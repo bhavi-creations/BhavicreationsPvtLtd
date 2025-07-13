@@ -1,0 +1,1892 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="your,keywords,here">
+    <meta name="author" content="Your Name">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>services Bhavi Creations</title>
+    <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="assests/traditional.css">
+    <link rel="stylesheet" href="assests/animation.css">
+    <link rel="stylesheet" href="assests/footer_animations.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="assests/branding.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        @media (max-width: 576px) {
+            .team_devision_btn {
+                width: 200px;
+            }
+        }
+        @media (min-width: 577px) and (max-width: 1284px){
+            .team_devision_btn {
+                width: 300px;
+            }
+        }
+        @media (min-width:1284px){
+              .team_devision_btn {
+                width: 300px;
+            }
+        }
+        .off_btn {
+            color: #0092ff;
+            font-size: 2rem;
+            line-height: 66px;
+        }
+
+        .off_btn_2 {
+            color: #cf2f2f;
+            font-size: 2rem;
+            line-height: 66px;
+        }
+
+        .off_btn_3 {
+            color: #16c66d;
+            font-size: 2rem;
+            line-height: 66px;
+        }
+
+        .card_btn {
+            width: 66px;
+            height: 66px;
+            margin-bottom: 1.875rem;
+            border-radius: 8px;
+            background-color: #ddedfb;
+            text-align: center;
+        }
+
+        .card_btn_2 {
+            width: 66px;
+            height: 66px;
+            margin-bottom: 1.875rem;
+            border-radius: 8px;
+            background-color: #fbe4e4;
+            text-align: center;
+        }
+
+        .card_btn_3 {
+            width: 66px;
+            height: 66px;
+            margin-bottom: 1.875rem;
+            border-radius: 8px;
+            background-color: #e0f4ea;
+            text-align: center;
+        }
+
+
+
+        /*button animations*/
+
+
+        .team_devision_btn {
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: #4c83fa;
+            font-size: 17px;
+            font-weight: 1000;
+            color: #ffffff;
+            border: 3px solid #4c83fa;
+            border-radius: 50px;
+            box-shadow: 0 0 0 #ffffff;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            /* width: 300px; */
+        }
+
+        .star-1 {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+        }
+
+        .star-2 {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-3 {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-4 {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.8s ease;
+        }
+
+        .team_devision_btn:hover {
+            background: transparent;
+            color: #4c83fa;
+            box-shadow: 0 0 0px #4c83fa;
+        }
+
+        .team_devision_btn:hover .star-1 {
+            position: absolute;
+            top: -80%;
+            left: -30%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-2 {
+            position: absolute;
+            top: -0%;
+            left: 10%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-3 {
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-4 {
+            position: absolute;
+            top: 30%;
+            left: 80%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 115%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 60%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .card_content {
+            background-color: #74abd2;
+            /* height: 400px; */
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+
+        .button {
+        --😀: #644dff;
+        --😀😀: #4836bb;
+        --😀😀😀: #654dff63;
+        cursor: pointer;
+        width: 184px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.125em;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #fff;
+        background: var(--😀);
+        border: 2px solid var(--😀😀);
+        border-radius: .75rem;
+        box-shadow: 0 8px 0 var(--😀😀);
+        transform: skew(-10deg);
+        transition: all .1s ease;
+        filter: drop-shadow(0 15px 20px var(--😀😀😀));
+        }
+
+        .button:active {
+        letter-spacing: 0px;
+        transform: skew(-10deg) translateY(8px);
+        box-shadow: 0 0 0 var(--😀😀😀);
+        }
+
+
+
+        .hello {
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background: linear-gradient(120deg, rgb(65, 43, 95), rgb(96, 51, 154));
+    }
+    .hello1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    }
+    .hello2 {
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: all 1s;
+    transform: rotate(20deg);
+    }
+    .hello3 {
+    width: 60%;
+    height: auto;
+    }
+    .hello4 {
+    color: rgb(240, 240, 240);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    }
+    .hello5 .hello2 {
+    transform: rotate(-35deg);
+    }
+
+    
+    </style>
+
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+
+    <!-- Navbar -->
+    <section class="sticky_nav nav_image_bg   shadow-lg">
+        <div class="container nav_main p-3">
+            <div class="d-flex justify-content-between align-items-center">
+
+                <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+                        style="width: 150px;height: 65px;" alt=""></a>
+
+
+                <div class="traveller">
+                    <div class="truckWrapper">
+                        <div class="truckBody">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 198 93" class="trucksvg">
+
+                                <path stroke-width="3" stroke="#282828" fill="#F83D3D"
+                                    d="M135 22.5H177.264C178.295 22.5 179.22 23.133 179.594 24.0939L192.33 56.8443C192.442 57.1332 192.5 57.4404 192.5 57.7504V89C192.5 90.3807 191.381 91.5 190 91.5H135C133.619 91.5 132.5 90.3807 132.5 89V25C132.5 23.6193 133.619 22.5 135 22.5Z">
+                                </path>
+                                <path stroke-width="3" stroke="#282828" fill="#7D7C7C"
+                                    d="M146 33.5H181.741C182.779 33.5 183.709 34.1415 184.078 35.112L190.538 52.112C191.16 53.748 189.951 55.5 188.201 55.5H146C144.619 55.5 143.5 54.3807 143.5 53V36C143.5 34.6193 144.619 33.5 146 33.5Z">
+                                </path>
+                                <path stroke-width="2" stroke="#282828" fill="#282828"
+                                    d="M150 65C150 65.39 149.763 65.8656 149.127 66.2893C148.499 66.7083 147.573 67 146.5 67C145.427 67 144.501 66.7083 143.873 66.2893C143.237 65.8656 143 65.39 143 65C143 64.61 143.237 64.1344 143.873 63.7107C144.501 63.2917 145.427 63 146.5 63C147.573 63 148.499 63.2917 149.127 63.7107C149.763 64.1344 150 64.61 150 65Z">
+                                </path>
+                                <rect stroke-width="2" stroke="#282828" fill="#FFFCAB" rx="1" height="7" width="5"
+                                    y="63" x="187"></rect>
+                                <rect stroke-width="2" stroke="#282828" fill="#282828" rx="1" height="11" width="4"
+                                    y="81" x="193"></rect>
+                                <rect stroke-width="3" stroke="#282828" fill="#DFDFDF" rx="2.5" height="90" width="121"
+                                    y="1.5" x="6.5"></rect>
+                                <rect stroke-width="2" stroke="#282828" fill="#DFDFDF" rx="2" height="4" width="6"
+                                    y="84" x="1"></rect>
+
+                                <text x="35%" y="40%" text-anchor="middle" fill=" #001372"
+                                    style="font-weight: bold; font-size:xx-large;">Bhavi </text>
+                                <text x="35%" y="70%" text-anchor="middle" fill=" #001372"
+                                    style="font-weight: bold; font-size: x-large;">Creations</text>
+
+                            </svg>
+                        </div>
+                        <div class="truckTires">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                                <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15">
+                                </circle>
+                                <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                                <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15">
+                                </circle>
+                                <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+                            </svg>
+                        </div>
+                        <div class="road"></div>
+
+                        <svg xml:space="preserve" viewBox="0 0 453.459 453.459"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                            version="1.1" fill="#000000" class="lampPost">
+
+                            <path d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993
+                          c-1.65,5.146-2.507,10.54-2.507,16.017c0,28.956,23.558,52.514,52.514,52.514c28.956,0,52.514-23.558,52.514-52.514
+                          c0-5.478-0.856-10.872-2.506-16.017h9.992c0-9.354-19.352-17.204-45.463-19.366v-8.954h-6.149C200.189,38.779,223.924,16,252.882,16
+                          c29.952,0,54.32,24.368,54.32,54.32c0,28.774-11.078,37.009-25.105,47.437c-17.444,12.968-37.216,27.667-37.216,78.884v113.914
+                          h-0.797c-5.068,0-9.174,4.108-9.174,9.177c0,2.844,1.293,5.383,3.321,7.066c-3.432,27.933-26.851,95.744-8.226,115.459v11.202h45.75
+                          v-11.202c18.625-19.715-4.794-87.527-8.227-115.459c2.029-1.683,3.322-4.223,3.322-7.066c0-5.068-4.107-9.177-9.176-9.177h-0.795
+                          V196.641c0-43.174,14.942-54.283,30.762-66.043c14.793-10.997,31.559-23.461,31.559-60.277C323.202,31.545,291.656,0,252.882,0z
+                          M232.77,111.694c0,23.442-19.071,42.514-42.514,42.514c-23.442,0-42.514-19.072-42.514-42.514c0-5.531,1.078-10.957,3.141-16.017
+                          h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+
+                <label for="check1" class="menuButton text-center onlyfortab">
+                    <input id="check1" type="checkbox" class="toggleDropdown">
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="bot"></span>
+                </label>
+                <ul class="dropdown-menu dropdown-menu-end menu_border">
+                    <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="loader_butterflu">
+        
+        <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.358 35.05c.435-.175.646-.408.861-.95.374-.94.698-1.52 1.145-2.05.78-.92 1.757-1.638 2.666-1.957.603-.212.9-.204 1.505.041.843.343 1.597.25 2.062-.254.95-1.029 3.95-6.873 5.841-11.376.869-2.07.831-1.882.797-3.962-.034-2.106-.024-2.064-.927-3.887-1.639-3.31-4.426-6.582-7.147-8.392C8.71 1.298 6.715.504 5.296.328c-.718-.09-2.465-.001-3.183.16C.943.752.279 1.268.279 1.917c0 .119.437 1.136.97 2.26.533 1.126 1.044 2.291 1.135 2.591.334 1.106.776 3.567.945 5.27.065.652.357 1.286.751 1.633.419.367 1.351.786 1.964.883.286.044.534.096.553.115.018.018-.129.128-.327.244-.761.446-1.432 1.439-1.74 2.574-.216.802-.194 2.914.045 4.121.24 1.212.575 2.318 1.031 3.403.46 1.092.535 1.458.439 2.135-.223 1.575-1.958 4.03-3.489 4.937-.693.41-.885.587-1.066.98-.173.375-.185.535-.069.953.223.802 1.206 1.326 1.937 1.033z" fill="#000"></path>
+        </svg>
+
+        
+        <svg viewBox="0 0 2.4 14.4" version="1.1" y="0" x="0" height="150" width="25" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.2 13c0 .641-.447 1.16-1 1.16-.553 0-1-.519-1-1.16V1.4C.2.759.647.24 1.2.24c.553 0 1 .519 1 1.16z" fill="#000"></path>
+        </svg>
+
+        
+        <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.105 35.155c-.42-.196-.627-.482-.902-1.253-.544-1.517-2.145-3.126-3.636-3.652-.69-.243-.887-.242-1.486.01-.617.26-1.342.278-1.798.045-.555-.283-1.76-2.262-3.476-5.708C2.628 22.232.984 18.575.455 17.144c-.236-.637-.237-.655-.237-2.485 0-2.164.01-2.209.9-4.013 1.011-2.049 2.53-4.189 4.185-5.9C7.679 2.293 9.783.995 12.49.313c.782-.197 1.554-.236 2.695-.137 1.619.14 2.38.38 2.882.909.21.22.246.321.243.684-.002.373-.122.67-.959 2.395-1.277 2.63-1.59 3.806-2.035 7.63-.111.951-.316 1.426-.809 1.87-.52.47-1.306.807-2.165.928l-.391.054.35.224c.897.574 1.58 1.674 1.834 2.956.193.969.12 2.791-.164 4.15-.222 1.061-.696 2.518-1.12 3.443-.336.735-.411 1.584-.203 2.3.505 1.738 2.056 3.692 3.736 4.705.693.417.938.83.874 1.476-.104 1.071-1.193 1.706-2.153 1.256z" fill="#000"></path>
+        </svg>
+    </div>
+
+
+
+    <section class="my-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  d-flex flex-column justify-content-center">
+                    <h1 class="large_text" style="font-weight: bold; ">Creative agency that<br /> help you go ahead.</h1>
+                    <!-- <h2 style="font-weight: bold; ">Feel Smart</h2> -->
+                    <p class="normal_text">At Bhavi Creations, we specialize in delivering comprehensive and result-driven digital marketing
+                        solutions to help businesses thrive in the ever-evolving online landscape. With a team of
+                        skilled professionals and a passion for innovation, we strive to create impactful digital
+                        strategies that drive growth, enhance brand visibility, and maximize your return on investment.
+                    </p>
+
+                    <!-- <img src="assests/images/bhavi/Group 1000015012.png " class="img-fluid"  alt=""> -->
+                </div>
+                <div class="col-md-6">
+
+                    <div class="video-container">
+                        <video controls class="img-fluid mt-2" muted autoplay loop>
+                            <source src="assests/images/Bhavi_Creations/best_digital_markting_services_in_kakinada_bhavi_creations.mp4" type="video/mp4">
+
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+            <div class="row mt-5">
+
+
+                <div class="col-lg-3 col-sm-12 col-md-6 mb-5">
+                        <div class="card_block  ">
+                            <div class="card_btn">
+                                <i class="off_btn bi bi-globe"></i>
+                            </div>
+                            <h5 class="mini_text_light_blue">online Branding</h5>
+                            <p class="py-2">Elevate your online presence with expertly crafted strategies encompassing logo
+                                design, web development, SEO, social media management, and more.</p>
+
+                            <a href="online_branding_mainpage.html"   style="text-decoration: none; color: white; ">
+                                                                
+                                    <button class="hello">
+                                        <span class="hello1">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 156 78"
+                                            class="hello2"
+                                        >
+                                            <path
+                                            fill="url(#paint0_linear_131_19)"
+                                            d="M10.3968 78C10.6002 78 32 72.831 32 72.831C29.5031 68.7434 27.3945 63.5193 26.0258 57.947C24.6386 52.3381 24.0837 46.7841 24.3982 42L3.38683 47.0957C0.0205717 47.9206 -1.0152 55.4725 1.09333 63.9959C3.05409 72.0061 7.10469 78 10.3968 78Z"
+                                            ></path>
+                                            <path
+                                            fill="url(#paint1_linear_131_19)"
+                                            d="M63.0824 25L34.8099 32.0351C33.7675 32.2957 32.8714 33.0215 32.1582 34.1382C31.6096 34.9943 31.1524 36.0738 30.8049 37.3393C30.5489 38.2513 30.366 39.2563 30.238 40.3544C29.6894 44.7839 30.0734 50.5348 31.5547 56.6207C33.0177 62.7067 35.2854 67.9925 37.7725 71.6587C38.3942 72.5707 39.016 73.371 39.6561 74.0596C40.5339 75.0274 41.43 75.7718 42.3078 76.2743C43.1307 76.7396 43.9536 77 44.74 77C45.0326 77 45.3252 76.9628 45.5995 76.8883L72.5919 70.1698L74 69.8164C69.867 64.1027 66.6484 56.1184 64.7282 48.1527C62.7532 39.9451 62.1497 31.8306 63.0094 25.3166C63.0458 25.2233 63.0643 25.1117 63.0824 25Z"
+                                            ></path>
+                                            <path
+                                            fill="url(#paint2_linear_131_19)"
+                                            d="M155.865 50.9153L144.361 3.54791C143.844 1.43031 141.964 0 139.88 0C139.512 0 139.143 0.0371509 138.774 0.130028L75.0921 15.8448C74.3361 16.0306 73.654 16.4021 73.0271 16.9594C72.1239 17.7581 71.3493 18.9284 70.7411 20.3958C70.3537 21.3246 70.0403 22.3648 69.7823 23.4979C68.4731 29.2935 68.7683 37.7267 70.9621 46.7544C73.2115 55.9863 76.9358 63.7509 80.8447 68.2277C81.6375 69.1194 82.4303 69.8995 83.2229 70.5125C83.4259 70.6795 83.6654 70.8283 83.9051 70.9581C85.6752 71.9798 87.7955 72.2584 89.7865 71.7571L152.492 56.5065C154.962 55.912 156.474 53.4044 155.865 50.9153Z"
+                                            ></path>
+                                            <defs>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="78"
+                                                x2="16"
+                                                y1="42"
+                                                x1="16"
+                                                id="paint0_linear_131_19"
+                                            >
+                                                <stop stop-color="#6A8EF6"></stop>
+                                                <stop stop-color="#BF8AEB" offset="1"></stop>
+                                            </linearGradient>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="77"
+                                                x2="52"
+                                                y1="25"
+                                                x1="52"
+                                                id="paint1_linear_131_19"
+                                            >
+                                                <stop stop-color="#6A8EF6"></stop>
+                                                <stop stop-color="#BF8AEB" offset="1"></stop>
+                                            </linearGradient>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="72"
+                                                x2="112.5"
+                                                y1="0"
+                                                x1="112.5"
+                                                id="paint2_linear_131_19"
+                                            >
+                                                <stop stop-color="#6A8EF6"></stop>
+                                                <stop stop-color="#BF8AEB" offset="1"></stop>
+                                            </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 104 69"
+                                            class="hello3"
+                                        >
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-width="11"
+                                            stroke="url(#paint0_linear_124_14)"
+                                            d="M98.4336 63.3406L52 5.99991"
+                                            ></path>
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-width="11"
+                                            stroke="url(#paint1_linear_124_14)"
+                                            d="M52.4336 6L6.00004 63.3407"
+                                            ></path>
+                                            <path
+                                            stroke-linecap="round"
+                                            stroke-width="11"
+                                            stroke="url(#paint2_linear_124_14)"
+                                            d="M52 63L52 6"
+                                            ></path>
+                                            <defs>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="40.5"
+                                                x2="68"
+                                                y1="32"
+                                                x1="77.5"
+                                                id="paint0_linear_124_14"
+                                            >
+                                                <stop stop-color="#8E8DF2"></stop>
+                                                <stop stop-color="#BC8BEC" offset="1"></stop>
+                                            </linearGradient>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="40.5174"
+                                                x2="36.4196"
+                                                y1="32.9922"
+                                                x1="26.1302"
+                                                id="paint1_linear_124_14"
+                                            >
+                                                <stop stop-color="#8E8DF2"></stop>
+                                                <stop stop-color="#BC8BEC" offset="1"></stop>
+                                            </linearGradient>
+                                            <linearGradient
+                                                gradientUnits="userSpaceOnUse"
+                                                y2="34.8174"
+                                                x2="42.7435"
+                                                y1="34.0069"
+                                                x1="55.4548"
+                                                id="paint2_linear_124_14"
+                                            >
+                                                <stop stop-color="#8E8DF2"></stop>
+                                                <stop stop-color="#BC8BEC" offset="1"></stop>
+                                            </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        </span>
+                                    
+                                        <span class="hello4">View more</span>
+                                    </button> 
+                                
+                            </a>
+                        </div>
+                </div>
+
+
+                <div class="col-lg-3  col-sm-12 col-md-6 mb-5">
+                        <div class="card_block">
+                            <div class="card_btn_2">
+                                <i class="off_btn_2 bi bi-briefcase"></i>
+                            </div>
+                            <h5 class="mini_text_light_blue">Offline Branding</h5>
+                            <p class="py-2">Enhance your offline presence with meticulously designed strategies covering logo creation, print materials, signage, event branding, and more.</p>
+                            <!-- <p>Our offline branding solutions, from captivating brochures to eye-catching vinyl stickers, guarantee a lasting impression for your brand in the physical world.</p> -->
+
+                            <a href="main_offline_markiting.html"   style="text-decoration: none; color: white; ">
+
+                                <button class="hello">
+                                    <span class="hello1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 156 78"
+                                        class="hello2"
+                                    >
+                                        <path
+                                        fill="url(#paint0_linear_131_19)"
+                                        d="M10.3968 78C10.6002 78 32 72.831 32 72.831C29.5031 68.7434 27.3945 63.5193 26.0258 57.947C24.6386 52.3381 24.0837 46.7841 24.3982 42L3.38683 47.0957C0.0205717 47.9206 -1.0152 55.4725 1.09333 63.9959C3.05409 72.0061 7.10469 78 10.3968 78Z"
+                                        ></path>
+                                        <path
+                                        fill="url(#paint1_linear_131_19)"
+                                        d="M63.0824 25L34.8099 32.0351C33.7675 32.2957 32.8714 33.0215 32.1582 34.1382C31.6096 34.9943 31.1524 36.0738 30.8049 37.3393C30.5489 38.2513 30.366 39.2563 30.238 40.3544C29.6894 44.7839 30.0734 50.5348 31.5547 56.6207C33.0177 62.7067 35.2854 67.9925 37.7725 71.6587C38.3942 72.5707 39.016 73.371 39.6561 74.0596C40.5339 75.0274 41.43 75.7718 42.3078 76.2743C43.1307 76.7396 43.9536 77 44.74 77C45.0326 77 45.3252 76.9628 45.5995 76.8883L72.5919 70.1698L74 69.8164C69.867 64.1027 66.6484 56.1184 64.7282 48.1527C62.7532 39.9451 62.1497 31.8306 63.0094 25.3166C63.0458 25.2233 63.0643 25.1117 63.0824 25Z"
+                                        ></path>
+                                        <path
+                                        fill="url(#paint2_linear_131_19)"
+                                        d="M155.865 50.9153L144.361 3.54791C143.844 1.43031 141.964 0 139.88 0C139.512 0 139.143 0.0371509 138.774 0.130028L75.0921 15.8448C74.3361 16.0306 73.654 16.4021 73.0271 16.9594C72.1239 17.7581 71.3493 18.9284 70.7411 20.3958C70.3537 21.3246 70.0403 22.3648 69.7823 23.4979C68.4731 29.2935 68.7683 37.7267 70.9621 46.7544C73.2115 55.9863 76.9358 63.7509 80.8447 68.2277C81.6375 69.1194 82.4303 69.8995 83.2229 70.5125C83.4259 70.6795 83.6654 70.8283 83.9051 70.9581C85.6752 71.9798 87.7955 72.2584 89.7865 71.7571L152.492 56.5065C154.962 55.912 156.474 53.4044 155.865 50.9153Z"
+                                        ></path>
+                                        <defs>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="78"
+                                            x2="16"
+                                            y1="42"
+                                            x1="16"
+                                            id="paint0_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="77"
+                                            x2="52"
+                                            y1="25"
+                                            x1="52"
+                                            id="paint1_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="72"
+                                            x2="112.5"
+                                            y1="0"
+                                            x1="112.5"
+                                            id="paint2_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 104 69"
+                                        class="hello3"
+                                    >
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint0_linear_124_14)"
+                                        d="M98.4336 63.3406L52 5.99991"
+                                        ></path>
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint1_linear_124_14)"
+                                        d="M52.4336 6L6.00004 63.3407"
+                                        ></path>
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint2_linear_124_14)"
+                                        d="M52 63L52 6"
+                                        ></path>
+                                        <defs>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="40.5"
+                                            x2="68"
+                                            y1="32"
+                                            x1="77.5"
+                                            id="paint0_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="40.5174"
+                                            x2="36.4196"
+                                            y1="32.9922"
+                                            x1="26.1302"
+                                            id="paint1_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="34.8174"
+                                            x2="42.7435"
+                                            y1="34.0069"
+                                            x1="55.4548"
+                                            id="paint2_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    </span>
+                                
+                                    <span class="hello4">View more</span>
+                                </button> 
+                            </a>
+                        </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-12  col-md-6 mb-5">
+                    <div class="card_block">
+                            <div class="card_btn_3">
+                                <i class="off_btn_3 bi bi-newspaper"></i>
+
+                            </div>
+                            <h5 class="mini_text_light_blue">Traditional Marketing</h5>
+                            <p class="py-2">Boost your traditional marketing impact with expertly crafted strategies including logo design, print materials, direct mail, event promotions, and more.</p>
+                            <!-- <p>Harness the power of traditional marketing channels with our range of services,
+                                including impactful pamphlets, attention-grabbing hoardings, and dynamic theatre
+                                ads. </p> -->
+
+                            <a href="traditional_marketing.html"  style="text-decoration: none; color: white; ">
+
+                                <button class="hello">
+                                    <span class="hello1">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 156 78"
+                                        class="hello2"
+                                    >
+                                        <path
+                                        fill="url(#paint0_linear_131_19)"
+                                        d="M10.3968 78C10.6002 78 32 72.831 32 72.831C29.5031 68.7434 27.3945 63.5193 26.0258 57.947C24.6386 52.3381 24.0837 46.7841 24.3982 42L3.38683 47.0957C0.0205717 47.9206 -1.0152 55.4725 1.09333 63.9959C3.05409 72.0061 7.10469 78 10.3968 78Z"
+                                        ></path>
+                                        <path
+                                        fill="url(#paint1_linear_131_19)"
+                                        d="M63.0824 25L34.8099 32.0351C33.7675 32.2957 32.8714 33.0215 32.1582 34.1382C31.6096 34.9943 31.1524 36.0738 30.8049 37.3393C30.5489 38.2513 30.366 39.2563 30.238 40.3544C29.6894 44.7839 30.0734 50.5348 31.5547 56.6207C33.0177 62.7067 35.2854 67.9925 37.7725 71.6587C38.3942 72.5707 39.016 73.371 39.6561 74.0596C40.5339 75.0274 41.43 75.7718 42.3078 76.2743C43.1307 76.7396 43.9536 77 44.74 77C45.0326 77 45.3252 76.9628 45.5995 76.8883L72.5919 70.1698L74 69.8164C69.867 64.1027 66.6484 56.1184 64.7282 48.1527C62.7532 39.9451 62.1497 31.8306 63.0094 25.3166C63.0458 25.2233 63.0643 25.1117 63.0824 25Z"
+                                        ></path>
+                                        <path
+                                        fill="url(#paint2_linear_131_19)"
+                                        d="M155.865 50.9153L144.361 3.54791C143.844 1.43031 141.964 0 139.88 0C139.512 0 139.143 0.0371509 138.774 0.130028L75.0921 15.8448C74.3361 16.0306 73.654 16.4021 73.0271 16.9594C72.1239 17.7581 71.3493 18.9284 70.7411 20.3958C70.3537 21.3246 70.0403 22.3648 69.7823 23.4979C68.4731 29.2935 68.7683 37.7267 70.9621 46.7544C73.2115 55.9863 76.9358 63.7509 80.8447 68.2277C81.6375 69.1194 82.4303 69.8995 83.2229 70.5125C83.4259 70.6795 83.6654 70.8283 83.9051 70.9581C85.6752 71.9798 87.7955 72.2584 89.7865 71.7571L152.492 56.5065C154.962 55.912 156.474 53.4044 155.865 50.9153Z"
+                                        ></path>
+                                        <defs>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="78"
+                                            x2="16"
+                                            y1="42"
+                                            x1="16"
+                                            id="paint0_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="77"
+                                            x2="52"
+                                            y1="25"
+                                            x1="52"
+                                            id="paint1_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="72"
+                                            x2="112.5"
+                                            y1="0"
+                                            x1="112.5"
+                                            id="paint2_linear_131_19"
+                                        >
+                                            <stop stop-color="#6A8EF6"></stop>
+                                            <stop stop-color="#BF8AEB" offset="1"></stop>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 104 69"
+                                        class="hello3"
+                                    >
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint0_linear_124_14)"
+                                        d="M98.4336 63.3406L52 5.99991"
+                                        ></path>
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint1_linear_124_14)"
+                                        d="M52.4336 6L6.00004 63.3407"
+                                        ></path>
+                                        <path
+                                        stroke-linecap="round"
+                                        stroke-width="11"
+                                        stroke="url(#paint2_linear_124_14)"
+                                        d="M52 63L52 6"
+                                        ></path>
+                                        <defs>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="40.5"
+                                            x2="68"
+                                            y1="32"
+                                            x1="77.5"
+                                            id="paint0_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="40.5174"
+                                            x2="36.4196"
+                                            y1="32.9922"
+                                            x1="26.1302"
+                                            id="paint1_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        <linearGradient
+                                            gradientUnits="userSpaceOnUse"
+                                            y2="34.8174"
+                                            x2="42.7435"
+                                            y1="34.0069"
+                                            x1="55.4548"
+                                            id="paint2_linear_124_14"
+                                        >
+                                            <stop stop-color="#8E8DF2"></stop>
+                                            <stop stop-color="#BC8BEC" offset="1"></stop>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    </span>
+                                
+                                    <span class="hello4">View more</span>
+                                </button> 
+                            </a>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3  col-sm-12 col-md-6 mb-5">
+                        <div class="card_block">
+                            <div class="card_btn">
+                                <i class="off_btn bi-laptop"></i>
+                            </div>
+                            <h5 class="mini_text_light_blue">Customized Softwares</h5>
+                            <p class="py-2">Empower your business with bespoke software solutions tailored to streamline operations and drive growth, meeting your unique requirements.</p>
+                            <!-- <p>Empower your business with bespoke software solutions designed to streamline
+                                operations, enhance efficiency, and drive growth, tailored to your unique
+                                requirements.</p> -->
+
+                            <a href="software_mainpage.htm"   style="text-decoration: none; color: white; ">
+                                      
+                            <button class="hello">
+                                <span class="hello1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 156 78"
+                                    class="hello2"
+                                >
+                                    <path
+                                    fill="url(#paint0_linear_131_19)"
+                                    d="M10.3968 78C10.6002 78 32 72.831 32 72.831C29.5031 68.7434 27.3945 63.5193 26.0258 57.947C24.6386 52.3381 24.0837 46.7841 24.3982 42L3.38683 47.0957C0.0205717 47.9206 -1.0152 55.4725 1.09333 63.9959C3.05409 72.0061 7.10469 78 10.3968 78Z"
+                                    ></path>
+                                    <path
+                                    fill="url(#paint1_linear_131_19)"
+                                    d="M63.0824 25L34.8099 32.0351C33.7675 32.2957 32.8714 33.0215 32.1582 34.1382C31.6096 34.9943 31.1524 36.0738 30.8049 37.3393C30.5489 38.2513 30.366 39.2563 30.238 40.3544C29.6894 44.7839 30.0734 50.5348 31.5547 56.6207C33.0177 62.7067 35.2854 67.9925 37.7725 71.6587C38.3942 72.5707 39.016 73.371 39.6561 74.0596C40.5339 75.0274 41.43 75.7718 42.3078 76.2743C43.1307 76.7396 43.9536 77 44.74 77C45.0326 77 45.3252 76.9628 45.5995 76.8883L72.5919 70.1698L74 69.8164C69.867 64.1027 66.6484 56.1184 64.7282 48.1527C62.7532 39.9451 62.1497 31.8306 63.0094 25.3166C63.0458 25.2233 63.0643 25.1117 63.0824 25Z"
+                                    ></path>
+                                    <path
+                                    fill="url(#paint2_linear_131_19)"
+                                    d="M155.865 50.9153L144.361 3.54791C143.844 1.43031 141.964 0 139.88 0C139.512 0 139.143 0.0371509 138.774 0.130028L75.0921 15.8448C74.3361 16.0306 73.654 16.4021 73.0271 16.9594C72.1239 17.7581 71.3493 18.9284 70.7411 20.3958C70.3537 21.3246 70.0403 22.3648 69.7823 23.4979C68.4731 29.2935 68.7683 37.7267 70.9621 46.7544C73.2115 55.9863 76.9358 63.7509 80.8447 68.2277C81.6375 69.1194 82.4303 69.8995 83.2229 70.5125C83.4259 70.6795 83.6654 70.8283 83.9051 70.9581C85.6752 71.9798 87.7955 72.2584 89.7865 71.7571L152.492 56.5065C154.962 55.912 156.474 53.4044 155.865 50.9153Z"
+                                    ></path>
+                                    <defs>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="78"
+                                        x2="16"
+                                        y1="42"
+                                        x1="16"
+                                        id="paint0_linear_131_19"
+                                    >
+                                        <stop stop-color="#6A8EF6"></stop>
+                                        <stop stop-color="#BF8AEB" offset="1"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="77"
+                                        x2="52"
+                                        y1="25"
+                                        x1="52"
+                                        id="paint1_linear_131_19"
+                                    >
+                                        <stop stop-color="#6A8EF6"></stop>
+                                        <stop stop-color="#BF8AEB" offset="1"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="72"
+                                        x2="112.5"
+                                        y1="0"
+                                        x1="112.5"
+                                        id="paint2_linear_131_19"
+                                    >
+                                        <stop stop-color="#6A8EF6"></stop>
+                                        <stop stop-color="#BF8AEB" offset="1"></stop>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 104 69"
+                                    class="hello3"
+                                >
+                                    <path
+                                    stroke-linecap="round"
+                                    stroke-width="11"
+                                    stroke="url(#paint0_linear_124_14)"
+                                    d="M98.4336 63.3406L52 5.99991"
+                                    ></path>
+                                    <path
+                                    stroke-linecap="round"
+                                    stroke-width="11"
+                                    stroke="url(#paint1_linear_124_14)"
+                                    d="M52.4336 6L6.00004 63.3407"
+                                    ></path>
+                                    <path
+                                    stroke-linecap="round"
+                                    stroke-width="11"
+                                    stroke="url(#paint2_linear_124_14)"
+                                    d="M52 63L52 6"
+                                    ></path>
+                                    <defs>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="40.5"
+                                        x2="68"
+                                        y1="32"
+                                        x1="77.5"
+                                        id="paint0_linear_124_14"
+                                    >
+                                        <stop stop-color="#8E8DF2"></stop>
+                                        <stop stop-color="#BC8BEC" offset="1"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="40.5174"
+                                        x2="36.4196"
+                                        y1="32.9922"
+                                        x1="26.1302"
+                                        id="paint1_linear_124_14"
+                                    >
+                                        <stop stop-color="#8E8DF2"></stop>
+                                        <stop stop-color="#BC8BEC" offset="1"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        gradientUnits="userSpaceOnUse"
+                                        y2="34.8174"
+                                        x2="42.7435"
+                                        y1="34.0069"
+                                        x1="55.4548"
+                                        id="paint2_linear_124_14"
+                                    >
+                                        <stop stop-color="#8E8DF2"></stop>
+                                        <stop stop-color="#BC8BEC" offset="1"></stop>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                                </span>
+                            
+                                <span class="hello4">View more</span>
+                            </button> 
+                            </a>
+                        </div>
+                </div>
+
+
+                
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container my-5">
+            <div class="col-12  ustify-content-center">
+                
+                    <h1 class="large_text" style="font-weight: bold; ">Let's Level Up Your Business With <strong>Digital Media</strong> </h1>
+                    <p class="mt-4 normal_text " style="text-align: justify;">At Bhavi Creations, we offer a holistic approach to digital transformation, providing a full
+                        spectrum of services to elevate your brand's presence and performance. From online branding
+                        strategies to offline marketing collateral, traditional advertising channels, and custom
+                        software development, our integrated solutions are designed to propel your business forward in
+                        today's competitive landscape. Whether you want to establish a strong online presence,
+                        make a mark in the physical world, or optimize your operations with cutting-edge software, we're
+                        here to help you achieve your goals and exceed expectations. Let's embark on this journey
+                        together and unlock the full potential of your brand. </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="text-center gradient_color_services">
+        <img src="assests/images/update_img/top_half.webp"
+        style="border-radius: 10px;" class="img-fluid   " />
+    </div>
+
+    <section style="background-color: rgba(208, 208, 208, 0.241); padding: 50px; margin-bottom: 50px;">
+        <div class="container   ">
+            <div class="row mt-5">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h6 class="mini_text_light_blue" style="font-weight: bold; ">WHY US </h6>
+                    <h2 style="font-weight: bold; " >Creative agency that helps you go ahead.</h2>
+                    <div class="text-center">
+                        <button class="text-center mt-4 team_devision_btn" id="developersBtn"
+                            onclick="toggleCard('developersCard')" type="button">Start-up Friendly
+
+                            <div class="star-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <button class="text-center mt-4 team_devision_btn" id="researchBtn"
+                            onclick="toggleCard('researchCard')">
+                            Research
+
+                            <div class="star-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <button class="text-center mt-4 team_devision_btn" id="designersBtn"
+                            onclick="toggleCard('designersCard')">
+                            Strategic Approach
+
+                            <div class="star-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <button class="text-center mt-4 team_devision_btn" id="marketingBtn"
+                            onclick="toggleCard('marketingCard')">
+                            Revolutionizing Growth
+
+                            <div class="star-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <button class="text-center mt-4 team_devision_btn" id="marketingBtn"
+                            onclick="toggleCard('marketingCard2')">
+                            Reporting and Analyzing
+
+                            <div class="star-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="star-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                    viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <defs></defs>
+                                    <g id="Layer_x0020_1">
+                                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                        <path class="fil0"
+                                            d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card_content mt-4" id="developersCard" style="display: block;">
+                        <!-- <p>Developers Content Here</p> -->
+                        <img src="assests/images/Bhavi_Creations/best_digital_markting_start_up_friendly_company_bhavi_creations.webp" alt="" class="img-fluid">
+                       
+
+                          <h4 style="font-weight: bold; color: rgb(255, 255, 255);">Bhavi Creations: Your Start-Up Friendly Branding Agency</h4>
+
+                              <p  style="  color: rgb(255, 255, 255);">    Discover how Bhavi Creations, a leading branding agency, provides tailored solutions and personalized support to empower start-ups on their journey to success. With a focus on creativity, innovation, and collaboration, we specialize in helping start-ups establish and grow their brand identity in today's competitive market landscape.</p>
+                    </div>
+                    <div class="card_content mt-4" id="researchCard" style="display: none;">
+                        <!-- <p>Strategic Approach</p> -->
+                        <img src="assests/images/Bhavi_Creations/best_digital_markting_Research_company_bhavi_creationsRevolutionizing growth.webp" alt="" class="img-fluid">
+                        <h4 style="font-weight: bold; color: rgb(255, 255, 255);"> Exploring New Horizons: Bhavi Creations Research Servicess</h4>
+
+                           <p  style="  color: rgb(255, 255, 255);">
+
+                            Uncover boundless possibilities with Bhavi Creations' research services. Our dedicated team delves deep into market trends, consumer behavior, and industry insights to provide invaluable data-driven strategies tailored to your business needs. Partner with us to embark on a journey of discovery and innovation, driving your business forward</p>
+                    </div>
+                    <div class="card_content mt-4" id="designersCard" style="display: none;">
+                        <!-- <p>Strategic Approach</p> -->
+                        <img src="assests/images/Bhavi_Creations/best_digital_markting_strategic_approach_company_bhavi_creations.webp" alt="" class="img-fluid">
+                        <h4  style="font-weight: bold; color: rgb(255, 255, 255);"> Strategic Solutions: Bhavi Creations' Approach to Success</h4>
+
+                           <p  style="  color: rgb(255, 255, 255);">  Unlock your business potential with Bhavi Creations' strategic approach. Our tailored solutions are designed to drive growth, enhance visibility, and maximize ROI. Trust our expertise to navigate the complexities of today's market landscape and position your brand for success.</p>
+                    </div>
+                    <div class="card_content mt-4" id="marketingCard" style="display: none;">
+                        <!-- <p>Revolutionizing Growth</p> -->
+                        <img src="assests/images/Bhavi_Creations/best_digital_markting_Revolutionizing_growth_company_bhavi_creationsRevolutionizing growth.webp" alt="" class="img-fluid">
+                        <h4  style="font-weight: bold; color: rgb(255, 255, 255);"> Revolutionizing Growth: Bhavi Creations' Innovative Approach</h4>
+
+                          <p  style="  color: rgb(255, 255, 255);">  Experience unprecedented growth with Bhavi Creations' revolutionary approach. Through cutting-edge strategies and forward-thinking solutions, we redefine industry standards and propel your business towards unparalleled success. Join us in revolutionizing growth and achieving your business goals.</p>
+                    </div>
+                    <div class="card_content mt-4" id="marketingCard2" style="display: none;">
+                        <!-- <p>Reporting and Analyzing</p> -->
+                        <img src="assests/images/Bhavi_Creations/best_digital_markting_Reporting_and_Analyzing_company_bhavi_creationsRevolutionizing growth.webp" alt="" class="img-fluid">
+                       <h4  style="font-weight: bold; color: rgb(255, 255, 255);"> Insightful Reporting & Analyzing: Bhavi Creations' Data-Driven Solutions</h4>
+                        
+                         <p  style="  color: rgb(255, 255, 255);">   Gain invaluable insights with Bhavi Creations' comprehensive reporting and sophisticated analytics. Our data-driven approach empowers informed decision-making, allowing you to optimize performance and stay ahead of the competition. Partner with us for insightful reporting and robust analyzing services to drive your business forward.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="text-light foot_bg_img   mt-5 foot ">
+
+        <div class="container " style="padding-top: 100px;">
+            <div class="row">
+
+                <div class="   col-md-4 text-center order-2 order-md-1">
+
+                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
+                    <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
+                        <span style="color:#ffffff; font-weight: bold;">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>: +91 9642343434
+                    </h5>
+
+
+                    <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
+                        <div class="d-flex mail_text_box" style="margin-top: 10px;">
+                            <span class="tooltip-container  ">
+
+                                <span class="text">@</span>
+                            </span> &nbsp;
+
+                            <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
+
+                        </div>
+                    </a>
+
+
+                    <div class="mt-3  " style="margin-bottom: 55px;">
+                        <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff; "
+                                class="fa-brands fa-facebook px-1  footicon"></i></a>
+                        <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands fa-instagram  px-1 footicon"></i></a>
+                        <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands fa-youtube  px-1  footicon"></i></a>
+                        <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
+                                style="font-size: 24px;  color: #ffffff;  "
+                                class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+                        <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
+                                style="font-size: 24px ; color: #ffffff;"
+                                class="fa-brands fa-pinterest px-1  footicon"></i></a>
+
+
+                    </div>
+                </div>
+
+
+                <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
+                    <a href="index.html">
+                        <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+                            style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
+                    </a>
+ 
+                </div>
+
+
+                <div class="    col-md-4 text-center order-3  order-md-3">
+
+                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
+                    
+                    <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
+                        Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
+ 
+                </div>
+
+            </div>
+        </div>
+        
+
+
+
+        <div class="footer-area-bottom theme-bg text-center pb-4">
+            <div class="container" style="margin-top: 30px;  ">
+                <div class="row">
+                    <div class=" col-12">
+                        <div class="footer-widget__copyright">
+                            <span style="color:#ffffff;font-weight: 400;">   
+                                <a
+                                    href="terms.html"
+                                    style="text-decoration: none; color: #ffffff">Terms & conditions |
+                                </a>
+                                <a
+                                    href="privacy.html"
+                                    style="text-decoration: none; color: #ffffff">
+                                    Privacy & policy ||</a>
+                                    <a
+                                    href="https://bhavicreations.com"
+                                    style="text-decoration: none; color: #ffffff">
+                                    Design with love @</a> <a
+                                    href="https://bhavicreations.com"
+                                    style="text-decoration: none; color: #ffffff">
+                                    <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
+
+                                 </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="footer-area-bottom theme-bg">
+            <div class="container">
+                <div class="row pt-4">
+            
+                    <div class="  col-md-6 col-12">
+                        <div class="footer-widget__copyright-info info-direction">
+                            <p class="  last_text">
+                            <a
+                                href="terms.html"
+                                style="text-decoration: none; color: #ffffff">Terms & conditions
+                            </a>
+                            <a
+                                href="privacy.html"
+                                style="text-decoration: none; color: #ffffff">
+                                Privacy & policy</a>
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 col-12 second_divv_end_brand">
+                    <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
+                        <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
+                        <p class="mini_text last_text mb-0">
+                            Design with love @
+                        </p>
+                        <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
+                        </a>
+                    </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div> -->
+
+    </footer>
+    <!-- ENDING  FOOTER -->
+
+
+
+
+
+    <div class="d-md-none">
+        <a href="index.html" style="text-decoration: none;">
+            <button class="Btn_back_buttn     ">
+                <div class="sign_back">
+                    <svg viewBox="0 0 512 512">
+                        <path
+                            d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text_go_back ">Go Back</div>
+            </button>
+        </a>
+    </div>
+
+    <div class="d-none d-md-block">
+        <a href="index.html" style="text-decoration: none;  ">
+            <div style="display: flex; align-items: center;">
+                <button class="Btn_back_buttn " style="display: flex; align-items: center;">
+                    <div>
+                        <svg class="" viewBox="0 0 512 512" style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
+                            <path
+                            fill="#ffffff" d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+                </button>
+            </div>
+        </a>
+    </div>
+
+
+    <button id="scrollBtn" onclick="scrollToTop()">
+        <div class="pyramid-loader animate__animated animate__bounceInDown">
+            <div class="wrapper ">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>
+        </div>
+    </button>
+
+
+
+
+
+
+
+
+   <!-- redirections  -->
+
+   <div class="open_bar open_home">
+    <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+        <span class="text">
+            <div class="borde-back">
+                <div class="icon">
+                    <i class="fa-solid fa-house" style="color: white;"></i>
+                </div>
+            </div>
+        </span>
+    </a>
+</div>
+
+<div class="open_bar open_services">
+    <a href="about.html" style="text-decoration: none;"> <span class="bar_in bar_Services">About Us</span>
+        <span class="text">
+            <div class="borde-back">
+                <div class="icon">
+                    <i class="fa-solid fa-users" style="color: white;"></i>
+                </div>
+            </div>
+        </span>
+    </a>
+</div>
+<div class="open_bar open_contact">
+    <a href="contact_us.html" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
+        <span class="text">
+            <div class="borde-back">
+                <div class="icon">
+                    <i class="fa-solid fa-headset" style="color: white;"></i>
+                   
+                </div>
+            </div>
+        </span>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Optional, smooth scrolling animation
+            });
+        }
+
+        // Show scroll button when scrolling down
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollBtn").style.display = "none";
+            }
+        }
+
+
+
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // Toggle dropdown on button click
+            $('.toggleDropdown').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.dropdown-menu').show();
+                } else {
+                    $('.dropdown-menu').hide();
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleCard(cardId) {
+
+            var cards = document.querySelectorAll('.card_content');
+            cards.forEach(function (card) {
+                card.style.display = 'none';
+            });
+
+            // Display the selected card
+            var card = document.getElementById(cardId);
+            if (card.style.display === 'none') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+    </script>
+<script type="text/javascript">
+        window.omnisend = window.omnisend || [];
+        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+        omnisend.push(["track", "$pageViewed"]);
+        !function(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=!0,
+        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
+        var t=document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(e,t)}();
+</script>
+</body>
+
+</html>

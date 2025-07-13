@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your website description">
+  <meta name="keywords" content="your,keywords,here">
+  <meta name="author" content="Your Name">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Bhavi Creations</title>
+  <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
+    type="image/x-icon">
+  <link rel="stylesheet" href="assests/footer_animations.css">
+
+  <!-- <link rel="stylesheet" href="assests/style.css"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assests/branding.css">
+
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+
+
+
+
+    .sft_btn {
+      padding: 1.3em 3em;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sft_btn:hover {
+      background-color: #23c483;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+    }
+
+    .sft_btn:active {
+      transform: translateY(-1px);
+    }
+
+    .sft_head {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 600;
+      color: #3887a6;
+    }
+
+
+
+    /* Loader*/
+
+
+    .svg-frame {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      transform-style: preserve-3d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .svg-frame svg {
+      position: absolute;
+      transition: .5s;
+      z-index: calc(1 - (0.2 * var(--j)));
+      transform-origin: center;
+      width: 344px;
+      height: 344px;
+      fill: none;
+    }
+
+    .svg-frame:hover svg {
+      transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+    }
+
+    .svg-frame svg #center {
+      transition: .5s;
+      transform-origin: center;
+    }
+
+    .svg-frame:hover svg #center {
+      transform: rotate(-30deg) translateX(45px) translateY(-3px);
+    }
+
+    #out2 {
+      animation: rotate16 7s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    #out3 {
+      animation: rotate16 3s ease-in-out infinite alternate;
+      transform-origin: center;
+      stroke: rgb(25, 105, 218);
+    }
+
+    #inner3,
+    #inner1 {
+      animation: rotate16 4s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    #center1 {
+      fill: rgb(25, 105, 218);
+      animation: rotate16 2s ease-in-out infinite alternate;
+      transform-origin: center;
+    }
+
+    @keyframes rotate16 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    @keyframes clockwise {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes counter-clockwise {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+
+    .gearbox {
+      background: #232424;
+      /* height: 200px; */
+      /* width: 200px; */
+      position: relative;
+      /* border: none; */
+      overflow: hidden;
+      border-radius: 6px;
+      /* box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1); */
+    }
+
+    .gearbox .overlay {
+      /* border-radius: 6px; */
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* width: 100%; */
+      /* height: 100%; */
+      z-index: 10;
+      /* box-shadow: inset 0px 0px 20px black; */
+      transition: background 0.2s;
+    }
+
+    .gearbox .overlay {
+      background: transparent;
+    }
+
+    .gear {
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      box-shadow: 0px -1px 0px 0px #888888, 0px 1px 0px 0px black;
+      border-radius: 30px;
+    }
+
+    .gear.large {
+      height: 120px;
+      width: 120px;
+      border-radius: 60px;
+    }
+
+    .gear.large:after {
+      height: 96px;
+      width: 96px;
+      border-radius: 48px;
+      margin-left: -48px;
+      margin-top: -48px;
+    }
+
+    .gear.one {
+      top: 12px;
+      left: 10px;
+    }
+
+    .gear.two {
+      top: 61px;
+      left: 60px;
+    }
+
+    .gear.three {
+      top: 110px;
+      left: 10px;
+    }
+
+    .gear.four {
+      top: 13px;
+      left: 128px;
+    }
+
+    .gear:after {
+      content: "";
+      position: absolute;
+      height: 36px;
+      width: 36px;
+      border-radius: 36px;
+      background: #111;
+      top: 50%;
+      left: 50%;
+      margin-left: -18px;
+      margin-top: -18px;
+      z-index: 3;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 2px 0px 0px #090909, inset 0px -1px 0px 0px #888888;
+    }
+
+    .gear-inner {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: #555;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .large .gear-inner {
+      border-radius: 60px;
+    }
+
+    .gear.one .gear-inner {
+      animation: counter-clockwise 3s infinite linear;
+    }
+
+    .gear.two .gear-inner {
+      animation: clockwise 3s infinite linear;
+    }
+
+    .gear.three .gear-inner {
+      animation: counter-clockwise 3s infinite linear;
+    }
+
+    .gear.four .gear-inner {
+      animation: counter-clockwise 6s infinite linear;
+    }
+
+    .gear-inner .bar {
+      background: #555;
+      height: 16px;
+      width: 76px;
+      position: absolute;
+      left: 50%;
+      margin-left: -38px;
+      top: 50%;
+      margin-top: -8px;
+      border-radius: 2px;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .large .gear-inner .bar {
+      margin-left: -68px;
+      width: 136px;
+    }
+
+    .gear-inner .bar:nth-child(2) {
+      transform: rotate(60deg);
+    }
+
+    .gear-inner .bar:nth-child(3) {
+      transform: rotate(120deg);
+    }
+
+    .gear-inner .bar:nth-child(4) {
+      transform: rotate(90deg);
+    }
+
+    .gear-inner .bar:nth-child(5) {
+      transform: rotate(30deg);
+    }
+
+    .gear-inner .bar:nth-child(6) {
+      transform: rotate(150deg);
+    }
+
+
+
+    .card_sft {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: linear-gradient(-45deg, #2c2c2c 0%, #b8b8b8 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .card_sft svg {
+      width: 48px;
+      fill: #333;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .card_sft:hover {
+      transform: rotate(-5deg) scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    .card_sft:hover .card__content {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 1;
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .card__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.4;
+    }
+
+    .card_sft:hover svg {
+      scale: 0;
+      transform: rotate(-45deg);
+    }
+  </style>
+
+
+
+</head>
+
+
+<body style="overflow-x: hidden;">
+
+  <!-- Navbar -->
+  <section class="sticky_nav nav_image_bg   shadow-lg">
+    <div class="container nav_main p-3">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+            style="width: 150px;height: 65px;" alt=""></a>
+
+
+        <div class="traveller">
+          <div class="truckWrapper">
+            <div class="truckBody">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 198 93" class="trucksvg">
+
+                <path stroke-width="3" stroke="#282828" fill="#F83D3D"
+                  d="M135 22.5H177.264C178.295 22.5 179.22 23.133 179.594 24.0939L192.33 56.8443C192.442 57.1332 192.5 57.4404 192.5 57.7504V89C192.5 90.3807 191.381 91.5 190 91.5H135C133.619 91.5 132.5 90.3807 132.5 89V25C132.5 23.6193 133.619 22.5 135 22.5Z">
+                </path>
+                <path stroke-width="3" stroke="#282828" fill="#7D7C7C"
+                  d="M146 33.5H181.741C182.779 33.5 183.709 34.1415 184.078 35.112L190.538 52.112C191.16 53.748 189.951 55.5 188.201 55.5H146C144.619 55.5 143.5 54.3807 143.5 53V36C143.5 34.6193 144.619 33.5 146 33.5Z">
+                </path>
+                <path stroke-width="2" stroke="#282828" fill="#282828"
+                  d="M150 65C150 65.39 149.763 65.8656 149.127 66.2893C148.499 66.7083 147.573 67 146.5 67C145.427 67 144.501 66.7083 143.873 66.2893C143.237 65.8656 143 65.39 143 65C143 64.61 143.237 64.1344 143.873 63.7107C144.501 63.2917 145.427 63 146.5 63C147.573 63 148.499 63.2917 149.127 63.7107C149.763 64.1344 150 64.61 150 65Z">
+                </path>
+                <rect stroke-width="2" stroke="#282828" fill="#FFFCAB" rx="1" height="7" width="5" y="63" x="187">
+                </rect>
+                <rect stroke-width="2" stroke="#282828" fill="#282828" rx="1" height="11" width="4" y="81" x="193">
+                </rect>
+                <rect stroke-width="3" stroke="#282828" fill="#DFDFDF" rx="2.5" height="90" width="121" y="1.5" x="6.5">
+                </rect>
+                <rect stroke-width="2" stroke="#282828" fill="#DFDFDF" rx="2" height="4" width="6" y="84" x="1"></rect>
+
+                <text x="35%" y="40%" text-anchor="middle" fill=" #001372"
+                  style="font-weight: bold; font-size:xx-large;">Bhavi </text>
+                <text x="35%" y="70%" text-anchor="middle" fill=" #001372"
+                  style="font-weight: bold; font-size: x-large;">Creations</text>
+
+              </svg>
+            </div>
+            <div class="truckTires">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15">
+                </circle>
+                <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15">
+                </circle>
+                <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+              </svg>
+            </div>
+            <div class="road"></div>
+
+            <svg xml:space="preserve" viewBox="0 0 453.459 453.459" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg" id="Capa_1" version="1.1" fill="#000000" class="lampPost">
+
+              <path d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993
+                      c-1.65,5.146-2.507,10.54-2.507,16.017c0,28.956,23.558,52.514,52.514,52.514c28.956,0,52.514-23.558,52.514-52.514
+                      c0-5.478-0.856-10.872-2.506-16.017h9.992c0-9.354-19.352-17.204-45.463-19.366v-8.954h-6.149C200.189,38.779,223.924,16,252.882,16
+                      c29.952,0,54.32,24.368,54.32,54.32c0,28.774-11.078,37.009-25.105,47.437c-17.444,12.968-37.216,27.667-37.216,78.884v113.914
+                      h-0.797c-5.068,0-9.174,4.108-9.174,9.177c0,2.844,1.293,5.383,3.321,7.066c-3.432,27.933-26.851,95.744-8.226,115.459v11.202h45.75
+                      v-11.202c18.625-19.715-4.794-87.527-8.227-115.459c2.029-1.683,3.322-4.223,3.322-7.066c0-5.068-4.107-9.177-9.176-9.177h-0.795
+                      V196.641c0-43.174,14.942-54.283,30.762-66.043c14.793-10.997,31.559-23.461,31.559-60.277C323.202,31.545,291.656,0,252.882,0z
+                      M232.77,111.694c0,23.442-19.071,42.514-42.514,42.514c-23.442,0-42.514-19.072-42.514-42.514c0-5.531,1.078-10.957,3.141-16.017
+                      h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"></path>
+            </svg>
+          </div>
+        </div>
+
+
+        <label for="check1" class="menuButton text-center onlyfortab">
+          <input id="check1" type="checkbox" class="toggleDropdown">
+          <span class="top"></span>
+          <span class="mid"></span>
+          <span class="bot"></span>
+        </label>
+        <ul class="dropdown-menu dropdown-menu-end menu_border">
+          <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
+          <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
+          <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="loader_butterflu" style="margin-bottom: -90px;">
+
+    <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M3.358 35.05c.435-.175.646-.408.861-.95.374-.94.698-1.52 1.145-2.05.78-.92 1.757-1.638 2.666-1.957.603-.212.9-.204 1.505.041.843.343 1.597.25 2.062-.254.95-1.029 3.95-6.873 5.841-11.376.869-2.07.831-1.882.797-3.962-.034-2.106-.024-2.064-.927-3.887-1.639-3.31-4.426-6.582-7.147-8.392C8.71 1.298 6.715.504 5.296.328c-.718-.09-2.465-.001-3.183.16C.943.752.279 1.268.279 1.917c0 .119.437 1.136.97 2.26.533 1.126 1.044 2.291 1.135 2.591.334 1.106.776 3.567.945 5.27.065.652.357 1.286.751 1.633.419.367 1.351.786 1.964.883.286.044.534.096.553.115.018.018-.129.128-.327.244-.761.446-1.432 1.439-1.74 2.574-.216.802-.194 2.914.045 4.121.24 1.212.575 2.318 1.031 3.403.46 1.092.535 1.458.439 2.135-.223 1.575-1.958 4.03-3.489 4.937-.693.41-.885.587-1.066.98-.173.375-.185.535-.069.953.223.802 1.206 1.326 1.937 1.033z"
+        fill="#000"></path>
+    </svg>
+
+
+    <svg viewBox="0 0 2.4 14.4" version="1.1" y="0" x="0" height="150" width="25" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.2 13c0 .641-.447 1.16-1 1.16-.553 0-1-.519-1-1.16V1.4C.2.759.647.24 1.2.24c.553 0 1 .519 1 1.16z"
+        fill="#000"></path>
+    </svg>
+
+
+    <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M15.105 35.155c-.42-.196-.627-.482-.902-1.253-.544-1.517-2.145-3.126-3.636-3.652-.69-.243-.887-.242-1.486.01-.617.26-1.342.278-1.798.045-.555-.283-1.76-2.262-3.476-5.708C2.628 22.232.984 18.575.455 17.144c-.236-.637-.237-.655-.237-2.485 0-2.164.01-2.209.9-4.013 1.011-2.049 2.53-4.189 4.185-5.9C7.679 2.293 9.783.995 12.49.313c.782-.197 1.554-.236 2.695-.137 1.619.14 2.38.38 2.882.909.21.22.246.321.243.684-.002.373-.122.67-.959 2.395-1.277 2.63-1.59 3.806-2.035 7.63-.111.951-.316 1.426-.809 1.87-.52.47-1.306.807-2.165.928l-.391.054.35.224c.897.574 1.58 1.674 1.834 2.956.193.969.12 2.791-.164 4.15-.222 1.061-.696 2.518-1.12 3.443-.336.735-.411 1.584-.203 2.3.505 1.738 2.056 3.692 3.736 4.705.693.417.938.83.874 1.476-.104 1.071-1.193 1.706-2.153 1.256z"
+        fill="#000"></path>
+    </svg>
+  </div>
+
+  <!-- 1st section -->
+
+  <section style="background: linear-gradient(to right,#f6f6ff,white );">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 text-center d-flex flex-column justify-content-center">
+          <h1 class="large_text"><b>Customized
+              Softwares</b></h1>
+
+          <div>
+            <h4 class="mini_text_light_blue"><strong> Billing Software </strong></h4>
+            <h4 class="mini_text_light_blue"><strong> Hospital Management </strong></h4>
+            <h4 class="mini_text_light_blue"><strong> Office Management </strong></h4>
+            <h4 class="mini_text_light_blue"><strong> Pharmacy Management </strong></h4>
+          </div>
+          <div>
+            <a href="contact_us.html"> <button class="sft_btn mt-2"> contact-us
+              </button></a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+          <img src="assests/images/bhavi/dev_3.gif" alt="" class="img-fluid mt-4">
+          <!-- <video src="assests/images/bhavi/dev_3.gif" autoplay loop></video> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <img src="assests/images/bhavi/dev_2.gif" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center text-center order-1 order-lg-2">
+          <h2 class="mt-5 large_text" style="font-size: 30px;">Custom Software: Our Process</h2>
+
+
+          <p class="normal_text">Developing customized software applications involves a strategic and collaborative
+            process to create tailored solutions that address specific business needs and objectives. At Bhavi
+            Creations, we follow a systematic approach to ensure that our custom software applications are designed,
+            developed, and implemented to meet the unique requirements of our clients. Let's explore the key stages of
+            the process and how customized software applications can be tailored to meet specific business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center d-none d-lg-block " style="margin-bottom: -900px;">
+    <img src="assests/images/update_img/frame.webp" style="border-radius: 10px;" class="img-fluid   " />
+  </div>
+
+  <section>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+
+
+
+
+        <div class="col-lg-6 row mt-5 mb-5 text-center">
+
+
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card_sft img-fluid">
+              <img src="assests/images/Bhavi_Creations/best_coustomized_softers_kakinada_bhavi_creations.webp" alt="">
+              <div class="card__content">
+                <p class="card__title" style="font-size:12px">Enhanced Efficiency and Productivity
+                </p>
+                <p class="card__description">Experience streamlined operations and increased productivity with our
+                  customized software solutions, tailored to optimize your business processes and workflows.</p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card_sft img-fluid">
+              <img src="assests/images/Bhavi_Creations/best_coustomized_softers_kkd_bhavi_creations.webp" alt="">
+              <div class="card__content">
+                <p class="card__title" style="font-size:12px">Seamless Integration and Scalability
+                </p>
+                <p class="card__description">Our software solutions seamlessly integrate with your existing systems and
+                  can scale with your business, ensuring smooth transitions and future-proofing your technology
+                  infrastructure.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card_sft img-fluid">
+              <img src="assests/images/Bhavi_Creations/Bhavi_best_coustomized_softers_kakinada_bhavi_creations.webp"
+                alt="">
+              <div class="card__content">
+                <p class="card__title" style="font-size:12px">Data-driven Decision Making
+                </p>
+                <p class="card__description">Leverage the power of data to make informed decisions and drive strategic
+                  initiatives with our customized software solutions, equipped with advanced analytics and reporting
+                  capabilities.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-6  col-md-6 mb-4">
+            <div class="card_sft img-fluid">
+              <!-- <img src="assests/images/Bhavi_Creations/new_Bhavi_best_coustomized_softers_kakinada_bhavi_creations.webp" -->
+              <img src="assests/images/Bhavi_Creations/new_Bhavi_best_coustomized_softers_kakinada_bhavi_creations - Copy - Copy.webp"
+                alt="">
+              <div class="card__content">
+                <p class="card__title" style="font-size:12px">Competitive Advantage and Differentiation
+                </p>
+                <p class="card__description">Stay ahead of the competition and differentiate your brand with our
+                  tailored software solutions, designed to address your unique business challenges and deliver
+                  exceptional value to your customers.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <p class="normal_text">Experience enhanced efficiency, seamless integration, and data-driven decision-making
+            with Bhavi Creations' customized software solutions. Our offerings empower businesses to scale seamlessly,
+            gain a competitive advantage, and differentiate their brand in the market. Unlock new possibilities for
+            growth and innovation by partnering with us today.</p>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mt-4 ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <img src="assests/images/bhavi/dev_4.gif" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6 text-center d-flex flex-column justify-content-center order-1 order-lg-2">
+          <h2 class="mini_text_light_blue" style="font-size: 26px;"> Introducing </h2>
+          <h1 class=" large_text ">Maximizing Efficiency and Innovation</h1>
+          <p class="normal_text">Unlock the full potential of your business with our customized software solutions. Our
+            tailored approach ensures that every aspect of your software aligns seamlessly with your operations, driving
+            efficiency and fostering innovation. Partner with Bhavi Creations to revolutionize your business processes
+            and stay ahead in today's competitive market.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="background-color: #232424; color: white;">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-6 col-md-12 col-sm-12  d-flex flex-column justify-content-center text-center">
+          <h2>Transformational Solutions</h2>
+          <p>Experience the transformative power of customized software solutions with Bhavi Creations. Our team is
+            dedicated to developing innovative and tailored software applications that align perfectly with your
+            business objectives. From streamlining operations to fostering innovation, our customized solutions are
+            designed to empower your organization for success in today's dynamic business landscape.</p>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center d-flex flex-column justify-content-center text-center">
+          <div class="svg-frame">
+            <svg style="--i:0;--j:0;">
+              <g id="out1">
+                <path
+                  d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z">
+                </path>
+                <path mask="url(#path-1-inside-1_111_3212)" stroke-miterlimit="16" stroke-width="2" stroke="#00FFFF"
+                  d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z">
+                </path>
+              </g>
+            </svg>
+
+            <svg style="--i:1;--j:1;">
+              <g id="out2">
+                <mask fill="white" id="path-2-inside-2_111_3212">
+                  <path
+                    d="M102.892 127.966C93.3733 142.905 88.9517 160.527 90.2897 178.19L94.3752 177.88C93.1041 161.1 97.3046 144.36 106.347 130.168L102.892 127.966Z">
+                  </path>
+                  <path
+                    d="M93.3401 194.968C98.3049 211.971 108.646 226.908 122.814 237.541L125.273 234.264C111.814 224.163 101.99 209.973 97.2731 193.819L93.3401 194.968Z">
+                  </path>
+                  <path
+                    d="M152.707 92.3592C140.33 95.3575 128.822 101.199 119.097 109.421L121.742 112.55C130.981 104.739 141.914 99.1897 153.672 96.3413L152.707 92.3592Z">
+                  </path>
+                  <path
+                    d="M253.294 161.699C255.099 175.937 253.132 190.4 247.59 203.639L243.811 202.057C249.075 189.48 250.944 175.74 249.23 162.214L253.294 161.699Z">
+                  </path>
+                  <path
+                    d="M172 90.0557C184.677 90.0557 197.18 92.9967 208.528 98.6474C219.875 104.298 229.757 112.505 237.396 122.621L234.126 125.09C226.869 115.479 217.481 107.683 206.701 102.315C195.921 96.9469 184.043 94.1529 172 94.1529V90.0557Z">
+                  </path>
+                  <path
+                    d="M244.195 133.235C246.991 138.442 249.216 143.937 250.83 149.623L246.888 150.742C245.355 145.34 243.242 140.12 240.586 135.174L244.195 133.235Z">
+                  </path>
+                  <path
+                    d="M234.238 225.304C223.932 237.338 210.358 246.126 195.159 250.604C179.961 255.082 163.79 255.058 148.606 250.534L149.775 246.607C164.201 250.905 179.563 250.928 194.001 246.674C208.44 242.42 221.335 234.071 231.126 222.639L234.238 225.304Z">
+                  </path>
+                </mask>
+                <path mask="url(#path-2-inside-2_111_3212)" fill="#00FFFF"
+                  d="M102.892 127.966L105.579 123.75L101.362 121.063L98.6752 125.28L102.892 127.966ZM90.2897 178.19L85.304 178.567L85.6817 183.553L90.6674 183.175L90.2897 178.19ZM94.3752 177.88L94.7529 182.866L99.7386 182.488L99.3609 177.503L94.3752 177.88ZM106.347 130.168L110.564 132.855L113.251 128.638L109.034 125.951L106.347 130.168ZM93.3401 194.968L91.9387 190.168L87.1391 191.569L88.5405 196.369L93.3401 194.968ZM122.814 237.541L119.813 241.54L123.812 244.541L126.813 240.542L122.814 237.541ZM125.273 234.264L129.272 237.265L132.273 233.266L128.274 230.265L125.273 234.264ZM97.2731 193.819L102.073 192.418L100.671 187.618L95.8717 189.02L97.2731 193.819ZM152.707 92.3592L157.567 91.182L156.389 86.3226L151.53 87.4998L152.707 92.3592ZM119.097 109.421L115.869 105.603L112.05 108.831L115.278 112.649L119.097 109.421ZM121.742 112.55L117.924 115.778L121.152 119.596L124.97 116.368L121.742 112.55ZM153.672 96.3413L154.849 101.201L159.708 100.023L158.531 95.1641L153.672 96.3413ZM253.294 161.699L258.255 161.07L257.626 156.11L252.666 156.738L253.294 161.699ZM247.59 203.639L245.66 208.251L250.272 210.182L252.203 205.569L247.59 203.639ZM243.811 202.057L239.198 200.126L237.268 204.739L241.88 206.669L243.811 202.057ZM249.23 162.214L248.601 157.253L243.641 157.882L244.269 162.842L249.23 162.214ZM172 90.0557V85.0557H167V90.0557H172ZM208.528 98.6474L206.299 103.123L206.299 103.123L208.528 98.6474ZM237.396 122.621L240.409 126.611L244.399 123.598L241.386 119.608L237.396 122.621ZM234.126 125.09L230.136 128.103L233.149 132.093L237.139 129.08L234.126 125.09ZM206.701 102.315L204.473 106.791L204.473 106.791L206.701 102.315ZM172 94.1529H167V99.1529H172V94.1529ZM244.195 133.235L248.601 130.87L246.235 126.465L241.83 128.83L244.195 133.235ZM250.83 149.623L252.195 154.433L257.005 153.067L255.64 148.257L250.83 149.623ZM246.888 150.742L242.078 152.107L243.444 156.917L248.254 155.552L246.888 150.742ZM240.586 135.174L238.22 130.768L233.815 133.134L236.181 137.539L240.586 135.174ZM234.238 225.304L238.036 228.556L241.288 224.759L237.491 221.506L234.238 225.304ZM195.159 250.604L196.572 255.4L196.572 255.4L195.159 250.604ZM148.606 250.534L143.814 249.107L142.386 253.899L147.178 255.326L148.606 250.534ZM149.775 246.607L151.203 241.816L146.411 240.388L144.983 245.18L149.775 246.607ZM194.001 246.674L195.415 251.47L195.415 251.47L194.001 246.674ZM231.126 222.639L234.379 218.841L230.581 215.589L227.329 219.386L231.126 222.639ZM98.6752 125.28C88.5757 141.13 83.8844 159.826 85.304 178.567L95.2754 177.812C94.0191 161.227 98.1709 144.681 107.109 130.653L98.6752 125.28ZM90.6674 183.175L94.7529 182.866L93.9976 172.895L89.912 173.204L90.6674 183.175ZM99.3609 177.503C98.1715 161.8 102.102 146.135 110.564 132.855L102.131 127.481C92.5071 142.585 88.0368 160.4 89.3895 178.258L99.3609 177.503ZM109.034 125.951L105.579 123.75L100.205 132.183L103.661 134.385L109.034 125.951ZM88.5405 196.369C93.8083 214.41 104.78 230.259 119.813 241.54L125.815 233.542C112.512 223.558 102.802 209.532 98.1397 193.566L88.5405 196.369ZM126.813 240.542L129.272 237.265L121.274 231.263L118.815 234.54L126.813 240.542ZM128.274 230.265C115.679 220.813 106.486 207.534 102.073 192.418L92.4735 195.221C97.493 212.412 107.948 227.513 122.272 238.263L128.274 230.265ZM95.8717 189.02L91.9387 190.168L94.7415 199.767L98.6745 198.619L95.8717 189.02ZM151.53 87.4998C138.398 90.681 126.188 96.8793 115.869 105.603L122.325 113.239C131.457 105.519 142.262 100.034 153.884 97.2187L151.53 87.4998ZM115.278 112.649L117.924 115.778L125.56 109.322L122.915 106.193L115.278 112.649ZM124.97 116.368C133.616 109.059 143.846 103.866 154.849 101.201L152.495 91.4818C139.981 94.5132 128.347 100.419 118.514 108.732L124.97 116.368ZM158.531 95.1641L157.567 91.182L147.848 93.5364L148.812 97.5185L158.531 95.1641ZM248.334 162.327C250.028 175.697 248.181 189.277 242.978 201.708L252.203 205.569C258.082 191.522 260.169 176.177 258.255 161.07L248.334 162.327ZM249.521 199.027L245.741 197.445L241.88 206.669L245.66 208.251L249.521 199.027ZM248.423 203.987C254.025 190.602 256.014 175.98 254.19 161.585L244.269 162.842C245.873 175.5 244.125 188.357 239.198 200.126L248.423 203.987ZM249.858 167.174L253.923 166.659L252.666 156.738L248.601 157.253L249.858 167.174ZM172 95.0557C183.903 95.0557 195.644 97.8172 206.299 103.123L210.757 94.1717C198.717 88.1761 185.45 85.0557 172 85.0557V95.0557ZM206.299 103.123C216.954 108.429 226.233 116.135 233.406 125.634L241.386 119.608C233.281 108.874 222.796 100.167 210.757 94.1717L206.299 103.123ZM234.383 118.631L231.113 121.1L237.139 129.08L240.409 126.611L234.383 118.631ZM238.116 122.077C230.393 111.849 220.403 103.552 208.93 97.8393L204.473 106.791C214.56 111.814 223.345 119.11 230.136 128.103L238.116 122.077ZM208.93 97.8393C197.458 92.1263 184.816 89.1529 172 89.1529V99.1529C183.269 99.1529 194.385 101.767 204.473 106.791L208.93 97.8393ZM177 94.1529V90.0557H167V94.1529H177ZM239.79 135.601C242.416 140.49 244.504 145.649 246.02 150.988L255.64 148.257C253.927 142.225 251.567 136.395 248.601 130.87L239.79 135.601ZM249.464 144.813L245.523 145.932L248.254 155.552L252.195 154.433L249.464 144.813ZM251.698 149.376C250.067 143.628 247.818 138.073 244.991 132.808L236.181 137.539C238.666 142.168 240.644 147.052 242.078 152.107L251.698 149.376ZM242.951 139.579L246.561 137.64L241.83 128.83L238.22 130.768L242.951 139.579ZM230.441 222.051C220.763 233.351 208.017 241.603 193.746 245.808L196.572 255.4C212.698 250.649 227.101 241.325 238.036 228.556L230.441 222.051ZM193.746 245.808C179.475 250.012 164.291 249.99 150.033 245.742L147.178 255.326C163.289 260.125 180.447 260.151 196.572 255.4L193.746 245.808ZM153.397 251.962L154.567 248.035L144.983 245.18L143.814 249.107L153.397 251.962ZM148.348 251.399C163.7 255.973 180.049 255.997 195.415 251.47L192.588 241.877C179.077 245.858 164.702 245.837 151.203 241.816L148.348 251.399ZM195.415 251.47C210.78 246.942 224.504 238.058 234.924 225.891L227.329 219.386C218.167 230.084 206.099 237.897 192.588 241.877L195.415 251.47ZM227.874 226.436L230.986 229.101L237.491 221.506L234.379 218.841L227.874 226.436Z">
+                </path>
+              </g>
+            </svg>
+
+            <svg style="--i:0;--j:2;">
+              <g id="inner3">
+                <path
+                  d="M195.136 135.689C188.115 131.215 179.948 128.873 171.624 128.946C163.299 129.019 155.174 131.503 148.232 136.099L148.42 136.382C155.307 131.823 163.368 129.358 171.627 129.286C179.886 129.213 187.988 131.537 194.954 135.975L195.136 135.689Z">
+                </path>
+                <path
+                  d="M195.136 208.311C188.115 212.784 179.948 215.127 171.624 215.054C163.299 214.981 155.174 212.496 148.232 207.901L148.42 207.618C155.307 212.177 163.368 214.642 171.627 214.714C179.886 214.786 187.988 212.463 194.954 208.025L195.136 208.311Z">
+                </path>
+                <path mask="url(#path-5-inside-3_111_3212)" fill="#00FFFF"
+                  d="M195.136 135.689L195.474 135.904L195.689 135.566L195.351 135.352L195.136 135.689ZM171.624 128.946L171.627 129.346L171.624 128.946ZM148.232 136.099L148.011 135.765L147.678 135.986L147.899 136.32L148.232 136.099ZM148.42 136.382L148.086 136.603L148.307 136.936L148.641 136.716L148.42 136.382ZM171.627 129.286L171.63 129.686L171.627 129.286ZM194.954 135.975L194.739 136.313L195.076 136.528L195.291 136.19L194.954 135.975ZM195.136 208.311L195.351 208.648L195.689 208.433L195.474 208.096L195.136 208.311ZM171.624 215.054L171.627 214.654L171.624 215.054ZM148.232 207.901L147.899 207.68L147.678 208.014L148.011 208.234L148.232 207.901ZM148.42 207.618L148.641 207.284L148.307 207.063L148.086 207.397L148.42 207.618ZM171.627 214.714L171.63 214.314L171.627 214.714ZM194.954 208.025L195.291 207.81L195.076 207.472L194.739 207.687L194.954 208.025ZM195.351 135.352C188.265 130.836 180.022 128.473 171.62 128.546L171.627 129.346C179.874 129.274 187.966 131.594 194.921 136.026L195.351 135.352ZM171.62 128.546C163.218 128.619 155.018 131.127 148.011 135.765L148.453 136.432C155.33 131.88 163.38 129.418 171.627 129.346L171.62 128.546ZM147.899 136.32L148.086 136.603L148.753 136.161L148.566 135.878L147.899 136.32ZM148.641 136.716C155.463 132.199 163.448 129.757 171.63 129.686L171.623 128.886C163.287 128.958 155.15 131.447 148.199 136.049L148.641 136.716ZM171.63 129.686C179.812 129.614 187.839 131.916 194.739 136.313L195.169 135.638C188.138 131.158 179.959 128.813 171.623 128.886L171.63 129.686ZM195.291 136.19L195.474 135.904L194.799 135.474L194.617 135.76L195.291 136.19ZM194.921 207.974C187.966 212.406 179.874 214.726 171.627 214.654L171.62 215.454C180.022 215.527 188.265 213.163 195.351 208.648L194.921 207.974ZM171.627 214.654C163.38 214.582 155.33 212.12 148.453 207.567L148.011 208.234C155.018 212.873 163.218 215.38 171.62 215.454L171.627 214.654ZM148.566 208.122L148.753 207.838L148.086 207.397L147.899 207.68L148.566 208.122ZM148.199 207.951C155.15 212.553 163.287 215.041 171.623 215.114L171.63 214.314C163.448 214.243 155.463 211.801 148.641 207.284L148.199 207.951ZM171.623 215.114C179.959 215.187 188.138 212.842 195.169 208.362L194.739 207.687C187.839 212.084 179.812 214.386 171.63 214.314L171.623 215.114ZM194.617 208.239L194.799 208.526L195.474 208.096L195.291 207.81L194.617 208.239Z">
+                </path>
+              </g>
+              <path stroke="#00FFFF"
+                d="M240.944 172C240.944 187.951 235.414 203.408 225.295 215.738C215.176 228.068 201.095 236.508 185.45 239.62C169.806 242.732 153.567 240.323 139.5 232.804C125.433 225.285 114.408 213.12 108.304 198.384C102.2 183.648 101.394 167.25 106.024 151.987C110.654 136.723 120.434 123.537 133.696 114.675C146.959 105.813 162.884 101.824 178.758 103.388C194.632 104.951 209.472 111.97 220.751 123.249"
+                id="out3"></path>
+            </svg>
+
+            <svg style="--i:1;--j:3;">
+              <g id="inner1">
+                <path fill="#00FFFF"
+                  d="M145.949 124.51L148.554 129.259C156.575 124.859 165.672 122.804 174.806 123.331C183.94 123.858 192.741 126.944 200.203 132.236C207.665 137.529 213.488 144.815 217.004 153.261C220.521 161.707 221.59 170.972 220.09 179.997L224.108 180.665L224.102 180.699L229.537 181.607C230.521 175.715 230.594 169.708 229.753 163.795L225.628 164.381C224.987 159.867 223.775 155.429 222.005 151.179C218.097 141.795 211.628 133.699 203.337 127.818C195.045 121.937 185.266 118.508 175.118 117.923C165.302 117.357 155.525 119.474 146.83 124.037C146.535 124.192 146.241 124.349 145.949 124.51ZM224.638 164.522C224.009 160.091 222.819 155.735 221.082 151.563C217.246 142.352 210.897 134.406 202.758 128.634C194.62 122.862 185.021 119.496 175.06 118.922C165.432 118.367 155.841 120.441 147.311 124.914L148.954 127.91C156.922 123.745 165.876 121.814 174.864 122.333C184.185 122.87 193.166 126.019 200.782 131.421C208.397 136.822 214.339 144.257 217.928 152.877C221.388 161.188 222.526 170.276 221.23 179.173L224.262 179.677C224.998 174.671 225.35 169.535 224.638 164.522Z"
+                  clip-rule="evenodd" fill-rule="evenodd"></path>
+                <path fill="#00FFFF"
+                  d="M139.91 220.713C134.922 217.428 130.469 213.395 126.705 208.758L130.983 205.286L130.985 205.288L134.148 202.721C141.342 211.584 151.417 217.642 162.619 219.839C173.821 222.036 185.438 220.232 195.446 214.742L198.051 219.491C197.759 219.651 197.465 219.809 197.17 219.963C186.252 225.693 173.696 227.531 161.577 225.154C154.613 223.789 148.041 221.08 142.202 217.234L139.91 220.713ZM142.752 216.399C148.483 220.174 154.934 222.833 161.769 224.173C173.658 226.504 185.977 224.704 196.689 219.087L195.046 216.09C185.035 221.323 173.531 222.998 162.427 220.82C151.323 218.643 141.303 212.747 134.01 204.122L131.182 206.5C134.451 210.376 138.515 213.607 142.752 216.399Z"
+                  clip-rule="evenodd" fill-rule="evenodd"></path>
+              </g>
+            </svg>
+
+            <svg style="--i:2;--j:4;">
+              <path fill="#00FFFF"
+                d="M180.956 186.056C183.849 184.212 186.103 181.521 187.41 178.349C188.717 175.177 189.013 171.679 188.258 168.332C187.503 164.986 185.734 161.954 183.192 159.65C180.649 157.346 177.458 155.883 174.054 155.46C170.649 155.038 167.197 155.676 164.169 157.288C161.14 158.9 158.683 161.407 157.133 164.468C155.582 167.528 155.014 170.992 155.505 174.388C155.997 177.783 157.524 180.944 159.879 183.439L161.129 182.259C159.018 180.021 157.648 177.186 157.207 174.141C156.766 171.096 157.276 167.989 158.667 165.245C160.057 162.5 162.261 160.252 164.977 158.806C167.693 157.36 170.788 156.788 173.842 157.167C176.895 157.546 179.757 158.858 182.037 160.924C184.317 162.99 185.904 165.709 186.581 168.711C187.258 171.712 186.992 174.849 185.82 177.694C184.648 180.539 182.627 182.952 180.032 184.606L180.956 186.056Z"
+                id="center1"></path>
+              <path fill="#00FFFF"
+                d="M172 166.445C175.068 166.445 177.556 168.932 177.556 172C177.556 175.068 175.068 177.556 172 177.556C168.932 177.556 166.444 175.068 166.444 172C166.444 168.932 168.932 166.445 172 166.445ZM172 177.021C174.773 177.021 177.021 174.773 177.021 172C177.021 169.227 174.773 166.979 172 166.979C169.227 166.979 166.979 169.227 166.979 172C166.979 174.773 169.227 177.021 172 177.021Z"
+                id="center"></path>
+            </svg>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="row my-4">
+        <!-- <div class=" "> -->
+        <div class="gearbox col-lg-6 col-md-12 col-sm-12 d-flex flex-row justify-content-center">
+          <div class="overlay"></div>
+          <div class="gear one">
+            <div class="gear-inner">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="gear two">
+            <div class="gear-inner">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="gear three">
+            <div class="gear-inner">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="gear four large">
+            <div class="gear-inner">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+          <!-- </div> -->
+
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center text-center">
+          <h2>Connect Today</h2>
+          <p>Ready to take your business to the next level? Get in touch with us today to explore how our customized
+            software solutions can drive process improvement, enhance efficiency, and unlock new opportunities for
+            growth and innovation. Let Bhavi Creations be your trusted partner on the journey to digital transformation.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="text-light foot_bg_img   mt-5 foot ">
+
+    <div class="container " style="padding-top: 100px;">
+        <div class="row">
+
+            <div class="   col-md-4 text-center order-2 order-md-1">
+
+                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
+                <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
+                    <span style="color:#ffffff; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>: +91 9642343434
+                </h5>
+
+
+                <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
+                    <div class="d-flex mail_text_box" style="margin-top: 10px;">
+                        <span class="tooltip-container  ">
+
+                            <span class="text">@</span>
+                        </span> &nbsp;
+
+                        <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
+
+                    </div>
+                </a>
+
+
+                <div class="mt-3  " style="margin-bottom: 55px;">
+                    <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
+                            style="font-size: 24px; color: #ffffff; "
+                            class="fa-brands fa-facebook px-1  footicon"></i></a>
+                    <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
+                            style="font-size: 24px; color: #ffffff;"
+                            class="fa-brands fa-instagram  px-1 footicon"></i></a>
+                    <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
+                            style="font-size: 24px; color: #ffffff;"
+                            class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
+                            style="font-size: 24px; color: #ffffff;"
+                            class="fa-brands fa-youtube  px-1  footicon"></i></a>
+                    <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
+                            style="font-size: 24px;  color: #ffffff;  "
+                            class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+                    <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
+                            style="font-size: 24px ; color: #ffffff;"
+                            class="fa-brands fa-pinterest px-1  footicon"></i></a>
+
+
+                </div>
+            </div>
+
+
+            <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
+                <a href="index.html">
+                    <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+                        style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
+                </a>
+
+            </div>
+
+
+            <div class="    col-md-4 text-center order-3  order-md-3">
+
+                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
+                
+                <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
+                    Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
+
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+    <div class="footer-area-bottom theme-bg text-center pb-4">
+        <div class="container" style="margin-top: 30px;  ">
+            <div class="row">
+                <div class=" col-12">
+                    <div class="footer-widget__copyright">
+                        <span style="color:#ffffff;font-weight: 400;">   
+                            <a
+                                href="terms.html"
+                                style="text-decoration: none; color: #ffffff">Terms & conditions |
+                            </a>
+                            <a
+                                href="privacy.html"
+                                style="text-decoration: none; color: #ffffff">
+                                Privacy & policy ||</a>
+                                <a
+                                href="https://bhavicreations.com"
+                                style="text-decoration: none; color: #ffffff">
+                                Design with love @</a> <a
+                                href="https://bhavicreations.com"
+                                style="text-decoration: none; color: #ffffff">
+                                <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
+
+                             </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="footer-area-bottom theme-bg">
+        <div class="container">
+            <div class="row pt-4">
+        
+                <div class="  col-md-6 col-12">
+                    <div class="footer-widget__copyright-info info-direction">
+                        <p class="  last_text">
+                        <a
+                            href="terms.html"
+                            style="text-decoration: none; color: #ffffff">Terms & conditions
+                        </a>
+                        <a
+                            href="privacy.html"
+                            style="text-decoration: none; color: #ffffff">
+                            Privacy & policy</a>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="col-md-6 col-12 second_divv_end_brand">
+                <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
+                    <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
+                    <p class="mini_text last_text mb-0">
+                        Design with love @
+                    </p>
+                    <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
+                    </a>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+    </div> -->
+
+</footer>
+  <!-- ENDING  FOOTER -->
+
+
+
+
+  <div class="d-md-none">
+    <a href="index.html" style="text-decoration: none;">
+      <button class="Btn_back_buttn     ">
+        <div class="sign_back">
+          <svg viewBox="0 0 512 512">
+            <path
+              d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+            </path>
+          </svg>
+        </div>
+        <div class="text_go_back ">Go Back</div>
+      </button>
+    </a>
+  </div>
+
+  <div class="d-none d-md-block">
+    <a href="index.html" style="text-decoration: none;  ">
+      <div style="display: flex; align-items: center;">
+        <button class="Btn_back_buttn " style="display: flex; align-items: center;">
+          <div>
+            <svg class="" viewBox="0 0 512 512"
+              style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
+              <path fill="#ffffff"
+                d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+              </path>
+            </svg>
+          </div>
+          <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+        </button>
+      </div>
+    </a>
+  </div>
+
+
+
+
+
+  <button id="scrollBtn" onclick="scrollToTop()">
+    <div class="pyramid-loader animate__animated animate__bounceInDown">
+      <div class="wrapper ">
+        <span class="side side1"></span>
+        <span class="side side2"></span>
+        <span class="side side3"></span>
+        <span class="side side4"></span>
+        <span class="shadow"></span>
+      </div>
+    </div>
+  </button>
+
+
+
+
+
+
+
+  <!-- redirections  -->
+
+  <div class="open_bar open_home">
+    <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+      <span class="text">
+        <div class="borde-back">
+          <div class="icon">
+            <i class="fa-solid fa-house" style="color: white;"></i>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+  <div class="open_bar open_services">
+    <a href="main_offline_markiting.html" style="text-decoration: none;"> <span class="bar_in bar_Offline"> Offline
+        Br...</span>
+      <span class="text">
+        <div class="borde-back">
+          <div class="icon">
+            <i class="fa-solid fa-file-contract" style="color: white;"></i>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+  <div class="open_bar open_contact">
+    <a href="traditional_marketing.html" style="text-decoration: none;"> <span
+        class="bar_in bar_Traditional">Traditional Mar...</span>
+      <span class="text">
+        <div class="borde-back">
+          <div class="icon">
+            <i class="fa-solid fa-chart-simple" style="color: white;"></i>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+
+  <div class="open_bar open_four">
+    <a href="online_branding_mainpage.html" style="text-decoration: none;"> <span class="bar_in bar_Online">Online
+        Br...
+      </span>
+      <span class="text">
+        <div class="borde-back">
+          <div class="icon">
+            <i class="fa-solid fa-laptop-code" style="color: white;"></i>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+
+
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional, smooth scrolling animation
+      });
+    }
+
+    // Show scroll button when scrolling down
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollBtn").style.display = "block";
+      } else {
+        document.getElementById("scrollBtn").style.display = "none";
+      }
+    }
+
+
+
+  </script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      // Toggle dropdown on button click
+      $('.toggleDropdown').change(function () {
+        if ($(this).is(':checked')) {
+          $('.dropdown-menu').show();
+        } else {
+          $('.dropdown-menu').hide();
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+        window.omnisend = window.omnisend || [];
+        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+        omnisend.push(["track", "$pageViewed"]);
+        !function(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=!0,
+        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
+        var t=document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(e,t)}();
+</script>
+</body>
+
+</html>
