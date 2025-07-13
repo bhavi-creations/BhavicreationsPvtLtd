@@ -422,73 +422,474 @@
                 <div class="col-md-6">
                     <h2 class="heading">Our Esteemed Clients</h2>
                 </div>
+                <div class="col-md-2 text-right">
+                    <a class="btn btn-primary mb-3 mr-5 " style="background-color: #1160A9;"
+                        href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " style="background-color: #1160A9;  "
+                        href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
                 <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
                     <select id="clientFilter" class="form-select w-auto d-inline-block">
                         <option value="all">All</option>
+                        <option value="hopsital">hopsital </option>
                         <option value="dental">Dental</option>
                         <option value="gynaic">Gynaic</option>
                         <option value="multispeciality">Multispeciality</option>
+                        <option value="cowandcalf">cowandcalf</option>
+                        <option value="lab">lab</option>
+                        <option value="plasticsurgeon">plasticsurgeon</option>
+                        <option value="diagnostics">diagnostics</option>
+                        
+                        <option value="Creative Agency">Creative Agency</option>
+                        <option value="Cultural ">Cultural </option>
+                        <option value="Cancer Specialist">Cancer Specialist</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value=""></option>
+                        
+                        
+                        
+                        
                         <option value="school">School</option>
                     </select>
                 </div>
             </div>
 
             <div class="row" id="clientLogos">
+
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+
+                    <div class="carousel-item active">
+                        <div class="row">
+
+
+                            <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://arunahospital.org/index.html" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://onestopvascular.com/" target="_blank">
+                                    <img style="height: 100px; width:180px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_One_stop__logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Dermatology">
+                                <a href="https://srihariskinandkidneyclinic.com/index.html" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="cowandcalf">
+                                <a href="https://www.cowandcalf.com/" target="_blank">
+                                    <img style="width:150px;height: 120px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-cow_and_caulf _bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://neurostarhospital.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_neurostar_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
+                                <a href="https://www.qualitycarelabs.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design-Quality_care_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Gynaic">
+                                <a href="https://coupleclinics.in/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_couples_clinic_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="hopsital">
+                                <a href="https://bhavicreations.com/"
+                                    target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design-suryachandrahomeo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="plasticsurgeon">
+                                <a href="https://drsubhashplasticsurgeon.com/" target="_blank">
+                                    <img style="height: 120px; width: 200px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-dr.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://unosuperspecialityclinics.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="">
+                                <a href="https://mythrienterprises.com/index.html" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
+                                <a href="https://abhieeraamdiagnostics.com/" target="_blank">
+                                    <img style="width: 150px; height: 140px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-abhi_ram_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="plasticsurgeon" >
+                                <a href="https://drsubhashplasticsurgeon.com/" target="_blank">
+                                    <img style="height: 120px; width: 200px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-dr.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://unosuperspecialityclinics.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
+                                <a href="https://mythrienterprises.com/index.html" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
+                                <a href="https://abhieeraamdiagnostics.com/" target="_blank">
+                                    <img style="width: 150px; height: 140px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-abhi_ram_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
+                                <a href="https://bhavicreations.com/">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_emergancy_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
+                                <a href="https://bhavicreations.com/">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_ABC_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category=" ">
+                                <a href="https://bhavicreations.com/">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="https://srisuryachandradentalhospital.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_dental_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="https://primehospitalskkd.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Kakinada_pharmacy_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img style="height: 130px;width: 100px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_RS_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                             
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category=" Cultural">
+                                <a href="https://hindudharmikapeetham.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_hindu_darmika_peetam_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_emergancy_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_ABC_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
+                                <a href="https://srisuryachandradentalhospital.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_dental_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center"> 
+                                <a href="https://primehospitalskkd.com/" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Kakinada_pharmacy_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center">
+                                <a href="#">
+                                    <img style="height: 130px;width: 100px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_RS_hospital_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Cultural">
+                                <a href="https://hindudharmikapeetham.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_hindu_darmika_peetam_logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://arunahospital.org/index.html" target="_blank">
+                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://onestopvascular.com/" target="_blank">
+                                    <img style="height: 100px; width:180px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_One_stop__logo_bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+
+                                </a>
+                            </div>
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://srihariskinandkidneyclinic.com/index.html" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
+                                <a href="https://appledentalvzm.in/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/apple-dental-logo.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
+                                <a href="https://krishnadentacureclinic.com/index.php" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/krishna_new_logo.png    "
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="dental">
+                                <a href="https://leeladentalhospital.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/leela_dental.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Gynaic">
+                                <a href="#" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/leela_gynaecoligy.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="dental">
+                                <a href="https://revanshdentalclinic.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/revansh_logo.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Cancer Specialist">
+                                <a href="https://askoncologist.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/ask oncology.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
+                                <a href="https://visiondentalguntur.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/vision.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
+                                <a href="https://srinivasadentalkakinada.com/" target="_blank">
+                                    <img style="height: 150px;width: 150px;"
+                                        src="assests/images/Bhavi_Creations/srinivasa.png"
+                                        alt="" class="img-fluid">
+                                </a>
+                            </div>
+
+
+
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
+                                <a href="https://onestopvascular.com/" target="_blank">
+                                    <img style="height: 100px; width:180px;"
+                                        src="assests/images/Bhavi_Creations/bluecrestschool.png"
+                                        alt="" class="img-fluid">
+
+                                </a>
+                            </div>
+
+
+                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="cowandcalf">
+                                <a href="https://www.cowandcalf.com/" target="_blank">
+                                    <img style="width:150px;height: 120px;"
+                                        src="assests/images/Bhavi_Creations/Best_logo_design-cow_and_caulf _bhavi_creations.webp"
+                                        alt="" class="img-fluid">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <!-- DENTAL -->
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
+                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
                     <a href="https://appledental.bhavicreations.com/index.php" target="_blank">
                         <img src="assests/images/Bhavi_Creations/apple-dental-logo.png" alt="Apple Dental"
-                            class="img-fluid" style="max-height:150px">
+                            class="img-fluid" >
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
                     <a href="https://krishnadentacureclinic.com/index.php" target="_blank">
                         <img src="assests/images/Bhavi_Creations/krishna_new_logo.png" alt="Krishna Dental"
-                            class="img-fluid" style="max-height:150px">
+                            class="img-fluid" >
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
                     <a href="https://revanshdentalclinic.com/" target="_blank">
                         <img src="assests/images/Bhavi_Creations/revansh_logo.png" alt="Revansh Dental"
-                            class="img-fluid" style="max-height:150px">
+                            class="img-fluid" >
                     </a>
-                </div>
+                </div> -->
 
                 <!-- GYNAIC -->
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="gynaic">
+                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="gynaic">
                     <a href="https://leelagynichospital.com/" target="_blank">
                         <img src="assests/images/Bhavi_Creations/leela_gynaecoligy.png" alt="Leela Gynaic"
-                            class="img-fluid" style="max-height:150px">
+                            class="img-fluid" >
                     </a>
-                </div>
+                </div> -->
 
                 <!-- MULTISPECIALITY -->
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="multispeciality">
+                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="multispeciality">
                     <a href="https://unosuperspecialityclinics.com/" target="_blank">
                         <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
-                            alt="UNO Super Speciality" class="img-fluid" style="max-height:150px">
+                            alt="UNO Super Speciality" class="img-fluid" >
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="multispeciality">
                     <a href="https://primehospitalskkd.com/" target="_blank">
                         <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
-                            alt="Prime Hospital" class="img-fluid" style="max-height:150px">
+                            alt="Prime Hospital" class="img-fluid" >
                     </a>
-                </div>
+                </div> -->
 
                 <!-- SCHOOLS -->
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="school">
+                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="school">
                     <a href="#">
                         <img src="assests/images/Bhavi_Creations/bluecrestschool.png" alt="Blue Crest School"
-                            class="img-fluid" style="max-height:150px">
+                            class="img-fluid" >
                     </a>
                 </div>
                 <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="school">
                     <a href="#">
                         <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
-                            alt="Sri Surya Vidyalaya" class="img-fluid" style="max-height:150px">
+                            alt="Sri Surya Vidyalaya" class="img-fluid" >
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -497,7 +898,7 @@
         const filterSelect = document.getElementById('clientFilter');
         const clientItems = document.querySelectorAll('.client-item');
 
-        filterSelect.addEventListener('change', function () {
+        filterSelect.addEventListener('change', function() {
             const value = this.value;
             clientItems.forEach(item => {
                 if (value === 'all' || item.dataset.category === value) {
@@ -759,10 +1160,6 @@
 
 
     <script>
-
-
-
-
         // Function to scroll to the top of the page
         function scrollToTop() {
             window.scrollTo({
@@ -772,7 +1169,9 @@
         }
 
         // Show scroll button when scrolling down
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -781,18 +1180,15 @@
                 document.getElementById("scrollBtn").style.display = "none";
             }
         }
-
-
-
     </script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Initialize the carousel
             $('#carouselExampleControls').carousel();
 
             // Attach an event listener to the carousel slide event
-            $('#carouselExampleControls').on('slid.bs.carousel', function () {
+            $('#carouselExampleControls').on('slid.bs.carousel', function() {
                 // Get the index of the active carousel item
                 var activeIndex = $('.carousel-item.active').index();
 
@@ -810,7 +1206,7 @@
                     case 3:
                         $('#viewProjectLink').attr('href', 'https://unosuperspecialityclinics.com/');
                         break;
-                    // Add more cases if needed
+                        // Add more cases if needed
                 }
             });
         });
@@ -824,9 +1220,9 @@
 
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Toggle dropdown on button click
-            $('.toggleDropdown').change(function () {
+            $('.toggleDropdown').change(function() {
                 if ($(this).is(':checked')) {
                     $('.dropdown-menu').show();
                 } else {
@@ -840,7 +1236,7 @@
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
-        !function () {
+        ! function() {
             var e = document.createElement("script");
             e.type = "text/javascript", e.async = !0,
                 e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";

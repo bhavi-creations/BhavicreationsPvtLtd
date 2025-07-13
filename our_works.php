@@ -743,15 +743,7 @@
                 </div>
                 <div class="col-3 col-md-3 col-lg-2">
                     <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'images')">Posters</button> -->
-
-
-
-
-
-
-
-
-
+ 
 
                     <button class="active team_devision_btn" data-bs-target="#pills-all" type="button" role="tab"
                         class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'images')"
@@ -838,11 +830,7 @@
 
 
                     </button>
-
-
-
-
-
+ 
 
                 </div>
 
