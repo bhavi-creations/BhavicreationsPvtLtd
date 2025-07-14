@@ -1,3 +1,30 @@
+<?php
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'bhavicreations_db');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch media
+$sql = "SELECT media_type, file_path FROM our_works";
+$result = $conn->query($sql);
+
+// Group media
+$media = [];
+while ($row = $result->fetch_assoc()) {
+    $type = $row['media_type'];
+    $file = $row['file_path'];
+    $media[$type][] = $file;
+}
+?>
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -743,7 +770,7 @@
                 </div>
                 <div class="col-3 col-md-3 col-lg-2">
                     <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'images')">Posters</button> -->
- 
+
 
                     <button class="active team_devision_btn" data-bs-target="#pills-all" type="button" role="tab"
                         class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'images')"
@@ -830,7 +857,7 @@
 
 
                     </button>
- 
+
 
                 </div>
 
@@ -1274,91 +1301,329 @@
             <!-- Tab Content -->
             <div id="all" class="media-tab-content active"></div>
 
-            <div id="images" class="media-tab-content ">
 
 
 
-                <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
-                <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
-                <img src="assests/images/portfolio/posters/poster_3.png" alt="" class="img-fluid">
-
-                <img src="assests/images/portfolio/posters/p12.png" alt="">
-                <img src="assests/images/portfolio/posters/p11.png" alt="">
-                <img src="assests/images/portfolio/posters/p13.png" alt="">
-                <img src="assests/images/portfolio/posters/p14.png" alt="">
-                <img src="assests/images/portfolio/posters/p15.png" alt="">
-                <img src="assests/images/portfolio/posters/p16.png" alt="">
-                <img src="assests/images/portfolio/posters/p17.png" alt="">
-                <img src="assests/images/portfolio/posters/p18.png" alt="">
 
 
 
-                <img src="assests/images/portfolio/posters/" alt="">
+
+
+
+            <!-- Posters -->
+            <div id="images" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Posters'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
 
-            <div id="videos" class="media-tab-content"><!-- creative real   -->
-                <!-- <video controls src="sample.mp4"></video> -->
-                <!-- <video controls src="assests/images//portfolio/creative reels/apple creative.mp4"
-                    style="width: 30%;"></video> -->
-                <!-- <video controls src="assests/images/portfolio/creative reels/bhavi creations's Video - Jun 11, 2025-VEED.mp4"
-                    style="width: 30%;"></video> -->
-
-
-
-                <!--   <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"
-                    style="width: 30%;"></video> <video controls src="assests/images/portfolio/creative reels//goku and spiderman reel.mp4" 
-                    style="width: 30%;"></video> <video controls src="assests/images/portfolio/creative reels/krishna dental creative.mp4"
-                    style="width: 30%;"></video> <video controls src="assests/images/portfolio/creative reels/krishna reel.mp4"
-                    style="width: 30%;"></video>--> <video controls
-                    src="assests/images/portfolio/creative reels/apple creative.mp4" style="width: 30%;"></video>
-                <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"
-                    style="width: 30%;"></video>
-                <video controls src="assests/images/portfolio/creative reels/krishna dental creative.mp4"
-                    style="width: 30%;"></video>
-                <video controls
-                    src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"
-                    style="width: 30%;"></video>
-
-
-
+            <!-- Logos -->
+            <div id="logos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Logos'] ?? [] as $file): ?>
+                        <div class="col-md-3 col-6 mb-3">
+                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <div id="reels" class="media-tab-content"><!-- testimonials  -->
 
-                <video controls src="assests/images/portfolio/testimonials/apple testimonial.mp4"
-                    style="width: 30%;"></video>
-                <video controls src="assests/images/portfolio/testimonials/krishna testmonial.mp4"
-                    style="width: 30%;"></video>
+            <!-- Videos -->
+            <div id="graphics" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Videos'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="uploads/staff/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <div id="logos" class="media-tab-content"> <!-- logo -->
 
-                <img src="assests/images/portfolio/logo/1.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/2.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/3.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/4.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/5.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/6.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/7.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/8.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/9.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/10.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/11.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/12.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/13.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/14.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/15.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/16.png" alt="" width="height400px">
-                <img src="assests/images/portfolio/logo/17.png" alt="" width="height400px">
+            <!-- Testimonials -->
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="./admin/public/uploads/staff $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <div id="banners" class="media-tab-content"><!-- broucher  -->
 
-                <!-- <img src="assests/images/portfolio/festival posters/baalayam sriramanavami.1.jpg" alt=""
-                    style="width: 300px;"> -->
+            <!-- Brochures -->
+            <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Brochures'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <div id="graphics" class="media-tab-content"> <!-- video add this  -->
 
-                <video controls src="assests/images/portfolio/educational videos/srinivasa educational video.mp4"
-                    style="width: 50%;"></video>
+            <!-- Creative Reels -->
+            <div id="videos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Creative Reels'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="uploads/staff/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
+
+
+
+
+
+
+
+            <!--             
+            <div id="images" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Posters'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="uploads/posters/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="logos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Logos'] as $file): ?>
+                        <div class="col-md-3 col-6 mb-3">
+                            <img src="uploads/logos/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="graphics" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Videos'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/videos/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+       
+            <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Brochures'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="uploads/brochures/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+          
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/testimonials/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="videos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Creative Reels'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/creative_reels/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div id="images" class="media-tab-content ">
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_3.png" alt="" class="img-fluid">
+
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p12.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p11.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p13.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p14.png" alt="">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div> -->
+
+            <!-- creative real   -->
+            <!-- <div id="videos" class="media-tab-content">
+
+
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/creative reels/apple creative.mp4" style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/creative reels/krishna dental creative.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+
+            </div> -->
+            <!-- testimonials  -->
+
+            <!-- <div id="reels" class="media-tab-content">
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/testimonials/krishna testmonial.mp4"></video>
+                    </div>
+
+
+
+                </div>
+
+            </div> -->
+
+            <!-- logo -->
+
+            <!-- <div id="logos" class="media-tab-content"> 
+                <div class="row">
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/2.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/3.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/4.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/5.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/6.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/7.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/8.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/9.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/10.png" alt="">
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/11.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"><img src="assests/images/portfolio/logo/12.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/13.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/14.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/15.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"><img src="assests/images/portfolio/logo/16.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/17.png" alt=""></div>
+                    </div>
+                </div>
+
+            </div> -->
+            <!-- broucher  -->
+            <!-- <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/apple fathers day.jpg" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/ask oncologist  bakrid.jpg" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/baalayam sriramanavami.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div> -->
+            <!-- video add this  -->
+            <!-- <div id="graphics" class="media-tab-content"> 
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/educational videos/srinivasa educational video.mp4"></video>
+                    </div>
+                </div>
+
+            </div> -->
+
         </div>
 
         <!-- JS -->
@@ -1393,7 +1658,7 @@
             }
 
             // ✅ On page load, show all media types by default
-            window.onload = function () {
+            window.onload = function() {
                 showMediaTab(null, 'all');
             };
         </script>
@@ -1447,13 +1712,13 @@
             }
 
             // ✅ Automatically load 'all' on page load
-            window.onload = function () {
+            window.onload = function() {
                 showMediaTab(null, 'all');
             };
         </script>
 
 
-
+        </div>
 
 
 
@@ -1565,7 +1830,7 @@
             <div class="container">
                 <div class="row pt-4">
             
-                    <div class="  col-md-6 col-12">
+                    <div class="  col-md-4 col-12">
                         <div class="footer-widget__copyright-info info-direction">
                             <p class="  last_text">
                             <a
@@ -1580,7 +1845,7 @@
                         </div>
                     </div>
             
-                    <div class="col-md-6 col-12 second_divv_end_brand">
+                    <div class="col-md-4 col-12 second_divv_end_brand">
                     <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
                         <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
                         <p class="mini_text last_text mb-0">
@@ -1701,10 +1966,6 @@
 
 
         <script>
-
-
-
-
             // Function to scroll to the top of the page
             function scrollToTop() {
                 window.scrollTo({
@@ -1714,7 +1975,9 @@
             }
 
             // Show scroll button when scrolling down
-            window.onscroll = function () { scrollFunction() };
+            window.onscroll = function() {
+                scrollFunction()
+            };
 
             function scrollFunction() {
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -1723,9 +1986,6 @@
                     document.getElementById("scrollBtn").style.display = "none";
                 }
             }
-
-
-
         </script>
 
 
@@ -1733,12 +1993,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 // Initial state
                 $(".Rajahmundry").hide();
 
                 // Dropdown change event
-                $("#branchdropdown").change(function () {
+                $("#branchdropdown").change(function() {
                     var selectedBranch = $(this).val();
 
                     // Hide all content
@@ -1779,7 +2039,7 @@
                     interval: 3000
                 });
 
-                $('.carousel .carousel-item').each(function () {
+                $('.carousel .carousel-item').each(function() {
                     var minPerSlide = 3;
                     var next = $(this).next();
                     if (!next.length) {
@@ -1797,7 +2057,7 @@
                     }
                 });
 
-                $('.carousel2 .carousel-item').each(function () {
+                $('.carousel2 .carousel-item').each(function() {
                     var minPerSlide = 3;
                     var next = $(this).next();
                     if (!next.length) {
@@ -1823,9 +2083,9 @@
 
 
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 // Toggle dropdown on button click
-                $('.toggleDropdown').change(function () {
+                $('.toggleDropdown').change(function() {
                     if ($(this).is(':checked')) {
                         $('.dropdown-menu').show();
                     } else {
@@ -1843,7 +2103,7 @@
             window.omnisend = window.omnisend || [];
             omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
             omnisend.push(["track", "$pageViewed"]);
-            !function () {
+            ! function() {
                 var e = document.createElement("script");
                 e.type = "text/javascript", e.async = !0,
                     e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";

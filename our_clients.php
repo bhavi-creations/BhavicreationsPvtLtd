@@ -448,11 +448,7 @@
                         <option value="Cultural ">Cultural </option>
                         <option value="Cancer Specialist">Cancer Specialist</option>
                         <option value="Dermatology">Dermatology</option>
-                        <option value=""></option>
-                        
-                        
-                        
-                        
+                      
                         <option value="school">School</option>
                     </select>
                 </div>
@@ -893,7 +889,7 @@
             </div>
         </div>
     </section>
-
+  
     <script>
         const filterSelect = document.getElementById('clientFilter');
         const clientItems = document.querySelectorAll('.client-item');
