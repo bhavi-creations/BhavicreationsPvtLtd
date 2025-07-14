@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +41,7 @@
                 <div class="container-fluid">
 
                     <form id="mediaUploadForm" action="upload_works.php" method="POST" enctype="multipart/form-data" style="color:black;">
-
-                        <!-- Always show this: Select Media Type -->
+                        <!-- Select Media Type -->
                         <div class="mb-3">
                             <label for="mediaType" class="form-label text-primary">Select Media Type</label>
                             <select class="form-control" name="media_type" id="mediaType" required>
@@ -59,18 +56,20 @@
                             </select>
                         </div>
 
-                        <!-- Always visible file input -->
+                        <!-- Upload File -->
                         <div class="mb-3">
                             <label for="mediaFile" class="form-label text-primary">Upload File (Image or Video)</label>
                             <input type="file" class="form-control" name="media_file" id="mediaFile" accept="image/*,video/*" required />
                         </div>
 
+                        <!-- Submit Buttons -->
                         <div class="row p-3">
                             <div class="col-xl-7 col-sm-2"></div>
                             <button type="reset" class="btn btn-danger mx-1 my-2 col-xl-2">Clear</button>
                             <button type="submit" class="btn btn-success mx-1 my-2 col-xl-2">Upload</button>
                         </div>
                     </form>
+
 
 
                     <script>
