@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Send email
         $mail->send();
 
-        // Redirect to contact_us.html with a success flag
-        header('Location: contact_us.html?success=1');
+        // Redirect to contact_us.php with a success flag
+        header('Location: contact_us.php?success=1');
         exit;
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

@@ -156,7 +156,7 @@
         <div class="container nav_main p-3">
             <div class="d-flex justify-content-between align-items-center">
 
-                <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+                <a href="index.php"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
                         style="width: 150px;height: 65px;" alt=""></a>
 
 
@@ -229,12 +229,12 @@
                     <span class="bot"></span>
                 </label>
                 <ul class="dropdown-menu dropdown-menu-end menu_border">
-                    <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
                     <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
                 </ul>
 
@@ -322,7 +322,7 @@
 
         <div class=" my-5 page-content_trad ">
 
-            <a class="card_trad" href="traditional_pamphlets.html" style="text-decoration: none; color: white;">
+            <a class="card_trad" href="traditional_pamphlets.php" style="text-decoration: none; color: white;">
                 <div>
                     <div class="content_trad ">
                         <h2 class="title_trad text-center">Pamphlets</h2>
@@ -330,7 +330,7 @@
                     </div>
                 </div>
             </a>
-            <a class="card_trad" href="hoarding.html" style="text-decoration: none; color: white;">
+            <a class="card_trad" href="hoarding.php" style="text-decoration: none; color: white;">
                 <div>
                     <div class="content_trad">
                         <h2 class="title_trad">Hoardings</h2>
@@ -339,7 +339,7 @@
                 </div>
             </a>
 
-            <a class="card_trad" href="theatre_ads.html" style="text-decoration: none; color: white;">
+            <a class="card_trad" href="theatre_ads.php" style="text-decoration: none; color: white;">
                 <div>
                     <div class="content_trad">
                         <h2 class="title_trad">Theatre ads</h2>
@@ -348,7 +348,7 @@
                 </div>
             </a>
 
-            <a class="card_trad" href="no_parking_ads.html" style="text-decoration: none; color: white;">
+            <a class="card_trad" href="no_parking_ads.php" style="text-decoration: none; color: white;">
                 <div>
                     <div class="content_trad">
                         <h2 class="title_trad">No Parking Boards</h2>
@@ -358,7 +358,7 @@
             </a>
 
 
-            <a class="card_trad" href="traditional_flex.html" style="text-decoration: none; color: white;">
+            <a class="card_trad" href="traditional_flex.php" style="text-decoration: none; color: white;">
                 <div>
                     <div class="content_trad">
                         <h2 class="title_trad">Flex Designs</h2>
@@ -409,7 +409,7 @@
                         present that resonates deeply with your target market. Let's elevate your brand with the
                         elegance and impact of traditional marketing services that truly stand the test of time.</p>
 
-                    <a href="contact_us.html"><button class="contact_button mr-auto">Contact us</button></a>
+                    <a href="contact_us.php"><button class="contact_button mr-auto">Contact us</button></a>
                 </div>
 
                 <div class="col-lg-3 col-md-5 col-sm-10 my-4 text-center d-flex flex-column justify-content-end">
@@ -513,7 +513,7 @@
                     <h2 class="text-center" style="color: white;"><b>Lets Work Together</b></h2>
 
                     <div class="text-center mt-2">
-                        <a href="contact_us.html"><button class="cta ">
+                        <a href="contact_us.php"><button class="cta ">
                                 <span>Contact Us</span>
                                 <svg width="15px" height="10px" viewBox="0 0 13 10">
                                     <path d="M1,5 L11,5"></path>
@@ -596,7 +596,7 @@
 
 
                 <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
@@ -626,11 +626,11 @@
                         <div class="footer-widget__copyright">
                             <span style="color:#ffffff;font-weight: 400;">   
                                 <a
-                                    href="terms.html"
+                                    href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
                                 </a>
                                 <a
-                                    href="privacy.html"
+                                    href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
                                     <a
@@ -658,11 +658,11 @@
                         <div class="footer-widget__copyright-info info-direction">
                             <p class="  last_text">
                             <a
-                                href="terms.html"
+                                href="terms.php"
                                 style="text-decoration: none; color: #ffffff">Terms & conditions
                             </a>
                             <a
-                                href="privacy.html"
+                                href="privacy.php"
                                 style="text-decoration: none; color: #ffffff">
                                 Privacy & policy</a>
                             </p>
@@ -690,7 +690,7 @@
 
 
     <div class="d-md-none">
-        <a href="index.html" style="text-decoration: none;">
+        <a href="index.php" style="text-decoration: none;">
             <button class="Btn_back_buttn     ">
                 <div class="sign_back">
                     <svg viewBox="0 0 512 512">
@@ -705,7 +705,7 @@
     </div>
 
     <div class="d-none d-md-block">
-        <a href="index.html" style="text-decoration: none;  ">
+        <a href="index.php" style="text-decoration: none;  ">
             <div style="display: flex; align-items: center;">
                 <button class="Btn_back_buttn " style="display: flex; align-items: center;">
                     <div>
@@ -737,7 +737,7 @@
   <!-- redirections  -->
 
   <div class="open_bar open_home">
-    <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+    <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
       <span class="text">
         <div class="borde-back">
           <div class="icon">
@@ -748,7 +748,7 @@
     </a>
   </div>
   <div class="open_bar open_services">
-    <a href="main_offline_markiting.html" style="text-decoration: none;"> <span class="bar_in bar_Online">Online
+    <a href="main_offline_markiting.php" style="text-decoration: none;"> <span class="bar_in bar_Online">Online
         Br...</span>
       <span class="text">
         <div class="borde-back">
@@ -760,7 +760,7 @@
     </a>
   </div>
   <div class="open_bar open_contact">
-    <a href="main_offline_markiting.html" style="text-decoration: none;"> <span class="bar_in bar_Offline"> Offline Br...</span>
+    <a href="main_offline_markiting.php" style="text-decoration: none;"> <span class="bar_in bar_Offline"> Offline Br...</span>
 
       <span class="text">
         <div class="borde-back">

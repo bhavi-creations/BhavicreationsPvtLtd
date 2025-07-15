@@ -354,7 +354,7 @@
         <div class="container nav_main p-3">
             <div class="d-flex justify-content-between align-items-center">
 
-                <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+                <a href="index.php"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
                         style="width: 150px;height: 65px;" alt=""></a>
 
 
@@ -427,12 +427,12 @@
                     <span class="bot"></span>
                 </label>
                 <ul class="dropdown-menu dropdown-menu-end menu_border">
-                    <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
                     <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
                 </ul>
 
@@ -505,7 +505,7 @@
                             <p class="py-2">Elevate your online presence with expertly crafted strategies encompassing logo
                                 design, web development, SEO, social media management, and more.</p>
 
-                            <a href="online_branding_mainpage.html"   style="text-decoration: none; color: white; ">
+                            <a href="online_branding_mainpage.php"   style="text-decoration: none; color: white; ">
                                                                 
                                     <button class="hello">
                                         <span class="hello1">
@@ -643,7 +643,7 @@
                             <p class="py-2">Enhance your offline presence with meticulously designed strategies covering logo creation, print materials, signage, event branding, and more.</p>
                             <!-- <p>Our offline branding solutions, from captivating brochures to eye-catching vinyl stickers, guarantee a lasting impression for your brand in the physical world.</p> -->
 
-                            <a href="main_offline_markiting.html"   style="text-decoration: none; color: white; ">
+                            <a href="main_offline_markiting.php"   style="text-decoration: none; color: white; ">
 
                                 <button class="hello">
                                     <span class="hello1">
@@ -783,7 +783,7 @@
                                 including impactful pamphlets, attention-grabbing hoardings, and dynamic theatre
                                 ads. </p> -->
 
-                            <a href="traditional_marketing.html"  style="text-decoration: none; color: white; ">
+                            <a href="traditional_marketing.php"  style="text-decoration: none; color: white; ">
 
                                 <button class="hello">
                                     <span class="hello1">
@@ -1618,7 +1618,7 @@
 
 
                 <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
@@ -1648,11 +1648,11 @@
                         <div class="footer-widget__copyright">
                             <span style="color:#ffffff;font-weight: 400;">   
                                 <a
-                                    href="terms.html"
+                                    href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
                                 </a>
                                 <a
-                                    href="privacy.html"
+                                    href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
                                     <a
@@ -1680,11 +1680,11 @@
                         <div class="footer-widget__copyright-info info-direction">
                             <p class="  last_text">
                             <a
-                                href="terms.html"
+                                href="terms.php"
                                 style="text-decoration: none; color: #ffffff">Terms & conditions
                             </a>
                             <a
-                                href="privacy.html"
+                                href="privacy.php"
                                 style="text-decoration: none; color: #ffffff">
                                 Privacy & policy</a>
                             </p>
@@ -1714,7 +1714,7 @@
 
 
     <div class="d-md-none">
-        <a href="index.html" style="text-decoration: none;">
+        <a href="index.php" style="text-decoration: none;">
             <button class="Btn_back_buttn     ">
                 <div class="sign_back">
                     <svg viewBox="0 0 512 512">
@@ -1729,7 +1729,7 @@
     </div>
 
     <div class="d-none d-md-block">
-        <a href="index.html" style="text-decoration: none;  ">
+        <a href="index.php" style="text-decoration: none;  ">
             <div style="display: flex; align-items: center;">
                 <button class="Btn_back_buttn " style="display: flex; align-items: center;">
                     <div>
@@ -1768,7 +1768,7 @@
    <!-- redirections  -->
 
    <div class="open_bar open_home">
-    <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+    <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
         <span class="text">
             <div class="borde-back">
                 <div class="icon">
@@ -1780,7 +1780,7 @@
 </div>
 
 <div class="open_bar open_services">
-    <a href="about.html" style="text-decoration: none;"> <span class="bar_in bar_Services">About Us</span>
+    <a href="about.php" style="text-decoration: none;"> <span class="bar_in bar_Services">About Us</span>
         <span class="text">
             <div class="borde-back">
                 <div class="icon">
@@ -1791,7 +1791,7 @@
     </a>
 </div>
 <div class="open_bar open_contact">
-    <a href="contact_us.html" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
+    <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
         <span class="text">
             <div class="borde-back">
                 <div class="icon">

@@ -195,7 +195,7 @@
         <div class="container nav_main p-3">
             <div class="d-flex justify-content-between align-items-center">
 
-                <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+                <a href="index.php"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
                         style="width: 150px;height: 65px;" alt=""></a>
 
 
@@ -268,12 +268,12 @@
                     <span class="bot"></span>
                 </label>
                 <ul class="dropdown-menu dropdown-menu-end menu_border">
-                    <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
                     <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a>
                     </li>
                 </ul>
@@ -464,7 +464,7 @@
 
 
                             <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://arunahospital.org/index.html" target="_blank">
+                                <a href="https://arunahospital.org/index.php" target="_blank">
                                     <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
                                         alt="" class="img-fluid">
                                 </a>
@@ -480,7 +480,7 @@
                             </div>
 
                             <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Dermatology">
-                                <a href="https://srihariskinandkidneyclinic.com/index.html" target="_blank">
+                                <a href="https://srihariskinandkidneyclinic.com/index.php" target="_blank">
                                     <img style="height: 150px;width: 150px;"
                                         src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
                                         alt="" class="img-fluid">
@@ -540,7 +540,7 @@
                             </div>
 
                             <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="">
-                                <a href="https://mythrienterprises.com/index.html" target="_blank">
+                                <a href="https://mythrienterprises.com/index.php" target="_blank">
                                     <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
                                         alt="" class="img-fluid">
                                 </a>
@@ -577,7 +577,7 @@
                             </div>
 
                             <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
-                                <a href="https://mythrienterprises.com/index.html" target="_blank">
+                                <a href="https://mythrienterprises.com/index.php" target="_blank">
                                     <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
                                         alt="" class="img-fluid">
                                 </a>
@@ -718,7 +718,7 @@
                             </div>
 
                             <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://arunahospital.org/index.html" target="_blank">
+                                <a href="https://arunahospital.org/index.php" target="_blank">
                                     <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
                                         alt="" class="img-fluid">
                                 </a>
@@ -736,7 +736,7 @@
 
 
                             <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://srihariskinandkidneyclinic.com/index.html" target="_blank">
+                                <a href="https://srihariskinandkidneyclinic.com/index.php" target="_blank">
                                     <img style="height: 150px;width: 150px;"
                                         src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
                                         alt="" class="img-fluid">
@@ -971,7 +971,7 @@
 
 
                 <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
@@ -1000,9 +1000,9 @@
                     <div class=" col-12">
                         <div class="footer-widget__copyright">
                             <span style="color:#ffffff;font-weight: 400;">
-                                <a href="terms.html" style="text-decoration: none; color: #ffffff">Terms & conditions |
+                                <a href="terms.php" style="text-decoration: none; color: #ffffff">Terms & conditions |
                                 </a>
-                                <a href="privacy.html" style="text-decoration: none; color: #ffffff">
+                                <a href="privacy.php" style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
                                 <a href="https://bhavicreations.com" style="text-decoration: none; color: #ffffff">
                                     Design with love @</a> <a href="https://bhavicreations.com"
@@ -1027,11 +1027,11 @@
                     <div class="footer-widget__copyright-info info-direction">
                         <p class="  last_text">
                         <a
-                            href="terms.html"
+                            href="terms.php"
                             style="text-decoration: none; color: #ffffff">Terms & conditions
                         </a>
                         <a
-                            href="privacy.html"
+                            href="privacy.php"
                             style="text-decoration: none; color: #ffffff">
                             Privacy & policy</a>
                         </p>
@@ -1058,7 +1058,7 @@
 
 
     <div class="d-md-none">
-        <a href="index.html" style="text-decoration: none;">
+        <a href="index.php" style="text-decoration: none;">
             <button class="Btn_back_buttn     ">
                 <div class="sign_back">
                     <svg viewBox="0 0 512 512">
@@ -1073,7 +1073,7 @@
     </div>
 
     <div class="d-none d-md-block">
-        <a href="index.html" style="text-decoration: none;  ">
+        <a href="index.php" style="text-decoration: none;  ">
             <div style="display: flex; align-items: center;">
                 <button class="Btn_back_buttn " style="display: flex; align-items: center;">
                     <div>
@@ -1112,7 +1112,7 @@
     <!-- redirections  -->
 
     <div class="open_bar open_home">
-        <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+        <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">
@@ -1124,7 +1124,7 @@
     </div>
 
     <div class="open_bar open_services">
-        <a href="services.html" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
+        <a href="services.php" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">
@@ -1135,7 +1135,7 @@
         </a>
     </div>
     <div class="open_bar open_contact">
-        <a href="contact_us.html" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
+        <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">

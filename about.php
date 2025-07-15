@@ -385,7 +385,7 @@
         <div class="container nav_main p-3">
             <div class="d-flex justify-content-between align-items-center">
 
-                <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+                <a href="index.php"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
                         style="width: 150px;height: 65px;" alt=""></a>
 
 
@@ -458,12 +458,12 @@
                     <span class="bot"></span>
                 </label>
                 <ul class="dropdown-menu dropdown-menu-end menu_border">
-                    <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
-                    <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
+                    <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
+                    <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
                     <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
                 </ul>
 
@@ -2320,7 +2320,7 @@
                         extraordinary, reach out to us today. Let's create magic together!</p>
 
 
-                    <a href="contact_us.html"><button class="sec_3_btn_team"
+                    <a href="contact_us.php"><button class="sec_3_btn_team"
                             style="vertical-align:middle"><span>Join</span></button></a>
 
 
@@ -2371,7 +2371,7 @@
 
             <div class=" mt-5 ml-auto">
 
-                <a href="contact_us.html" style="text-decoration: none;">
+                <a href="contact_us.php" style="text-decoration: none;">
                     <button class="tony_start_btn" alt="Get in Touch">
                         <i>G</i>
                         <i>e</i>
@@ -2453,7 +2453,7 @@
 
 
                 <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
@@ -2483,11 +2483,11 @@
                         <div class="footer-widget__copyright">
                             <span style="color:#ffffff;font-weight: 400;">   
                                 <a
-                                    href="terms.html"
+                                    href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
                                 </a>
                                 <a
-                                    href="privacy.html"
+                                    href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
                                     <a
@@ -2515,11 +2515,11 @@
                         <div class="footer-widget__copyright-info info-direction">
                             <p class="  last_text">
                             <a
-                                href="terms.html"
+                                href="terms.php"
                                 style="text-decoration: none; color: #ffffff">Terms & conditions
                             </a>
                             <a
-                                href="privacy.html"
+                                href="privacy.php"
                                 style="text-decoration: none; color: #ffffff">
                                 Privacy & policy</a>
                             </p>
@@ -2547,7 +2547,7 @@
 
 
     <div class="d-md-none">
-        <a href="index.html" style="text-decoration: none;">
+        <a href="index.php" style="text-decoration: none;">
             <button class="Btn_back_buttn     ">
                 <div class="sign_back">
                     <svg viewBox="0 0 512 512">
@@ -2562,7 +2562,7 @@
     </div>
 
     <div class="d-none d-md-block">
-        <a href="index.html" style="text-decoration: none;  ">
+        <a href="index.php" style="text-decoration: none;  ">
             <div style="display: flex; align-items: center;">
                 <button class="Btn_back_buttn " style="display: flex; align-items: center;">
                     <div>
@@ -2597,7 +2597,7 @@
     <!-- redirections  -->
 
     <div class="open_bar open_home">
-        <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+        <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">
@@ -2609,7 +2609,7 @@
     </div>
 
     <div class="open_bar open_services">
-        <a href="services.html" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
+        <a href="services.php" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">
@@ -2620,7 +2620,7 @@
         </a>
     </div>
     <div class="open_bar open_contact">
-        <a href="contact_us.html" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
+        <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
             <span class="text">
                 <div class="borde-back">
                     <div class="icon">

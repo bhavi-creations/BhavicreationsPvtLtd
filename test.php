@@ -356,7 +356,7 @@
 
 
           <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-              <a href="index.html">
+              <a href="index.php">
                   <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                       style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
               </a>
@@ -386,11 +386,11 @@
                   <div class="footer-widget__copyright">
                       <span style="color:#ffffff;font-weight: 400;">   
                           <a
-                              href="terms.html"
+                              href="terms.php"
                               style="text-decoration: none; color: #ffffff">Terms & conditions |
                           </a>
                           <a
-                              href="privacy.html"
+                              href="privacy.php"
                               style="text-decoration: none; color: #ffffff">
                               Privacy & policy ||</a>
                               <a
@@ -418,11 +418,11 @@
                   <div class="footer-widget__copyright-info info-direction">
                       <p class="  last_text">
                       <a
-                          href="terms.html"
+                          href="terms.php"
                           style="text-decoration: none; color: #ffffff">Terms & conditions
                       </a>
                       <a
-                          href="privacy.html"
+                          href="privacy.php"
                           style="text-decoration: none; color: #ffffff">
                           Privacy & policy</a>
                       </p>

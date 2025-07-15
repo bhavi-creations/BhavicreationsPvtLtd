@@ -55,7 +55,7 @@
     <div class="container nav_main p-3">
       <div class="d-flex justify-content-between align-items-center">
 
-        <a href="index.html"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
+        <a href="index.php"> <img src="assests/images/bhavi/foot_bhavi_logo.webp" class="img-fluid   "
             style="width: 150px;height: 65px;" alt=""></a>
 
 
@@ -126,12 +126,12 @@
           <span class="bot"></span>
         </label>
         <ul class="dropdown-menu dropdown-menu-end menu_border">
-          <li><a class="dropdown-item menu_item_black" href="index.html">Home</a></li>
-          <li><a class="dropdown-item menu_item_black" href="about.html">About</a></li>
-          <li><a class="dropdown-item menu_item_black" href="services.html">Services</a></li>
-          <li><a class="dropdown-item menu_item_black  " href="Portfolio.html">Portfolio</a></li>
-          <li><a class="dropdown-item menu_item_black  " href="contact_us.html">Contact Us</a></li>
-          <li><a class="dropdown-item menu_item_black  " href="our_works.html">Our Works</a></li>
+          <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
+          <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
+          <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
+          <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
                     <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
         </ul>
 
@@ -228,7 +228,7 @@
                     <strong>Leave a lasting impression with every handshake.</strong>
                   </p>
 
-                  <a href="visting_cards.html" style="text-decoration: none; ">
+                  <a href="visting_cards.php" style="text-decoration: none; ">
                     <button class="card_buttons " style="margin-top:40px;">
                       <span class="span-mother">
                         <span>V</span>
@@ -269,7 +269,7 @@
                   <p>
                     <strong>Turn your ideas into captivating stories.</strong>
                   </p>
-                  <a href="brochures.html" style="text-decoration: none; ">
+                  <a href="brochures.php" style="text-decoration: none; ">
                     <button class="card_buttons " style="margin-top:80px;">
                       <span class="span-mother">
                         <span>B</span>
@@ -307,7 +307,7 @@
                   <p>
                     <strong>Stick with style, stand out anywhere.</strong>
                   </p>
-                  <a href="venyl_stickers.html" style="text-decoration: none; ">
+                  <a href="venyl_stickers.php" style="text-decoration: none; ">
                     <button class="card_buttons " style="margin-top:45px;">
                       <span class="span-mother">
                         <span>V</span>
@@ -346,7 +346,7 @@
                     <strong>Spread your message, one hand at a time.</strong>
                   </p>
 
-                  <a href="offline_pamphlets.html" style="text-decoration: none; ">
+                  <a href="offline_pamphlets.php" style="text-decoration: none; ">
                     <button class="card_buttons " style="margin-top:75px;">
                       <span class="span-mother  ">
                         <span>P</span>
@@ -404,7 +404,7 @@
                   <p>
                     <strong>Bold statements that catch eyes and captivate minds.</strong>
                   </p>
-                  <a href="offline_flex.html" style="text-decoration: none; ">
+                  <a href="offline_flex.php" style="text-decoration: none; ">
                     <button class="card_buttons  " style="margin-top: 55px;">
                       <span class="span-mother">
                         <span>F</span>
@@ -434,7 +434,7 @@
                   <p>
                     <strong>Knowledge meets creativity in every page.</strong>
                   </p>
-                  <a href="text_books.html" style="text-decoration: none; ">
+                  <a href="text_books.php" style="text-decoration: none; ">
                     <button class="card_buttons " style="margin-top:45px;">
                       <span class="span-mother">
                         <span>T</span>
@@ -466,7 +466,7 @@
                   <p>
                     <strong>Stay organized, stay remembered, every day of the year.</strong>
                   </p>
-                  <a href="calenders.html" style="text-decoration: none; ">
+                  <a href="calenders.php" style="text-decoration: none; ">
                     <button class="card_buttons  " style="margin-top: 55px;">
                       <span class="span-mother">
                         <span>C</span>
@@ -508,7 +508,7 @@
                   <p>
                     <strong>Write your story with every page, reflect your brand's journey.</strong>
                   </p>
-                  <a href="dairys.html" style="text-decoration: none; ">
+                  <a href="dairys.php" style="text-decoration: none; ">
                     <button class="card_buttons  " style="margin-top: 55px;">
                       <span class="span-mother">
                         <span>D</span>
@@ -579,7 +579,7 @@
               today to explore how Bhavi Creations can help you make a lasting impression in the physical world and
               drive real-world results for your business.</p>
             <div class="col-6">
-              <a href="contact_us.html" style="text-decoration: none;"><button class="conct_btn mb-5">
+              <a href="contact_us.php" style="text-decoration: none;"><button class="conct_btn mb-5">
                   <span>Connect Us</span>
                 </button>
               </a>
@@ -699,7 +699,7 @@
 
 
             <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                         style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                 </a>
@@ -729,11 +729,11 @@
                     <div class="footer-widget__copyright">
                         <span style="color:#ffffff;font-weight: 400;">   
                             <a
-                                href="terms.html"
+                                href="terms.php"
                                 style="text-decoration: none; color: #ffffff">Terms & conditions |
                             </a>
                             <a
-                                href="privacy.html"
+                                href="privacy.php"
                                 style="text-decoration: none; color: #ffffff">
                                 Privacy & policy ||</a>
                                 <a
@@ -761,11 +761,11 @@
                     <div class="footer-widget__copyright-info info-direction">
                         <p class="  last_text">
                         <a
-                            href="terms.html"
+                            href="terms.php"
                             style="text-decoration: none; color: #ffffff">Terms & conditions
                         </a>
                         <a
-                            href="privacy.html"
+                            href="privacy.php"
                             style="text-decoration: none; color: #ffffff">
                             Privacy & policy</a>
                         </p>
@@ -792,7 +792,7 @@
 
 
   <div class="d-md-none">
-    <a href="index.html" style="text-decoration: none;">
+    <a href="index.php" style="text-decoration: none;">
       <button class="Btn_back_buttn     ">
         <div class="sign_back">
           <svg viewBox="0 0 512 512">
@@ -807,7 +807,7 @@
   </div>
 
   <div class="d-none d-md-block">
-    <a href="index.html" style="text-decoration: none;  ">
+    <a href="index.php" style="text-decoration: none;  ">
       <div style="display: flex; align-items: center;">
         <button class="Btn_back_buttn " style="display: flex; align-items: center;">
           <div>
@@ -844,7 +844,7 @@
   <!-- redirections  -->
 
   <div class="open_bar open_home">
-    <a href="index.html" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+    <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
       <span class="text">
         <div class="borde-back">
           <div class="coni">
@@ -855,7 +855,7 @@
     </a>
   </div>
   <div class="open_bar open_services">
-    <a href="online_branding_mainpage.html" style="text-decoration: none;"> <span class="bar_in bar_Online">Online
+    <a href="online_branding_mainpage.php" style="text-decoration: none;"> <span class="bar_in bar_Online">Online
         Br...
       </span>
       <span class="text">
@@ -868,7 +868,7 @@
     </a>
   </div>
   <div class="open_bar open_contact">
-    <a href="traditional_marketing.html" style="text-decoration: none;"> <span
+    <a href="traditional_marketing.php" style="text-decoration: none;"> <span
         class="bar_in bar_Traditional">Traditional Mar...</span>
       <span class="text">
         <div class="borde-back">

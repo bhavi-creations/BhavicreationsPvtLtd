@@ -164,13 +164,13 @@
       </label>
 
       <ul class="dropdown-menu dropdown-menu-end menu_border">
-        <li><a class="dropdown-item menu_item" href="index.html">Home</a></li>
-        <li><a class="dropdown-item menu_item" href="about.html">About</a></li>
-        <li><a class="dropdown-item menu_item" href="services.html">Services</a></li>
-        <li><a class="dropdown-item menu_item  " href="Portfolio.html">Portfolio</a></li>
-        <li><a class="dropdown-item menu_item  " href="contact_us.html">Contact Us</a></li>
-        <li class="d-none d-md-block"><a class="dropdown-item menu_item lol " href="our_works.html">Our Works</a></li>
-        <li class="d-md-none "><a class="dropdown-item menu_item  " href="our_works.html">Our Works</a></li>
+        <li><a class="dropdown-item menu_item" href="index.php">Home</a></li>
+        <li><a class="dropdown-item menu_item" href="about.php">About</a></li>
+        <li><a class="dropdown-item menu_item" href="services.php">Services</a></li>
+        <li><a class="dropdown-item menu_item  " href="Portfolio.php">Portfolio</a></li>
+        <li><a class="dropdown-item menu_item  " href="contact_us.php">Contact Us</a></li>
+        <li class="d-none d-md-block"><a class="dropdown-item menu_item lol " href="our_works.php">Our Works</a></li>
+        <li class="d-md-none "><a class="dropdown-item menu_item  " href="our_works.php">Our Works</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item  " href="http://office.bhavicreations.com/">Team Login</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item lol" href="https://invoice.bhavicreations.com">Admin Login</a></li>
       </ul>
@@ -206,7 +206,7 @@
           <a href="#" style="text-decoration: none; ">
 
 
-            <a href="contact_us.html"><button class="sec1-viewmore ceo_btn"> <span style="font-size: 20px;"> 👋</span>
+            <a href="contact_us.php"><button class="sec1-viewmore ceo_btn"> <span style="font-size: 20px;"> 👋</span>
                 Connect to Us </button></a>
 
 
@@ -290,7 +290,7 @@
       <div class="row  ">
 
         <div class="   col-sm-3  col-md-3  col-lg-3 cardo    animate__animated  animate__fadeInBottomLeft ">
-          <a href="online_branding_mainpage.html" style="text-decoration: none ;">
+          <a href="online_branding_mainpage.php" style="text-decoration: none ;">
             <div class="parent  ">
               <div class="card" style="border-radius: 20px !important;">
                 <div class="logo moye">
@@ -312,7 +312,7 @@
         </div>
 
         <div class="  col-sm-3   col-md-3 col-lg-3  cardo   animate__animated  animate__fadeInBottomLeft  ">
-          <a href="main_offline_markiting.html" style="text-decoration: none ;">
+          <a href="main_offline_markiting.php" style="text-decoration: none ;">
             <div class="parent">
               <div class="card" style="border-radius: 20px !important;">
                 <div class="logo moye">
@@ -333,7 +333,7 @@
           </a>
         </div>
         <div class="     col-sm-3  col-md-3 col-lg-3   cardo    animate__animated  animate__fadeInBottomRight  ">
-          <a href="traditional_marketing.html" style="text-decoration: none ;">
+          <a href="traditional_marketing.php" style="text-decoration: none ;">
             <div class="parent">
               <div class="card" style="border-radius: 20px !important;">
                 <div class="logo moye">
@@ -389,7 +389,7 @@
       <div class="row">
 
         <div class="col-6 button_card animate__animated  animate__fadeInBottomLeft">
-          <a href="online_branding_mainpage.html">
+          <a href="online_branding_mainpage.php">
             <button class="btn"
               style="color: white; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
               Online Branding
@@ -399,7 +399,7 @@
 
 
         <div class="col-6 button_card  animate__animated  animate__fadeInBottomRight">
-          <a href="main_offline_markiting.html">
+          <a href="main_offline_markiting.php">
 
             <button class="btn"
               style="color: white; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
@@ -409,7 +409,7 @@
         </div>
 
         <div class="col-6   animate__animated  animate__fadeInBottomLeft">
-          <a href="traditional_marketing.html">
+          <a href="traditional_marketing.php">
 
             <button class="btn"
               style="color: white; font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
