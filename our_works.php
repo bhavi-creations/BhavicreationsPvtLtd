@@ -440,6 +440,15 @@ while ($row = $result->fetch_assoc()) {
             }
 
         }
+
+
+        .media-equal-height {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 
 </head>
@@ -1299,15 +1308,51 @@ while ($row = $result->fetch_assoc()) {
             </div>
 
             <!-- Tab Content -->
-            <div id="all" class="media-tab-content active"></div>
+            <!-- <div id="all" class="media-tab-content active"></div> -->
+
+
+            <div id="all" class="media-tab-content active">
+                <div class="row">
+                    <?php
+                    foreach ($media as $type => $files) {
+                        foreach ($files as $file) {
+                            $ext = pathinfo($file, PATHINFO_EXTENSION);
+                            $filePath = 'uploads/staff/' . $file;
+
+                            // VIDEO
+                            if (in_array($ext, ['mp4', 'mov', 'avi', 'webm'])) {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <video class="media-equal-height" controls>
+                    <source src="' . $filePath . '" type="video/' . $ext . '">
+                  </video>
+                </div>';
+                            }
+                            // PDF
+                            elseif ($ext === 'pdf') {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <a href="' . $filePath . '" target="_blank" class="btn btn-outline-primary w-100 media-equal-height d-flex justify-content-center align-items-center">
+                    📄 View Brochure (PDF)
+                  </a>
+                </div>';
+                            }
+                            // IMAGE
+                            else {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <img src="' . $filePath . '" class="media-equal-height">
+                </div>';
+                            }
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
 
 
 
 
 
 
-
-
+            <!-- <img src="./admin/public/uploads/staff/" alt=""> -->
 
 
             <!-- Posters -->
@@ -1315,7 +1360,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="row">
                     <?php foreach ($media['Posters'] ?? [] as $file): ?>
                         <div class="col-md-4 col-12 mb-3">
-                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -1326,7 +1371,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="row">
                     <?php foreach ($media['Logos'] ?? [] as $file): ?>
                         <div class="col-md-3 col-6 mb-3">
-                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -1338,14 +1383,14 @@ while ($row = $result->fetch_assoc()) {
                     <?php foreach ($media['Videos'] ?? [] as $file): ?>
                         <div class="col-md-4 col-12 mb-3">
                             <video controls style="width: 100%;">
-                                <source src="uploads/staff/<?= $file ?>">
+                                <source src="admin/public/uploads/staff/<?= $file ?>">
                             </video>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
 
-            <!-- Testimonials -->
+            <!-- Testimonials 
             <div id="reels" class="media-tab-content">
                 <div class="row">
                     <?php foreach ($media['Testimonials'] ?? [] as $file): ?>
@@ -1356,26 +1401,63 @@ while ($row = $result->fetch_assoc()) {
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Brochures -->
+
+
+            <!-- Brochures-->
             <div id="banners" class="media-tab-content">
                 <div class="row">
                     <?php foreach ($media['Brochures'] ?? [] as $file): ?>
                         <div class="col-md-4 col-12 mb-3">
-                            <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                            <!-- <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid"> -->
+                            <?php if ($ext === 'pdf'): ?>
+                                <a href="uploads/staff/<?= $file ?>" target="_blank" class="btn btn-outline-primary w-100">
+                                    📄 View Brochure (PDF)
+                                </a>
+                            <?php else: ?>
+                                <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
 
-            <!-- Creative Reels -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Testimonials -->
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="admin/public/uploads/staff/<?= $file ?>" type="video/mp4">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+
+
+            <!-- Creative Reels  -->
             <div id="videos" class="media-tab-content">
                 <div class="row">
                     <?php foreach ($media['Creative Reels'] ?? [] as $file): ?>
                         <div class="col-md-4 col-12 mb-3">
                             <video controls style="width: 100%;">
-                                <source src="uploads/staff/<?= $file ?>">
+                                <source src="admin/public/uploads/staff/<?= $file ?>">
                             </video>
                         </div>
                     <?php endforeach; ?>
@@ -1388,12 +1470,12 @@ while ($row = $result->fetch_assoc()) {
 
 
 
-            <!--             
-            <div id="images" class="media-tab-content">
+
+            <!-- <div id="images" class="media-tab-content">
                 <div class="row">
                     <?php foreach ($media['Posters'] as $file): ?>
                         <div class="col-md-4 col-12 mb-3">
-                            <img src="uploads/posters/<?= $file ?>" class="img-fluid">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -1458,7 +1540,7 @@ while ($row = $result->fetch_assoc()) {
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div> -->
+            </div>  -->
 
 
 

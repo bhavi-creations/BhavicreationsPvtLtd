@@ -58,8 +58,8 @@
 
                         <!-- Upload File -->
                         <div class="mb-3">
-                            <label for="mediaFile" class="form-label text-primary">Upload File (Image or Video)</label>
-                            <input type="file" class="form-control" name="media_file" id="mediaFile" accept="image/*,video/*" required />
+                            <label for="mediaFile" class="form-label text-primary">Upload File (Image, Video, or PDF)</label>
+                            <input type="file" class="form-control" name="media_file" id="mediaFile" accept="image/*,video/*,.pdf" required />
                         </div>
 
                         <!-- Submit Buttons -->
@@ -69,6 +69,7 @@
                             <button type="submit" class="btn btn-success mx-1 my-2 col-xl-2">Upload</button>
                         </div>
                     </form>
+
 
 
 
