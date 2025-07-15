@@ -1,3 +1,30 @@
+<?php
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'bhavicreations_db');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch media
+$sql = "SELECT media_type, file_path FROM our_works";
+$result = $conn->query($sql);
+
+// Group media
+$media = [];
+while ($row = $result->fetch_assoc()) {
+    $type = $row['media_type'];
+    $file = $row['file_path'];
+    $media[$type][] = $file;
+}
+?>
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -11,18 +38,19 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Portfolio Bhavi Creations</title>
+    <title>Bhavi Creations</title>
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
 
-    <link rel="stylesheet" href="assests/traditional.css">
-    <link rel="stylesheet" href="assests/traditional_animation.css">
-    <link rel="stylesheet" href="assests/footer_animations.css">
+    <link rel="stylesheet" href="assests/about.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assests/about_animation.css">
+    <link rel="stylesheet" href="assests/footer_animations.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -30,165 +58,407 @@
     <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assests/branding.css">
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"> -->
-
-
+    <link rel="stylesheet" href="assests/branding.css">
 
     <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
 
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- */
+        @media (max-width: 768px) {
+            .carousel-inner .carousel-item>div {
+                display: none;
+            }
 
-
-
-
-
-
-
-        .poppins-thin {
-            font-family: "Poppins", sans-serif;
-            font-weight: 200;
-            font-style: normal;
+            .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
         }
 
-        * {
-            font-family: "Poppins", sans-serif;
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
         }
 
+        /* display 3 */
+        @media (min-width: 768px) {
 
-        .sec1 {
-            background-color: #F8F8F8;
+            .carousel-inner .carousel-item-right.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(33.333%);
+            }
+
+            .carousel-inner .carousel-item-left.active,
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-33.333%);
+            }
         }
 
-        .para {
-            font-size: 30px;
+        .carousel-inner .carousel-item-right,
+        .carousel-inner .carousel-item-left {
+            transform: translateX(0);
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 338px;
+            perspective: 1000px;
+            font-family: sans-serif;
+        }
+
+        .title {
+            font-size: 1.5em;
             font-weight: 900;
-            padding-left: -20px;
-            margin-left: -52px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border: 1px solid coral;
+            border-radius: 1rem;
+        }
+
+        .flip-card-front {
+            background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+                    rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+            color: coral;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+                    bisque 40%, rgb(255, 185, 160) 78%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* .img-fluid {
+            width: auto;
+            height: 350px;
+        } */
+
+
+
+
+
+
+
+
+        .team_devision_btn {
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: #4c83fa;
+            font-size: 17px;
+            font-weight: 1000;
+            color: #ffffff;
+            border: 3px solid #4c83fa;
+            border-radius: 50px;
+            box-shadow: 0 0 0 #ffffff;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .star-1 {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+        }
+
+        .star-2 {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-3 {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-4 {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 45%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+        }
+
+        .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0 #4c83fa);
+            z-index: -5;
+            transition: all 0.8s ease;
+        }
+
+        .team_devision_btn:hover {
+            background: transparent;
+            color: #4c83fa;
+            box-shadow: 0 0 0px #4c83fa;
+        }
+
+        .team_devision_btn:hover .star-1 {
+            position: absolute;
+            top: -80%;
+            left: -30%;
+            width: 25px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-2 {
+            position: absolute;
+            top: -0%;
+            left: 10%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-3 {
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-4 {
+            position: absolute;
+            top: 30%;
+            left: 80%;
+            width: 8px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-5 {
+            position: absolute;
+            top: 25%;
+            left: 115%;
+            width: 15px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+        .team_devision_btn:hover .star-6 {
+            position: absolute;
+            top: 5%;
+            left: 60%;
+            width: 5px;
+            height: auto;
+            filter: drop-shadow(0 0 0px #4c83fa);
+            z-index: 2;
+        }
+
+
+        .fil0 {
+            fill: #4c83fa;
         }
 
 
 
-        @media (min-width:992px) and (max-width:1200px) {
+        .section3 {
+            background-color: #FFF1E1;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
 
-            .para {
 
-                margin-left: -38px;
-            }
+
+        .sec_3_btn_team {
+            display: inline-block;
+            border-radius: 50px;
+            border: none;
+            background-image: linear-gradient(to bottom, #85c7ee, #0579ee);
+            color: white;
+            font-family: inherit;
+            text-align: center;
+            font-size: 13px;
+
+            width: 10em;
+            padding: 1em;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .sec_3_btn_team span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.4s;
+        }
+
+        .sec_3_btn_team span:after {
+            content: 'Our Team';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.7s;
+        }
+
+        .sec_3_btn_team:hover span {
+            padding-right: 5em;
+        }
+
+        .sec_3_btn_team:hover span:after {
+            opacity: 4;
+            right: 0;
+        }
+
+        .sec3-heading {
+            font-family: Poppins;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 54px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0C5077;
+        }
+
+        .sec3-paragraph {
+            font-family: Poppins;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #3A3A3A;
 
         }
 
-        @media (min-width:768px) and (max-width:992px) {
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
 
-            .para {
+        @media (min-width: 1200px) {
 
-                margin-left: -78px;
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1300px !important;
             }
+        }
 
+
+
+
+
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 880px !important;
+            }
         }
 
         @media (max-width:768px) {
+            .team_devision_btn {
+                font-size: 14px;
+                /* Reduce font size */
+                padding: 6px 12px;
+                /* Smaller padding */
 
-            .para {
-                margin-top: -90px;
-                margin-left: 40px;
             }
 
         }
 
-        .heading {
-            font-weight: 700;
-            font-size: 45px;
-            line-height: 67.5px;
-            color: #1160A9;
-        }
 
-        .para2 {
-            font-weight: 600;
-            font-size: 25px;
-            line-height: 37.5px;
-        }
-
-        body {
-            background-image: url(assests/images/bhavi/Gride\ .webp);
-            background-position: center;
-            /* background-size: cover; */
-            background-repeat: no-repeat;
-            /* background-color: gray; */
-            /* background-position-x: ; */
-        }
-
-        .cardpara {
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 37.2px;
-        }
-
-        .parades {
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 27px;
-        }
-
-        .side {
-
-            color: #2580D5;
-            font-family: "Poppins", sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 35px;
-            letter-spacing: 0em;
-            text-align: left;
-
-        }
-
-        .gradient-text {
-            /* Apply Linear Gradient to Text */
-            background: linear-gradient(135deg, #3498db, #c0392b, rgb(2, 233, 140));
-            /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(135deg, #3498db, #1f3cf5, rgb(2, 233, 140));
-            background: -moz-linear-gradient(135deg, #3498db, #c0392b, rgb(2, 233, 140));
-            background: -o-linear-gradient(135deg, #3498db, #c0392b, rgb(2, 233, 140));
-
-            /* Ensuring Text is Visible */
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-
-            /* Adding Some Padding and Margin for Clarity */
-            padding: 20px;
-            margin: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
+        .media-equal-height {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 
-
-
 </head>
 
+
+
+
+
+
 <body>
-
-
-
 
     <!-- Navbar -->
     <section class="sticky_nav nav_image_bg   shadow-lg">
@@ -284,6 +554,8 @@
     </section>
 
 
+
+
     <div class="loader_butterflu">
 
         <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193"
@@ -315,837 +587,1451 @@
 
 
 
-    <!--  Unlocking  section -->
-
-
-
-    <!-- <section class="my-5 ">
-        <div class="container sec1" style="background-image: url('assests/images/bhavi/Group\ 1000015025.webp')">
-            <div class="row">
-                <div class="col-lg-1 col-md-2 mt-5">
-                    <img src="assests/images/bhavi/project.webp" alt="">
-                </div>
-                <div class="col-lg-6 col-md-8 mt-1 d-flex flex-column justify-content-center">
-                </div>
-            </div>
-            <div class="col-12 d-flex flex-row justify-content-center heading ">
-                <p class="  pb-3">Unlocking boundless potential <br> through Creative Exploration."</p>
-            </div>
-        </div>
-
-
-        <div class="asrtonout_container ">
-
-            <div class="box-of-nakshtra1  ">
-                <div class="nakshtra nakshtra-position1"></div>
-                <div class="nakshtra nakshtra-position2"></div>
-                <div class="nakshtra nakshtra-position3"></div>
-                <div class="nakshtra nakshtra-position4"></div>
-                <div class="nakshtra nakshtra-position5"></div>
-                <div class="nakshtra nakshtra-position6"></div>
-                <div class="nakshtra nakshtra-position7"></div>
-            </div>
-            <div class="box-of-nakshtra2">
-                <div class="nakshtra nakshtra-position1"></div>
-                <div class="nakshtra nakshtra-position2"></div>
-                <div class="nakshtra nakshtra-position3"></div>
-                <div class="nakshtra nakshtra-position4"></div>
-                <div class="nakshtra nakshtra-position5"></div>
-                <div class="nakshtra nakshtra-position6"></div>
-                <div class="nakshtra nakshtra-position7"></div>
-            </div>
-            <div class="box-of-nakshtra3">
-                <div class="nakshtra nakshtra-position1"></div>
-                <div class="nakshtra nakshtra-position2"></div>
-                <div class="nakshtra nakshtra-position3"></div>
-                <div class="nakshtra nakshtra-position4"></div>
-                <div class="nakshtra nakshtra-position5"></div>
-                <div class="nakshtra nakshtra-position6"></div>
-                <div class="nakshtra nakshtra-position7"></div>
-            </div>
-            <div class="box-of-nakshtra4">
-                <div class="nakshtra nakshtra-position1"></div>
-                <div class="nakshtra nakshtra-position2"></div>
-                <div class="nakshtra nakshtra-position3"></div>
-                <div class="nakshtra nakshtra-position4"></div>
-                <div class="nakshtra nakshtra-position5"></div>
-                <div class="nakshtra nakshtra-position6"></div>
-                <div class="nakshtra nakshtra-position7"></div>
-            </div>
-            <div data-js="astro" class="astronaut">
-                <div class="space_man_head"></div>
-                <div class="arm arm-left"></div>
-                <div class="arm arm-right"></div>
-                <div class="space_man_body">
-                    <div class="panel"></div>
-                </div>
-                <div class="leg leg-left"></div>
-                <div class="leg leg-right"></div>
-                <div class="schoolbag"></div>
-            </div>
-
-        </div>
-    </section> -->
-
-    <!-- first hand section -->
-    <!-- <section class="eva_conrainer_animation">
-
-        <div class="loveable_robat">
-            <div class="modelViewPort_eva_love ">
-                <div class="eva">
-                    <div class="eva_head">
-                        <div class="eva_eyeChamber">
-                            <div class="eva_eye"></div>
-                            <div class="eva_eye"></div>
-                        </div>
-                    </div>
-                    <div class="eva_body">
-                        <div class="eva_body_hand"></div>
-                        <div class="eva_body_hand"></div>
-                        <div class="eva_scannerThing"></div>
-                        <div class="eva_scannerOrigin"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-
-
-
-
-
-    <section class="pt-5 pb-5">
-        <div class="container">
-            <div class="row align-items-center justify-content-between mb-4">
-                <div class="col-md-6">
-                    <h2 class="heading">Our Esteemed Clients</h2>
-                </div>
-                <div class="col-md-2 text-right">
-                    <a class="btn btn-primary mb-3 mr-5 " style="background-color: #1160A9;"
-                        href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                    </a>
-                    <a class="btn btn-primary mb-3 " style="background-color: #1160A9;  "
-                        href="#carouselExampleIndicators2" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
-                    <select id="clientFilter" class="form-select w-auto d-inline-block">
-                        <option value="all">All</option>
-                        <option value="hopsital">hopsital </option>
-                        <option value="dental">Dental</option>
-                        <option value="gynaic">Gynaic</option>
-                        <option value="multispeciality">Multispeciality</option>
-                        <option value="cowandcalf">cowandcalf</option>
-                        <option value="lab">lab</option>
-                        <option value="plasticsurgeon">plasticsurgeon</option>
-                        <option value="diagnostics">diagnostics</option>
-                        
-                        <option value="Creative Agency">Creative Agency</option>
-                        <option value="Cultural ">Cultural </option>
-                        <option value="Cancer Specialist">Cancer Specialist</option>
-                        <option value="Dermatology">Dermatology</option>
-                      
-                        <option value="school">School</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="row" id="clientLogos">
-
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-
-                    <div class="carousel-item active">
-                        <div class="row">
-
-
-                            <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://arunahospital.org/index.php" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://onestopvascular.com/" target="_blank">
-                                    <img style="height: 100px; width:180px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_One_stop__logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Dermatology">
-                                <a href="https://srihariskinandkidneyclinic.com/index.php" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="cowandcalf">
-                                <a href="https://www.cowandcalf.com/" target="_blank">
-                                    <img style="width:150px;height: 120px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-cow_and_caulf _bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://neurostarhospital.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_neurostar_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
-                                <a href="https://www.qualitycarelabs.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design-Quality_care_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Gynaic">
-                                <a href="https://coupleclinics.in/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_couples_clinic_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="hopsital">
-                                <a href="https://bhavicreations.com/"
-                                    target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design-suryachandrahomeo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="plasticsurgeon">
-                                <a href="https://drsubhashplasticsurgeon.com/" target="_blank">
-                                    <img style="height: 120px; width: 200px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-dr.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://unosuperspecialityclinics.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="">
-                                <a href="https://mythrienterprises.com/index.php" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
-                                <a href="https://abhieeraamdiagnostics.com/" target="_blank">
-                                    <img style="width: 150px; height: 140px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-abhi_ram_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="plasticsurgeon" >
-                                <a href="https://drsubhashplasticsurgeon.com/" target="_blank">
-                                    <img style="height: 120px; width: 200px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-dr.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://unosuperspecialityclinics.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
-                                <a href="https://mythrienterprises.com/index.php" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_mytri_enterprises_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="diagnostics">
-                                <a href="https://abhieeraamdiagnostics.com/" target="_blank">
-                                    <img style="width: 150px; height: 140px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-abhi_ram_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
-                                <a href="https://bhavicreations.com/">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_emergancy_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="">
-                                <a href="https://bhavicreations.com/">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_ABC_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category=" ">
-                                <a href="https://bhavicreations.com/">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="https://srisuryachandradentalhospital.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_dental_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="https://primehospitalskkd.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Kakinada_pharmacy_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img style="height: 130px;width: 100px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_RS_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                             
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category=" Cultural">
-                                <a href="https://hindudharmikapeetham.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_hindu_darmika_peetam_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_emergancy_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_ABC_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
-                                <a href="https://srisuryachandradentalhospital.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_surya_dental_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center"> 
-                                <a href="https://primehospitalskkd.com/" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_Kakinada_pharmacy_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center">
-                                <a href="#">
-                                    <img style="height: 130px;width: 100px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_RS_hospital_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Cultural">
-                                <a href="https://hindudharmikapeetham.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_hindu_darmika_peetam_logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3 mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://arunahospital.org/index.php" target="_blank">
-                                    <img src="assests/images/Bhavi_Creations/Best_logo_design_aruna__logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://onestopvascular.com/" target="_blank">
-                                    <img style="height: 100px; width:180px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_One_stop__logo_bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://srihariskinandkidneyclinic.com/index.php" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design_SRI_HARI_LOGO-bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
-                                <a href="https://appledentalvzm.in/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/apple-dental-logo.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
-                                <a href="https://krishnadentacureclinic.com/index.php" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/krishna_new_logo.png    "
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="dental">
-                                <a href="https://leeladentalhospital.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/leela_dental.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Gynaic">
-                                <a href="#" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/leela_gynaecoligy.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center  client-item" data-category="dental">
-                                <a href="https://revanshdentalclinic.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/revansh_logo.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="Cancer Specialist">
-                                <a href="https://askoncologist.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/ask oncology.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
-                                <a href="https://visiondentalguntur.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/vision.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="dental">
-                                <a href="https://srinivasadentalkakinada.com/" target="_blank">
-                                    <img style="height: 150px;width: 150px;"
-                                        src="assests/images/Bhavi_Creations/srinivasa.png"
-                                        alt="" class="img-fluid">
-                                </a>
-                            </div>
-
-
-
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="multispeciality">
-                                <a href="https://onestopvascular.com/" target="_blank">
-                                    <img style="height: 100px; width:180px;"
-                                        src="assests/images/Bhavi_Creations/bluecrestschool.png"
-                                        alt="" class="img-fluid">
-
-                                </a>
-                            </div>
-
-
-                            <div class="col-12 col-md-3  mt-5 text-center client-item" data-category="cowandcalf">
-                                <a href="https://www.cowandcalf.com/" target="_blank">
-                                    <img style="width:150px;height: 120px;"
-                                        src="assests/images/Bhavi_Creations/Best_logo_design-cow_and_caulf _bhavi_creations.webp"
-                                        alt="" class="img-fluid">
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- DENTAL -->
-                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
-                    <a href="https://appledental.bhavicreations.com/index.php" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/apple-dental-logo.png" alt="Apple Dental"
-                            class="img-fluid" >
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
-                    <a href="https://krishnadentacureclinic.com/index.php" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/krishna_new_logo.png" alt="Krishna Dental"
-                            class="img-fluid" >
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="dental">
-                    <a href="https://revanshdentalclinic.com/" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/revansh_logo.png" alt="Revansh Dental"
-                            class="img-fluid" >
-                    </a>
-                </div> -->
-
-                <!-- GYNAIC -->
-                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="gynaic">
-                    <a href="https://leelagynichospital.com/" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/leela_gynaecoligy.png" alt="Leela Gynaic"
-                            class="img-fluid" >
-                    </a>
-                </div> -->
-
-                <!-- MULTISPECIALITY -->
-                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="multispeciality">
-                    <a href="https://unosuperspecialityclinics.com/" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/Best_logo_design_uno_bhavi_creations.webp"
-                            alt="UNO Super Speciality" class="img-fluid" >
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="multispeciality">
-                    <a href="https://primehospitalskkd.com/" target="_blank">
-                        <img src="assests/images/Bhavi_Creations/Best_logo_design_Prime_hospital_logo_bhavi_creations.webp"
-                            alt="Prime Hospital" class="img-fluid" >
-                    </a>
-                </div> -->
-
-                <!-- SCHOOLS -->
-                <!-- <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="school">
-                    <a href="#">
-                        <img src="assests/images/Bhavi_Creations/bluecrestschool.png" alt="Blue Crest School"
-                            class="img-fluid" >
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 mb-4 text-center client-item" data-category="school">
-                    <a href="#">
-                        <img src="assests/images/Bhavi_Creations/Best_logo_design_sri_surya_vidyalaya_logo_bhavi_creations.webp"
-                            alt="Sri Surya Vidyalaya" class="img-fluid" >
-                    </a>
-                </div> -->
-            </div>
-        </div>
-    </section>
-  
-    <script>
-        const filterSelect = document.getElementById('clientFilter');
-        const clientItems = document.querySelectorAll('.client-item');
-
-        filterSelect.addEventListener('change', function() {
-            const value = this.value;
-            clientItems.forEach(item => {
-                if (value === 'all' || item.dataset.category === value) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    </script>
-
     <style>
-        @media (max-width: 767px) {
-            .client-item {
-                flex: 0 0 100%;
-                max-width: 100%;
+        .media-tab-buttons button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .media-tab-buttons button.active {
+            background-color: #007BFF;
+
+            /* background-color: #28323c; */
+            color: #fff;
+        }
+
+        @media (max-width:768px) {
+            .media-tab-buttons button.active {
+                font-size: 12px !important;
             }
         }
+
+        .media-tab-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .media-tab-content.active {
+            display: block;
+        }
+
+        .media-tab-content video,
+        .media-tab-content img {
+            margin-bottom: 30px;
+        }
+
+        .media-box {
+            margin: 10px 0;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width:768px) {
+            .media-tab-content video {
+                width: 100% !important;
+            }
+
+        }
+
+        /* size  */
+
+        .media-tab-content {
+            display: none;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .media-tab-content.active {
+            display: flex;
+        }
+
+        .equal-media {
+            height: 250px;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .media-tab-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+
+        .media-tab-btn.active {
+            background-color: #333;
+            color: white;
+        }
     </style>
+    </head>
 
+    <body class="bg-light p-3">
 
-
-    <footer class="text-light foot_bg_img   mt-5 foot ">
-
-        <div class="container " style="padding-top: 100px;">
-            <div class="row">
-
-                <div class="   col-md-4 text-center order-2 order-md-1">
-
-                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
-                    <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
-                        <span style="color:#ffffff; font-weight: bold;">
-                            <i class="fa-solid fa-phone"></i>
-                        </span>: +91 9642343434
-                    </h5>
-
-
-                    <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
-                        <div class="d-flex mail_text_box" style="margin-top: 10px;">
-                            <span class="tooltip-container  ">
-
-                                <span class="text">@</span>
-                            </span> &nbsp;
-
-                            <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
-
-                        </div>
-                    </a>
-
-
-                    <div class="mt-3  " style="margin-bottom: 55px;">
-                        <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff; "
-                                class="fa-brands fa-facebook px-1  footicon"></i></a>
-                        <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands fa-instagram  px-1 footicon"></i></a>
-                        <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands  px-1  fa-square-x-twitter"></i></a>
-                        <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands fa-youtube  px-1  footicon"></i></a>
-                        <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
-                                style="font-size: 24px;  color: #ffffff;  "
-                                class="fa-brands fa-linkedin   px-1 footicon"></i></a>
-                        <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
-                                style="font-size: 24px ; color: #ffffff;"
-                                class="fa-brands fa-pinterest px-1  footicon"></i></a>
-
-
-                    </div>
-                </div>
-
-
-                <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                    <a href="index.php">
-                        <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
-                            style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
-                    </a>
-
-                </div>
-
-
-                <div class="    col-md-4 text-center order-3  order-md-3">
-
-                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-
-                    <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
-                        Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
-
-                </div>
-
-            </div>
-        </div>
-
-
-
-
-        <div class="footer-area-bottom theme-bg text-center pb-4">
-            <div class="container" style="margin-top: 30px;  ">
-                <div class="row">
-                    <div class=" col-12">
-                        <div class="footer-widget__copyright">
-                            <span style="color:#ffffff;font-weight: 400;">
-                                <a href="terms.php" style="text-decoration: none; color: #ffffff">Terms & conditions |
-                                </a>
-                                <a href="privacy.php" style="text-decoration: none; color: #ffffff">
-                                    Privacy & policy ||</a>
-                                <a href="https://bhavicreations.com" style="text-decoration: none; color: #ffffff">
-                                    Design with love @</a> <a href="https://bhavicreations.com"
-                                    style="text-decoration: none; color: #ffffff">
-                                    <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png"
-                                        class="img-fluid brand_image" alt=""></a>
-
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!-- <div class="footer-area-bottom theme-bg">
         <div class="container">
-            <div class="row pt-4">
-        
-                <div class="  col-md-6 col-12">
-                    <div class="footer-widget__copyright-info info-direction">
-                        <p class="  last_text">
-                        <a
-                            href="terms.php"
-                            style="text-decoration: none; color: #ffffff">Terms & conditions
-                        </a>
-                        <a
-                            href="privacy.php"
-                            style="text-decoration: none; color: #ffffff">
-                            Privacy & policy</a>
-                        </p>
+
+            <!-- Row of 7 tabs -->
+            <div class="row media-tab-buttons g-2 mb-4">
+                <div class="col-3 col-md-3 col-lg-1">
+                    <!-- <button class="media-tab-btn active" onclick="showMediaTab(event, 'all')">All</button> -->
+
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button" role="tab"
+                        class="media-tab-btn portfolio_section active" onclick="showMediaTab(event, 'all')"
+                        aria-controls="pills-home" aria-selected="true">All
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+
+
+
+                </div>
+                <div class="col-3 col-md-3 col-lg-2">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'images')">Posters</button> -->
+
+
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button" role="tab"
+                        class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'images')"
+                        aria-controls="pills-home" aria-selected="true">Posters
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+
+
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="col-3 col-md-3 col-lg-1">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'logos')">Logos</button> -->
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button"
+                        class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'logos')" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Logos
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="col-3 col-md-3 col-lg-2">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'graphics')">Videos</button> -->
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button"
+                        class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'graphics')" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Videos
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+
+
+                <div class="col-4 col-md-3 col-lg-2">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'banners')">Brochures</button> -->
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button"
+                        class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'banners')" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Brochures
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="col-4 col-md-3 col-lg-2">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Testimonials reels</button> -->
+
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button"
+                        class="media-tab-btn portfolio_section" onclick="showMediaTab(event, 'reels')" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Testimonials
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="col-4 col-md-3 col-lg-2">
+                    <!-- <button class="media-tab-btn" onclick="showMediaTab(event, 'videos')">Creative reals</button> -->
+
+                    <button class="active team_devision_btn" data-bs-target="#pills-all" type="button"
+                        class="media-tab-btn  portfolio_section" onclick="showMediaTab(event, 'videos')" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Creative reels
+                        <div class="star-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="star-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Layer_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path class="fil0"
+                                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+            </div>
+
+            <!-- Tab Content -->
+            <!-- <div id="all" class="media-tab-content active"></div> -->
+
+
+            <div id="all" class="media-tab-content active">
+                <div class="row">
+                    <?php
+                    foreach ($media as $type => $files) {
+                        foreach ($files as $file) {
+                            $ext = pathinfo($file, PATHINFO_EXTENSION);
+                            $filePath = 'uploads/staff/' . $file;
+
+                            // VIDEO
+                            if (in_array($ext, ['mp4', 'mov', 'avi', 'webm'])) {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <video class="media-equal-height" controls>
+                    <source src="' . $filePath . '" type="video/' . $ext . '">
+                  </video>
+                </div>';
+                            }
+                            // PDF
+                            elseif ($ext === 'pdf') {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <a href="' . $filePath . '" target="_blank" class="btn btn-outline-primary w-100 media-equal-height d-flex justify-content-center align-items-center">
+                    📄 View Brochure (PDF)
+                  </a>
+                </div>';
+                            }
+                            // IMAGE
+                            else {
+                                echo '<div class="col-md-4 col-12 mb-3">
+                  <img src="' . $filePath . '" class="media-equal-height">
+                </div>';
+                            }
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- <img src="./admin/public/uploads/staff/" alt=""> -->
+
+
+            <!-- Posters -->
+            <div id="images" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Posters'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <!-- Logos -->
+            <div id="logos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Logos'] ?? [] as $file): ?>
+                        <div class="col-md-3 col-6 mb-3">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <!-- Videos -->
+            <div id="graphics" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Videos'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="admin/public/uploads/staff/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <!-- Testimonials 
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="./admin/public/uploads/staff $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div> -->
+
+
+
+            <!-- Brochures-->
+            <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Brochures'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <!-- <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid"> -->
+                            <?php if ($ext === 'pdf'): ?>
+                                <a href="uploads/staff/<?= $file ?>" target="_blank" class="btn btn-outline-primary w-100">
+                                    📄 View Brochure (PDF)
+                                </a>
+                            <?php else: ?>
+                                <img src="uploads/staff/<?= $file ?>" class="img-fluid">
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Testimonials -->
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="admin/public/uploads/staff/<?= $file ?>" type="video/mp4">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+
+
+            <!-- Creative Reels  -->
+            <div id="videos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Creative Reels'] ?? [] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls style="width: 100%;">
+                                <source src="admin/public/uploads/staff/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- <div id="images" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Posters'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="admin/public/uploads/staff/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="logos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Logos'] as $file): ?>
+                        <div class="col-md-3 col-6 mb-3">
+                            <img src="uploads/logos/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="graphics" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Videos'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/videos/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+       
+            <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Brochures'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <img src="uploads/brochures/<?= $file ?>" class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+          
+            <div id="reels" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Testimonials'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/testimonials/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+           
+            <div id="videos" class="media-tab-content">
+                <div class="row">
+                    <?php foreach ($media['Creative Reels'] as $file): ?>
+                        <div class="col-md-4 col-12 mb-3">
+                            <video controls class="w-100">
+                                <source src="uploads/creative_reels/<?= $file ?>">
+                            </video>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div id="images" class="media-tab-content ">
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/poster_3.png" alt="" class="img-fluid">
+
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p12.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p11.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p13.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="assests/images/portfolio/posters/p14.png" alt="">
                     </div>
                 </div>
-        
-                <div class="col-md-6 col-12 second_divv_end_brand">
-                <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
-                    <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
-                    <p class="mini_text last_text mb-0">
-                        Design with love @
-                    </p>
-                    <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
-                    </a>
+
+
+
+
+
+
+
+
+
+
+            </div> -->
+
+            <!-- creative real   -->
+            <!-- <div id="videos" class="media-tab-content">
+
+
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/creative reels/apple creative.mp4" style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/creative reels/krishna dental creative.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"
+                            style="width: 100%;"></video>
+                    </div>
+                    
                 </div>
+
+
+
+
+
+
+
+            </div> -->
+            <!-- testimonials  -->
+
+            <!-- <div id="reels" class="media-tab-content">
+
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls
+                            src="assests/images/portfolio/testimonials/krishna testmonial.mp4"></video>
+                    </div>
+
+
+
                 </div>
-            
-            </div>
+
+            </div> -->
+
+            <!-- logo -->
+
+            <!-- <div id="logos" class="media-tab-content"> 
+                <div class="row">
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/2.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/3.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/4.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/5.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/6.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/7.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/8.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/9.png" alt=""></div>
+                    <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/10.png" alt="">
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/11.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"><img src="assests/images/portfolio/logo/12.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/13.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/14.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/15.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"><img src="assests/images/portfolio/logo/16.png" alt=""></div>
+                        <div class="col-md-4 col-lg-2 col-12"> <img src="assests/images/portfolio/logo/17.png" alt=""></div>
+                    </div>
+                </div>
+
+            </div> -->
+            <!-- broucher  -->
+            <!-- <div id="banners" class="media-tab-content">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/apple fathers day.jpg" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/ask oncologist  bakrid.jpg" alt="">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="./assests/images/portfolio/festival posters/baalayam sriramanavami.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div> -->
+            <!-- video add this  -->
+            <!-- <div id="graphics" class="media-tab-content"> 
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <video controls src="assests/images/portfolio/educational videos/srinivasa educational video.mp4"></video>
+                    </div>
+                </div>
+
+            </div> -->
+
         </div>
-    </div> -->
 
-    </footer>
+        <!-- JS -->
+        <script>
+            function showMediaTab(event, tabId) {
+                // Remove 'active' class from all tab buttons
+                document.querySelectorAll('.media-tab-btn')?.forEach(btn => btn.classList.remove('active'));
+
+                // Add 'active' class to clicked tab button
+                if (event) {
+                    event.target.classList.add('active');
+                } else {
+                    document.querySelector(".media-tab-btn[onclick*='all']")?.classList.add('active');
+                }
+
+                // Hide all tab content sections
+                document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+
+                // If "all" tab is selected, merge all media content
+                if (tabId === 'all') {
+                    let combined = '';
+                    ['images', 'videos', 'reels', 'logos', 'banners', 'graphics'].forEach(id => {
+                        const tab = document.getElementById(id);
+                        if (tab) combined += tab.innerHTML;
+                    });
+                    const allTab = document.getElementById('all');
+                    allTab.innerHTML = combined;
+                }
+
+                // Show selected tab
+                document.getElementById(tabId).classList.add('active');
+            }
+
+            // ✅ On page load, show all media types by default
+            window.onload = function() {
+                showMediaTab(null, 'all');
+            };
+        </script>
 
 
 
-    <div class="d-md-none">
-        <a href="index.php" style="text-decoration: none;">
-            <button class="Btn_back_buttn     ">
-                <div class="sign_back">
-                    <svg viewBox="0 0 512 512">
-                        <path
-                            d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
-                        </path>
-                    </svg>
+
+        <script>
+            function showMediaTab(event, tabId) {
+                // Remove active class from all buttons
+                document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+
+                // Hide all content tabs
+                document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+
+                if (tabId === 'all') {
+                    // Combine all sections into #all dynamically
+                    const allContent = ['images', 'videos', 'reels', 'logos', 'banners', 'graphics']
+                        .map(id => document.getElementById(id).innerHTML)
+                        .join('');
+                    const allTab = document.getElementById('all');
+                    allTab.innerHTML = allContent;
+                }
+
+                // Show selected tab
+                document.getElementById(tabId).classList.add('active');
+            }
+        </script>
+
+
+        <script>
+            function showMediaTab(event, tabId) {
+                // Remove 'active' from all buttons
+                document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
+                if (event) event.target.classList.add('active');
+
+                // Hide all tabs
+                document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+
+                // Show selected tab
+                document.getElementById(tabId).classList.add('active');
+
+                // If "all", dynamically combine all content
+                if (tabId === 'all') {
+                    const allContent = ['images', 'videos', 'reels', 'logos', 'banners', 'graphics']
+                        .map(id => document.getElementById(id).innerHTML)
+                        .join('');
+                    document.getElementById('all').innerHTML = allContent;
+                }
+            }
+
+            // ✅ Automatically load 'all' on page load
+            window.onload = function() {
+                showMediaTab(null, 'all');
+            };
+        </script>
+
+
+     
+
+
+
+        <!-- FOOTER -->
+        <footer class="text-light foot_bg_img   mt-5 foot ">
+
+            <div class="container " style="padding-top: 100px;">
+                <div class="row">
+
+                    <div class="   col-md-4 text-center order-2 order-md-1">
+
+                        <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
+                        <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
+                            <span style="color:#ffffff; font-weight: bold;">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>: +91 9642343434
+                        </h5>
+
+
+                        <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
+                            <div class="d-flex mail_text_box" style="margin-top: 10px;">
+                                <span class="tooltip-container  ">
+
+                                    <span class="text">@</span>
+                                </span> &nbsp;
+
+                                <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
+
+                            </div>
+                        </a>
+
+
+                        <div class="mt-3  " style="margin-bottom: 55px;">
+                            <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
+                                    style="font-size: 24px; color: #ffffff; "
+                                    class="fa-brands fa-facebook px-1  footicon"></i></a>
+                            <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
+                                    style="font-size: 24px; color: #ffffff;"
+                                    class="fa-brands fa-instagram  px-1 footicon"></i></a>
+                            <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
+                                    style="font-size: 24px; color: #ffffff;"
+                                    class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+                            <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
+                                    style="font-size: 24px; color: #ffffff;"
+                                    class="fa-brands fa-youtube  px-1  footicon"></i></a>
+                            <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
+                                    style="font-size: 24px;  color: #ffffff;  "
+                                    class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+                            <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
+                                    style="font-size: 24px ; color: #ffffff;"
+                                    class="fa-brands fa-pinterest px-1  footicon"></i></a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
+                        <a href="index.php">
+                            <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+                                style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
+                        </a>
+
+                    </div>
+
+
+                    <div class="    col-md-4 text-center order-3  order-md-3">
+
+                        <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
+
+                        <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
+                            Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
+
+                    </div>
+
                 </div>
-                <div class="text_go_back ">Go Back</div>
-            </button>
-        </a>
-    </div>
+            </div>
 
-    <div class="d-none d-md-block">
-        <a href="index.php" style="text-decoration: none;  ">
-            <div style="display: flex; align-items: center;">
-                <button class="Btn_back_buttn " style="display: flex; align-items: center;">
-                    <div>
-                        <svg class="" viewBox="0 0 512 512"
-                            style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
-                            <path fill="#ffffff"
+
+
+
+            <div class="footer-area-bottom theme-bg text-center pb-4">
+                <div class="container" style="margin-top: 30px;  ">
+                    <div class="row">
+                        <div class=" col-12">
+                            <div class="footer-widget__copyright">
+                                <span style="color:#ffffff;font-weight: 400;">
+                                    <a href="terms.php" style="text-decoration: none; color: #ffffff">Terms &
+                                        conditions |
+                                    </a>
+                                    <a href="privacy.php" style="text-decoration: none; color: #ffffff">
+                                        Privacy & policy ||</a>
+                                    <a href="https://bhavicreations.com" style="text-decoration: none; color: #ffffff">
+                                        Design with love @</a> <a href="https://bhavicreations.com"
+                                        style="text-decoration: none; color: #ffffff">
+                                        <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png"
+                                            class="img-fluid brand_image" alt=""></a>
+
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="footer-area-bottom theme-bg">
+            <div class="container">
+                <div class="row pt-4">
+            
+                    <div class="  col-md-4 col-12">
+                        <div class="footer-widget__copyright-info info-direction">
+                            <p class="  last_text">
+                            <a
+                                href="terms.php"
+                                style="text-decoration: none; color: #ffffff">Terms & conditions
+                            </a>
+                            <a
+                                href="privacy.php"
+                                style="text-decoration: none; color: #ffffff">
+                                Privacy & policy</a>
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 col-12 second_divv_end_brand">
+                    <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
+                        <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
+                        <p class="mini_text last_text mb-0">
+                            Design with love @
+                        </p>
+                        <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
+                        </a>
+                    </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div> -->
+
+        </footer>
+        <!-- ENDING  FOOTER -->
+
+
+
+        <div class="d-md-none">
+            <a href="index.php" style="text-decoration: none;">
+                <button class="Btn_back_buttn     ">
+                    <div class="sign_back">
+                        <svg viewBox="0 0 512 512">
+                            <path
                                 d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
                             </path>
                         </svg>
                     </div>
-                    <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+                    <div class="text_go_back ">Go Back</div>
                 </button>
-            </div>
-        </a>
-    </div>
-
-
-
-    <button id="scrollBtn" onclick="scrollToTop()">
-        <div class="pyramid-loader animate_animated animate_bounceInDown">
-            <div class="wrapper ">
-                <span class="side side1"></span>
-                <span class="side side2"></span>
-                <span class="side side3"></span>
-                <span class="side side4"></span>
-                <span class="shadow"></span>
-            </div>
+            </a>
         </div>
-    </button>
 
-
-
-
-
-
-    <!-- redirections  -->
-
-    <div class="open_bar open_home">
-        <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
-            <span class="text">
-                <div class="borde-back">
-                    <div class="icon">
-                        <i class="fa-solid fa-house" style="color: white;"></i>
-                    </div>
+        <div class="d-none d-md-block">
+            <a href="index.php" style="text-decoration: none;  ">
+                <div style="display: flex; align-items: center;">
+                    <button class="Btn_back_buttn " style="display: flex; align-items: center;">
+                        <div>
+                            <svg class="" viewBox="0 0 512 512"
+                                style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
+                                <path fill="#ffffff"
+                                    d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+                    </button>
                 </div>
-            </span>
-        </a>
-    </div>
+            </a>
+        </div>
 
-    <div class="open_bar open_services">
-        <a href="services.php" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
-            <span class="text">
-                <div class="borde-back">
-                    <div class="icon">
-                        <i class="fa-solid fa-laptop-file" style="color: white;"></i>
-                    </div>
+
+
+
+        <button id="scrollBtn" onclick="scrollToTop()">
+            <div class="pyramid-loader animate__animated animate__bounceInDown">
+                <div class="wrapper ">
+                    <span class="side side1"></span>
+                    <span class="side side2"></span>
+                    <span class="side side3"></span>
+                    <span class="side side4"></span>
+                    <span class="shadow"></span>
                 </div>
-            </span>
-        </a>
-    </div>
-    <div class="open_bar open_contact">
-        <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
-            <span class="text">
-                <div class="borde-back">
-                    <div class="icon">
-                        <i class="fa-solid fa-headset" style="color: white;"></i>
+            </div>
+        </button>
 
+        <!-- redirections  -->
+
+        <div class="open_bar open_home">
+            <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
+                <span class="text">
+                    <div class="borde-back">
+                        <div class="icon">
+                            <i class="fa-solid fa-house" style="color: white;"></i>
+                        </div>
                     </div>
-                </div>
-            </span>
-        </a>
-    </div>
+                </span>
+            </a>
+        </div>
+
+        <div class="open_bar open_services">
+            <a href="services.php" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
+                <span class="text">
+                    <div class="borde-back">
+                        <div class="icon">
+                            <i class="fa-solid fa-laptop-file" style="color: white;"></i>
+                        </div>
+                    </div>
+                </span>
+            </a>
+        </div>
+        <div class="open_bar open_contact">
+            <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact Us</span>
+                <span class="text">
+                    <div class="borde-back">
+                        <div class="icon">
+                            <i class="fa-solid fa-headset" style="color: white;"></i>
+
+                        </div>
+                    </div>
+                </span>
+            </a>
+        </div>
 
 
 
@@ -1155,91 +2041,158 @@
 
 
 
-    <script>
-        // Function to scroll to the top of the page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Optional, smooth scrolling animation
-            });
-        }
 
-        // Show scroll button when scrolling down
-        window.onscroll = function() {
-            scrollFunction()
-        };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollBtn").style.display = "none";
+
+
+
+
+        <script>
+            // Function to scroll to the top of the page
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Optional, smooth scrolling animation
+                });
             }
-        }
-    </script>
 
-    <script>
-        $(document).ready(function() {
-            // Initialize the carousel
-            $('#carouselExampleControls').carousel();
+            // Show scroll button when scrolling down
+            window.onscroll = function() {
+                scrollFunction()
+            };
 
-            // Attach an event listener to the carousel slide event
-            $('#carouselExampleControls').on('slid.bs.carousel', function() {
-                // Get the index of the active carousel item
-                var activeIndex = $('.carousel-item.active').index();
-
-                // Update the href attribute of the anchor tag based on the active carousel item
-                switch (activeIndex) {
-                    case 0:
-                        $('#viewProjectLink').attr('href', 'https://arunahospital.org/');
-                        break;
-                    case 1:
-                        $('#viewProjectLink').attr('href', 'https://onestopvascular.com/');
-                        break;
-                    case 2:
-                        $('#viewProjectLink').attr('href', 'https://www.qualitycarelabs.com/Services.aspx');
-                        break;
-                    case 3:
-                        $('#viewProjectLink').attr('href', 'https://unosuperspecialityclinics.com/');
-                        break;
-                        // Add more cases if needed
-                }
-            });
-        });
-    </script>
-
-
-
-
-
-
-
-
-    <script>
-        $(document).ready(function() {
-            // Toggle dropdown on button click
-            $('.toggleDropdown').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.dropdown-menu').show();
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollBtn").style.display = "block";
                 } else {
-                    $('.dropdown-menu').hide();
+                    document.getElementById("scrollBtn").style.display = "none";
                 }
+            }
+        </script>
+
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+        <script>
+            $(document).ready(function() {
+                // Initial state
+                $(".Rajahmundry").hide();
+
+                // Dropdown change event
+                $("#branchdropdown").change(function() {
+                    var selectedBranch = $(this).val();
+
+                    // Hide all content
+                    $(".kakinada, .Rajahmundry").hide();
+
+                    // Show content based on the selected branch
+                    if (selectedBranch === "Kakinada") {
+                        $(".kakinada").show();
+                        $(".kakinadaContent").show();
+                        $(".RajahmundryContent").hide();
+                        $(".carousal1").show();
+                        $(".carousal2").hide();
+
+                        // reloadCarousel(".carousal1");
+                    } else if (selectedBranch === "Rajahmundry") {
+                        $(".Rajahmundry").show();
+                        $(".RajahmundryContent").show();
+                        $(".kakinadaContent").hide();
+                        $(".carousal1").hide();
+                        $(".carousal2").show();
+
+                        // reloadCarousel(".carousal2");
+
+                    }
+                });
+
+                // // Function to reload the carousel
+                // function reloadCarousel(carouselId) {
+                //     var carousel = $(carouselId);
+                //     carousel.carousel(0); // Reset the carousel to the first slide
+                // }
+
+                // Initialize carousels
+                $('#recipeCarousel1').carousel({
+                    interval: 3000
+                });
+                $('#recipeCarousel2').carousel({
+                    interval: 3000
+                });
+
+                $('.carousel .carousel-item').each(function() {
+                    var minPerSlide = 3;
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+
+                    for (var i = 0; i < minPerSlide; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = $(this).siblings(':first');
+                        }
+
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+
+                $('.carousel2 .carousel-item').each(function() {
+                    var minPerSlide = 3;
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+
+                    for (var i = 0; i < minPerSlide; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = $(this).siblings(':first');
+                        }
+
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+
+                // Trigger initial selection
+                $("#branchdropdown").trigger("change");
             });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        window.omnisend = window.omnisend || [];
-        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
-        omnisend.push(["track", "$pageViewed"]);
-        ! function() {
-            var e = document.createElement("script");
-            e.type = "text/javascript", e.async = !0,
-                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
-            var t = document.getElementsByTagName("script")[0];
-            t.parentNode.insertBefore(e, t)
-        }();
-    </script>
-</body>
+        </script>
+
+
+
+        <script>
+            $(document).ready(function() {
+                // Toggle dropdown on button click
+                $('.toggleDropdown').change(function() {
+                    if ($(this).is(':checked')) {
+                        $('.dropdown-menu').show();
+                    } else {
+                        $('.dropdown-menu').hide();
+                    }
+                });
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+        <script type="text/javascript">
+            window.omnisend = window.omnisend || [];
+            omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+            omnisend.push(["track", "$pageViewed"]);
+            ! function() {
+                var e = document.createElement("script");
+                e.type = "text/javascript", e.async = !0,
+                    e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+                var t = document.getElementsByTagName("script")[0];
+                t.parentNode.insertBefore(e, t)
+            }();
+        </script>
+    </body>
 
 </html>

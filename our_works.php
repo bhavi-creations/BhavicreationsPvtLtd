@@ -729,7 +729,7 @@
 
 
             <!-- <div id="all" class="media-tab-content active">
-                Example media items -->
+                <!-- Example media items -->
             <!-- <div class="media-item">
                     <img src="uploads/staff/image1.jpg" alt="Image 1">
                 </div>
@@ -741,7 +741,8 @@
                 </div>
                 <div class="media-item">
                     <img src="uploads/staff/image4.jpg" alt="Image 4">
-                </div>
+                </div> 
+               
             </div> -->
 
 
