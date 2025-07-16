@@ -53,11 +53,11 @@ include '../../db.connection/db_connection.php';
                         </a>
                     </div>
 
+
+
                     <div class="row row-custom no-gutters">
                         <?php
-                        include '../../db.connection/db_connection.php';
-
-                        $sql = "SELECT id, media_type, title, file_path FROM our_works ORDER BY id DESC";
+                        $sql = "SELECT id, media_type, title, file_path, media_link FROM our_works ORDER BY id DESC";
                         $result = $conn->query($sql);
 
                         if ($result === false) {
@@ -67,36 +67,44 @@ include '../../db.connection/db_connection.php';
                                 $file = htmlspecialchars($row['file_path']);
                                 $media_type = htmlspecialchars($row['media_type']);
                                 $title = htmlspecialchars($row['title']);
+                                $media_link = htmlspecialchars($row['media_link']);
                                 $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
                                 $media_path = "uploads/staff/" . $file;
 
                                 echo "<div class='col-12 col-md-4 col-custom mb-4'>
-                <div class='card card-custom shadow'>";
+                    <div class='card card-custom shadow'>";
 
-                                // Show image or video based on extension
+                                // Optional link wrap
+                                if ($media_link) echo "<a href='$media_link' target='_blank'>";
+
+                                // Render media
                                 if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp', 'svg'])) {
                                     echo "<img src='$media_path' class='card-img-top' alt='$title' style='height: 220px; object-fit: cover;'>";
                                 } elseif (in_array($ext, ['mp4', 'mov', 'avi', 'webm'])) {
                                     echo "<video controls style='width: 100%; height: 220px; object-fit: cover;'>
-                    <source src='$media_path' type='video/$ext'>
-                    Your browser does not support the video tag.
-                  </video>";
+                        <source src='$media_path' type='video/$ext'>
+                        Your browser does not support the video tag.
+                      </video>";
+                                } elseif ($ext === 'pdf') {
+                                    echo "<embed src='$media_path' type='application/pdf' width='100%' height='220px' />";
                                 } else {
                                     echo "<p class='text-center text-muted'>Unsupported file type.</p>";
                                 }
 
+                                if ($media_link) echo "</a>";
+
                                 echo "  <div class='card-body'>
-                    <h5 class='card-title'>$title</h5>
-                    <p class='card-text'>
-                        <strong>Media Type:</strong> $media_type
-                    </p>
-                    <div class='row'>
-                        <a href='edit_works.php?id=" . intval($row['id']) . "' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit</a>
-                        <a href='delete_works.php?id=" . intval($row['id']) . "' class='btn btn-danger col-xl-4 mx-3 my-2'>Delete</a>
+                        <h5 class='card-title'>$title</h5>
+                        <p class='card-text'>
+                            <strong>Media Type:</strong> $media_type
+                        </p>
+                        <div class='row'>
+                            <a href='edit_works.php?id=" . intval($row['id']) . "' class='btn btn-warning col-xl-4 mx-3 my-2'>Edit</a>
+                            <a href='delete_works.php?id=" . intval($row['id']) . "' class='btn btn-danger col-xl-4 mx-3 my-2'>Delete</a>
+                        </div>
                     </div>
                 </div>
-              </div>
-            </div>";
+              </div>";
                             }
                         } else {
                             echo "<p class='mx-3'>No works uploaded yet.</p>";

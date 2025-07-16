@@ -3,20 +3,18 @@ include '../../db.connection/db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $media_type = $conn->real_escape_string($_POST['media_type']);
-    $title = $conn->real_escape_string($_POST['title']);
+    $media_link = isset($_POST['media_link']) ? $conn->real_escape_string($_POST['media_link']) : "";
 
-    // File upload
+    // File upload handling
     if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === UPLOAD_ERR_OK) {
         $fileTmp = $_FILES['media_file']['tmp_name'];
         $fileName = $_FILES['media_file']['name'];
         $ext = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
 
-        // Allowed extensions
-        
-
+        // Allowed file types
         $allowedExt = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp', 'svg', 'mp4', 'mov', 'avi', 'webm', 'pdf'];
         if (!in_array($ext, $allowedExt)) {
-            die("❌ Error: Invalid file type. Allowed: " . implode(', ', $allowedExt));
+            die("❌ Error: Invalid file type. Allowed types are: " . implode(', ', $allowedExt));
         }
 
         // Upload folder
@@ -25,15 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             mkdir($uploadDir, 0755, true);
         }
 
-        // Unique file name
+        // Unique filename
         $newFileName = uniqid('work_') . '.' . $ext;
         $uploadPath = $uploadDir . $newFileName;
 
         // Move uploaded file
         if (move_uploaded_file($fileTmp, $uploadPath)) {
-            // ✅ Store only filename in DB
-            $sql = "INSERT INTO our_works (media_type, title, file_path)
-                    VALUES ('$media_type', '$title', '$newFileName')";
+            // Store only the filename, not the full path
+            $sql = "INSERT INTO our_works (media_type, file_path, media_link) 
+                    VALUES ('$media_type', '$newFileName', '$media_link')";
 
             if ($conn->query($sql) === TRUE) {
                 echo "<script>
@@ -54,4 +52,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 $conn->close();
-?>

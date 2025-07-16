@@ -41,34 +41,50 @@
                 <div class="container-fluid">
 
                     <form id="mediaUploadForm" action="upload_works.php" method="POST" enctype="multipart/form-data" style="color:black;">
-                        <!-- Select Media Type -->
+                        <!-- 🔹 Select Media Type -->
                         <div class="mb-3">
                             <label for="mediaType" class="form-label text-primary">Select Media Type</label>
                             <select class="form-control" name="media_type" id="mediaType" required>
                                 <option value="">-- Select Media Type --</option>
+                                <option value="Logo">Logo</option>
+                                <option value="Website">Website</option>
                                 <option value="Posters">Posters</option>
-                                <option value="Logos">Logos</option>
+                                <option value="Reels">Reels</option>
+                                <option value="Photo Shoot">Photo Shoot</option>
                                 <option value="Videos">Videos</option>
-                                <option value="Brochures">Brochures</option>
                                 <option value="Testimonials">Testimonials</option>
-                                <option value="Creative Reels">Creative Reels</option>
-                                <option value="Others">Others</option>
+                                <option value="Animated Videos">Animated Videos</option>
+                                <option value="Visiting Cards">Visiting Cards</option>
+                                <option value="Pamphlets">Pamphlets</option>
+                                <option value="Brochures">Brochures</option>
+                                <option value="Hoardings">Hoardings</option>
                             </select>
                         </div>
 
-                        <!-- Upload File -->
+
+
+                        
+                        <!-- 🔹 Optional Link -->
                         <div class="mb-3">
-                            <label for="mediaFile" class="form-label text-primary">Upload File (Image, Video, or PDF)</label>
-                            <input type="file" class="form-control" name="media_file" id="mediaFile" accept="image/*,video/*,.pdf" required />
+                            <label for="mediaLink" class="form-label text-primary">Optional Redirect Link</label>
+                            <input type="url" class="form-control" name="media_link" id="mediaLink" placeholder="https://example.com">
                         </div>
 
-                        <!-- Submit Buttons -->
+                        <!-- 🔹 Upload File -->
+                        <div class="mb-3">
+                            <label for="mediaFile" class="form-label text-primary">Upload File (Image, Video, or PDF)</label>
+                            <input type="file" class="form-control" name="media_file" accept="image/*,video/*,.pdf" required />
+                        </div>
+
+
+                        <!-- 🔹 Buttons -->
                         <div class="row p-3">
                             <div class="col-xl-7 col-sm-2"></div>
                             <button type="reset" class="btn btn-danger mx-1 my-2 col-xl-2">Clear</button>
                             <button type="submit" class="btn btn-success mx-1 my-2 col-xl-2">Upload</button>
                         </div>
                     </form>
+
 
 
 

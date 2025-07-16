@@ -2,74 +2,72 @@
 include '../../db.connection/db_connection.php';
 
 if (!isset($_GET['id'])) {
-    echo "❌ No Work ID provided.";
-    exit;
+    die("❌ No ID provided.");
 }
 
 $id = intval($_GET['id']);
 
-// Fetch the current record
+// Fetch existing data
 $sql = "SELECT * FROM our_works WHERE id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id);
+$stmt->bind_param('i', $id);
 $stmt->execute();
 $result = $stmt->get_result();
-
-if ($result->num_rows === 0) {
-    echo "❌ Work record not found.";
-    exit;
-}
-
 $work = $result->fetch_assoc();
 
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
-    $media_type = $conn->real_escape_string($_POST['media_type']);
-    $newFileName = $work['file_path']; // Default to old file if no new one is uploaded
+if (!$work) {
+    die("❌ Work not found.");
+}
 
-    // If a new file is uploaded
+// Handle update
+if (isset($_POST['update'])) {
+    $media_type = $conn->real_escape_string($_POST['media_type']);
+    $media_link = $conn->real_escape_string($_POST['media_link'] ?? '');
+    $newFileName = $work['file_path']; // default: old file
+
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $fileTmp = $_FILES['file']['tmp_name'];
         $fileName = $_FILES['file']['name'];
         $ext = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-        $allowedExt = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'mp4', 'webm', 'mov', 'avi'];
 
+        // ✅ Supported formats
+        $allowedExt = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp', 'svg', 'mp4', 'mov', 'avi', 'webm', 'pdf'];
         if (!in_array($ext, $allowedExt)) {
-            die("❌ Invalid file type. Allowed types: " . implode(', ', $allowedExt));
+            die("❌ Invalid file type.");
         }
 
-        // Create upload directory if needed
         $uploadDir = 'uploads/staff/';
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
 
-        // Delete old file
-        $oldFilePath = $uploadDir . $work['file_path'];
-        if (file_exists($oldFilePath)) {
-            unlink($oldFilePath);
-        }
-
-        // Save new file
         $newFileName = uniqid('work_') . '.' . $ext;
         $uploadPath = $uploadDir . $newFileName;
 
-        if (!move_uploaded_file($fileTmp, $uploadPath)) {
-            die("❌ Failed to move uploaded file.");
+        if (move_uploaded_file($fileTmp, $uploadPath)) {
+            // Delete old file
+            $oldPath = $uploadDir . $work['file_path'];
+            if (file_exists($oldPath)) {
+                unlink($oldPath);
+            }
+        } else {
+            die("❌ Upload failed.");
         }
     }
-    // Update database
-    $updateSql = "UPDATE our_works SET media_type = ?, file_path = ? WHERE id = ?";
-    $stmt = $conn->prepare($updateSql);
-    $stmt->bind_param("ssi", $media_type, $newFileName, $id);
 
-    if ($stmt->execute()) {
-        echo "<script>alert('✅ Work updated successfully.'); window.location.href='view_works.php';</script>";
+    // Update database
+    $updateSql = "UPDATE our_works SET media_type = ?, media_link = ?, file_path = ? WHERE id = ?";
+    $updateStmt = $conn->prepare($updateSql);
+    $updateStmt->bind_param('sssi', $media_type, $media_link, $newFileName, $id);
+
+    if ($updateStmt->execute()) {
+        echo "<script>alert('✅ Media updated successfully.'); window.location.href='view_works.php';</script>";
     } else {
-        echo "❌ Failed to update work: " . $conn->error;
+        echo "❌ Update failed: " . $conn->error;
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -99,20 +97,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
                                 </div>
                                 <div class="card-body">
                                     <form method="POST" enctype="multipart/form-data">
+                                        <!-- Media Type -->
                                         <div class="form-group">
                                             <label for="media_type">Select Media Type</label>
                                             <select name="media_type" class="form-control" required>
                                                 <option value="">-- Select Media Type --</option>
                                                 <?php
-                                                $types = ['Posters', 'Logos', 'Videos', 'Brochures', 'Testimonials', 'Creative Reels'];
+                                                $types = [
+                                                    'Logo',
+                                                    'Website',
+                                                    'Posters',
+                                                    'Reels',
+                                                    'Photo Shoot',
+                                                    'Videos',
+                                                    'Testimonials',
+                                                    'Animated Videos',
+                                                    'Visiting Cards',
+                                                    'Pamphlets',
+                                                    'Brochures',
+                                                    'Hoardings'
+                                                ];
                                                 foreach ($types as $type) {
-                                                    $selected = $work['media_type'] === $type ? "selected" : "";
+                                                    $selected = ($work['media_type'] === $type) ? "selected" : "";
                                                     echo "<option value='$type' $selected>$type</option>";
                                                 }
                                                 ?>
                                             </select>
                                         </div>
 
+                                        <!-- Current File -->
                                         <div class="form-group">
                                             <label>Current File</label><br>
                                             <?php
@@ -120,21 +133,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
                                             $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
                                             $path = "uploads/staff/" . $file;
 
-                                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'])) {
+                                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
                                                 echo "<img src='$path' style='max-width: 200px; height: auto; border: 1px solid #ccc; padding: 5px;'>";
                                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                                 echo "<video controls width='200'><source src='$path' type='video/$ext'>Your browser does not support the video tag.</video>";
+                                            } elseif ($ext === 'pdf') {
+                                                echo "<a href='$path' target='_blank' class='btn btn-outline-info'>View Brochure (PDF)</a>";
                                             } else {
                                                 echo "<p class='text-muted'>Unsupported format.</p>";
                                             }
                                             ?><br><br>
                                         </div>
 
+                                        <!-- Optional New File -->
                                         <div class="form-group">
                                             <label for="file">Upload New File (optional)</label>
-                                            <input type="file" name="file" class="form-control-file" accept="image/*,video/*">
+                                            <input type="file" name="file" class="form-control-file" accept="image/*,video/*,.pdf">
                                         </div>
 
+                                        <!-- Optional Redirect Link -->
+                                        <div class="form-group">
+                                            <label for="media_link">Optional Redirect Link (for click)</label>
+                                            <input type="url" class="form-control" name="media_link"
+                                                value="<?= htmlspecialchars($work['media_link'] ?? '') ?>" placeholder="https://example.com">
+                                        </div>
+
+                                        <!-- Submit -->
                                         <button type="submit" name="update" class="btn btn-success">Update Work</button>
                                     </form>
                                 </div>
@@ -142,6 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
                         </div>
                     </div>
                 </div>
+
 
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">

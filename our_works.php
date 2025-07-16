@@ -1090,10 +1090,10 @@
 
             <!-- Brochures Tab Content -->
             <div id="brochures" class="media-tab-content">
-                <div class="row gx-3 gy-4"> <!-- gx-3 adds spacing between columns -->
+                <div class="row gx-3 gy-4">
 
                     <div class="col-12 col-md-4">
-                        <iframe src="assests/images/portfolio/brouchers/samhita CATALOGUE 1 (1).pdf" width="400px"
+                        <iframe src="assests/images/portfolio/brouchers/samhita CATALOGUE 1 (1).pdf" 
                             height="400px" style="border:1px solid #ccc;" title="Brochure PDF"></iframe>
                     </div>
 

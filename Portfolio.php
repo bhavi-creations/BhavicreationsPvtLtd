@@ -1148,6 +1148,21 @@
 
                                         </a>
                                     </div>
+
+
+
+
+                                    <div class="col-12 col-md-3  mt-5 text-center">
+                                        <a href="https://samhitasoilsolutions.com/" target="_blank">
+                                            <img style="height: 100px; width:180px;"
+                                                src="assests/images/Bhavi_Creations/samhitha.png"
+                                                alt="" class="img-fluid">
+
+                                        </a>
+                                    </div>
+
+
+                                    
                                
 
                                     <div class="col-12 col-md-3  mt-5 text-center">
