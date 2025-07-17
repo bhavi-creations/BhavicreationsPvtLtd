@@ -371,48 +371,66 @@
 
         }
 
-        img,
-        video {
-            max-width: 100%;
-            height: auto;
+
+
+
+        .card {
+            background-color: lightgrey;
+            /* width: 250px;
+      padding: 20px; */
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        @media (min-width: 1200px) {
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background-color: #e0f7fa;
 
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
-                max-width: 1300px !important;
-            }
-        }
-
-
-
-
-
-        @media (min-width: 768px) and (max-width: 992px) {
-
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
-                max-width: 880px !important;
-            }
-        }
-
-        @media (max-width:768px) {
-            .team_devision_btn {
-                font-size: 14px;
-                /* Reduce font size */
-                padding: 6px 12px;
-                /* Smaller padding */
-
+            /* light cyan on hover */
+            box-shad img,
+            video {
+                max-width: 100%;
+                height: auto;
             }
 
-        }
+            @media (min-width: 1200px) {
+
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm,
+                .container-xl {
+                    max-width: 1300px !important;
+                }
+            }
+
+
+
+
+
+            @media (min-width: 768px) and (max-width: 992px) {
+
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm,
+                .container-xl {
+                    max-width: 880px !important;
+                }
+            }
+
+            @media (max-width:768px) {
+                .team_devision_btn {
+                    font-size: 14px;
+                    /* Reduce font size */
+                    padding: 6px 12px;
+                    /* Smaller padding */
+
+                }
+
+            }
     </style>
 
 </head>
@@ -505,10 +523,10 @@
                     <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
                     <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
                     <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <!-- <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li> -->
                     <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
                     <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
-                    <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a>
+                    <!-- <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a> -->
                     </li>
                 </ul>
 
@@ -590,10 +608,10 @@
             display: block;
         }
 
-        .media-tab-content video,
+        /* .media-tab-content video,
         .media-tab-content img {
             margin-bottom: 30px;
-        }
+        } */
 
         .media-box {
             margin: 10px 0;
@@ -712,8 +730,7 @@
                 </div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated
                         Videos</button></div>
-                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting
-                        Cards</button></div>
+                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
 
 
                 <!-- Inside your tab button section -->
@@ -898,213 +915,909 @@
 
 
             <!-- 🔸 All Tab Content -->
+            <!-- <div id="all" class="media-tab-content active"></div> -->
+
+
+            <!-- <div id="all" class="media-tab-content active">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+
+                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "./admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'  border: none;'>
+                            <div class='card-body p-0' style='height: 100%; display: flex; flex-direction: column;'>";
+
+                            if ($link) echo "<a href='$link' target='_blank' style='flex: 1 1 auto;'>";
+
+                            // Media wrapper with full size
+                            echo "<div style='height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;'>";
+
+                            // Handle Image
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' style='width: 100%; height: 100%; object-fit: cover;'>";
+                            }
+                            // Handle Video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='width: 100%; height: 100%; object-fit: cover;'>
+                            <source src='$path' type='video/$ext'>
+                            Your browser does not support the video tag.
+                          </video>";
+                            }
+                            // Handle PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<a href='$path' target='_blank' class='btn btn-outline-primary w-100 h-100 d-flex align-items-center justify-content-center'>
+                            📄 View PDF
+                          </a>";
+                            } else {
+                                echo "<p class='text-muted'>Unsupported file</p>";
+                            }
+
+                            echo "</div>"; // end media wrapper
+
+                            if ($link) echo "</a>";
+
+                            // Title bar
+                            echo "<div style='padding: 8px; text-align: center; background: #f8f9fa;'>
+                        <strong>$title</strong>
+                      </div>";
+
+                            echo "</div>
+                      </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
+            </div> -->
+
+
+
+            <!-- <div id="all" class="media-tab-content active">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+
+                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "./admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card' style='border: none;'>
+                            <div class='card-body p-2 text-center'>";
+
+                            if ($link) echo "<a href='$link' target='_blank'>";
+
+                            // ✅ Wrapper div to control layout
+                            echo "<div style='width: 100%; max-height: 100%;'>";
+
+                            // Handle Image
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='object-fit: contain; width: 100%; height: auto;'>";
+                            }
+                            // Handle Video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='object-fit: contain; height: auto;'>
+                            <source src='$path' type='video/$ext'>
+                            Your browser does not support the video tag.
+                          </video>";
+                            }
+                            // Handle PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<a href='$path' target='_blank' class='btn btn-outline-primary w-100'>
+                            📄 View PDF
+                          </a>";
+                            } else {
+                                echo "<p class='text-muted'>Unsupported file</p>";
+                            }
+
+                            echo "</div>"; // end media wrapper
+
+                            if ($link) echo "</a>";
+
+                            // Title
+                            echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
+                      </div>
+                    </div>
+                  </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
+            </div> -->
+
+
+
             <div id="all" class="media-tab-content active">
-                <div class="row" id="allMediaContainer"></div>
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust path as necessary
+
+                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file; // Update path if needed
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card' style='overflow: hidden;'>
+                        <div class='card-body p-2'>";
+
+                            // Wrap in link if available
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // Display image
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid'  object-fit: cover; width: 100%; border-radius: 8px;'>";
+                            }
+                            // Display video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls  object-fit: cover; width: 100%; border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            }
+                            // Display PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            }
+                            // Unsupported type
+                            else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
             </div>
+
+
+
+
+
+
+
+
+
 
 
             <div id="logo" class="media-tab-content">
                 <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
 
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/2.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/3.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/4.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/5.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/6.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/7.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/8.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/9.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/10.png" alt=""></div>
-                    <div class="col-md-3 col-12"><img src="assests/images/portfolio/logo/11.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/12.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/13.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/14.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/15.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/16.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/17.png" alt=""></div>
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Logo' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "./admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-3 mb-4'>
+                        <div class='card' style='overflow: hidden; '>
+                            <div class='card-body ' style='text-align: left;'>";
+
+                            if ($link) echo "<a href='$link' target='_blank' style='display: block;'>";
+
+                            echo "<div  display: flex; align-items: center;'>";
+
+                            // Show image
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' alt='$title' style='max-width: 100%; max-height: 100%; object-fit: contain;'>";
+                            }
+                            // Show video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls   object-fit: contain;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            }
+                            // Show PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<a href='$path' target='_blank' class='btn btn-outline-primary'>📄 View PDF</a>";
+                            } else {
+                                echo "<p class='text-muted'>Unsupported file</p>";
+                            }
+
+                            echo "</div>"; // end media wrapper
+
+                            if ($link) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No logo media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
-
             </div>
+
+
             <div id="website" class="media-tab-content">
-
-
-
-
                 <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
 
-                    <div class="col-md-3 col-12">
-                        <a href="https://www.askoncologist.com/"> <img src="assests/images/portfolio/logo/1.png" alt=""
-                                style="width: 200px;"></a>
-                    </div>
-                    <div class="col-md-3 col-12"> <a href="https://kakinadahub.com/">
-                            <img src="assests/images/portfolio/logo/2.png" alt="" style="width: 200px;"> </a>
-                    </div>
-                    <div class="col-md-3 col-12"> <a href="https://neurostarhospital.com/"> <img
-                                src="assests/images/portfolio/logo/3.png" alt="" style="width: 200px;"></a></div>
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Website' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
-                    <div class="col-md-3 col-12"> <a href="https://renew.bhavicreations.com/index.php"> <img
-                                src="assests/images/portfolio/logo/5.png" alt="" style="width: 200px;"></a></div>
-                    <div class="col-md-3 col-12"> <a href="https://samhitasoilsolutions.com/" style="width: 200px;">
-                            <img src="assests/images/portfolio/logo/6.png" alt=""></div></a>
-                    <div class="col-md-3 col-12"> <a href="https://www.loveandcaretrust.com/"> <img
-                                src="assests/images/portfolio/logo/7.png" alt="" style="width: 200px;">
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
 
-                        </a> </div>
+                            echo "<div class='col-lg-4 col-md-6 col-12 mb-4'>
+                    <div class='card border-0 shadow-sm h-100 hover-card'>
+                        <div class='card-body d-flex flex-column justify-content-between' style='padding: 10px;'>";
 
-                    <div class="col-md-3 col-12"> <a href="https://srinivasadentalkakinada.com/"> <img
-                                src="assests/images/portfolio/logo/10.png" alt="" style="width: 200px;">
-                        </a> </div>
+                            // Media Preview with link
+                            echo "<div style='width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; height: 145px; overflow: hidden;'>";
 
+                            if (!empty($link)) echo "<a href='$link' target='_blank' style='display:block; width:100%; text-align:center;'>";
 
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='max-height: 100%; max-width: 100%; object-fit: contain;'>
+                        <source src='$path' type='video/$ext'>
+                        Your browser does not support the video tag.
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<div class='w-100 h-100 d-flex align-items-center justify-content-center'>
+                            <span class='text-muted'>📄 PDF</span>
+                        </div>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "</div>"; // end media preview
+
+                            // Title
+                            echo "<div class='mt-2 text-center'><strong>$title</strong></div>";
+
+                            // View Site Button
+                            if (!empty($link)) {
+                                echo "<div class='mt-2 text-center'>
+                        <a href='$link' target='_blank' class='btn btn-sm btn-success'>🌐 View Site</a>
+                    </div>";
+                            }
+
+                            echo "</div></div></div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No Website media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
-
-
-
-
-
             </div>
+
+
+
+
+
             <div id="posters" class="media-tab-content">
-
                 <div class="row">
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
+                    <?php
+                    include 'db.connection/db_connection.php';
 
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/poster_3.png" alt=""
-                            class="img-fluid">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p12.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p11.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p13.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p14.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p15.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p16.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p17.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p18.png" alt="">
-                    </div>
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Posters' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card border-0 shadow-sm'>
+                            <div class='card-body p-2 text-center'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // ✅ Display media with original ratio
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                            Your browser does not support the video tag.
+                          </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No Posters uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
             </div>
+
+
+
 
 
 
             <div id="reels" class="media-tab-content">
-
                 <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust path if needed
 
-                    <div class="col-md-4 col-12">
-                        <video controls src="assests/images/portfolio/creative reels/apple creative.mp4""></video>
-                    </div>
-                    <div class=" col-md-4 col-12">
-                            <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Reels' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
-                        <video controls
-                            src="assests/images/portfolio/creative reels/krishna dental creative.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <video controls
-                            src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"></video>
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
 
-                    </div>
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'>
+                            <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // Show image
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            }
+                            // Show video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            }
+                            // Show PDF link
+                            elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            }
+                            // Unsupported format
+                            else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No Reels uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
             </div>
+
+
+
+
+
+
 
 
             <div id="photoshoot" class="media-tab-content">
                 <div class="row">
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust if needed
 
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Photo Shoot' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file; // Update path if needed
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                // 👉 Full-size image, no height/width restrictions
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='width: 100%; border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
                     </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/poster_3.png" alt=""
-                            class="img-fluid">
-                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No Photo Shoot media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
             </div>
+
+
+
+
+
+
+
             <div id="videos" class="media-tab-content">
                 <div class="row">
-                    <div class="col-md-4 col-12">
-                        <video controls
-                            src="assests/images/portfolio/educational videos/srinivasa educational video.mp4"></video>
+                    <?php
+                    include 'db.connection/db_connection.php'; // adjust path as needed
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Videos' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file; // adjust this path if needed
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // IMAGE
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            }
+                            // VIDEO
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            }
+                            // PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            }
+                            // OTHER
+                            else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
                     </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No video media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
-                </video>
             </div>
+
+
+
+
+
+
+
+
+
             <div id="testimonials" class="media-tab-content">
-
                 <div class="row">
-                    <div class="col-md-4 col-12"> <video controls
-                            src="assests/images/portfolio/testimonials/apple testimonial.mp4"></video></div>
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust path if necessary
 
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Testimonials' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file; // Adjust path if needed
 
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No testimonials uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
             </div>
+
+
+
 
             <div id="animatedvideos" class="media-tab-content">
                 <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust if path differs
 
-                    <div class="col-md-4 col-12">
-                        <video controls src="assests/images/portfolio/creative reels/apple creative.mp4""></video>
-                    </div>
-                    <div class=" col-md-4 col-12">
-                            <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Animated Videos' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
-                        <video controls
-                            src="assests/images/portfolio/creative reels/krishna dental creative.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <video controls
-                            src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"></video>
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
 
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                      </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
                     </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
                 </div>
-
             </div>
+
+
+
             <div id="visitingcards" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // adjust this path if needed
 
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Visiting Cards' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No visiting cards uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
             </div>
-            <!-- Pamphlets Tab Content -->
+
+
+
+
             <div id="pamphlets" class="media-tab-content">
-                <img src="assets/img/pamphlet1.jpg" alt="Pamphlet 1">
-                <img src="assets/img/pamphlet2.jpg" alt="Pamphlet 2">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Update path if needed
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Pamphlets' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No pamphlets uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
             </div>
+
+
 
             <!-- Brochures Tab Content -->
             <div id="brochures" class="media-tab-content">
-                <div class="row gx-3 gy-4">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust the path if needed
 
-                    <div class="col-12 col-md-4">
-                        <iframe src="assests/images/portfolio/brouchers/samhita CATALOGUE 1 (1).pdf" 
-                            height="400px" style="border:1px solid #ccc;" title="Brochure PDF"></iframe>
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Brochures' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card h-100'>
+                        <div class='card-body p-2 text-center'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px; width: 300px; height: 400px; object-fit: contain;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='border-radius: 8px; width: 300px; height: 400px; object-fit: contain;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<div style='width: 300px; height: 400px; overflow: hidden; border-radius: 8px; margin: auto;'>
+                            <iframe src='$path#toolbar=0' width='100%' height='100%' style='border: none;'></iframe>
+                          </div>";
+                                // echo "<p class='mt-2'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 Open Full PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
+                        </div>
                     </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No brochures uploaded yet.</p></div>";
+                    }
 
-
+                    $conn->close();
+                    ?>
                 </div>
-
-                <div id="hoardings" class="media-tab-content"></div>
-
-
-
             </div>
+
+
+
+
+
+
+
+
+            <div id="hoardings" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // adjust path if needed
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Hoardings' ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
+                        <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // Display media based on file type
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No hoardings uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
+            </div>
+
+
+
+
 
 
 
@@ -1112,7 +1825,7 @@
 
 
             <!-- all image will below script in below  -->
-            <script>
+            <!-- <script>
                 function showMediaTab(event, tabId) {
                     // Remove active class from all buttons
                     document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -1152,9 +1865,41 @@
                 }
 
                 // Default load
-                window.onload = function () {
+                window.onload = function() {
                     showMediaTab(null, 'all');
                 };
+            </script> -->
+
+
+
+
+
+            <script>
+                // Store initial "all" tab HTML on page load
+                let originalAllContent = '';
+
+                window.onload = function() {
+                    originalAllContent = document.getElementById('all').innerHTML;
+                    showMediaTab(null, 'all');
+                };
+
+                function showMediaTab(event, tabId) {
+                    // Remove 'active' from all buttons
+                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
+                    if (event) event.target.classList.add('active');
+
+                    // Hide all tabs
+                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+
+                    // Show selected tab
+                    const selectedTab = document.getElementById(tabId);
+                    selectedTab.classList.add('active');
+
+                    // Restore original 'all' tab content
+                    if (tabId === 'all') {
+                        selectedTab.innerHTML = originalAllContent;
+                    }
+                }
             </script>
 
 
@@ -1164,13 +1909,8 @@
 
 
 
-
-
-
-
-
             <!-- JS -->
-            <script>
+            <!-- <script>
                 function showMediaTab(event, tabId) {
                     // Remove 'active' class from all tab buttons
                     document.querySelectorAll('.media-tab-btn')?.forEach(btn => btn.classList.remove('active'));
@@ -1201,15 +1941,15 @@
                 }
 
                 // ✅ On page load, show all media types by default
-                window.onload = function () {
+                window.onload = function() {
                     showMediaTab(null, 'all');
                 };
-            </script>
+            </script>  -->
 
 
 
 
-            <script>
+            <!-- <script>
                 function showMediaTab(event, tabId) {
                     // Remove active class from all buttons
                     document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -1230,10 +1970,10 @@
                     // Show selected tab
                     document.getElementById(tabId).classList.add('active');
                 }
-            </script>
+            </script> -->
 
 
-            <script>
+            <!-- <script>
                 function showMediaTab(event, tabId) {
                     // Remove 'active' from all buttons
                     document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -1256,15 +1996,57 @@
 
 
                     // ✅ Automatically load 'all' on page load
-                    window.onload = function () {
+                    window.onload = function() {
                         showMediaTab(null, 'all');
                     };
+                }
+            </script>  -->
+
+            <!-- <script>
+                function showMediaTab(event, tabId) {
+                    // Remove 'active' from all buttons
+                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
+                    if (event) event.target.classList.add('active');
+
+                    // Hide all tabs
+                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+
+                    // If 'all' is selected, dynamically load all contents
+                    if (tabId === 'all') {
+                        const allTab = document.getElementById('all');
+
+                        // Clear previous content
+                        allTab.innerHTML = '';
+
+                        // List of tab IDs to combine
+                        const tabIds = ['images', 'videos', 'reels', 'logos', 'banners', 'graphics', 'pamphlets', 'brochures'];
+
+                        tabIds.forEach(id => {
+                            const tab = document.getElementById(id);
+                            if (tab) {
+                                // Clone tab content and append to #all
+                                const clone = tab.cloneNode(true);
+                                clone.classList.remove('media-tab-content'); // Remove any tab-specific class
+                                clone.classList.remove('active'); // Make sure it's not accidentally active
+                                allTab.append(...clone.children);
+                            }
+                        });
+                    }
+
+                    // Show selected tab
+                    document.getElementById(tabId).classList.add('active');
+                }
+
+                // ✅ Automatically load 'all' on page load
+                window.onload = function() {
+                    showMediaTab(null, 'all');
+                };
+            </script> -->
 
 
 
 
 
-            </script>
 
 
 
@@ -1518,31 +2300,26 @@
 
 
         <script>
+            // Function to scroll to the top of the page
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Optional, smooth scrolling animation
+                });
+            }
 
+            // Show scroll button when scrolling down
+            window.onscroll = function() {
+                scrollFunction()
+            };
 
-
-
-                    // Function to scroll to the top of the page
-                    function scrollToTop() {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth' // Optional, smooth scrolling animation
-                        });
-                    }
-
-                    // Show scroll button when scrolling down
-                    window.onscroll = function () { scrollFunction() };
-
-                    function scrollFunction() {
-                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                            document.getElementById("scrollBtn").style.display = "block";
-                        } else {
-                            document.getElementById("scrollBtn").style.display = "none";
-                        }
-                    }
-
-
-
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollBtn").style.display = "block";
+                } else {
+                    document.getElementById("scrollBtn").style.display = "none";
+                }
+            }
         </script>
 
 
@@ -1550,106 +2327,106 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
         <script>
-                    $(document).ready(function () {
-                        // Initial state
-                        $(".Rajahmundry").hide();
+            $(document).ready(function() {
+                // Initial state
+                $(".Rajahmundry").hide();
 
-                        // Dropdown change event
-                        $("#branchdropdown").change(function () {
-                            var selectedBranch = $(this).val();
+                // Dropdown change event
+                $("#branchdropdown").change(function() {
+                    var selectedBranch = $(this).val();
 
-                            // Hide all content
-                            $(".kakinada, .Rajahmundry").hide();
+                    // Hide all content
+                    $(".kakinada, .Rajahmundry").hide();
 
-                            // Show content based on the selected branch
-                            if (selectedBranch === "Kakinada") {
-                                $(".kakinada").show();
-                                $(".kakinadaContent").show();
-                                $(".RajahmundryContent").hide();
-                                $(".carousal1").show();
-                                $(".carousal2").hide();
+                    // Show content based on the selected branch
+                    if (selectedBranch === "Kakinada") {
+                        $(".kakinada").show();
+                        $(".kakinadaContent").show();
+                        $(".RajahmundryContent").hide();
+                        $(".carousal1").show();
+                        $(".carousal2").hide();
 
-                                // reloadCarousel(".carousal1");
-                            } else if (selectedBranch === "Rajahmundry") {
-                                $(".Rajahmundry").show();
-                                $(".RajahmundryContent").show();
-                                $(".kakinadaContent").hide();
-                                $(".carousal1").hide();
-                                $(".carousal2").show();
+                        // reloadCarousel(".carousal1");
+                    } else if (selectedBranch === "Rajahmundry") {
+                        $(".Rajahmundry").show();
+                        $(".RajahmundryContent").show();
+                        $(".kakinadaContent").hide();
+                        $(".carousal1").hide();
+                        $(".carousal2").show();
 
-                                // reloadCarousel(".carousal2");
+                        // reloadCarousel(".carousal2");
 
-                            }
-                        });
+                    }
+                });
 
-                        // // Function to reload the carousel
-                        // function reloadCarousel(carouselId) {
-                        //     var carousel = $(carouselId);
-                        //     carousel.carousel(0); // Reset the carousel to the first slide
-                        // }
+                // // Function to reload the carousel
+                // function reloadCarousel(carouselId) {
+                //     var carousel = $(carouselId);
+                //     carousel.carousel(0); // Reset the carousel to the first slide
+                // }
 
-                        // Initialize carousels
-                        $('#recipeCarousel1').carousel({
-                            interval: 3000
-                        });
-                        $('#recipeCarousel2').carousel({
-                            interval: 3000
-                        });
+                // Initialize carousels
+                $('#recipeCarousel1').carousel({
+                    interval: 3000
+                });
+                $('#recipeCarousel2').carousel({
+                    interval: 3000
+                });
 
-                        $('.carousel .carousel-item').each(function () {
-                            var minPerSlide = 3;
-                            var next = $(this).next();
-                            if (!next.length) {
-                                next = $(this).siblings(':first');
-                            }
-                            next.children(':first-child').clone().appendTo($(this));
+                $('.carousel .carousel-item').each(function() {
+                    var minPerSlide = 3;
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
 
-                            for (var i = 0; i < minPerSlide; i++) {
-                                next = next.next();
-                                if (!next.length) {
-                                    next = $(this).siblings(':first');
-                                }
+                    for (var i = 0; i < minPerSlide; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = $(this).siblings(':first');
+                        }
 
-                                next.children(':first-child').clone().appendTo($(this));
-                            }
-                        });
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
 
-                        $('.carousel2 .carousel-item').each(function () {
-                            var minPerSlide = 3;
-                            var next = $(this).next();
-                            if (!next.length) {
-                                next = $(this).siblings(':first');
-                            }
-                            next.children(':first-child').clone().appendTo($(this));
+                $('.carousel2 .carousel-item').each(function() {
+                    var minPerSlide = 3;
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
 
-                            for (var i = 0; i < minPerSlide; i++) {
-                                next = next.next();
-                                if (!next.length) {
-                                    next = $(this).siblings(':first');
-                                }
+                    for (var i = 0; i < minPerSlide; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = $(this).siblings(':first');
+                        }
 
-                                next.children(':first-child').clone().appendTo($(this));
-                            }
-                        });
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
 
-                        // Trigger initial selection
-                        $("#branchdropdown").trigger("change");
-                    });
+                // Trigger initial selection
+                $("#branchdropdown").trigger("change");
+            });
         </script>
 
 
 
         <script>
-                    $(document).ready(function () {
-                        // Toggle dropdown on button click
-                        $('.toggleDropdown').change(function () {
-                            if ($(this).is(':checked')) {
-                                $('.dropdown-menu').show();
-                            } else {
-                                $('.dropdown-menu').hide();
-                            }
-                        });
-                    });
+            $(document).ready(function() {
+                // Toggle dropdown on button click
+                $('.toggleDropdown').change(function() {
+                    if ($(this).is(':checked')) {
+                        $('.dropdown-menu').show();
+                    } else {
+                        $('.dropdown-menu').hide();
+                    }
+                });
+            });
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1657,16 +2434,16 @@
 
 
         <script type="text/javascript">
-                window.omnisend = window.omnisend || [];
-                omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
-                omnisend.push(["track", "$pageViewed"]);
-                !function () {
-                    var e = document.createElement("script");
-                    e.type = "text/javascript", e.async = !0,
-                        e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
-                    var t = document.getElementsByTagName("script")[0];
-                    t.parentNode.insertBefore(e, t)
-                }();
+            window.omnisend = window.omnisend || [];
+            omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+            omnisend.push(["track", "$pageViewed"]);
+            ! function() {
+                var e = document.createElement("script");
+                e.type = "text/javascript", e.async = !0,
+                    e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+                var t = document.getElementsByTagName("script")[0];
+                t.parentNode.insertBefore(e, t)
+            }();
         </script>
     </body>
 

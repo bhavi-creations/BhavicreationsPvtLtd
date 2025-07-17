@@ -461,10 +461,10 @@
                     <li><a class="dropdown-item menu_item_black" href="index.php">Home</a></li>
                     <li><a class="dropdown-item menu_item_black" href="about.php">About</a></li>
                     <li><a class="dropdown-item menu_item_black" href="services.php">Services</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li>
+                    <!-- <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li> -->
                     <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
                     <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
-                    <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li>
+                    <!-- <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li> -->
                 </ul>
 
 
@@ -546,7 +546,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6 col-md-12 col-sm-12 text-center order-1 order-lg-2">
-                    <img src="assests/images/Bhavi_Creations/bhavi_ceo_Phaneednra_bhavi_creations.webp"
+                    <img src="assests/images/Bhavi_Creations/phani_ceo_sir.png"
                         style="border-radius: 10px;" class="img-fluid " />
 
                 </div>
@@ -1658,14 +1658,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
+                                    <!-- <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
                                                     src="assests/images/Bhavi_Creations/prasanthi_teleceller.png">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
 
                                     <div class="carousel-item">
@@ -1764,7 +1764,7 @@
                                     </div> -->
                             
 
-                            <div class="flip-card mt-4">
+                            <!-- <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <img src="assests/images/Bhavi_Creations/prasanthi_teleceller.png"
@@ -1775,7 +1775,7 @@
                                         <p>Telecaller</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
