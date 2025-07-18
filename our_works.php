@@ -1053,7 +1053,7 @@
 
 
 
-            <div id="all" class="media-tab-content active">
+            <!-- <div id="all" class="media-tab-content active">
                 <div class="row">
                     <?php
                     include 'db.connection/db_connection.php'; // Adjust path as necessary
@@ -1070,7 +1070,7 @@
                             $path = "admin/public/uploads/staff/" . $file; // Update path if needed
 
                             echo "<div class='col-md-4 mb-4'>
-                    <div class='card' style='overflow: hidden;'>
+                    <div class='card shadow-sm h-100' style='overflow: hidden;'>
                         <div class='card-body p-2'>";
 
                             // Wrap in link if available
@@ -1110,10 +1110,69 @@
                     ?>
                 </div>
             </div>
+ -->
 
 
 
+            <div id="all" class="media-tab-content active">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Adjust path as necessary
 
+                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file; // Update path if needed
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card shadow-sm h-100' style='overflow: hidden;'>
+                        <div class='card-body p-2'>";
+
+                            // Wrap in link if available
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            // Display image (centered)
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<div class='d-flex justify-content-center'>
+                            <img src='$path' class='img-fluid' style='object-fit: cover; max-width: 100%; border-radius: 8px;'>
+                          </div>";
+                            }
+                            // Display video
+                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls style='object-fit: cover; width: 100%; border-radius: 8px;'>
+                            <source src='$path' type='video/$ext'>
+                          </video>";
+                            }
+                            // Display PDF
+                            elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            }
+                            // Unsupported type
+                            else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        </div>
+                    </div>
+                </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
+                    }
+
+                    $conn->close();
+                    ?>
+                </div>
+            </div>
 
 
 
