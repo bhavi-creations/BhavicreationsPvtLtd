@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 
@@ -434,9 +432,6 @@
 
             }
     </style>
-
-
-
 
 </head>
 
