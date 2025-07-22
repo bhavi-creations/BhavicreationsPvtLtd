@@ -1786,9 +1786,9 @@
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
                             if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px; width: 300px; height: 400px; object-fit: contain;'>";
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;  object-fit: contain;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls style='border-radius: 8px; width: 300px; height: 400px; object-fit: contain;'>
+                                echo "<video controls style='border-radius: 8px;  object-fit: contain;'>
                             <source src='$path' type='video/$ext'>
                           </video>";
                             } elseif ($ext === 'pdf') {
