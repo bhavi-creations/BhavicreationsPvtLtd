@@ -1667,58 +1667,6 @@
 
 
 
-        <button id="scrollBtn" onclick="scrollToTop()">
-            <div class="pyramid-loader animate__animated animate__bounceInDown">
-                <div class="wrapper ">
-                    <span class="side side1"></span>
-                    <span class="side side2"></span>
-                    <span class="side side3"></span>
-                    <span class="side side4"></span>
-                    <span class="shadow"></span>
-                </div>
-            </div>
-        </button>
-
-        <!-- redirections  -->
-
-        <div class="open_bar open_home">
-            <a href="index.php" style="text-decoration: none;"> <span class="bar_in bar_home">Home</span>
-                <span class="text">
-                    <div class="borde-back">
-                        <div class="icon">
-                            <i class="fa-solid fa-house" style="color: white;"></i>
-                        </div>
-                    </div>
-                </span>
-            </a>
-        </div>
-
-        <div class="open_bar open_services">
-            <a href="services.php" style="text-decoration: none;"> <span class="bar_in bar_Services">Services</span>
-                <span class="text">
-                    <div class="borde-back">
-                        <div class="icon">
-                            <i class="fa-solid fa-laptop-file" style="color: white;"></i>
-                        </div>
-                    </div>
-                </span>
-            </a>
-        </div>
-        <div class="open_bar open_contact">
-            <a href="contact_us.php" style="text-decoration: none;"> <span class="bar_in bar_Contact">Contact
-                    Us</span>
-                <span class="text">
-                    <div class="borde-back">
-                        <div class="icon">
-                            <i class="fa-solid fa-headset" style="color: white;"></i>
-
-                        </div>
-                    </div>
-                </span>
-            </a>
-        </div>
-
-
 
 
 
@@ -1886,6 +1834,6 @@
 
 
 
-    </body>
+ 
 
-</html>
+</body></html>
