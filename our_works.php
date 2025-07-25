@@ -709,424 +709,31 @@
     .media-tab-content video {
       width: 100%;
     } */
-
-        .media-tab-content {
-            display: none;
-        }
-
-        .media-tab-content.active {
-            display: block;
-        }
     </style>
     </head>
 
     <body class="bg-light p-3">
 
-        <div class="container">
 
-            <!-- Row of 7 tabs -->
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Our Creative Portfolio</h1>
+            <hr>
+
             <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons">
                 <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'all')">All</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
-
-
-
-
-
-
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'posters')">Posters</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Reels</button></div>
-                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button>
-                </div>
+                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'videos')">Videos</button></div>
-                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button>
-                </div>
-                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated
-                        Videos</button></div>
+                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button></div>
+                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated Videos</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
-
-
-                <!-- Inside your tab button section -->
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'pamphlets')">Pamphlets</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
-
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div>
             </div>
-
-            <!-- Tab Content  -->
-            <!-- <div id="all" class="media-tab-content active"></div> -->
-
-
-
-            <!-- <div id="all" class="media-tab-content active">
-                <!-- Example media items -->
-            <!-- <div class="media-item">
-                    <img src="uploads/staff/image1.jpg" alt="Image 1">
-                </div>
-                <div class="media-item">
-                    <img src="uploads/staff/image2.jpg" alt="Image 2">
-                </div>
-                <div class="media-item">
-                    <img src="uploads/staff/image3.jpg" alt="Image 3">
-                </div>
-                <div class="media-item">
-                    <img src="uploads/staff/image4.jpg" alt="Image 4">
-                </div> 
-               
-            </div> -->
-
-
-            <!-- <div id="images" class="media-tab-content ">
-
-
-                <div class="row">
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <img src="assests/images/portfolio/posters/poster_2.png" alt="" class="img-fluid">
-
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/poster_3.png" alt=""
-                            class="img-fluid">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p12.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p11.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p13.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p14.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p15.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p16.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p17.png" alt="">
-                    </div>
-                    <div class="col-md-4 col-12"> <img src="assests/images/portfolio/posters/p18.png" alt="">
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-            </div> -->
-
-
-            <!-- creative real    -->
-
-            <!-- <div id="videos" class="media-tab-content">
-
-
-                <div class="row">
-
-                    <div class="col-md-4 col-12">
-                        <video controls src="assests/images/portfolio/creative reels/apple creative.mp4""></video>
-                    </div>
-                    <div class=" col-md-4 col-12">
-                            <video controls src="assests/images/portfolio/creative reels/brest implant.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
-
-                        <video controls
-                            src="assests/images/portfolio/creative reels/krishna dental creative.mp4"></video>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <video controls
-                            src="assests/images/portfolio/creative reels/WhatsApp Video 2025-07-01 at 18.31.16_1c0cd66f.mp4"></video>
-
-                    </div>
-                </div>
-
-
-
-
-
-            </div> -->
-
-            <!-- testimonials   -->
-            <!-- <div id="reels" class="media-tab-content">
-
-                <div class="row">
-                    <div class="col-md-4 col-12"> <video controls
-                            src="assests/images/portfolio/testimonials/apple testimonial.mp4"></video></div>
-                    <div class="col-md-4 col-12">
-                        <video controls src="assests/images/portfolio/testimonials/krishna testmonial.mp4"></video>
-                    </div>
-
-
-                </div>
-
-
-
-            </div> -->
-
-            <!-- logo  -->
-            <!-- <div id="logos" class="media-tab-content">
-
-
-                <div class="row">
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/1.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/2.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/3.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/4.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/5.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/6.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/7.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/8.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/9.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/10.png" alt=""></div>
-                    <div class="col-md-3 col-12"><img src="assests/images/portfolio/logo/11.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/12.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/13.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/14.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/15.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/16.png" alt=""></div>
-                    <div class="col-md-3 col-12"> <img src="assests/images/portfolio/logo/17.png" alt=""></div>
-
-                </div>
-
-            </div> -->
-
-            <!-- broucher   -->
-            <!-- <div id="banners" class="media-tab-content">
-
-                <img src="assests/images/portfolio/festival posters/baalayam sriramanavami.1.jpg" alt=""
-                    style="width: 300px;">
-            </div> -->
-
-            <!-- video add this   -->
-            <!-- <div id="graphics" class="media-tab-content">
-                <div class="row">
-                    <div class="col-md-4 col-12">
-                        <video controls
-                            src="assests/images/portfolio/educational videos/srinivasa educational video.mp4"></video>
-                    </div>
-                </div>
-
-            </div> -->
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div id="all" class="media-tab-content active"></div> -->
-
-
-            <!-- 🔸 All Tab Content -->
-            <!-- <div id="all" class="media-tab-content active"></div> -->
-
-
-            <!-- <div id="all" class="media-tab-content active">
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php';
-
-                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
-                    $result = $conn->query($sql);
-
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "./admin/public/uploads/staff/" . $file;
-
-                            echo "<div class='col-md-4 mb-4'>
-                        <div class='card'  border: none;'>
-                            <div class='card-body p-0' style='height: 100%; display: flex; flex-direction: column;'>";
-
-                            if ($link) echo "<a href='$link' target='_blank' style='flex: 1 1 auto;'>";
-
-                            // Media wrapper with full size
-                            echo "<div style='height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;'>";
-
-                            // Handle Image
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' style='width: 100%; height: 100%; object-fit: cover;'>";
-                            }
-                            // Handle Video
-                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls style='width: 100%; height: 100%; object-fit: cover;'>
-                            <source src='$path' type='video/$ext'>
-                            Your browser does not support the video tag.
-                          </video>";
-                            }
-                            // Handle PDF
-                            elseif ($ext === 'pdf') {
-                                echo "<a href='$path' target='_blank' class='btn btn-outline-primary w-100 h-100 d-flex align-items-center justify-content-center'>
-                            📄 View PDF
-                          </a>";
-                            } else {
-                                echo "<p class='text-muted'>Unsupported file</p>";
-                            }
-
-                            echo "</div>"; // end media wrapper
-
-                            if ($link) echo "</a>";
-
-                            // Title bar
-                            echo "<div style='padding: 8px; text-align: center; background: #f8f9fa;'>
-                        <strong>$title</strong>
-                      </div>";
-
-                            echo "</div>
-                      </div>
-                    </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
-                    }
-
-                    $conn->close();
-                    ?>
-                </div>
-            </div> -->
-
-
-
-            <!-- <div id="all" class="media-tab-content active">
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php';
-
-                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
-                    $result = $conn->query($sql);
-
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "./admin/public/uploads/staff/" . $file;
-
-                            echo "<div class='col-md-4 mb-4'>
-                        <div class='card' style='border: none;'>
-                            <div class='card-body p-2 text-center'>";
-
-                            if ($link) echo "<a href='$link' target='_blank'>";
-
-                            // ✅ Wrapper div to control layout
-                            echo "<div style='width: 100%; max-height: 100%;'>";
-
-                            // Handle Image
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid' style='object-fit: contain; width: 100%; height: auto;'>";
-                            }
-                            // Handle Video
-                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls class='w-100' style='object-fit: contain; height: auto;'>
-                            <source src='$path' type='video/$ext'>
-                            Your browser does not support the video tag.
-                          </video>";
-                            }
-                            // Handle PDF
-                            elseif ($ext === 'pdf') {
-                                echo "<a href='$path' target='_blank' class='btn btn-outline-primary w-100'>
-                            📄 View PDF
-                          </a>";
-                            } else {
-                                echo "<p class='text-muted'>Unsupported file</p>";
-                            }
-
-                            echo "</div>"; // end media wrapper
-
-                            if ($link) echo "</a>";
-
-                            // Title
-                            echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
-                      </div>
-                    </div>
-                  </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
-                    }
-
-                    $conn->close();
-                    ?>
-                </div>
-            </div> -->
-
-
-
-            <!-- <div id="all" class="media-tab-content active">
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php'; // Adjust path as necessary
-
-                    $sql = "SELECT * FROM our_works ORDER BY id DESC";
-                    $result = $conn->query($sql);
-
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file; // Update path if needed
-
-                            echo "<div class='col-md-4 mb-4'>
-                    <div class='card shadow-sm h-100' style='overflow: hidden;'>
-                        <div class='card-body p-2'>";
-
-                            // Wrap in link if available
-                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
-
-                            // Display image
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid'  object-fit: cover; width: 100%; border-radius: 8px;'>";
-                            }
-                            // Display video
-                            elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls  object-fit: cover; width: 100%; border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
-                            }
-                            // Display PDF
-                            elseif ($ext === 'pdf') {
-                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
-                            }
-                            // Unsupported type
-                            else {
-                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
-                            }
-
-                            if (!empty($link)) echo "</a>";
-
-                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
-                        </div>
-                    </div>
-                </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
-                    }
-
-                    $conn->close();
-                    ?>
-                </div>
-            </div>
- -->
-
-
 
             <div id="all" class="media-tab-content active">
                 <div class="row">
@@ -1154,14 +761,14 @@
                             // Display image (centered)
                             if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
                                 echo "<div class='d-flex justify-content-center'>
-                            <img src='$path' class='img-fluid' style='object-fit: cover; max-width: 100%; border-radius: 8px;'>
-                          </div>";
+                            <img src='$path' class='img-fluid' style='max-width: 100%; border-radius: 8px;'>
+                        </div>";
                             }
                             // Display video
                             elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls style='object-fit: cover; width: 100%; border-radius: 8px;'>
                             <source src='$path' type='video/$ext'>
-                          </video>";
+                        </video>";
                             }
                             // Display PDF
                             elseif ($ext === 'pdf') {
@@ -1182,25 +789,24 @@
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
                     }
-
+                    // Close connection only once after all PHP blocks are processed
                     $conn->close();
                     ?>
                 </div>
             </div>
 
-
-
-
-
-
-
             <div id="logo" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php';
+                    include 'db.connection/db_connection.php'; // Re-establish connection for each block, or establish once at the top and pass $conn around
+                    $conn_logo = new mysqli($servername, $username, $password, $dbname); // New connection for this block
+                    if ($conn_logo->connect_error) {
+                        die("Connection failed: " . $conn_logo->connect_error);
+                    }
+
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Logo' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_logo->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1208,25 +814,25 @@
                             $title = htmlspecialchars($row['title']);
                             $link = htmlspecialchars($row['media_link']);
                             $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "./admin/public/uploads/staff/" . $file;
+                            $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-md-3 mb-4'>
-                        <div class='card' style='overflow: hidden; '>
-                            <div class='card-body ' style='text-align: left;'>";
+                        <div class='card' style='overflow: hidden;'>
+                            <div class='card-body' style='text-align: center;'>"; // Changed to center for consistency
 
-                            if ($link) echo "<a href='$link' target='_blank' style='display: block;'>";
+                            if (!empty($link)) echo "<a href='$link' target='_blank' style='display: block;'>";
 
-                            echo "<div  display: flex; align-items: center;'>";
+                            echo "<div style='display: flex; justify-content: center; align-items: center; height: 150px;'>"; // Added height for consistency
 
                             // Show image
                             if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' alt='$title' style='max-width: 100%; max-height: 100%; object-fit: contain;'>";
+                                echo "<img src='$path' alt='$title' class='img-fluid' style='max-height: 100%; max-width: 100%; object-fit: contain;'>";
                             }
                             // Show video
                             elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls   object-fit: contain;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
+                                echo "<video controls class='img-fluid' style='max-height: 100%; max-width: 100%; object-fit: contain;'>
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             }
                             // Show PDF
                             elseif ($ext === 'pdf') {
@@ -1237,7 +843,7 @@
 
                             echo "</div>"; // end media wrapper
 
-                            if ($link) echo "</a>";
+                            if (!empty($link)) echo "</a>";
 
                             echo "<p class='mt-2 mb-0'><strong>$title</strong></p>
                             </div>
@@ -1247,20 +853,22 @@
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No logo media uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_logo->close();
                     ?>
                 </div>
             </div>
-
 
             <div id="website" class="media-tab-content">
                 <div class="row">
                     <?php
                     include 'db.connection/db_connection.php';
+                    $conn_website = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_website->connect_error) {
+                        die("Connection failed: " . $conn_website->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Website' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_website->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1271,8 +879,8 @@
                             $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-lg-4 col-md-6 col-12 mb-4'>
-                    <div class='card border-0 shadow-sm h-100 hover-card'>
-                        <div class='card-body d-flex flex-column justify-content-between' style='padding: 10px;'>";
+                        <div class='card border-0 shadow-sm h-100 hover-card'>
+                            <div class='card-body d-flex flex-column justify-content-between' style='padding: 10px;'>";
 
                             // Media Preview with link
                             echo "<div style='width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; height: 145px; overflow: hidden;'>";
@@ -1283,13 +891,13 @@
                                 echo "<img src='$path' class='img-fluid' style='max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls style='max-height: 100%; max-width: 100%; object-fit: contain;'>
-                        <source src='$path' type='video/$ext'>
-                        Your browser does not support the video tag.
-                    </video>";
+                                <source src='$path' type='video/$ext'>
+                                Your browser does not support the video tag.
+                            </video>";
                             } elseif ($ext === 'pdf') {
                                 echo "<div class='w-100 h-100 d-flex align-items-center justify-content-center'>
-                            <span class='text-muted'>📄 PDF</span>
-                        </div>";
+                                <span class='text-muted'>📄 PDF</span>
+                            </div>";
                             } else {
                                 echo "<p class='text-muted text-center'>Unsupported format</p>";
                             }
@@ -1304,8 +912,8 @@
                             // View Site Button
                             if (!empty($link)) {
                                 echo "<div class='mt-2 text-center'>
-                        <a href='$link' target='_blank' class='btn btn-sm btn-success'>🌐 View Site</a>
-                    </div>";
+                                <a href='$link' target='_blank' class='btn btn-sm btn-success'>🌐 View Site</a>
+                            </div>";
                             }
 
                             echo "</div></div></div>";
@@ -1313,23 +921,22 @@
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No Website media uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_website->close();
                     ?>
                 </div>
             </div>
-
-
-
-
 
             <div id="posters" class="media-tab-content">
                 <div class="row">
                     <?php
                     include 'db.connection/db_connection.php';
+                    $conn_posters = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_posters->connect_error) {
+                        die("Connection failed: " . $conn_posters->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Posters' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_posters->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1345,14 +952,14 @@
 
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
-                            // ✅ Display media with original ratio
+                            // Display media with original ratio
                             if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
                                 echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls class='w-100' style='border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                            Your browser does not support the video tag.
-                          </video>";
+                                <source src='$path' type='video/$ext'>
+                                Your browser does not support the video tag.
+                            </video>";
                             } elseif ($ext === 'pdf') {
                                 echo "<p><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
                             } else {
@@ -1369,24 +976,22 @@
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No Posters uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_posters->close();
                     ?>
                 </div>
             </div>
 
-
-
-
-
-
             <div id="reels" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php'; // Adjust path if needed
+                    include 'db.connection/db_connection.php';
+                    $conn_reels = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_reels->connect_error) {
+                        die("Connection failed: " . $conn_reels->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Reels' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_reels->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1409,8 +1014,8 @@
                             // Show video
                             elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls class='w-100' style='border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             }
                             // Show PDF link
                             elseif ($ext === 'pdf') {
@@ -1431,26 +1036,22 @@
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No Reels uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_reels->close();
                     ?>
                 </div>
             </div>
 
-
-
-
-
-
-
-
             <div id="photoshoot" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php'; // Adjust if needed
+                    include 'db.connection/db_connection.php';
+                    $conn_photoshoot = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_photoshoot->connect_error) {
+                        die("Connection failed: " . $conn_photoshoot->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Photo Shoot' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_photoshoot->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1458,21 +1059,20 @@
                             $title = htmlspecialchars($row['title']);
                             $link = htmlspecialchars($row['media_link']);
                             $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file; // Update path if needed
+                            $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
+                        <div class='card'>
+                            <div class='card-body p-2'>";
 
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
                             if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                // 👉 Full-size image, no height/width restrictions
                                 echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls style='width: 100%; border-radius: 8px;'>
-                        <source src='$path' type='video/$ext'>
-                    </video>";
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             } elseif ($ext === 'pdf') {
                                 echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
                             } else {
@@ -1482,32 +1082,29 @@
                             if (!empty($link)) echo "</a>";
 
                             echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
                         </div>
-                    </div>
-                </div>";
+                    </div>";
                         }
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No Photo Shoot media uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_photoshoot->close();
                     ?>
                 </div>
             </div>
 
-
-
-
-
-
-
             <div id="videos" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php'; // adjust path as needed
+                    include 'db.connection/db_connection.php';
+                    $conn_videos = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_videos->connect_error) {
+                        die("Connection failed: " . $conn_videos->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Videos' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_videos->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1515,11 +1112,11 @@
                             $title = htmlspecialchars($row['title']);
                             $link = htmlspecialchars($row['media_link']);
                             $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file; // adjust this path if needed
+                            $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
+                        <div class='card'>
+                            <div class='card-body p-2'>";
 
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
@@ -1530,8 +1127,8 @@
                             // VIDEO
                             elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls class='w-100' style='border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             }
                             // PDF
                             elseif ($ext === 'pdf') {
@@ -1545,34 +1142,29 @@
                             if (!empty($link)) echo "</a>";
 
                             echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
                         </div>
-                    </div>
-                </div>";
+                    </div>";
                         }
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No video media uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_videos->close();
                     ?>
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
             <div id="testimonials" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php'; // Adjust path if necessary
+                    include 'db.connection/db_connection.php';
+                    $conn_testimonials = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_testimonials->connect_error) {
+                        die("Connection failed: " . $conn_testimonials->connect_error);
+                    }
 
                     $sql = "SELECT * FROM our_works WHERE media_type = 'Testimonials' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $result = $conn_testimonials->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1580,11 +1172,11 @@
                             $title = htmlspecialchars($row['title']);
                             $link = htmlspecialchars($row['media_link']);
                             $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file; // Adjust path if needed
+                            $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
+                        <div class='card'>
+                            <div class='card-body p-2'>";
 
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
@@ -1592,8 +1184,8 @@
                                 echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls class='img-fluid' style='border-radius: 8px;'>
-                        <source src='$path' type='video/$ext'>
-                    </video>";
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             } elseif ($ext === 'pdf') {
                                 echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
                             } else {
@@ -1603,81 +1195,29 @@
                             if (!empty($link)) echo "</a>";
 
                             echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
                         </div>
-                    </div>
-                </div>";
+                    </div>";
                         }
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No testimonials uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_testimonials->close();
                     ?>
                 </div>
             </div>
-
-
-
 
             <div id="animatedvideos" class="media-tab-content">
                 <div class="row">
                     <?php
-                    include 'db.connection/db_connection.php'; // Adjust if path differs
-
-                    $sql = "SELECT * FROM our_works WHERE media_type = 'Animated Videos' ORDER BY id DESC";
-                    $result = $conn->query($sql);
-
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file;
-
-                            echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
-
-                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
-
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
-                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls style='border-radius: 8px;'>
-                        <source src='$path' type='video/$ext'>
-                      </video>";
-                            } elseif ($ext === 'pdf') {
-                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
-                            } else {
-                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
-                            }
-
-                            if (!empty($link)) echo "</a>";
-
-                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
-                        </div>
-                    </div>
-                </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
+                    include 'db.connection/db_connection.php';
+                    $conn_animated = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_animated->connect_error) {
+                        die("Connection failed: " . $conn_animated->connect_error);
                     }
 
-                    $conn->close();
-                    ?>
-                </div>
-            </div>
-
-
-
-            <div id="visitingcards" class="media-tab-content">
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php'; // adjust this path if needed
-
-                    $sql = "SELECT * FROM our_works WHERE media_type = 'Visiting Cards' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Animated Videos' ORDER BY id DESC";
+                    $result = $conn_animated->query($sql);
 
                     if ($result && $result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -1688,8 +1228,8 @@
                             $path = "admin/public/uploads/staff/" . $file;
 
                             echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
+                        <div class='card'>
+                            <div class='card-body p-2'>";
 
                             if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
@@ -1697,8 +1237,8 @@
                                 echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
                             } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
                                 echo "<video controls class='w-100' style='border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
+                                <source src='$path' type='video/$ext'>
+                            </video>";
                             } elseif ($ext === 'pdf') {
                                 echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
                             } else {
@@ -1708,18 +1248,236 @@
                             if (!empty($link)) echo "</a>";
 
                             echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
                         </div>
-                    </div>
-                </div>";
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
+                    }
+                    $conn_animated->close();
+                    ?>
+                </div>
+            </div>
+
+            <div id="visitingcards" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+                    $conn_visitingcards = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_visitingcards->connect_error) {
+                        die("Connection failed: " . $conn_visitingcards->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Visiting Cards' ORDER BY id DESC";
+                    $result = $conn_visitingcards->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'>
+                            <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                                <source src='$path' type='video/$ext'>
+                            </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
                         }
                     } else {
                         echo "<div class='col-12'><p class='text-muted text-center'>No visiting cards uploaded yet.</p></div>";
                     }
-
-                    $conn->close();
+                    $conn_visitingcards->close();
                     ?>
                 </div>
             </div>
+
+            <div id="pamphlets" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+                    $conn_pamphlets = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_pamphlets->connect_error) {
+                        die("Connection failed: " . $conn_pamphlets->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Pamphlets' ORDER BY id DESC";
+                    $result = $conn_pamphlets->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'>
+                            <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                                <source src='$path' type='video/$ext'>
+                            </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No pamphlets uploaded yet.</p></div>";
+                    }
+                    $conn_pamphlets->close();
+                    ?>
+                </div>
+            </div>
+
+            <div id="brochures" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+                    $conn_brochures = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_brochures->connect_error) {
+                        die("Connection failed: " . $conn_brochures->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Brochures' ORDER BY id DESC";
+                    $result = $conn_brochures->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'>
+                            <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                                <source src='$path' type='video/$ext'>
+                            </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No brochures uploaded yet.</p></div>";
+                    }
+                    $conn_brochures->close();
+                    ?>
+                </div>
+            </div>
+
+            <div id="hoardings" class="media-tab-content">
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php';
+                    $conn_hoardings = new mysqli($servername, $username, $password, $dbname);
+                    if ($conn_hoardings->connect_error) {
+                        die("Connection failed: " . $conn_hoardings->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'Hoardings' ORDER BY id DESC";
+                    $result = $conn_hoardings->query($sql);
+
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                        <div class='card'>
+                            <div class='card-body p-2'>";
+
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='w-100' style='border-radius: 8px;'>
+                                <source src='$path' type='video/$ext'>
+                            </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
+
+                            if (!empty($link)) echo "</a>";
+
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
+                        </div>
+                    </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No hoardings uploaded yet.</p></div>";
+                    }
+                    $conn_hoardings->close();
+                    ?>
+                </div>
+            </div>
+
+
+
+
+
+
+
 
 
 
@@ -1776,7 +1534,7 @@
 
 
 
-            <!-- Brochures Tab Content -->
+            
             <div id="brochures" class="media-tab-content">
                 <div class="row">
                     <?php
@@ -1830,301 +1588,77 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-            <div id="hoardings" class="media-tab-content">
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php'; // adjust path if needed
-
-                    $sql = "SELECT * FROM our_works WHERE media_type = 'Hoardings' ORDER BY id DESC";
-                    $result = $conn->query($sql);
-
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file;
-
-                            echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
-
-                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
-
-                            // Display media based on file type
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
-                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
-                        <source src='$path' type='video/$ext'>
-                    </video>";
-                            } elseif ($ext === 'pdf') {
-                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
-                            } else {
-                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
-                            }
-
-                            if (!empty($link)) echo "</a>";
-
-                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
-                        </div>
-                    </div>
-                </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No hoardings uploaded yet.</p></div>";
-                    }
-
-                    $conn->close();
-                    ?>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-            <!-- all image will below script in below  -->
-            <!-- <script>
-                function showMediaTab(event, tabId) {
-                    // Remove active class from all buttons
-                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
-
-                    // Set active class on clicked button
-                    if (event) event.target.classList.add('active');
-
-                    // Hide all content tabs
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    if (tabId === 'all') {
-                        const allMedia = document.getElementById('allMediaContainer');
-                        allMedia.innerHTML = ''; // Clear previous
-
-                        const mediaIds = ['logos', 'website', 'posters', 'reels', 'photoshot', 'videos', 'testmonnials', 'animatedvideos', 'visitingcards', 'pamphlets', 'brochures', 'hoarding'];
-
-                        mediaIds.forEach(id => {
-                            const section = document.getElementById(id);
-                            if (section) {
-                                const items = section.querySelectorAll('img, video, iframe');
-                                items.forEach(item => {
-                                    const clone = item.cloneNode(true);
-                                    const col = document.createElement('div');
-                                    col.className = 'col-12 col-sm-6 col-md-4 mb-4';
-                                    const wrapper = document.createElement('div');
-                                    wrapper.className = 'media-box';
-                                    wrapper.appendChild(clone);
-                                    col.appendChild(wrapper);
-                                    allMedia.appendChild(col);
-                                });
-                            }
-                        });
-                    }
-
-                    // Show selected tab
-                    document.getElementById(tabId).classList.add('active');
-                }
-
-                // Default load
-                window.onload = function() {
-                    showMediaTab(null, 'all');
-                };
-            </script> -->
-
-
-
-
-
-            <script>
-                // Store initial "all" tab HTML on page load
-                let originalAllContent = '';
-
-                window.onload = function() {
-                    originalAllContent = document.getElementById('all').innerHTML;
-                    showMediaTab(null, 'all');
-                };
-
-                function showMediaTab(event, tabId) {
-                    // Remove 'active' from all buttons
-                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
-                    if (event) event.target.classList.add('active');
-
-                    // Hide all tabs
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    // Show selected tab
-                    const selectedTab = document.getElementById(tabId);
-                    selectedTab.classList.add('active');
-
-                    // Restore original 'all' tab content
-                    if (tabId === 'all') {
-                        selectedTab.innerHTML = originalAllContent;
-                    }
-                }
-            </script>
-
-
-
-
-
-
-
-
-            <!-- JS -->
-            <!-- <script>
-                function showMediaTab(event, tabId) {
-                    // Remove 'active' class from all tab buttons
-                    document.querySelectorAll('.media-tab-btn')?.forEach(btn => btn.classList.remove('active'));
-
-                    // Add 'active' class to clicked tab button
-                    if (event) {
-                        event.target.classList.add('active');
-                    } else {
-                        document.querySelector(".media-tab-btn[onclick*='all']")?.classList.add('active');
-                    }
-
-                    // Hide all tab content sections
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    // If "all" tab is selected, merge all media content
-                    if (tabId === 'all') {
-                        let combined = '';
-                        ['images', 'videos', 'reels', 'logos', 'banners', 'graphics'].forEach(id => {
-                            const tab = document.getElementById(id);
-                            if (tab) combined += tab.innerHTML;
-                        });
-                        const allTab = document.getElementById('all');
-                        allTab.innerHTML = combined;
-                    }
-
-                    // Show selected tab
-                    document.getElementById(tabId).classList.add('active');
-                }
-
-                // ✅ On page load, show all media types by default
-                window.onload = function() {
-                    showMediaTab(null, 'all');
-                };
-            </script>  -->
-
-
-
-
-            <!-- <script>
-                function showMediaTab(event, tabId) {
-                    // Remove active class from all buttons
-                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
-                    event.target.classList.add('active');
-
-                    // Hide all content tabs
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    if (tabId === 'all') {
-                        // Combine all sections into #all dynamically
-                        const allContent = ['images', 'videos', 'reels', 'logos', 'banners', 'graphics']
-                            .map(id => document.getElementById(id).innerHTML)
-                            .join('');
-                        const allTab = document.getElementById('all');
-                        allTab.innerHTML = allContent;
-                    }
-
-                    // Show selected tab
-                    document.getElementById(tabId).classList.add('active');
-                }
-            </script> -->
-
-
-            <!-- <script>
-                function showMediaTab(event, tabId) {
-                    // Remove 'active' from all buttons
-                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
-                    if (event) event.target.classList.add('active');
-
-                    // Hide all tabs
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    // Show selected tab
-                    document.getElementById(tabId).classList.add('active');
-
-                    if (tabId === 'all') {
-                        let combined = '';
-                        ['images', 'videos', 'reels', 'logos', 'banners', 'graphics', 'pamphlets', 'brochures'].forEach(id => {
-                            const tab = document.getElementById(id);
-                            combined += tab ? tab.innerHTML : '';
-                        });
-                        document.getElementById('all').innerHTML = combined;
-                    }
-
-
-                    // ✅ Automatically load 'all' on page load
-                    window.onload = function() {
-                        showMediaTab(null, 'all');
-                    };
-                }
-            </script>  -->
-
-            <!-- <script>
-                function showMediaTab(event, tabId) {
-                    // Remove 'active' from all buttons
-                    document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
-                    if (event) event.target.classList.add('active');
-
-                    // Hide all tabs
-                    document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
-
-                    // If 'all' is selected, dynamically load all contents
-                    if (tabId === 'all') {
-                        const allTab = document.getElementById('all');
-
-                        // Clear previous content
-                        allTab.innerHTML = '';
-
-                        // List of tab IDs to combine
-                        const tabIds = ['images', 'videos', 'reels', 'logos', 'banners', 'graphics', 'pamphlets', 'brochures'];
-
-                        tabIds.forEach(id => {
-                            const tab = document.getElementById(id);
-                            if (tab) {
-                                // Clone tab content and append to #all
-                                const clone = tab.cloneNode(true);
-                                clone.classList.remove('media-tab-content'); // Remove any tab-specific class
-                                clone.classList.remove('active'); // Make sure it's not accidentally active
-                                allTab.append(...clone.children);
-                            }
-                        });
-                    }
-
-                    // Show selected tab
-                    document.getElementById(tabId).classList.add('active');
-                }
-
-                // ✅ Automatically load 'all' on page load
-                window.onload = function() {
-                    showMediaTab(null, 'all');
-                };
-            </script> -->
-
-
-
-
-
-
-
-
-
         </div>
+        <script>
+            function showMediaTab(event, tabName) {
+                // Hide all tab contents
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("media-tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].classList.remove("active");
+                }
+
+                // Deactivate all tab buttons
+                tablinks = document.getElementsByClassName("media-tab-btn");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+
+                // Show the specific tab content
+                document.getElementById(tabName).classList.add("active");
+
+                // Activate the button that opened the tab
+                event.currentTarget.classList.add("active");
+
+                // Update URL hash
+                window.location.hash = tabName;
+            }
+
+            // Function to show the correct tab on page load based on URL hash
+            function showTabFromHash() {
+                let hash = window.location.hash.substring(1); // Remove the '#'
+                if (hash) {
+                    let targetTab = document.getElementById(hash);
+                    let targetButton = document.querySelector(`.media-tab-btn[onclick*="'${hash}'"]`);
+
+                    if (targetTab && targetButton) {
+                        // Manually trigger the tab display
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("media-tab-content");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].classList.remove("active");
+                        }
+                        tablinks = document.getElementsByClassName("media-tab-btn");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].classList.remove("active");
+                        }
+
+                        targetTab.classList.add("active");
+                        targetButton.classList.add("active");
+                    } else {
+                        // If hash doesn't match a valid tab, default to 'all'
+                        showMediaTab(null, 'all');
+                    }
+                } else {
+                    // Default to 'all' tab if no hash is present
+                    showMediaTab(null, 'all');
+                }
+            }
+
+            // Call showTabFromHash when the page loads
+            window.onload = showTabFromHash;
+
+            // Listen for hash changes (e.g., when user uses browser back/forward buttons)
+            window.onhashchange = showTabFromHash;
+        </script>
+
+
+
+
+
+
+
+    
 
 
 
@@ -2518,64 +2052,6 @@
                 t.parentNode.insertBefore(e, t)
             }();
         </script>
-
-        <script>
-            function showMediaTab(event, tabId) {
-                // 1. Remove active class from all buttons
-                const buttons = document.querySelectorAll('.media-tab-btn');
-                buttons.forEach(btn => btn.classList.remove('active'));
-
-                // 2. Add active class to clicked button
-                event.target.classList.add('active');
-
-                // 3. Hide all media content sections
-                const contents = document.querySelectorAll('.media-tab-content');
-                contents.forEach(content => content.classList.remove('active'));
-
-                // 4. Show selected tab
-                document.getElementById(tabId).classList.add('active');
-
-                // 5. Update URL with single clean path segment
-                const base = window.location.origin + window.location.pathname.split('/our_works.php')[0];
-                const newUrl = base + '/our_works.php/' + (tabId !== 'all' ? tabId : '');
-                window.history.replaceState(null, '', newUrl);
-            }
-        </script>
-
-
-
-
-
-
-
-
-    <!-- <script>
-function showMediaTab(evt, tabName) {
-    // Hide all tab contents
-    var tabContents = document.getElementsByClassName("media-tab-content");
-    for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].style.display = "none";
-        tabContents[i].classList.remove("active");
-    }
-
-    // Remove 'active' class from all tab buttons
-    var tabButtons = document.getElementsByClassName("media-tab-btn");
-    for (var i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-    }
-
-    // Show selected tab
-    document.getElementById(tabName).style.display = "block";
-    document.getElementById(tabName).classList.add("active");
-    evt.currentTarget.classList.add("active");
-
-    // 🟢 Update the browser URL without reload
-    const baseUrl = window.location.origin + window.location.pathname;
-    const newUrl = `${baseUrl}/${tabName}`;
-    window.history.pushState({ path: newUrl }, '', newUrl);
-}
-</script> -->
-
     </body>
 
 </html>
