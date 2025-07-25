@@ -674,7 +674,7 @@
         <div class="container">
 
 
-            <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons">
+            <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1">
                 <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'all')">All</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
