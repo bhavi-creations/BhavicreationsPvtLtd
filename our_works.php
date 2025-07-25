@@ -709,6 +709,14 @@
     .media-tab-content video {
       width: 100%;
     } */
+
+        .media-tab-content {
+            display: none;
+        }
+
+        .media-tab-content.active {
+            display: block;
+        }
     </style>
     </head>
 
@@ -721,6 +729,12 @@
                 <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'all')">All</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
+
+
+
+
+
+
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'posters')">Posters</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Reels</button></div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button>
@@ -2504,6 +2518,64 @@
                 t.parentNode.insertBefore(e, t)
             }();
         </script>
+
+        <script>
+            function showMediaTab(event, tabId) {
+                // 1. Remove active class from all buttons
+                const buttons = document.querySelectorAll('.media-tab-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // 2. Add active class to clicked button
+                event.target.classList.add('active');
+
+                // 3. Hide all media content sections
+                const contents = document.querySelectorAll('.media-tab-content');
+                contents.forEach(content => content.classList.remove('active'));
+
+                // 4. Show selected tab
+                document.getElementById(tabId).classList.add('active');
+
+                // 5. Update URL with single clean path segment
+                const base = window.location.origin + window.location.pathname.split('/our_works.php')[0];
+                const newUrl = base + '/our_works.php/' + (tabId !== 'all' ? tabId : '');
+                window.history.replaceState(null, '', newUrl);
+            }
+        </script>
+
+
+
+
+
+
+
+
+    <!-- <script>
+function showMediaTab(evt, tabName) {
+    // Hide all tab contents
+    var tabContents = document.getElementsByClassName("media-tab-content");
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+        tabContents[i].classList.remove("active");
+    }
+
+    // Remove 'active' class from all tab buttons
+    var tabButtons = document.getElementsByClassName("media-tab-btn");
+    for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // Show selected tab
+    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+
+    // 🟢 Update the browser URL without reload
+    const baseUrl = window.location.origin + window.location.pathname;
+    const newUrl = `${baseUrl}/${tabName}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+}
+</script> -->
+
     </body>
 
 </html>
