@@ -730,7 +730,8 @@
                 </div>
                 <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated
                         Videos</button></div>
-                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
+                <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting
+                        Cards</button></div>
 
 
                 <!-- Inside your tab button section -->
@@ -1937,7 +1938,7 @@
                 // Store initial "all" tab HTML on page load
                 let originalAllContent = '';
 
-                window.onload = function() {
+                window.onload = function () {
                     originalAllContent = document.getElementById('all').innerHTML;
                     showMediaTab(null, 'all');
                 };
@@ -1960,6 +1961,35 @@
                     }
                 }
             </script>
+
+
+
+
+            <div id="media-gallery" class="row"></div>
+
+            <script>
+                fetch("https://adminworks.bhavicreations.com/get_media.php")
+                    .then(res => res.json())
+                    .then(data => {
+                        const container = document.getElementById("media-gallery");
+
+                        data.forEach(item => {
+                            let element = "";
+
+                            if (item.media_type === "Poster" || item.media_type === "Image") {
+                                element = `<img src="${item.media_url}" class="img-fluid mb-3" alt="media">`;
+                            } else if (item.media_type === "Video") {
+                                element = `<video controls class="img-fluid mb-3"><source src="${item.media_url}" type="video/mp4"></video>`;
+                            }
+
+                            const col = document.createElement("div");
+                            col.className = "col-md-3";
+                            col.innerHTML = element;
+                            container.appendChild(col);
+                        });
+                    });
+            </script>
+
 
 
 
@@ -2368,7 +2398,7 @@
             }
 
             // Show scroll button when scrolling down
-            window.onscroll = function() {
+            window.onscroll = function () {
                 scrollFunction()
             };
 
@@ -2386,12 +2416,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 // Initial state
                 $(".Rajahmundry").hide();
 
                 // Dropdown change event
-                $("#branchdropdown").change(function() {
+                $("#branchdropdown").change(function () {
                     var selectedBranch = $(this).val();
 
                     // Hide all content
@@ -2432,7 +2462,7 @@
                     interval: 3000
                 });
 
-                $('.carousel .carousel-item').each(function() {
+                $('.carousel .carousel-item').each(function () {
                     var minPerSlide = 3;
                     var next = $(this).next();
                     if (!next.length) {
@@ -2450,7 +2480,7 @@
                     }
                 });
 
-                $('.carousel2 .carousel-item').each(function() {
+                $('.carousel2 .carousel-item').each(function () {
                     var minPerSlide = 3;
                     var next = $(this).next();
                     if (!next.length) {
@@ -2476,9 +2506,9 @@
 
 
         <script>
-            $(document).ready(function() {
+            $(document).ready(function () {
                 // Toggle dropdown on button click
-                $('.toggleDropdown').change(function() {
+                $('.toggleDropdown').change(function () {
                     if ($(this).is(':checked')) {
                         $('.dropdown-menu').show();
                     } else {
@@ -2496,7 +2526,7 @@
             window.omnisend = window.omnisend || [];
             omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
             omnisend.push(["track", "$pageViewed"]);
-            ! function() {
+            ! function () {
                 var e = document.createElement("script");
                 e.type = "text/javascript", e.async = !0,
                     e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
