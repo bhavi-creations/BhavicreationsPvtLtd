@@ -662,17 +662,6 @@
         </svg>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
     <div class="container">
 
 
@@ -682,17 +671,11 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'posters')">Posters</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Reels</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button>
-            </div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button> </div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'videos')">Videos</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button>
-            </div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated
-                    Videos</button></div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button> </div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated  Videos</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
-
-
-            <!-- Inside your tab button section -->
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'pamphlets')">Pamphlets</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
@@ -1422,7 +1405,7 @@
 
     </div>
 
-    
+
     <script>
         function showMediaTab(event, tabName) {
             // Hide all tab contents
@@ -1492,6 +1475,7 @@
 
 
 
+
     <!-- FOOTER -->
     <footer class="text-light foot_bg_img   mt-5 foot ">
 
@@ -1522,24 +1506,12 @@
 
 
                     <div class="mt-3  " style="margin-bottom: 55px;">
-                        <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff; "
-                                class="fa-brands fa-facebook px-1  footicon"></i></a>
-                        <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands fa-instagram  px-1 footicon"></i></a>
-                        <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands  px-1  fa-square-x-twitter"></i></a>
-                        <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
-                                style="font-size: 24px; color: #ffffff;"
-                                class="fa-brands fa-youtube  px-1  footicon"></i></a>
-                        <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
-                                style="font-size: 24px;  color: #ffffff;  "
-                                class="fa-brands fa-linkedin   px-1 footicon"></i></a>
-                        <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
-                                style="font-size: 24px ; color: #ffffff;"
-                                class="fa-brands fa-pinterest px-1  footicon"></i></a>
+                        <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i style="font-size: 24px; color: #ffffff; " class="fa-brands fa-facebook px-1  footicon"></i></a>
+                        <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i style="font-size: 24px; color: #ffffff;" class="fa-brands fa-instagram  px-1 footicon"></i></a>
+                        <a href="https://twitter.com/bhavi_creations" target="_blank"> <i style="font-size: 24px; color: #ffffff;" class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i style="font-size: 24px; color: #ffffff;" class="fa-brands fa-youtube  px-1  footicon"></i></a>
+                        <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i style="font-size: 24px;  color: #ffffff;  " class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+                        <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i style="font-size: 24px ; color: #ffffff;" class="fa-brands fa-pinterest px-1  footicon"></i></a>
 
 
                     </div>
@@ -1596,42 +1568,8 @@
         </div>
 
 
-        <!-- <div class="footer-area-bottom theme-bg">
-            <div class="container">
-                <div class="row pt-4">
-            
-                    <div class="  col-md-6 col-12">
-                        <div class="footer-widget__copyright-info info-direction">
-                            <p class="  last_text">
-                            <a
-                                href="terms.php"
-                                style="text-decoration: none; color: #ffffff">Terms & conditions
-                            </a>
-                            <a
-                                href="privacy.php"
-                                style="text-decoration: none; color: #ffffff">
-                                Privacy & policy</a>
-                            </p>
-                        </div>
-                    </div>
-            
-                    <div class="col-md-6 col-12 second_divv_end_brand">
-                    <div class="footer-widget__copyright-info info-direction d-flex flex-row justify-content-end align-items-center">
-                        <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
-                        <p class="mini_text last_text mb-0">
-                            Design with love @
-                        </p>
-                        <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt="">
-                        </a>
-                    </div>
-                    </div>
-                
-                </div>
-            </div>
-        </div> -->
-
     </footer>
-    <!-- ENDING  FOOTER -->
+
 
 
 
@@ -1667,21 +1605,6 @@
             </div>
         </a>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script>
@@ -1817,7 +1740,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
@@ -1828,14 +1751,7 @@
             var t = document.getElementsByTagName("script")[0];
             t.parentNode.insertBefore(e, t)
         }();
-    </script>
-
-
-
-
-
-
-
+    </script> -->
 
 
 

@@ -7,14 +7,14 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     $password = "";
     $dbname = "bhavicreations_db";
 } else {
-    // $username = "bhavicreationspvtltd";
-    // $password = "qbWkuINh3wc8P9z";
-    // $dbname = "bhavicreationspvtltd";
+    $username = "bhavicreationspvtltd";
+    $password = "qbWkuINh3wc8P9z";
+    $dbname = "bhavicreationspvtltd";
    
     
-    $username = "bhavicreations";
-    $password = "d8Az75YlgmyBnVM";
-    $dbname = "bhavicreations";
+    // $username = "bhavicreations";
+    // $password = "d8Az75YlgmyBnVM";
+    // $dbname = "bhavicreations";
 
 }
 
