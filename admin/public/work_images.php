@@ -40,7 +40,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <form id="mediaUploadForm" action="upload_works.php" method="POST" enctype="multipart/form-data" style="color:black;">
+                    <form id="mediaUploadForm" action="upload_works.php" method="POST" $_FILES['media_file'] enctype="multipart/form-data" style="color:black;">
                         <!-- 🔹 Select Media Type -->
                         <div class="mb-3">
                             <label for="mediaType" class="form-label text-primary">Select Media Type</label>
