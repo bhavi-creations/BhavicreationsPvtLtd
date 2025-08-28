@@ -1674,6 +1674,21 @@
                                         </div>
                                     </div>
 
+
+
+
+
+
+
+                                    <div class="carousel-item">
+                                        <div class="col-md-4">
+                                            <div class="card card-body">
+                                                <img class="img-fluid"
+                                                    src="assests/images/Bhavi_Creations/bhanu_prasad.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
@@ -1791,6 +1806,28 @@
                                     </div>
                                 </div>
                             </div> 
+
+
+
+
+                            <div class="flip-card mt-4">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="assests/images/Bhavi_Creations/bhanu_prasad.png"
+                                            alt="Front Image" class="card-image img-fluid">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p class="title">Bhanu Prasad</p>
+                                        <p>marketing executive</p>
+                                    </div>
+                                </div>
+                            </div> 
+
+
+
+
+
+
                             
                             <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
