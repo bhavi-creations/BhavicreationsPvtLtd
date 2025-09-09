@@ -40,11 +40,39 @@
     <link rel="stylesheet" href="assests/branding.css">
 
     <style>
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        @media (max-width:768px) {
+
+
+            .button-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
         }
+
+
+
+
+        @media (min-width:768px) and (max-width:1200px) {
+
+
+            .button-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+
+        @media (min-width:1201px) and (max-width:1600px) {
+
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+}
 
         .btn-animated {
             font-weight: bold;

@@ -667,7 +667,7 @@
     <div class="container">
 
 
-        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1">
+        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1 justify-content-center align-items-center">
             <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'pamphlets')">Pamphlets</button></div>
             <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
@@ -682,6 +682,15 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
+        </div>
+
+        
+        <div style="text-align: right; margin: 10px 0;">
+            <a href="pages.php">
+                <button style="padding:8px 16px; background:#3653f8; color:white; border:none; border-radius:5px; cursor:pointer;">
+                    Go Back
+                </button>
+            </a>
         </div>
 
         <!-- <div id="all" class="media-tab-content active">

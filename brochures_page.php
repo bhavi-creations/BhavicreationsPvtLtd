@@ -389,49 +389,49 @@
             background-color: #e0f7fa;
         }
 
-            /* light cyan on hover */
-            box-shad img,
-            video {
-                max-width: 100%;
-                height: auto;
+        /* light cyan on hover */
+        box-shad img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 1200px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1300px !important;
+            }
+        }
+
+
+
+
+
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 880px !important;
+            }
+        }
+
+        @media (max-width:768px) {
+            .team_devision_btn {
+                font-size: 14px;
+                /* Reduce font size */
+                padding: 6px 12px;
+                /* Smaller padding */
+
             }
 
-            @media (min-width: 1200px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 1300px !important;
-                }
-            }
-
-
-
-
-
-            @media (min-width: 768px) and (max-width: 992px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 880px !important;
-                }
-            }
-
-            @media (max-width:768px) {
-                .team_devision_btn {
-                    font-size: 14px;
-                    /* Reduce font size */
-                    padding: 6px 12px;
-                    /* Smaller padding */
-
-                }
-
-            }
+        }
     </style>
 
     <style>
@@ -529,6 +529,59 @@
                 font-size: 10px !important;
             }
 
+        }
+
+
+
+
+
+        /* From Uiverse.io by Navarog21 */
+        button {
+            width: 10em;
+            position: relative;
+            height: 3.5em;
+            border: 3px ridge #149CEA;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            transition: 1s;
+            border-radius: 0.3em;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 3%;
+            width: 95%;
+            height: 40%;
+            /* background-color: #212121; */
+            transition: 0.5s;
+            transform-origin: center;
+        }
+
+        button::before {
+            content: "";
+            transform-origin: center;
+            position: absolute;
+            top: 80%;
+            left: 3%;
+            width: 95%;
+            height: 40%;
+            /* background-color: #212121; */
+            transition: 0.5s;
+        }
+
+        button:hover::before,
+        button:hover::after {
+            transform: scale(0)
+        }
+
+        button:hover {
+            box-shadow: inset 0px 0px 25px #1479EA;
         }
     </style>
 
@@ -667,23 +720,29 @@
     <div class="container">
 
 
-        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1">
-            <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'brochures')">brochures</button></div>
-            <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">brochures</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'posters')">Posters</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Reels</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button> </div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'videos')">Videos</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button> </div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated Videos</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">brochures</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
+
+        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1 justify-content-center text-center">
+            <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'brochures')">brochures</button></div>
+           
         </div>
 
+        <!-- <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1 ">
+            <div>
+                <button class="media-tab-btn active" onclick="showMediaTab(event, 'brochures')">Brochures</button>
+            </div>
+        </div> -->
+
+
+
+
+        <div style="text-align: right; margin: 10px 0;">
+            <a href="pages.php">
+                <button style="padding:8px 16px; background:#3653f8; color:white; border:none; border-radius:5px; cursor:pointer;">
+                    Go Back
+                </button>
+            </a>
+        </div>
         <!-- <div id="all" class="media-tab-content active">
             <div class="row">
                 <?php

@@ -389,49 +389,49 @@
             background-color: #e0f7fa;
         }
 
-            /* light cyan on hover */
-            box-shad img,
-            video {
-                max-width: 100%;
-                height: auto;
+        /* light cyan on hover */
+        box-shad img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 1200px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1300px !important;
+            }
+        }
+
+
+
+
+
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 880px !important;
+            }
+        }
+
+        @media (max-width:768px) {
+            .team_devision_btn {
+                font-size: 14px;
+                /* Reduce font size */
+                padding: 6px 12px;
+                /* Smaller padding */
+
             }
 
-            @media (min-width: 1200px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 1300px !important;
-                }
-            }
-
-
-
-
-
-            @media (min-width: 768px) and (max-width: 992px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 880px !important;
-                }
-            }
-
-            @media (max-width:768px) {
-                .team_devision_btn {
-                    font-size: 14px;
-                    /* Reduce font size */
-                    padding: 6px 12px;
-                    /* Smaller padding */
-
-                }
-
-            }
+        }
     </style>
 
     <style>
@@ -667,7 +667,7 @@
     <div class="container">
 
 
-        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1">
+        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1 justify-content-center align-items-center">
             <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'videos')">videos</button></div>
             <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'videos')">videos</button></div>
@@ -682,6 +682,14 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
+        </div>
+
+        <div style="text-align: right; margin: 10px 0;">
+            <a href="pages.php">
+                <button style="padding:8px 16px; background:#3653f8; color:white; border:none; border-radius:5px; cursor:pointer;">
+                    Go Back
+                </button>
+            </a>
         </div>
 
         <!-- <div id="all" class="media-tab-content active">
