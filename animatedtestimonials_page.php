@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your website description">
+    <meta name="description" content="Your animatedvideos description">
     <meta name="keywords" content="your,keywords,here">
     <meta name="author" content="Your Name">
 
@@ -667,9 +667,9 @@
 
 
         <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1">
-            <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'all')">All</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'website')">Website</button></div>
+            <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
+            <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'posters')">Posters</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'reels')">Reels</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'photoshoot')">Photo Shoot</button> </div>
@@ -677,10 +677,10 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'testimonials')">Testimonials</button> </div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">Animated Videos</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'visitingcards')">Visiting Cards</button></div>
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'pamphlets')">Pamphlets</button></div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
-            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div>
+            <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
         </div>
 
         <!-- <div id="all" class="media-tab-content active">
@@ -743,67 +743,61 @@
             </div>
         </div>  -->
 
-      <div id="all" class="media-tab-content active">
+        <div id="animatedvideos" class="media-tab-content active">
             <div class="row">
-                <?php
-                include 'db.connection/db_connection.php'; // Adjust path as necessary
 
-                $sql = "SELECT * FROM our_works ORDER BY id DESC";
-                $result = $conn->query($sql);
+                <div class="row">
+                    <?php
+                    include 'db.connection/db_connection.php'; // Update path if needed
 
-                if ($result && $result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        $file = htmlspecialchars($row['file_path']);
-                        $title = htmlspecialchars($row['title']);
-                        $link = htmlspecialchars($row['media_link']);
-                        $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                        $path = "admin/public/uploads/staff/" . $file; // Update path if needed
+                    $sql = "SELECT * FROM our_works WHERE media_type = 'animatedvideos' ORDER BY id DESC";
+                    $result = $conn->query($sql);
 
-                        echo "<div class='col-md-4 mb-4'>
-                    <div class='card shadow-sm h-100' style='overflow: hidden;'>
+                    if ($result && $result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $file = htmlspecialchars($row['file_path']);
+                            $title = htmlspecialchars($row['title']);
+                            $link = htmlspecialchars($row['media_link']);
+                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                            $path = "admin/public/uploads/staff/" . $file;
+
+                            echo "<div class='col-md-4 mb-4'>
+                    <div class='card'>
                         <div class='card-body p-2'>";
 
-                        // Wrap in link if available
-                        if (!empty($link)) echo "<a href='$link' target='_blank'>";
+                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
-                        // Display image (centered)
-                        if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                            echo "<div class='d-flex justify-content-center'>
-                            <img src='$path' class='img-fluid'  border-radius: 8px;'>
-                          </div>";
-                        }
-                        // Display video
-                        elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                            echo "<video controls   border-radius: 8px;'>
-                            <source src='$path' type='video/$ext'>
-                          </video>";
-                        }
-                        // Display PDF
-                        elseif ($ext === 'pdf') {
-                            echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
-                        }
-                        // Unsupported type
-                        else {
-                            echo "<p class='text-muted text-center'>Unsupported file format</p>";
-                        }
+                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
+                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
+                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
+                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
+                        <source src='$path' type='video/$ext'>
+                    </video>";
+                            } elseif ($ext === 'pdf') {
+                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
+                            } else {
+                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
+                            }
 
-                        if (!empty($link)) echo "</a>";
+                            if (!empty($link)) echo "</a>";
 
-                        echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
                         </div>
                     </div>
                 </div>";
+                        }
+                    } else {
+                        echo "<div class='col-12'><p class='text-muted text-center'>No animatedvideos uploaded yet.</p></div>";
                     }
-                } else {
-                    echo "<div class='col-12'><p class='text-muted text-center'>No media uploaded yet.</p></div>";
-                }
 
-                $conn->close();
-                ?>
+                    $conn->close();
+                    ?>
+
+
+                </div>
             </div>
-        </div> 
 
-
+        </div>
         <div id="logo" class="media-tab-content">
             <div class="row">
                 <?php
@@ -864,12 +858,12 @@
         </div>
 
 
-        <div id="website" class="media-tab-content">
+        <div id="animatedvideos" class="media-tab-content">
             <div class="row">
                 <?php
                 include 'db.connection/db_connection.php';
 
-                $sql = "SELECT * FROM our_works WHERE media_type = 'Website' ORDER BY id DESC";
+                $sql = "SELECT * FROM our_works WHERE media_type = 'animatedvideos' ORDER BY id DESC";
                 $result = $conn->query($sql);
 
                 if ($result && $result->num_rows > 0) {
@@ -921,7 +915,7 @@
                         echo "</div></div></div>";
                     }
                 } else {
-                    echo "<div class='col-12'><p class='text-muted text-center'>No Website media uploaded yet.</p></div>";
+                    echo "<div class='col-12'><p class='text-muted text-center'>No animatedvideos media uploaded yet.</p></div>";
                 }
 
                 $conn->close();
@@ -1307,12 +1301,12 @@
 
 
 
-        <div id="pamphlets" class="media-tab-content">
+        <div id="animatedvideos" class="media-tab-content">
             <div class="row">
                 <?php
                 include 'db.connection/db_connection.php'; // Update path if needed
 
-                $sql = "SELECT * FROM our_works WHERE media_type = 'Pamphlets' ORDER BY id DESC";
+                $sql = "SELECT * FROM our_works WHERE media_type = 'animatedvideos' ORDER BY id DESC";
                 $result = $conn->query($sql);
 
                 if ($result && $result->num_rows > 0) {
@@ -1349,7 +1343,7 @@
                 </div>";
                     }
                 } else {
-                    echo "<div class='col-12'><p class='text-muted text-center'>No pamphlets uploaded yet.</p></div>";
+                    echo "<div class='col-12'><p class='text-muted text-center'>No animatedvideos uploaded yet.</p></div>";
                 }
 
                 $conn->close();
@@ -1467,7 +1461,7 @@
     </div>
 
 
-    <script>
+    <!-- <script>
         function showMediaTab(event, tabName) {
             // Hide all tab contents
             var i, tabcontent, tablinks;
@@ -1528,9 +1522,65 @@
 
         // Listen for hash changes (e.g., when user uses browser back/forward buttons)
         window.onhashchange = showTabFromHash;
+    </script> -->
+
+
+    <script>
+        function showMediaTab(event, tabName) {
+            // Hide all tab contents
+            const tabcontent = document.getElementsByClassName("media-tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Deactivate all tab buttons
+            const tablinks = document.getElementsByClassName("media-tab-btn");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show selected tab
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add("active");
+            }
+
+            // Activate the button
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add("active");
+            }
+
+            // Update URL hash
+            window.location.hash = tabName;
+        }
+
+        function showTabFromHash() {
+            const hash = window.location.hash.substring(1); // Remove #
+            const validTabs = ['animatedvideos', 'all', 'images', 'videos', 'logos']; // Add more if needed
+
+            const defaultTab = 'animatedvideos';
+            let tabToShow = validTabs.includes(hash) ? hash : defaultTab;
+
+            const targetTab = document.getElementById(tabToShow);
+            const targetBtn = document.querySelector(`.media-tab-btn[onclick*="'${tabToShow}'"]`);
+
+            // Hide all tabs and remove active from all buttons
+            document.querySelectorAll('.media-tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.media-tab-btn').forEach(btn => btn.classList.remove('active'));
+
+            // Show desired tab and highlight its button
+            if (targetTab) targetTab.classList.add('active');
+            if (targetBtn) targetBtn.classList.add('active');
+        }
+
+        window.onload = showTabFromHash;
+        window.onhashchange = showTabFromHash;
     </script>
 
 
+
+
+    </div>
 
 
 
@@ -1800,6 +1850,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+
+    <!-- <script type="text/javascript">
+        window.omnisend = window.omnisend || [];
+        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+        omnisend.push(["track", "$pageViewed"]);
+        ! function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript", e.async = !0,
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        }();
+    </script> -->
 
 
 

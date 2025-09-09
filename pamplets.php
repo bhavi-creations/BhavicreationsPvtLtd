@@ -387,6 +387,7 @@
         .card:hover {
             transform: translateY(-10px) scale(1.03);
             background-color: #e0f7fa;
+        }
 
             /* light cyan on hover */
             box-shad img,
