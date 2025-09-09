@@ -625,7 +625,7 @@
                     <!-- <li><a class="dropdown-item menu_item_black  " href="Portfolio.php">Portfolio</a></li> -->
                     <li><a class="dropdown-item menu_item_black  " href="contact_us.php">Contact Us</a></li>
                     <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
-                    <li><a class="dropdown-item menu_item_black  " href="pages.php">Pages</a></li>
+                    <li class="d-md-none "><a class="dropdown-item menu_item  " href="pages.php">Page</a></li>
                     <!-- <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a> -->
                     </li>
                 </ul>
@@ -667,7 +667,7 @@
     <div class="container">
 
 
-        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1 justify-content-center align-items-center">
+        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1  justify-content-center align-items-center" >
             <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
             <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
@@ -682,7 +682,7 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
-        </div>
+    </div>
 
         <div style="text-align: right; margin: 10px 0;">
             <a href="pages.php">
