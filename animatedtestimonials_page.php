@@ -389,49 +389,49 @@
             background-color: #e0f7fa;
         }
 
-            /* light cyan on hover */
-            box-shad img,
-            video {
-                max-width: 100%;
-                height: auto;
+        /* light cyan on hover */
+        box-shad img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 1200px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1300px !important;
+            }
+        }
+
+
+
+
+
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 880px !important;
+            }
+        }
+
+        @media (max-width:768px) {
+            .team_devision_btn {
+                font-size: 14px;
+                /* Reduce font size */
+                padding: 6px 12px;
+                /* Smaller padding */
+
             }
 
-            @media (min-width: 1200px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 1300px !important;
-                }
-            }
-
-
-
-
-
-            @media (min-width: 768px) and (max-width: 992px) {
-
-                .container,
-                .container-lg,
-                .container-md,
-                .container-sm,
-                .container-xl {
-                    max-width: 880px !important;
-                }
-            }
-
-            @media (max-width:768px) {
-                .team_devision_btn {
-                    font-size: 14px;
-                    /* Reduce font size */
-                    padding: 6px 12px;
-                    /* Smaller padding */
-
-                }
-
-            }
+        }
     </style>
 
     <style>
@@ -667,7 +667,7 @@
     <div class="container">
 
 
-        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1  justify-content-center align-items-center" >
+        <div class="row g-2 mb-4 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 media-tab-buttons mx-1  justify-content-center align-items-center">
             <div><button class="media-tab-btn active" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
             <!-- <div><button class="media-tab-btn" onclick="showMediaTab(event, 'logo')">Logo</button></div>
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'animatedvideos')">animatedvideos</button></div>
@@ -682,7 +682,7 @@
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'brochures')">Brochures</button></div>
 
             <div><button class="media-tab-btn" onclick="showMediaTab(event, 'hoardings')">Hoardings</button></div> -->
-    </div>
+        </div>
 
         <div style="text-align: right; margin: 10px 0;">
             <a href="pages.php">
@@ -751,62 +751,60 @@
                 ?>
             </div>
         </div>  -->
+        <div id="animatedvideo" class="media-tab-content active"><!-- active = default show -->
+    <div class="row">
+        <?php
+        include 'db.connection/db_connection.php';
 
-        <div id="animatedvideos" class="media-tab-content active">
-            <div class="row">
+        // Fix: normalize spaces + case
+        $sql = "SELECT * FROM our_works 
+                WHERE REPLACE(TRIM(LOWER(media_type)), ' ', '') = 'animatedvideo' 
+                ORDER BY id DESC";
+        $result = $conn->query($sql);
 
-                <div class="row">
-                    <?php
-                    include 'db.connection/db_connection.php'; // Update path if needed
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $file = htmlspecialchars($row['file_path']);
+                $title = htmlspecialchars($row['title']);
+                $link = htmlspecialchars($row['media_link']);
+                $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
-                    $sql = "SELECT * FROM our_works WHERE media_type = 'animatedvideos' ORDER BY id DESC";
-                    $result = $conn->query($sql);
+                // Path fix: check if already contains uploads/staff/
+                $path = (strpos($file, 'uploads/staff/') !== false) ? $file : "admin/public/uploads/staff/" . $file;
 
-                    if ($result && $result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $file = htmlspecialchars($row['file_path']);
-                            $title = htmlspecialchars($row['title']);
-                            $link = htmlspecialchars($row['media_link']);
-                            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                            $path = "admin/public/uploads/staff/" . $file;
+                echo "<div class='col-md-4 mb-4'>
+                        <div class='card shadow-sm h-100'>
+                            <div class='card-body p-2'>";
 
-                            echo "<div class='col-md-4 mb-4'>
-                    <div class='card'>
-                        <div class='card-body p-2'>";
+                // If media_link exists → wrap
+                if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
-                            if (!empty($link)) echo "<a href='$link' target='_blank'>";
+                // Video check
+                if (in_array($ext, ['mp4', 'webm', 'ogg', 'mov'])) {
+                    $mime = ($ext === 'mp4') ? 'video/mp4' : (($ext === 'webm') ? 'video/webm' : (($ext === 'ogg') ? 'video/ogg' : 'video/mp4'));
+                    echo "<video controls class='img-fluid' style='border-radius:8px; max-height:300px;'>
+                            <source src='$path' type='$mime'>
+                          </video>";
+                } else {
+                    echo "<p class='text-muted text-center'>⚠ Only video formats supported for animated videos</p>";
+                }
 
-                            if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                                echo "<img src='$path' class='img-fluid' style='border-radius: 8px;'>";
-                            } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                                echo "<video controls class='img-fluid' style='border-radius: 8px;'>
-                        <source src='$path' type='video/$ext'>
-                    </video>";
-                            } elseif ($ext === 'pdf') {
-                                echo "<p class='text-center'><a href='$path' target='_blank' class='btn btn-outline-info btn-sm'>📄 View PDF</a></p>";
-                            } else {
-                                echo "<p class='text-muted text-center'>Unsupported file format</p>";
-                            }
+                if (!empty($link)) echo "</a>";
 
-                            if (!empty($link)) echo "</a>";
-
-                            echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                            </div>
                         </div>
-                    </div>
-                </div>";
-                        }
-                    } else {
-                        echo "<div class='col-12'><p class='text-muted text-center'>No animatedvideos uploaded yet.</p></div>";
-                    }
+                    </div>";
+            }
+        } else {
+            echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
+        }
 
-                    $conn->close();
-                    ?>
+        $conn->close();
+        ?>
+    </div>
+</div>
 
-
-                </div>
-            </div>
-
-        </div>
         <div id="logo" class="media-tab-content">
             <div class="row">
                 <?php
@@ -867,70 +865,7 @@
         </div>
 
 
-        <div id="animatedvideos" class="media-tab-content">
-            <div class="row">
-                <?php
-                include 'db.connection/db_connection.php';
 
-                $sql = "SELECT * FROM our_works WHERE media_type = 'animatedvideos' ORDER BY id DESC";
-                $result = $conn->query($sql);
-
-                if ($result && $result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        $file = htmlspecialchars($row['file_path']);
-                        $title = htmlspecialchars($row['title']);
-                        $link = htmlspecialchars($row['media_link']);
-                        $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-                        $path = "admin/public/uploads/staff/" . $file;
-
-                        echo "<div class='col-lg-4 col-md-6 col-12 mb-4'>
-                    <div class='card border-0 shadow-sm h-100 hover-card'>
-                        <div class='card-body d-flex flex-column justify-content-between' style='padding: 10px;'>";
-
-                        // Media Preview with link
-                        echo "<div style='width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; height: 145px; overflow: hidden;'>";
-
-                        if (!empty($link)) echo "<a href='$link' target='_blank' style='display:block; width:100%; text-align:center;'>";
-
-                        if (in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'])) {
-                            echo "<img src='$path' class='img-fluid' style='max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.3s;'>";
-                        } elseif (in_array($ext, ['mp4', 'webm', 'mov', 'avi'])) {
-                            echo "<video controls style='max-height: 100%; max-width: 100%; object-fit: contain;'>
-                        <source src='$path' type='video/$ext'>
-                        Your browser does not support the video tag.
-                    </video>";
-                        } elseif ($ext === 'pdf') {
-                            echo "<div class='w-100 h-100 d-flex align-items-center justify-content-center'>
-                            <span class='text-muted'>📄 PDF</span>
-                        </div>";
-                        } else {
-                            echo "<p class='text-muted text-center'>Unsupported format</p>";
-                        }
-
-                        if (!empty($link)) echo "</a>";
-
-                        echo "</div>"; // end media preview
-
-                        // Title
-                        echo "<div class='mt-2 text-center'><strong>$title</strong></div>";
-
-                        // View Site Button
-                        if (!empty($link)) {
-                            echo "<div class='mt-2 text-center'>
-                        <a href='$link' target='_blank' class='btn btn-sm btn-success'>🌐 View Site</a>
-                    </div>";
-                        }
-
-                        echo "</div></div></div>";
-                    }
-                } else {
-                    echo "<div class='col-12'><p class='text-muted text-center'>No animatedvideos media uploaded yet.</p></div>";
-                }
-
-                $conn->close();
-                ?>
-            </div>
-        </div>
 
 
         <div id="posters" class="media-tab-content">
