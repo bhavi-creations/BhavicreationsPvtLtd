@@ -1018,7 +1018,7 @@
                     <li class="nav-item mt-2" role="presentation">
                         <button class="team_devision_btn" id="pills-contentwriter-kakinada-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-contentwriter-kakinada" type="button" role="tab"
-                            aria-controls="pills-home" aria-selected="true">Marketing Executive
+                            aria-controls="pills-home" aria-selected="true">Telecaller 
                             <div class="star-1">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -1670,7 +1670,7 @@
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
-                                                    src="assests/images/Bhavi_Creations/Suryanarayana.png">
+                                                    src="assests/images/Bhavi_Creations/vijaya.png">
                                             </div>
                                         </div>
                                     </div>
@@ -1690,14 +1690,14 @@
                                         </div>
                                     </div> -->
 
-                                    <div class="carousel-item">
+                                    <!-- <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
                                                     src="assests/images/Bhavi_Creations/raviteja.png">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <!-- <div class="carousel-item">
                                         <div class="col-md-4">
@@ -1798,12 +1798,12 @@
                              <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="assests/images/Bhavi_Creations/Suryanarayana.png"
+                                        <img src="assests/images/Bhavi_Creations/vijaya.png"
                                             alt="Front Image" class="card-image img-fluid">
                                     </div>
                                     <div class="flip-card-back">
-                                        <p class="title">Suryanarayana</p>
-                                        <p>marketing executive</p>
+                                        <p class="title">vijaya lakshmi</p>
+                                        <p>Telecaller </p>
                                     </div>
                                 </div>
                             </div> 
@@ -1830,7 +1830,7 @@
 
 
                             
-                            <div class="flip-card mt-4">
+                            <!-- <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <img src="assests/images/Bhavi_Creations/raviteja.png"
@@ -1841,7 +1841,7 @@
                                         <p>marketing executive</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
