@@ -1948,7 +1948,7 @@
                                             alt="Front Image" class="card-image img-fluid">
                                     </div>
                                     <div class="flip-card-back">
-                                        <p class="title">Sathish</p>
+                                        <p class="title">SAI KIRAN</p>
                                         <p>Designer</p>
                                     </div>
                                 </div>
