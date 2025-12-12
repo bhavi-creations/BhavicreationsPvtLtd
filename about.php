@@ -1699,31 +1699,31 @@
                                         </div>
                                     </div> -->
 
-                                    <!-- <div class="carousel-item">
+                                    <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
-                                                    src="assests/images/Bhavi_Creations/vinaya_designer.png">
+                                                    src="assests/images/Bhavi_Creations/mahendra.png">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                     
-                                    <div class="carousel-item">
+                                    <!-- <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
                                                     src="assests/images/Bhavi_Creations/sathish_designer.png">
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- <div class="carousel-item">
+                                    </div> -->
+                                    <div class="carousel-item">
                                         <div class="col-md-4">
                                             <div class="card card-body">
                                                 <img class="img-fluid"
-                                                    src="assests/images/Bhavi_Creations/sai_kiran_1.png">
+                                                    src="assests/images/Bhavi_Creations/aslesh .png">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
                                      
                                      
                                     <div class="carousel-item">
@@ -1928,27 +1928,27 @@
                                     </div>
                                 </div>
                             </div>  -->
-                            <!-- <div class="flip-card  mt-4">
+                            <div class="flip-card  mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="assests/images/Bhavi_Creations/sai_kiran_1.png"
+                                        <img src="assests/images/Bhavi_Creations/mahendra.png"
                                             alt="Front Image" class="card-image img-fluid">
 
                                     </div>
                                     <div class="flip-card-back">
-                                        <p class="title">Sai Kiran</p>
+                                        <p class="title">Mahendra</p>
                                         <p>Designer</p>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="assests/images/Bhavi_Creations/sathish_designer.png"
+                                        <img src="assests/images/Bhavi_Creations/aslesh .png"
                                             alt="Front Image" class="card-image img-fluid">
                                     </div>
                                     <div class="flip-card-back">
-                                        <p class="title">SAI KIRAN</p>
+                                        <p class="title">Aslesh</p>
                                         <p>Designer</p>
                                     </div>
                                 </div>
