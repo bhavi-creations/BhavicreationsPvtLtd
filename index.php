@@ -171,6 +171,9 @@
         <li><a class="dropdown-item menu_item  " href="contact_us.php">Contact Us</a></li>
         <li class="d-none d-md-block"><a class="dropdown-item menu_item lol " href="our_works.php">Our Works</a></li>
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="our_works.php">Our Works</a></li>
+        <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li>
+        <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li>
+        
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="pages.php">Page</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item  " href="http://office.bhavicreations.com/">Team Login</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item lol" href="https://invoice.bhavicreations.com">Admin Login</a></li>
@@ -600,34 +603,7 @@
   </script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="scripts.js"></script>
 
-  <script>
-    const gif = document.getElementById('gif');
-    const sound = document.getElementById('sound');
-
-    gif.addEventListener('mouseenter', () => {
-      sound.play();
-    });
-
-    gif.addEventListener('mouseleave', () => {
-      sound.pause();
-      sound.currentTime = 0; // Resets the audio to the beginning
-    });
-  </script>
-
-
-<script type="text/javascript">
-        window.omnisend = window.omnisend || [];
-        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
-        omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
 </body>
 
 </html>
