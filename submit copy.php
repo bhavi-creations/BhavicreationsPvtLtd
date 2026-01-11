@@ -2,7 +2,7 @@
 // ================== DB CONNECTION ==================
 $conn = new mysqli("localhost", "root", "", "bhavicreations_db");
 if ($conn->connect_error) {
-    die("DB Connection Failed");
+    die("DB Connection Failed: " . $conn->connect_error);
 }
 
 // ================== PHPMailer ==================
@@ -13,103 +13,152 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-// ================== POST DATA ==================
-$name    = $_POST['name'] ?? '';
-$phone   = $_POST['phone'] ?? '';
-$address = $_POST['address'] ?? '';
+// ================== SAFE POST HELPER ==================
+function post($key) {
+    return $_POST[$key] ?? '';
+}
 
-$photo_count  = $_POST['photo_count'] ?? '';
-$photo_type   = $_POST['photo_type'] ?? '';
-$photo_custom = $_POST['photo_custom_msg'] ?? '';
+// ================== BASIC DETAILS ==================
+$name    = post('name');
+$phone   = post('phone');
+$address = post('address');
 
-$video_count  = $_POST['video_count'] ?? '';
-$video_type   = $_POST['video_type'] ?? '';
-$video_custom = $_POST['video_custom_msg'] ?? '';
+// ================== PHOTO ==================
+$photo_count  = post('photo_count');
+$photo_type   = post('photo_type');
+$photo_custom = post('photo_custom_msg');
 
-$reels_count  = $_POST['reels_count'] ?? '';
-$reels_type   = $_POST['reels_type'] ?? '';
-$reels_custom = $_POST['reels_custom_msg'] ?? '';
+// ================== VIDEO ==================
+$video_count  = post('video_count');
+$video_type   = post('video_type');
+$video_custom = post('video_custom_msg');
 
-$website_type = $_POST['website_type'] ?? '';
-$seo_option   = $_POST['seo_option'] ?? '';
-$payment_type = $_POST['payment_type'] ?? '';
-$gst_option   = $_POST['gst_option'] ?? '';
+$video_footage_source = post('video_footage_source');
+$video_script_source  = post('video_script_source');
+$video_music_source   = post('video_music_source');
 
+// ================== REELS ==================
+$reels_count  = post('reels_count');
+$reels_type   = post('reels_type');
+$reels_custom = post('reels_custom_msg');
+
+$reels_footage_source = post('reels_footage_source');
+$reels_script_source  = post('reels_script_source');
+$reels_music_source   = post('reels_music_source');
+
+// ================== WEBSITE ==================
+$website_type          = post('website_type');
+$website_category_type = post('website_category_type');
+$website_domain_type   = post('website_domain_type');
+$website_hosting_type  = post('website_hosting_type');
+
+// ================== SEO / PAYMENT ==================
+$seo_option   = post('seo_option');
+$payment_type = post('payment_type');
+$gst_option   = post('gst_option');
+
+// ================== SOCIAL MEDIA ==================
 $social_media = json_encode($_POST['social_media'] ?? []);
 
 // ================== SAVE TO DATABASE ==================
-$sql = "INSERT INTO bhavi_enquiries
-(name, phone, address,
-photo_count, photo_type, photo_custom_msg,
-video_count, video_type, video_custom_msg,
-reels_count, reels_type, reels_custom_msg,
-website_type, seo_option, social_media,
-payment_type, gst_option)
-VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$sql = "INSERT INTO bhavi_enquiries (
+    name, phone, address,
+
+    photo_count, photo_type, photo_custom_msg,
+
+    video_count, video_type, video_custom_msg,
+    video_footage_source, video_script_source, video_music_source,
+
+    reels_count, reels_type, reels_custom_msg,
+    reels_footage_source, reels_script_source, reels_music_source,
+
+    website_type, website_category_type,
+    website_domain_type, website_hosting_type,
+
+    seo_option, social_media,
+    payment_type, gst_option
+) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param(
-    "sssssssssssssssss",
+    "sssssssssssssssssssssssssss",
     $name, $phone, $address,
+
     $photo_count, $photo_type, $photo_custom,
+
     $video_count, $video_type, $video_custom,
+    $video_footage_source, $video_script_source, $video_music_source,
+
     $reels_count, $reels_type, $reels_custom,
-    $website_type, $seo_option, $social_media,
+    $reels_footage_source, $reels_script_source, $reels_music_source,
+
+    $website_type, $website_category_type,
+    $website_domain_type, $website_hosting_type,
+
+    $seo_option, $social_media,
     $payment_type, $gst_option
 );
-$stmt->execute();
+
+if (!$stmt->execute()) {
+    die("DB INSERT FAILED: " . $stmt->error);
+}
 
 // ================== EMAIL SEND ==================
 $mail = new PHPMailer(true);
 
 try {
-
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-
-    // 🔴 SAME MAIL WHICH IS ALREADY WORKING FOR YOU
     $mail->Username   = 'manimalladi05@gmail.com';
     $mail->Password   = 'ltlxupjfqbobegqg';
-
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('manimalladi05@gmail.com', 'Bhavi Creation');
-    $mail->addAddress('manimalladi05@gmail.com'); // Admin mail
+    $mail->setFrom('manimalladi05@gmail.com', 'Bhavi Creations');
+    $mail->addAddress('manimalladi05@gmail.com');
 
     $mail->isHTML(true);
-    $mail->Subject = 'New Enquiry - Bhavi Creation Pvt Ltd';
+    $mail->Subject = 'New Enquiry - Bhavi Creations';
 
     $mail->Body = "
     <h2>New Enquiry Received</h2>
 
-    <h3>Basic Details</h3>
-    <b>Name:</b> $name <br>
-    <b>Phone:</b> $phone <br>
-    <b>Address:</b> $address <br><br>
+    <h3>Client Details</h3>
+    Name: $name <br>
+    Phone: $phone <br>
+    Address: $address <br><br>
 
-    <h3>Photos</h3>
+    <h3>Photo Requirements</h3>
     Count: $photo_count <br>
     Type: $photo_type <br>
-    Custom: $photo_custom <br><br>
+    Notes: $photo_custom <br><br>
 
-    <h3>Videos</h3>
+    <h3>Video Requirements</h3>
     Count: $video_count <br>
     Type: $video_type <br>
-    Custom: $video_custom <br><br>
+    Notes: $video_custom <br>
+    Footage Source: $video_footage_source <br>
+    Script Source: $video_script_source <br>
+    Music Source: $video_music_source <br><br>
 
-    <h3>Reels</h3>
+    <h3>Reels Requirements</h3>
     Count: $reels_count <br>
     Type: $reels_type <br>
-    Custom: $reels_custom <br><br>
+    Notes: $reels_custom <br>
+    Footage Source: $reels_footage_source <br>
+    Script Source: $reels_script_source <br>
+    Music Source: $reels_music_source <br><br>
 
-    <h3>Website & SEO</h3>
-    Website: $website_type <br>
-    SEO: $seo_option <br><br>
+    <h3>Website Details</h3>
+    Website Type: $website_type <br>
+    Category: $website_category_type <br>
+    Domain: $website_domain_type <br>
+    Hosting: $website_hosting_type <br><br>
 
-    <h3>Social Media</h3>
-    " . implode(', ', $_POST['social_media'] ?? []) . "<br><br>
+    <h3>SEO & Social</h3>
+    SEO Option: $seo_option <br>
+    Social Media: " . implode(', ', $_POST['social_media'] ?? []) . "<br><br>
 
     <h3>Payment</h3>
     Payment Type: $payment_type <br>
@@ -117,48 +166,9 @@ try {
     ";
 
     $mail->send();
-
     echo "SUCCESS";
 
 } catch (Exception $e) {
-    echo "MAIL ERROR";
+    echo "MAIL ERROR: " . $mail->ErrorInfo;
 }
-
-
-
-
-// below code workings 
-
-
-
-<?php
-$conn = new mysqli("localhost", "root", "", "bhavicreations_db");
-
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-/* ===== SAVE DATA ===== */
-$social = json_encode($_POST['social_media'] ?? []);
-
-$sql = "INSERT INTO bhavi_enquiries
-(name,phone,address,photo_count,photo_type,photo_custom_msg,
-video_count,video_type,video_custom_msg,
-reels_count,reels_type,reels_custom_msg,
-website_type,seo_option,social_media,payment_type,gst_option)
-VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sssssssssssssssss",
-$_POST['name'],$_POST['phone'],$_POST['address'],
-$_POST['photo_count'],$_POST['photo_type'],$_POST['photo_custom_msg'],
-$_POST['video_count'],$_POST['video_type'],$_POST['video_custom_msg'],
-$_POST['reels_count'],$_POST['reels_type'],$_POST['reels_custom_msg'],
-$_POST['website_type'],$_POST['seo_option'],$social,
-$_POST['payment_type'],$_POST['gst_option']
-);
-$stmt->execute();
-
-/* ===== EMAIL ===== */
-// $mail = new PHPMailer(true);
+?>

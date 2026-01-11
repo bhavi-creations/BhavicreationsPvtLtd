@@ -39,7 +39,8 @@
     <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assests/branding.css">
 
-    <style>
+    <!-- <style>
+   
         @media (max-width: 768px) {
             .carousel-inner .carousel-item>div {
                 display: none;
@@ -367,7 +368,7 @@
             color: #3A3A3A;
 
         }
-    </style>
+    </style> -->
 
 </head>
 
@@ -526,7 +527,7 @@
 
 
             <div class="section-box">
-                <!--  <h5>Poster</h5> -->
+                <!-- <h5>Poster</h5> -->
                 <label><input type="radio" name="designing" value="4"> Designing</label>
 
                 <label><input type="radio" name="digital_marketing" value="4"> Digital marketing</label>
@@ -535,27 +536,6 @@
 
 
             </div>
-
-
-            <!--<div class="section-box services-section">
-               <h5 class="service-title">Select One Service</h5> -->
-
-            <!-- <label class="service-option">
-                    <input type="radio" name="designing" value="4">
-                    Designing
-                </label>
-
-                <label class="service-option">
-                    <input type="radio" name="digital_marketing" value="4">
-                    Digital Marketing
-                </label>
-
-                <label class="service-option">
-                    <input type="radio" name="branding_agency" value="8">
-                    Branding Agency
-                </label> 
-            </div>-->
-
 
 
 
@@ -606,7 +586,7 @@
 
 
 
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label>
                             <input type="checkbox" id="footageCheck">
                             Footage source
@@ -625,30 +605,14 @@
 
                         <input type="radio" name="reels_footage" value="from_client">
                         <input type="radio" name="reels_footage" value="from_company">
-                    </div> -->
+                    </div>
+
+
+
+
+
 
                     <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="footageCheck" name="reels_footage_check" value="1">
-                            Footage source
-                        </label>
-                    </div>
-
-                    <div id="footageFields" style="display:none;">
-                        <label>
-                            <input type="radio" name="reels_footage" value="from_client">
-                            Footage from your end
-                        </label>
-                        <label>
-                            <input type="radio" name="reels_footage" value="from_company">
-                            Footage from our end
-                        </label>
-                    </div>
-
-
-
-
-                    <!-- <div class="form-group">
                         <label>
                             <input type="checkbox" id="ScriptCheck">
                             Script source
@@ -664,26 +628,9 @@
                             <input type="radio" name="reels_script" value="from_company">
                             Script from our end
                         </label>
-                    </div> -->
-
-
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="ScriptCheck" name="reels_script_check" value="1">
-                            Script source
-                        </label>
                     </div>
 
-                    <div id="ScriptFields" style="display:none;">
-                        <label>
-                            <input type="radio" name="reels_script" value="from_client">
-                            Script from your end
-                        </label>
-                        <label>
-                            <input type="radio" name="reels_script" value="from_company">
-                            Script from our end
-                        </label>
-                    </div>
+
 
 
 
@@ -693,7 +640,7 @@
 
                     <div class="form-group">
                         <label>
-                            <input type="checkbox" id="ScriptMusicCheck" name="reels_music_check" value="1">
+                            <input type="checkbox" id="ScriptMusicCheck">
                             Music
                         </label>
                     </div>
@@ -723,24 +670,19 @@
                 </div> -->
 
 
-                    <h5>Reels</h5>
-                    <label><input type="radio" name="reels_count" value="4" onclick="showReelsType()"> 4</label>
-                    <label><input type="radio" name="reels_count" value="8" onclick="showReelsType()"> 8</label>
-                    <label><input type="radio" name="reels_count" value="12" onclick="showReelsType()"> 12</label>
-                    <label><input type="radio" name="reels_count" value="16" onclick="showReelsType()"> 16</label>
-                    <label><input type="radio" name="reels_count" value="custom" onclick="showReelsCustom()"> Custom</label>
+                <h5>Reels</h5>
+                <label><input type="radio" name="reels_count" value="4" onclick="showReelsType()"> 4</label>
+                <label><input type="radio" name="reels_count" value="8" onclick="showReelsType()"> 8</label>
+                <label><input type="radio" name="reels_count" value="12" onclick="showReelsType()"> 12</label>
+                <label><input type="radio" name="reels_count" value="16" onclick="showReelsType()"> 16</label>
+                <label><input type="radio" name="reels_count" value="custom" onclick="showReelsCustom()"> Custom</label>
 
-                    <div id="reels_custom" style="display:none;" class="mt-2">
-                        <input type="number" name="reels_custom_msg" class="form-control" placeholder="No of reels">
-                    </div>
-
-
+                <div id="reels_custom" style="display:none;" class="mt-2">
+                    <input type="number" name="reels_custom_msg" class="form-control" placeholder="No of reels">
                 </div>
 
 
             </div>
-
-
 
             <!-- VIDEOS -->
             <div class="section-box">
@@ -809,18 +751,14 @@
 
 
                     <h5 class="">Voice Need (Voice Over)</h5>
-                    <label><input type="radio" name="voice_over" value="Need"> Need</label>
-                    <label><input type="radio" name="voice_over" value="No Need"> No Need</label>
-                    <!-- <label><input type="radio" name="voice_over" value="custom" onclick="showVideoVoiceCustom()"> Custom</label>
+                    <label><input type="radio" name="video_count" value="4" onclick=""> Need</label>
+                    <label><input type="radio" name="video_count" value="8" onclick=""> No Need</label>
 
-                    <div id="voice_over" style="display:none;" class="mt-2">
-                        <textarea name="voice_over_msg" class="form-control"></textarea>
-                    </div> -->
+                    <label><input type="radio" name="video_count" value="custom" onclick="showVideoVoiceCustom()"> Custom</label>
 
-
-                    <!-- <h5>Videos</h5>
-                    <label><input type="radio" name="video_count" value="4" onclick="showVideoType()"> 4</label>
-                    <label><input type="radio" name="video_count" value="8" onclick="showVideoType()"> 8</label> -->
+                    <div id="videovoice_custom" style="display:none;" class="mt-2">
+                        <textarea name="videovoice_msg" class="form-control" placeholder="Add Your custom required "></textarea>
+                    </div>
 
 
                 </div>
@@ -856,13 +794,14 @@
                     </label>
                 </div>
 
+                <!-- Hidden Inputs -->
+                <div id="WedsiteFields" style="display:none; ">
 
+                    <div class="col-md-4"> <label><input type="radio" name="reels_type" value="Basic"> Landing Page (Single Page)</label>
+                    </div>
+                    <div class="col-md-4"><label><input type="radio" name="reels_type" value="Standard"> Business Website (Multi-page)</label></div>
 
-                <div id="WedsiteFields" style="display:none;">
-                    <div class="col-md-4"> <label><input type="radio" name="website_category" value="Landing Page"> Landing Page (Single Page)</label></div>
-                    <div class="col-md-4"><label><input type="radio" name="website_category" value="Business Website"> Business Website (Multi-page)</label></div>
                 </div>
-
 
 
                 <!-- Kind of Website -->
@@ -875,10 +814,14 @@
                 </div>
 
                 <!-- Hidden Inputs -->
-                <div id="DomainFields" style="display:none;">
-                    <div class="col-md-4"> <label><input type="radio" name="domain_provider" value="Client"> Will you provide it</label></div>
-                    <div class="col-md-4"><label><input type="radio" name="domain_provider" value="Company"> should we purchase it ourselves</label></div>
+                <div id="DomainFields" style="display:none; ">
+
+                    <div class="col-md-4"> <label><input type="radio" name="reels_type" value="Basic"> Will you provide it</label>
+                    </div>
+                    <div class="col-md-4"><label><input type="radio" name="reels_type" value="Standard"> should we purchase it ourselves</label></div>
+
                 </div>
+
 
 
 
@@ -893,9 +836,13 @@
                     </label>
                 </div>
 
-                <div id="HostingFields" style="display:none;">
-                    <div class="col-md-4"> <label><input type="radio" name="hosting_need" value="Need"> Need</label></div>
-                    <div class="col-md-4"><label><input type="radio" name="hosting_need" value="No-Need"> No-Need</label></div>
+                <!-- Hidden Inputs -->
+                <div id="HostingFields" style="display:none; ">
+
+                    <div class="col-md-4"> <label><input type="radio" name="reels_type" value="Basic"> Need</label>
+                    </div>
+                    <div class="col-md-4"><label><input type="radio" name="reels_type" value="Standard"> No-Need</label></div>
+
                 </div>
 
 
@@ -906,59 +853,30 @@
 
             </div>
 
+
             <!-- SEO -->
-            <!--  <div class="section-box">
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="SeoCheck" name="seo_check" value="1">
-                            SEO
-                        </label>
-                    </div>
-
-                    Hidden Inputs 
-                    <div id="SeoFields" style="display:none;">
-
-                        <div class="col-md-4">
-                            <label>
-                                <input type="radio" name="seo_type" value="Need"> Need
-                            </label>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label>
-                                <input type="radio" name="seo_type" value="No-Need"> No-Need
-                            </label>
-                        </div>
-                    </div>-->
-
             <div class="section-box">
                 <h5>SEO</h5>
+
+
+
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" id="SeoCheck" name="seo_check" value="1">
+                        <input type="checkbox" id="SeoCheck">
                         SEO
                     </label>
                 </div>
 
-
                 <!-- Hidden Inputs -->
-                <div id="SeoFields" style="display:none;">
+                <div id="SeoFields" style="display:none; ">
 
-                    <div class="col-md-4">
-                        <label>
-                            <input type="radio" name="seo_type" value="Need"> Need
-                        </label>
+                    <div class="col-md-4"> <label><input type="radio" name="reels_type" value="Basic"> Need</label>
                     </div>
+                    <div class="col-md-4"><label><input type="radio" name="reels_type" value="Standard"> No-Need</label></div>
 
-                    <div class="col-md-4">
-                        <label>
-                            <input type="radio" name="seo_type" value="No-Need"> No-Need
-                        </label>
-                    </div>
                 </div>
 
 
-            </div>
 
 
 
@@ -968,13 +886,15 @@
 
 
 
-            <!-- <label><input type="radio" name="seo_option" value="Need"> Need</label>
+
+
+                <!-- <label><input type="radio" name="seo_option" value="Need"> Need</label>
                 <label><input type="radio" name="seo_option" value="No Need"> No Need</label> -->
-
+            </div>
 
             <!-- SOCIAL -->
             <div class="section-box">
-                <h5>Social Media </h5>
+                <h5>Social Media Handling</h5>
 
                 <div class="form-group">
                     <label style="font-size: 20px;">
@@ -1019,39 +939,6 @@
 
                 </div>
 
-
-
-
-
-                <div class="form-group">
-                    <label>
-                        <input style="font-size: 20px;" type="radio" id="HandlingCheck" name="handling_check" value="1">
-                        Social Media Handling
-                    </label>
-                </div>
-
-                <div id="Handlingields" style="display:none;">
-                    <div class="col-md-4">
-                        <label>
-                            <input type="radio" name="reels_type" value="Basic">
-                            Social Media Handling your side
-                        </label>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label>
-                            <input type="radio" name="reels_type" value="Standard">
-                            Social Media Handling our side
-                        </label>
-                    </div>
-                </div>
-
-
-
-
-
-
-
             </div>
 
 
@@ -1067,9 +954,10 @@
             <div class="section-box">
                 <h5>printing Services</h5>
 
+
                 <div class="form-group">
                     <label style="font-size: 20px;">
-                        <input type="radio" id="prientCheck" name="printing_check" value="1">
+                        <input type="radio" id="prientCheck">
                         Our printing Services
                     </label>
                 </div>
@@ -1078,61 +966,80 @@
                 <div id="prientFields" style="display:none;">
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Flexis">
+                        <input type="checkbox" name="social_media[]" value="Flexis">
                         Flexis
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Brouchers">
+                        <input type="checkbox" name="social_media[]" value="Brouchers">
                         Brouchers
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Visiting Cards">
-                        Visiting Cards
+                        <input type="checkbox" name="social_media[]" value="visiting Cards">
+                        visiting Cards
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Calender">
+                        <input type="checkbox" name="social_media[]" value="Calender">
                         Calender
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Diary">
-                        Diary
+                        <input type="checkbox" name="social_media[]" value="Dairy">
+                        Dairy
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Banner">
+                        <input type="checkbox" name="social_media[]" value="Banner">
                         Banner
                     </label>
 
+
+
+
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Pamplets">
+                        <input type="checkbox" name="social_media[]" value="     Pamplets">
                         Pamplets
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Menu Cards">
+                        <input type="checkbox" name="social_media[]" value="  Menu Cards">
                         Menu Cards
                     </label>
 
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="ID Cards">
+                        <input type="checkbox" name="social_media[]" value="   ID Cards">
                         ID Cards
                     </label>
-
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Hoardings">
+                        <input type="checkbox" name="social_media[]" value="Hoardings">
                         Hoardings
                     </label>
-
                     <label class="radio-style">
-                        <input type="checkbox" name="printing_services[]" value="Letter Headings">
+                        <input type="checkbox" name="social_media[]" value=" Letter Headings">
                         Letter Headings
                     </label>
+
+
+
+
+
+
                 </div>
+
             </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
             <div class="section-box">
@@ -1220,19 +1127,6 @@
 
         // newly add for own 
     </script>
-
-
-
-
-
-
-
-    <script>
-        document.getElementById('prientCheck').addEventListener('change', function() {
-            document.getElementById('prientFields').style.display = this.checked ? 'block' : 'none';
-        });
-    </script>
-
     <script>
         document.querySelectorAll('input[name="website_type"]').forEach((radio) => {
             radio.addEventListener('change', function() {
@@ -1369,22 +1263,7 @@
                 this.checked ? "block" : "none";
         });
     </script>
-    <script>
-        document.getElementById("HandlingCheck").addEventListener("change", function() {
-            document.getElementById("Handlingields").style.display =
-                this.checked ? "block" : "none";
-        });
-    </script>
 
-    <!-- handler -->
-    <div id="HandlingFields" style="display:none;">
-        <div class="col-md-4">
-            <label><input type="radio" name="social_handling" value="Client Side"> Social Media Handling your side</label>
-        </div>
-        <div class="col-md-4">
-            <label><input type="radio" name="social_handling" value="Company Side"> Social Media Handling our side</label>
-        </div>
-    </div>
 
     <!-- prienting -->
 
