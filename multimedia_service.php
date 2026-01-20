@@ -1395,6 +1395,37 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to toggle visibility
+            function toggleSection(checkId, fieldId) {
+                const checkbox = document.getElementById(checkId);
+                const fields = document.getElementById(fieldId);
+                if (checkbox && fields) {
+                    checkbox.addEventListener('change', function() {
+                        fields.style.display = this.checked ? 'block' : 'none';
+                    });
+                }
+            }
+
+            // Reels sections
+            toggleSection('footageCheck', 'footageFields');
+            toggleSection('ScriptCheck', 'ScriptFields');
+            toggleSection('ScriptMusicCheck', 'ScriptMusicFields');
+
+            // Video sections
+            toggleSection('footageVideoCheck', 'footageVideoFields');
+            toggleSection('footageVideoScriptCheck', 'footageVideoScriptFields');
+            toggleSection('footageVideoMusicCheck', 'footageVideoMusicFields');
+
+            // Website & SEO sections
+            toggleSection('WedsiteCheck', 'WedsiteFields');
+            toggleSection('DomainCheck', 'DomainFields');
+            toggleSection('HostingCheck', 'HostingFields');
+            toggleSection('SeoCheck', 'SeoFields');
+        });
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
