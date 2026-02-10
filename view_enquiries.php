@@ -1,10 +1,14 @@
 <?php
+// Database connection path సరిచూసుకోండి
 include 'db.connection/db_connection.php';
 
+// డేటాబేస్ నుండి డేటాను తీసుకోవడం
 $q = $conn->query("SELECT * FROM bhavi_enquiries ORDER BY id DESC");
 $data = [];
-while ($row = $q->fetch_assoc()) {
-    $data[] = $row;
+if ($q) {
+    while ($row = $q->fetch_assoc()) {
+        $data[] = $row;
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -108,38 +112,7 @@ while ($row = $q->fetch_assoc()) {
             margin-bottom: 25px;
         }
 
-
-
-
-
-
-
-
-        /* @media (min-width: 1400px) {
-
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl,
-            .container-xxl {
-                max-width: 1400px;
-            }
-        } */
-
-        /* @media (min-width: 1200px) {
-
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
-                max-width: 1160px;
-            }
-        } */
-
         @media (min-width: 992px) {
-
             .container,
             .container-lg,
             .container-md,
@@ -149,7 +122,6 @@ while ($row = $q->fetch_assoc()) {
         }
 
         @media (max-width: 768px) {
-
             .container,
             .container-md,
             .container-sm {
@@ -167,39 +139,38 @@ while ($row = $q->fetch_assoc()) {
             Client Requirement Details
         </h3>
 
-        <!-- ================= MOBILE VIEW ================= -->
         <div class="mobile-view">
             <?php foreach ($data as $row): ?>
                 <div class="card-box">
                     <?php
-                    // Group fields for mobile display
-                    $personalFields = ['client_name', 'firm_name', 'personal_number', 'online_url', 'address'];
-                    $serviceFields = ['online_presence_type', 'selected_services', 'wants_designing', 'wants_digital_marketing', 'wants_branding', 'package_type'];
-                    $mediaFields = ['image_quality', 'image_count', 'reels_count', 'reels_custom_val', 'video_voice_over', 'video_count'];
-                    $marketingFields = ['social_platforms', 'gst_status', 'printing_check', 'printing_services', 'seo_check', 'seo_type', 'reels_footage_check', 'reels_footage', 'reels_script_check', 'reels_script', 'reels_music_check', 'reels_music', 'website_category'];
+                    // Group fields based on your DB column names
+                    $personalFields = ['name', 'firm_name', 'personal_number', 'number', 'address'];
+                    $serviceFields = ['online_presence_type', 'designing', 'digital_marketing', 'branding_agency', 'payment_type'];
+                    $mediaFields = ['photo_type', 'photo_count', 'reels_count', 'reels_custom_msg', 'video_count', 'voice_over_option'];
+                    $marketingFields = ['social_media_platforms', 'gst_option', 'printing_check', 'printing_services', 'seo_check', 'seo_type', 'website_category'];
                     ?>
                     <div class="section-group">
                         <div class="section-title">Personal Details</div>
                         <?php foreach ($personalFields as $f): ?>
-                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?></p>
+                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?? 'N/A' ?></p>
                         <?php endforeach; ?>
                     </div>
                     <div class="section-group">
                         <div class="section-title">Service Details</div>
                         <?php foreach ($serviceFields as $f): ?>
-                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?></p>
+                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?? 'N/A' ?></p>
                         <?php endforeach; ?>
                     </div>
                     <div class="section-group">
                         <div class="section-title">Media / Reels / Video</div>
                         <?php foreach ($mediaFields as $f): ?>
-                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?></p>
+                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?? 'N/A' ?></p>
                         <?php endforeach; ?>
                     </div>
                     <div class="section-group">
                         <div class="section-title">Website / Marketing / Others</div>
                         <?php foreach ($marketingFields as $f): ?>
-                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?></p>
+                            <p><span class="label"><?= ucwords(str_replace('_', ' ', $f)) ?>:</span> <?= $row[$f] ?? 'N/A' ?></p>
                         <?php endforeach; ?>
                     </div>
 
@@ -214,8 +185,6 @@ while ($row = $q->fetch_assoc()) {
             <?php endforeach; ?>
         </div>
 
-        <!-- ================= DESKTOP TABLE ================= -->
-        <!-- ================= DESKTOP TABLE ================= -->
         <div class="desktop-table table-responsive">
             <table class="table table-bordered bg-white">
                 <thead>
@@ -224,43 +193,45 @@ while ($row = $q->fetch_assoc()) {
                         <th>Client Name</th>
                         <th>Firm Name</th>
                         <th>Personal Number</th>
-                        <th>Online Url</th>
-                        <th>Address</th>
-                        <th>Selected Services</th>
-                        <th>Package Type</th>
-                        <th>Image Count</th>
-                        <th>Video Count</th>
-                        <th>Social Platforms</th>
-                        <th>Gst Status</th>
-                        <th>Seo Type</th>
+                        <th>Number</th>
+                        <th>Designing</th>
+                        <th>Digital Mkt</th>
+                        <th>Branding</th>
+                        <th>Package</th>
+                        <th>Images</th>
+                        <th>Videos</th>
+                        <th>SEO</th>
                         <th class="no-print">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data as $row): ?>
-                        <tr>
-                            <td><?= $row['id'] ?></td>
-                            <td><?= $row['client_name'] ?></td>
-                            <td><?= $row['firm_name'] ?></td>
-                            <td><?= $row['personal_number'] ?></td>
-                            <td><?= $row['online_url'] ?></td>
-                            <td><?= $row['address'] ?></td>
-                            <td><?= $row['selected_services'] ?></td>
-                            <td><?= $row['package_type'] ?></td>
-                            <td><?= $row['image_count'] ?></td>
-                            <td><?= $row['video_count'] ?></td>
-                            <td><?= $row['social_platforms'] ?></td>
-                            <td><?= $row['gst_status'] ?></td>
-                            <td><?= $row['seo_type'] ?></td>
-                            <td class="no-print">
-                                <i class="bi bi-eye text-primary" onclick='viewData(<?= json_encode($row) ?>)'></i>
-                                <i class="bi bi-printer text-success" onclick='printRow(<?= json_encode($row) ?>)'></i>
-                                <a href="delete_enquiry.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this enquiry?')">
-                                    <i class="bi bi-trash text-danger"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+                    <?php if(!empty($data)): ?>
+                        <?php foreach ($data as $row): ?>
+                            <tr>
+                                <td><?= $row['id'] ?></td>
+                                <td><?= $row['name'] ?></td>
+                                <td><?= $row['firm_name'] ?></td>
+                                <td><?= $row['personal_number'] ?></td>
+                                <td><?= $row['online_url'] ?></td>
+                                <td><?= $row['designing'] ?></td>
+                                <td><?= $row['digital_marketing'] ?></td>
+                                <td><?= $row['branding_agency'] ?></td>
+                                <td><?= $row['payment_type'] ?></td>
+                                <td><?= $row['photo_count'] ?></td>
+                                <td><?= $row['video_count'] ?></td>
+                                <td><?= $row['seo_type'] ?></td>
+                                <td class="no-print">
+                                    <i class="bi bi-eye text-primary" onclick='viewData(<?= json_encode($row) ?>)'></i>
+                                    <i class="bi bi-printer text-success" onclick='printRow(<?= json_encode($row) ?>)'></i>
+                                    <a href="delete_enquiry.php?id=<?= $row['id'] ?>" onclick="return confirm('Delete this enquiry?')">
+                                        <i class="bi bi-trash text-danger"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr><td colspan="13">No Data Found</td></tr>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>
@@ -269,12 +240,11 @@ while ($row = $q->fetch_assoc()) {
 
     </div>
 
-    <!-- ================= MODAL ================= -->
     <div class="modal fade" id="viewModal">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Client Full Requirement</h5>
+                    <h5 class="modal-title">Bhavi Creations Pvt Ltd-Client Full Requirement</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body" id="modalBody"></div>
@@ -285,19 +255,19 @@ while ($row = $q->fetch_assoc()) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function viewData(row) {
-            // Sections for modal display
+            // Updated keys to match your DB columns
             const sections = {
-                "Personal Details": ['client_name', 'firm_name', 'personal_number', 'online_url', 'address'],
-                "Service Details": ['online_presence_type', 'selected_services', 'wants_designing', 'wants_digital_marketing', 'wants_branding', 'package_type'],
-                "Media / Reels / Video": ['image_quality', 'image_count', 'reels_count', 'reels_custom_val', 'video_voice_over', 'video_count'],
-                "Website / Marketing / Others": ['social_platforms', 'gst_status', 'printing_check', 'printing_services', 'seo_check', 'seo_type', 'reels_footage_check', 'reels_footage', 'reels_script_check', 'reels_script', 'reels_music_check', 'reels_music', 'website_category']
+                "Personal Details": ['name', 'firm_name', 'personal_number', 'number', 'address'],
+                "Service Details": ['online_presence_type', 'designing', 'digital_marketing', 'branding_agency', 'payment_type'],
+                "Media / Reels / Video": ['photo_type', 'photo_count', 'photo_custom_msg', 'reels_count', 'reels_footage', 'reels_script', 'reels_music', 'video_count', 'voice_over_option'],
+                "Website / Marketing / Others": ['website_category', 'website_domain', 'website_hosting', 'seo_check', 'seo_type', 'social_media_platforms', 'printing_services', 'gst_option']
             };
             let html = '<div class="container-fluid">';
             for (const section in sections) {
                 html += `<div class="section-group"><h4 class="section-title">${section}</h4><table class="table table-bordered modal-table">`;
                 sections[section].forEach(key => {
                     if (row[key] !== undefined)
-                        html += `<tr><th>${key.replace(/_/g,' ')}</th><td>${row[key]}</td></tr>`;
+                        html += `<tr><th style="width:30%">${key.replace(/_/g,' ').toUpperCase()}</th><td>${row[key] ? row[key] : 'N/A'}</td></tr>`;
                 });
                 html += '</table></div>';
             }
@@ -307,25 +277,8 @@ while ($row = $q->fetch_assoc()) {
         }
 
         function printRow(row) {
-            let html = `<html><head><title>Print</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></head><body style="padding:20px;">`;
-            html += `<h3>Bhavi Creations Pvt Ltd - Client Requirement</h3><table class="table table-bordered">`;
-            for (let key in row) {
-                html += `<tr><th>${key.replace(/_/g,' ')}</th><td>${row[key]}</td></tr>`;
-            }
-            html += `</table></body></html>`;
-            let w = window.open('', '_blank', 'width=900');
-            w.document.write(html);
-            w.document.close();
-            w.focus();
-            w.print();
-            w.close();
-        }
-    </script>
-
-    <script>
-        function printRow(row) {
-            const fields = Object.keys(row); // all fields
-            const chunkSize = 15; // number of fields per page
+            const fields = Object.keys(row);
+            const chunkSize = 15;
             let html = `<html>
     <head>
         <title>Print</title>
@@ -342,13 +295,12 @@ while ($row = $q->fetch_assoc()) {
         <h3>Bhavi Creations Pvt Ltd - Client Requirement</h3>
     `;
 
-            // Split fields into chunks
             for (let i = 0; i < fields.length; i += chunkSize) {
-                if (i > 0) html += '<div class="page-break"></div>'; // page break before next chunk
+                if (i > 0) html += '<div class="page-break"></div>';
                 html += '<table class="table table-bordered">';
                 let chunk = fields.slice(i, i + chunkSize);
                 chunk.forEach(key => {
-                    html += `<tr><th>${key.replace(/_/g,' ')}</th><td>${row[key]}</td></tr>`;
+                    html += `<tr><th style="width:35%">${key.replace(/_/g,' ').toUpperCase()}</th><td>${row[key] ? row[key] : 'N/A'}</td></tr>`;
                 });
                 html += '</table>';
             }
@@ -358,12 +310,12 @@ while ($row = $q->fetch_assoc()) {
             let w = window.open('', '_blank', 'width=900');
             w.document.write(html);
             w.document.close();
-            w.focus();
-            w.print();
-            w.close();
+            w.onload = function() {
+                w.print();
+                w.close();
+            };
         }
     </script>
 
 </body>
-
 </html>

@@ -195,7 +195,7 @@ try {
     ";
 
     $mail->send();
-    echo "<script>alert('✅ Data Saved & Full Email Sent Successfully!'); window.location.href='index.php';</script>";
+    echo "<script>alert('✅ Thank You for Choosing Bhavi Creations Pvt Ltd'); window.location.href='index.php';</script>";
 } catch (Exception $e) {
     echo "Saved in Database, but Mail Error: {$mail->ErrorInfo}";
 }
