@@ -171,8 +171,8 @@
         <li><a class="dropdown-item menu_item  " href="contact_us.php">Contact Us</a></li>
         <li class="d-none d-md-block"><a class="dropdown-item menu_item lol " href="our_works.php">Our Works</a></li>
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="our_works.php">Our Works</a></li>
-        <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li>
-        <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li>
+        <!-- <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li> -->
+        <!-- <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li> -->
         
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="pages.php">Page</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item  " href="http://office.bhavicreations.com/">Team Login</a></li>
