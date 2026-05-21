@@ -3,68 +3,85 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Adjust the path to autoload.php based on your project
+require 'vendor/autoload.php';
 
-// Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Assign POST data to variables
-    $first_name = $_POST['first_name'] ?? '';
-    $last_name = $_POST['last_name'] ?? '';
-    $phone = $_POST['phone'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $message = $_POST['message'] ?? '';
-    $subject = $_POST['subject'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Create a new PHPMailer instance
+    $first_name = htmlspecialchars(trim($_POST['first_name'] ?? ''));
+    $last_name  = htmlspecialchars(trim($_POST['last_name'] ?? ''));
+    $email      = htmlspecialchars(trim($_POST['email'] ?? ''));
+    $phone      = htmlspecialchars(trim($_POST['phone'] ?? ''));
+    $subject    = htmlspecialchars(trim($_POST['subject'] ?? ''));
+    $message    = nl2br(htmlspecialchars(trim($_POST['message'] ?? '')));
+
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings for Gmail SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
 
-        $mail->Username = 'bhaviwebdevelopment@gmail.com';
-        $mail->Password = 'ipotpfyrqocuxjld';
+        $mail->Username   = 'manimalladi05@gmail.com';
+        $mail->Password   = 'cvarqcchfjpawxvo';
 
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
 
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->setFrom('manimalladi05@gmail.com', 'Bhavi Website');
+        $mail->addAddress('manimalladi05@gmail.com', 'Bhavi Creations');
 
-        // Sender
+        if (!empty($email)) {
+            $mail->addReplyTo($email, $first_name . ' ' . $last_name);
+        }
 
-
-        $mail->setFrom('bhaviwebdevelopment@gmail.com', 'Bhavi Website');
-
-        // Recipient
-
-        $mail->addAddress('Admin@bhavicreations.com', 'Bhavi');
-
-
-
-        // Content
         $mail->isHTML(true);
-        $mail->Subject = 'New Message from Contact Form Bhavi Website';
+        $mail->Subject = "New Contact Form Enquiry - Bhavi Website";
+
         $mail->Body = "
-            <h1>New Message</h1>
-            <p><strong>Name:</strong> $first_name</p>
-            <p><strong>Last Name:</strong> $last_name</p>
-            <p><strong>Phone:</strong> $phone</p>
-            <p><strong>Email:</strong> $email</p>
-            <p><strong>Subject:</strong> $subject</p>   
-            <p><strong>Message:</strong><br>$message</p>
+            <h2>New Contact Form Submission</h2>
+            <table border='1' cellpadding='10' cellspacing='0' style='border-collapse:collapse;width:100%;'>
+                <tr>
+                    <td><strong>First Name</strong></td>
+                    <td>{$first_name}</td>
+                </tr>
+                <tr>
+                    <td><strong>Last Name</strong></td>
+                    <td>{$last_name}</td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>{$email}</td>
+                </tr>
+                <tr>
+                    <td><strong>Phone Number</strong></td>
+                    <td>{$phone}</td>
+                </tr>
+                <tr>
+                    <td><strong>Selected Service</strong></td>
+                    <td>{$subject}</td>
+                </tr>
+                <tr>
+                    <td><strong>Message</strong></td>
+                    <td>{$message}</td>
+                </tr>
+            </table>
         ";
 
-        // Send email
+        $mail->AltBody = "
+First Name: {$first_name}
+Last Name: {$last_name}
+Email: {$email}
+Phone: {$phone}
+Selected Service: {$subject}
+Message: " . strip_tags($message);
+
         $mail->send();
 
-        // Redirect to contact_us.php with a success flag
-        header('Location: contact_us.php?success=1');
-        exit;
+        header("Location: thankyou.php");
+        exit();
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "Mailer Error: " . $mail->ErrorInfo;
     }
 } else {
-    // If accessed directly without POST data
-    echo 'Access Denied';
+    echo "Access Denied";
 }
