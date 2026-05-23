@@ -5,7 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
-  <meta name="keywords" content="your,keywords,here">
+  <meta name="keywords" content="Best digital marketing agency in Kakinada,
+Digital marketing agency in Kakinada,
+Digital marketing company in Kakinada,
+Online marketing services in Kakinada,
+Internet marketing agency in Kakinada,
+Branding agency in Kakinada,
+Website design company in Kakinada,
+Social media marketing agency in Kakinada,
+SEO services in Kakinada,
+Google Ads agency in Kakinada">
   <meta name="author" content="Your Name">
 
   <!-- Bootstrap CSS -->
@@ -39,12 +48,24 @@
 
   <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
 
-<link rel="canonical" href="https://bhavicreations.com/" />
+  <link rel="canonical" href="https://bhavicreations.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWS4V98M9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DWS4V98M9N');
+  </script>
 
 </head>
 
@@ -135,15 +156,15 @@
         style="width: 250px;height: 120px;" alt="">
 
 
-        <a href="http://office.bhavicreations.com/" target="_blank">
-          <span class="address d-none d-md-block animated-text animate__animated animate__bounceInDown">
-              <i class="fas fa-users"></i> Team Login
-          </span>
+      <a href="http://office.bhavicreations.com/" target="_blank">
+        <span class="address d-none d-md-block animated-text animate__animated animate__bounceInDown">
+          <i class="fas fa-users"></i> Team Login
+        </span>
       </a>
-      <a href="https://invoice.bhavicreations.com/"  target="_blank">
-          <span class="address d-none d-md-block animated-texto animate__animated animate__bounceInDown">
-              <i class="fas fa-user-shield"></i> Admin Login
-          </span>
+      <a href="https://invoice.bhavicreations.com/" target="_blank">
+        <span class="address d-none d-md-block animated-texto animate__animated animate__bounceInDown">
+          <i class="fas fa-user-shield"></i> Admin Login
+        </span>
       </a>
 
 
@@ -174,7 +195,7 @@
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="our_works.php">Our Works</a></li>
         <!-- <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li> -->
         <!-- <li class="d-md-none "><a class="dropdown-item menu_item  " href="multimedia_service.php">Multimedia Service</a></li> -->
-        
+
         <li class="d-md-none "><a class="dropdown-item menu_item  " href="pages.php">Page</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item  " href="http://office.bhavicreations.com/">Team Login</a></li>
         <li class="d-md-none"><a class="dropdown-item menu_item lol" href="https://invoice.bhavicreations.com">Admin Login</a></li>
@@ -533,7 +554,7 @@
           <div class="profile">
             <div class="user">
               <div class="img"><img
-                  src="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp" 
+                  src="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
                   class="img-fluid" alt="Bhavi Creations"></div>
               <div class="details">
                 <div class="name">Bhavi</div>
@@ -573,9 +594,9 @@
 
   <script>
     // JavaScript to make the text visible after a delay
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       // Delay the visibility of the animated text
-      setTimeout(function () {
+      setTimeout(function() {
         document.querySelector('.animated-text').style.visibility = 'visible';
       }, 500); // Adjust the delay (in milliseconds) as needed
     });
@@ -583,17 +604,17 @@
 
   <script>
     // JavaScript to make the text visible after a delay
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       // Delay the visibility of the animated text
-      setTimeout(function () {
+      setTimeout(function() {
         document.querySelector('.animated-texto').style.visibility = 'visible';
       }, 500); // Adjust the delay (in milliseconds) as needed
     });
   </script>
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       // Toggle dropdown on button click
-      $('.toggleDropdown').change(function () {
+      $('.toggleDropdown').change(function() {
         if ($(this).is(':checked')) {
           $('.dropdown-menu').show();
         } else {
@@ -602,7 +623,7 @@
       });
     });
   </script>
-<?php include 'broucherdownloader.php'; ?>
+  <?php include 'broucherdownloader.php'; ?>
 
 
 </body>
