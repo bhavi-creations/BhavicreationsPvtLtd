@@ -1,59 +1,57 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Your website description">
-        <meta name="keywords" content="your,keywords,here">
-        <meta name="author" content="Your Name">
-    
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-        <title>Bhavi Creations</title>
-        <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp" type="image/x-icon">
-    
-        <link rel="stylesheet" href="assests/ofline_marketing_animations.css">
-        <link rel="stylesheet" href="assests/footer_animations.css">
 
-    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
-     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-     
-         <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-         <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-         <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    
-    
-    
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-        <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="your,keywords,here">
+    <meta name="author" content="Your Name">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="assests/branding.css">
 
-        <style>
+    <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp" type="image/x-icon">
 
-        body{
+    <link rel="stylesheet" href="assests/ofline_marketing_animations.css">
+    <link rel="stylesheet" href="assests/footer_animations.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="assests/branding.css">
+
+    <style>
+        body {
             overflow-x: hidden;
         }
+    </style>
+    <?php include 'heading.php'; ?>
+</head>
+
+<body>
 
 
-        </style>
-        
-    </head>
-
-  <body  >
-    
- 
     <!-- Navbar -->
     <section class="sticky_nav nav_image_bg   shadow-lg">
         <div class="container nav_main p-3">
@@ -150,30 +148,30 @@
 
 
     <div class="loader_butterflu">
-        
+
         <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.358 35.05c.435-.175.646-.408.861-.95.374-.94.698-1.52 1.145-2.05.78-.92 1.757-1.638 2.666-1.957.603-.212.9-.204 1.505.041.843.343 1.597.25 2.062-.254.95-1.029 3.95-6.873 5.841-11.376.869-2.07.831-1.882.797-3.962-.034-2.106-.024-2.064-.927-3.887-1.639-3.31-4.426-6.582-7.147-8.392C8.71 1.298 6.715.504 5.296.328c-.718-.09-2.465-.001-3.183.16C.943.752.279 1.268.279 1.917c0 .119.437 1.136.97 2.26.533 1.126 1.044 2.291 1.135 2.591.334 1.106.776 3.567.945 5.27.065.652.357 1.286.751 1.633.419.367 1.351.786 1.964.883.286.044.534.096.553.115.018.018-.129.128-.327.244-.761.446-1.432 1.439-1.74 2.574-.216.802-.194 2.914.045 4.121.24 1.212.575 2.318 1.031 3.403.46 1.092.535 1.458.439 2.135-.223 1.575-1.958 4.03-3.489 4.937-.693.41-.885.587-1.066.98-.173.375-.185.535-.069.953.223.802 1.206 1.326 1.937 1.033z" fill="#000"></path>
+            <path d="M3.358 35.05c.435-.175.646-.408.861-.95.374-.94.698-1.52 1.145-2.05.78-.92 1.757-1.638 2.666-1.957.603-.212.9-.204 1.505.041.843.343 1.597.25 2.062-.254.95-1.029 3.95-6.873 5.841-11.376.869-2.07.831-1.882.797-3.962-.034-2.106-.024-2.064-.927-3.887-1.639-3.31-4.426-6.582-7.147-8.392C8.71 1.298 6.715.504 5.296.328c-.718-.09-2.465-.001-3.183.16C.943.752.279 1.268.279 1.917c0 .119.437 1.136.97 2.26.533 1.126 1.044 2.291 1.135 2.591.334 1.106.776 3.567.945 5.27.065.652.357 1.286.751 1.633.419.367 1.351.786 1.964.883.286.044.534.096.553.115.018.018-.129.128-.327.244-.761.446-1.432 1.439-1.74 2.574-.216.802-.194 2.914.045 4.121.24 1.212.575 2.318 1.031 3.403.46 1.092.535 1.458.439 2.135-.223 1.575-1.958 4.03-3.489 4.937-.693.41-.885.587-1.066.98-.173.375-.185.535-.069.953.223.802 1.206 1.326 1.937 1.033z" fill="#000"></path>
         </svg>
 
-        
+
         <svg viewBox="0 0 2.4 14.4" version="1.1" y="0" x="0" height="150" width="25" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.2 13c0 .641-.447 1.16-1 1.16-.553 0-1-.519-1-1.16V1.4C.2.759.647.24 1.2.24c.553 0 1 .519 1 1.16z" fill="#000"></path>
+            <path d="M2.2 13c0 .641-.447 1.16-1 1.16-.553 0-1-.519-1-1.16V1.4C.2.759.647.24 1.2.24c.553 0 1 .519 1 1.16z" fill="#000"></path>
         </svg>
 
-        
+
         <svg viewBox="0 0 18.528 35.424" version="1.1" y="0" x="0" height="369" width="193" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15.105 35.155c-.42-.196-.627-.482-.902-1.253-.544-1.517-2.145-3.126-3.636-3.652-.69-.243-.887-.242-1.486.01-.617.26-1.342.278-1.798.045-.555-.283-1.76-2.262-3.476-5.708C2.628 22.232.984 18.575.455 17.144c-.236-.637-.237-.655-.237-2.485 0-2.164.01-2.209.9-4.013 1.011-2.049 2.53-4.189 4.185-5.9C7.679 2.293 9.783.995 12.49.313c.782-.197 1.554-.236 2.695-.137 1.619.14 2.38.38 2.882.909.21.22.246.321.243.684-.002.373-.122.67-.959 2.395-1.277 2.63-1.59 3.806-2.035 7.63-.111.951-.316 1.426-.809 1.87-.52.47-1.306.807-2.165.928l-.391.054.35.224c.897.574 1.58 1.674 1.834 2.956.193.969.12 2.791-.164 4.15-.222 1.061-.696 2.518-1.12 3.443-.336.735-.411 1.584-.203 2.3.505 1.738 2.056 3.692 3.736 4.705.693.417.938.83.874 1.476-.104 1.071-1.193 1.706-2.153 1.256z" fill="#000"></path>
+            <path d="M15.105 35.155c-.42-.196-.627-.482-.902-1.253-.544-1.517-2.145-3.126-3.636-3.652-.69-.243-.887-.242-1.486.01-.617.26-1.342.278-1.798.045-.555-.283-1.76-2.262-3.476-5.708C2.628 22.232.984 18.575.455 17.144c-.236-.637-.237-.655-.237-2.485 0-2.164.01-2.209.9-4.013 1.011-2.049 2.53-4.189 4.185-5.9C7.679 2.293 9.783.995 12.49.313c.782-.197 1.554-.236 2.695-.137 1.619.14 2.38.38 2.882.909.21.22.246.321.243.684-.002.373-.122.67-.959 2.395-1.277 2.63-1.59 3.806-2.035 7.63-.111.951-.316 1.426-.809 1.87-.52.47-1.306.807-2.165.928l-.391.054.35.224c.897.574 1.58 1.674 1.834 2.956.193.969.12 2.791-.164 4.15-.222 1.061-.696 2.518-1.12 3.443-.336.735-.411 1.584-.203 2.3.505 1.738 2.056 3.692 3.736 4.705.693.417.938.83.874 1.476-.104 1.071-1.193 1.706-2.153 1.256z" fill="#000"></path>
         </svg>
     </div>
 
-    <section class="mt-5 shadow mb-5  " >
+    <section class="mt-5 shadow mb-5  ">
         <div class="container p-5">
-            <div class="row">          
+            <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <!-- <p class="" style="color:rgb(0, 0, 0);font-weight:bold">Award Winning Company</p>               -->
-                    <h2 class="  animate_animated animate_bounceInLeft large_text" >Welcome to our Flex Banner Collection</h2>
+                    <h2 class="  animate_animated animate_bounceInLeft large_text">Welcome to our Flex Banner Collection</h2>
                     <p>
-                        
+
                         Explore our diverse range of flex banners designed to captivate your audience and elevate your brand visibility. From vibrant colors to durable materials, our flex banners are crafted to withstand the elements and leave a lasting impression on passersby. Partner with us to transform your outdoor advertising strategy and make a bold statement with custom flex banners tailored to your brand's unique identity.</p>
                     <!-- <div class="card shadow mt-4 p-3  ">
                         <div class="row">
@@ -191,65 +189,65 @@
                         </div>
                     </div> -->
                     <div class="col-6">
-                   
-                    <a href="contact_us.php" style="text-decoration: none;">   <button class="ofline_flex_first_btn animate_animated animate_bounceInDown">Contact us</button></a> 
-    
+
+                        <a href="contact_us.php" style="text-decoration: none;"> <button class="ofline_flex_first_btn animate_animated animate_bounceInDown">Contact us</button></a>
+
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5 text-center"    >
-                    <img src="assests/images/online-branding/ofline.webp"  class="img-fluid"/>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5 text-center">
+                    <img src="assests/images/online-branding/ofline.webp" class="img-fluid" />
                 </div>
             </div>
-        </div>  
+        </div>
     </section>
-     
+
     <section>
         <div class="container">
             <div class="row m-5">
                 <div class="col-lg-8">
-                    <h2 class=" animate_animated animate_bounceInRight large_text"  >Discover the Power of Flex Banners</h2>
-                    <p  >Our flex banners are designed to grab attention with vibrant colors and bold graphics that make your message stand out in any outdoor setting. With high-resolution printing and durable materials, our banners ensure maximum visibility and impact, even in challenging weather conditions.</p>
+                    <h2 class=" animate_animated animate_bounceInRight large_text">Discover the Power of Flex Banners</h2>
+                    <p>Our flex banners are designed to grab attention with vibrant colors and bold graphics that make your message stand out in any outdoor setting. With high-resolution printing and durable materials, our banners ensure maximum visibility and impact, even in challenging weather conditions.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="container shadow mt-2" style="background-color: rgba(216, 216, 216, 0.199);  border-width:10px;border-color:cadetblue ">
             <div class="row p-5">
-                
+
                 <div class="col-12 col-lg-9  mt-3  ">
-                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_1.webp"    class="img-fluid"/>
+                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_1.webp" class="img-fluid" />
                 </div>
-                
+
                 <div class="col-12  col-lg-3  d-flex flex-column justify-content-center  mt-3  ">
                     <p>Whether you need banners for events, promotions, or brand advertising, we offer customizable solutions to suit your specific requirements. From size and shape to design and messaging, we work closely with you to create banners that align with your brand identity and marketing goals.</p>
                 </div>
-    
-    
-               
+
+
+
                 <div class="col-12  col-md-6 d-flex flex-column justify-content-center mt-3 order-sm-2 order-md-1">
                     <p>Flex banners offer a cost-effective way to reach a wide audience and generate brand awareness. Compared to traditional advertising methods, such as billboards or TV commercials, flex banners provide a budget-friendly option without compromising on visibility or effectiveness. Invest in flex banners today and see the results for yourself!</p>
                 </div>
-                 <div class="col-12   col-md-6  mt-3 order-sm-1 order-md-2">
-                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_2.webp"    class="img-fluid"/>
+                <div class="col-12   col-md-6  mt-3 order-sm-1 order-md-2">
+                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_2.webp" class="img-fluid" />
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    <section class="mt-5" >
-        <div class="container" >
+
+
+    <section class="mt-5">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_3.webp" style="width:1100px; height:600px; border-radius:20px" class="img-fluid"/>
+                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_3.webp" style="width:1100px; height:600px; border-radius:20px" class="img-fluid" />
                 </div>
             </div>
         </div>
     </section>
-    
-    
+
+
     <!-- <section>
         <div class="container d-none d-md-block " >
             <div class="row card ms-1 mr-1 p-2" style="    background: linear-gradient(to bottom, #00ffdd, #ff00f7); margin-top:-100px;border-radius:30px" >
@@ -262,7 +260,7 @@
             </div>
         </div>
     </section> -->
-    
+
     <!-- <section>
         <div class="container">
             <div class="row">
@@ -273,135 +271,135 @@
             </div>
         </div>
     </section> -->
-    
-    
+
+
     <section class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_4.webp" class="img-fluid"/>
+                    <img src="assests/images/update_img/best_flex_wide_bhavi_creations_4.webp" class="img-fluid" />
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-                   <p>Reach out to us today to discuss your flex banner needs and explore how we can help elevate your brand visibility and marketing efforts. Our team is ready to assist you with personalized solutions tailored to your requirements, ensuring maximum impact and effectiveness for your advertising campaigns</p>
-                   <p> With our commitment to quality, creativity, and customer satisfaction, you can trust Bhavi Creations to deliver standout flex banners that make a lasting impression on your target audience. Contact us now to get started on your next advertising project and take your brand visibility to new heights.</p>
+                    <p>Reach out to us today to discuss your flex banner needs and explore how we can help elevate your brand visibility and marketing efforts. Our team is ready to assist you with personalized solutions tailored to your requirements, ensuring maximum impact and effectiveness for your advertising campaigns</p>
+                    <p> With our commitment to quality, creativity, and customer satisfaction, you can trust Bhavi Creations to deliver standout flex banners that make a lasting impression on your target audience. Contact us now to get started on your next advertising project and take your brand visibility to new heights.</p>
                 </div>
             </div>
         </div>
     </section>
-  
 
 
 
- <!-- FOOTER -->
- <footer class="text-light foot_bg_img   mt-5 foot ">
 
-    <div class="container " style="padding-top: 100px;">
-        <div class="row">
+    <!-- FOOTER -->
+    <footer class="text-light foot_bg_img   mt-5 foot ">
 
-            <div class="   col-md-4 text-center order-2 order-md-1">
-
-                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
-                <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
-                    <span style="color:#ffffff; font-weight: bold;">
-                        <i class="fa-solid fa-phone"></i>
-                    </span>: +91 9642343434
-                </h5>
-
-
-                <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
-                    <div class="d-flex mail_text_box" style="margin-top: 10px;">
-                        <span class="tooltip-container  ">
-
-                            <span class="text">@</span>
-                        </span> &nbsp;
-
-                        <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
-
-                    </div>
-                </a>
-
-
-                <div class="mt-3  " style="margin-bottom: 55px;">
-                    <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff; "
-                            class="fa-brands fa-facebook px-1  footicon"></i></a>
-                    <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands fa-instagram  px-1 footicon"></i></a>
-                    <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands  px-1  fa-square-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands fa-youtube  px-1  footicon"></i></a>
-                    <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
-                            style="font-size: 24px;  color: #ffffff;  "
-                            class="fa-brands fa-linkedin   px-1 footicon"></i></a>
-                    <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
-                            style="font-size: 24px ; color: #ffffff;"
-                            class="fa-brands fa-pinterest px-1  footicon"></i></a>
-
-
-                </div>
-            </div>
-
-
-            <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                <a href="index.php">
-                    <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
-                        style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
-                </a>
-
-            </div>
-
-
-            <div class="    col-md-4 text-center order-3  order-md-3">
-
-                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-                
-                <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
-                    Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
-
-            </div>
-
-        </div>
-    </div>
-    
-
-
-
-    <div class="footer-area-bottom theme-bg text-center pb-4">
-        <div class="container" style="margin-top: 30px;  ">
+        <div class="container " style="padding-top: 100px;">
             <div class="row">
-                <div class=" col-12">
-                    <div class="footer-widget__copyright">
-                        <span style="color:#ffffff;font-weight: 400;">   
-                            <a
-                                href="terms.php"
-                                style="text-decoration: none; color: #ffffff">Terms & conditions |
-                            </a>
-                            <a
-                                href="privacy.php"
-                                style="text-decoration: none; color: #ffffff">
-                                Privacy & policy ||</a>
-                                <a
-                                href="https://bhavicreations.com"
-                                style="text-decoration: none; color: #ffffff">
-                                Design with love @</a> <a
-                                href="https://bhavicreations.com"
-                                style="text-decoration: none; color: #ffffff">
-                                <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
 
-                             </span>
+                <div class="   col-md-4 text-center order-2 order-md-1">
+
+                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
+                    <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
+                        <span style="color:#ffffff; font-weight: bold;">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>: +91 9642343434
+                    </h5>
+
+
+                    <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
+                        <div class="d-flex mail_text_box" style="margin-top: 10px;">
+                            <span class="tooltip-container  ">
+
+                                <span class="text">@</span>
+                            </span> &nbsp;
+
+                            <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
+
+                        </div>
+                    </a>
+
+
+                    <div class="mt-3  " style="margin-bottom: 55px;">
+                        <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff; "
+                                class="fa-brands fa-facebook px-1  footicon"></i></a>
+                        <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands fa-instagram  px-1 footicon"></i></a>
+                        <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
+                                style="font-size: 24px; color: #ffffff;"
+                                class="fa-brands fa-youtube  px-1  footicon"></i></a>
+                        <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
+                                style="font-size: 24px;  color: #ffffff;  "
+                                class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+                        <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
+                                style="font-size: 24px ; color: #ffffff;"
+                                class="fa-brands fa-pinterest px-1  footicon"></i></a>
+
+
                     </div>
+                </div>
+
+
+                <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
+                    <a href="index.php">
+                        <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+                            style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
+                    </a>
+
+                </div>
+
+
+                <div class="    col-md-4 text-center order-3  order-md-3">
+
+                    <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
+
+                    <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
+                        Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
+
                 </div>
 
             </div>
         </div>
-    </div>
 
 
-    <!-- <div class="footer-area-bottom theme-bg">
+
+
+        <div class="footer-area-bottom theme-bg text-center pb-4">
+            <div class="container" style="margin-top: 30px;  ">
+                <div class="row">
+                    <div class=" col-12">
+                        <div class="footer-widget__copyright">
+                            <span style="color:#ffffff;font-weight: 400;">
+                                <a
+                                    href="terms.php"
+                                    style="text-decoration: none; color: #ffffff">Terms & conditions |
+                                </a>
+                                <a
+                                    href="privacy.php"
+                                    style="text-decoration: none; color: #ffffff">
+                                    Privacy & policy ||</a>
+                                <a
+                                    href="https://bhavicreations.com"
+                                    style="text-decoration: none; color: #ffffff">
+                                    Design with love @</a> <a
+                                    href="https://bhavicreations.com"
+                                    style="text-decoration: none; color: #ffffff">
+                                    <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
+
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="footer-area-bottom theme-bg">
         <div class="container">
             <div class="row pt-4">
         
@@ -435,56 +433,57 @@
         </div>
     </div> -->
 
-</footer>
-  <!-- ENDING  FOOTER -->
+    </footer>
+    <!-- ENDING  FOOTER -->
 
 
 
 
-  <div class="d-md-none">
-    <a href="main_offline_markiting.php" style="text-decoration: none;">
-        <button class="Btn_back_buttn     ">
-            <div class="sign_back">
-                <svg viewBox="0 0 512 512">
-                    <path
-                        d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
-                    </path>
-                </svg>
-            </div>
-            <div class="text_go_back ">Go Back</div>
-        </button>
-    </a>
-</div>
-
-<div class="d-none d-md-block">
-    <a href="main_offline_markiting.php" style="text-decoration: none;">
-        <div style="display: flex; align-items: center;">
-            <button class="Btn_back_buttn " style="display: flex; align-items: center;">
-                <div>
-                    <svg class="" viewBox="0 0 512 512" style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
+    <div class="d-md-none">
+        <a href="main_offline_markiting.php" style="text-decoration: none;">
+            <button class="Btn_back_buttn     ">
+                <div class="sign_back">
+                    <svg viewBox="0 0 512 512">
                         <path
-                        fill="#ffffff" d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                            d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
                         </path>
                     </svg>
                 </div>
-                <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+                <div class="text_go_back ">Go Back</div>
             </button>
+        </a>
+    </div>
+
+    <div class="d-none d-md-block">
+        <a href="main_offline_markiting.php" style="text-decoration: none;">
+            <div style="display: flex; align-items: center;">
+                <button class="Btn_back_buttn " style="display: flex; align-items: center;">
+                    <div>
+                        <svg class="" viewBox="0 0 512 512" style="width: 20px; height: 20px; margin-right: 5px; margin-left:20px;  ">
+                            <path
+                                fill="#ffffff" d="M134.1 406.1L11.3 283.3c-7.2-7.2-11.3-17.1-11.3-27.3s4.1-20.1 11.3-27.3l122.8-122.8c6.4-6.4 15-9.9 24-9.9c18.7 0 33.9 15.2 33.9 33.9l0 62.1 128 0c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l-128 0 0 62.1c0 18.7-15.2 33.9-33.9 33.9c-9 0-17.6-3.6-24-9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div style="margin-left: 5px; color: #ffffff; font-weight: bold;">Go Back</div>
+                </button>
+            </div>
+        </a>
+    </div>
+
+    <button id="scrollBtn" onclick="scrollToTop()">
+        <div class="pyramid-loader animate__animated animate__bounceInDown">
+            <div class="wrapper ">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>
         </div>
-    </a>
-</div> 
+    </button>
 
-  <button id="scrollBtn" onclick="scrollToTop()"> <div class="pyramid-loader animate__animated animate__bounceInDown">
-    <div class="wrapper ">
-      <span class="side side1"></span>
-      <span class="side side2"></span>
-      <span class="side side3"></span>
-      <span class="side side4"></span>
-      <span class="shadow"></span>
-    </div>  
-  </div>
-</button>
 
-  
 
     <!-- redirections  -->
 
@@ -555,63 +554,65 @@
             </span>
         </a>
     </div>
- 
 
 
 
 
 
 
-  <script>
-    // Function to scroll to the top of the page
-    function scrollToTop() {
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth' // Optional, smooth scrolling animation
-          });
-      }
-  
-      // Show scroll button when scrolling down
-      window.onscroll = function() {scrollFunction()};
-  
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("scrollBtn").style.display = "block";
-          } else {
-              document.getElementById("scrollBtn").style.display = "none";
-          }
-      }
 
-
-
-  </script>
-
-
-
-
-  <script>
-    $(document).ready(function () {
-      // Toggle dropdown on button click
-      $('.toggleDropdown').change(function () {
-        if ($(this).is(':checked')) {
-          $('.dropdown-menu').show();
-        } else {
-          $('.dropdown-menu').hide();
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Optional, smooth scrolling animation
+            });
         }
-      });
-    });
-</script>
+
+        // Show scroll button when scrolling down
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollBtn").style.display = "none";
+            }
+        }
+    </script>
 
 
-  <script type="text/javascript">
+
+
+    <script>
+        $(document).ready(function() {
+            // Toggle dropdown on button click
+            $('.toggleDropdown').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.dropdown-menu').show();
+                } else {
+                    $('.dropdown-menu').hide();
+                }
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+        ! function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript", e.async = !0,
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        }();
+    </script>
 </body>
+
 </html>

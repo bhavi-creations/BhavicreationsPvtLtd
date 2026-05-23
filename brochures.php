@@ -39,7 +39,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
-
+<?php include 'heading.php'; ?>
 </head>
 
 

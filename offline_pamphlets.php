@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Bhavi Creations</title>
+
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
     <link rel="stylesheet" href="assests/footer_animations.css">
@@ -214,7 +214,7 @@
             line-height: 1.4;
         }
     </style>
-
+    <?php include 'heading.php'; ?>
 </head>
 
 <body>
@@ -346,15 +346,15 @@
         <div class="slider-container img-fluid">
             <div class="left-slide">
                 <div style="background-color: #FFB866">
-                    <h1  style="font-size: 26px;" >Elevate Your Strategy with Bhavi Creations</h1>
+                    <h1 style="font-size: 26px;">Elevate Your Strategy with Bhavi Creations</h1>
 
                 </div>
                 <div style="background-color: #FD3555">
-                    <h1  style="font-size: 26px;">Stand Out with Stunning Pamphlets from Bhavi Creations</h1>
+                    <h1 style="font-size: 26px;">Stand Out with Stunning Pamphlets from Bhavi Creations</h1>
 
                 </div>
                 <div style="background-color: #2A86BA">
-                    <h1  style="font-size: 26px;"> From Concept to Creation : Perfect Pamphlets for Your Brand </h1>
+                    <h1 style="font-size: 26px;"> From Concept to Creation : Perfect Pamphlets for Your Brand </h1>
                 </div>
                 <div style="background-color: #252E33">
                     <h1 style="font-size: 26px;">Transform Your Marketing with Bhavi Creations</h1>
@@ -557,22 +557,22 @@
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
- 
+
                 </div>
 
 
                 <div class="    col-md-4 text-center order-3  order-md-3">
 
                     <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-                    
+
                     <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
                         Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
- 
+
                 </div>
 
             </div>
         </div>
-        
+
 
 
 
@@ -581,7 +581,7 @@
                 <div class="row">
                     <div class=" col-12">
                         <div class="footer-widget__copyright">
-                            <span style="color:#ffffff;font-weight: 400;">   
+                            <span style="color:#ffffff;font-weight: 400;">
                                 <a
                                     href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
@@ -590,7 +590,7 @@
                                     href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
-                                    <a
+                                <a
                                     href="https://bhavicreations.com"
                                     style="text-decoration: none; color: #ffffff">
                                     Design with love @</a> <a
@@ -598,7 +598,7 @@
                                     style="text-decoration: none; color: #ffffff">
                                     <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
 
-                                 </span>
+                            </span>
                         </div>
                     </div>
 
@@ -766,16 +766,12 @@
             </span>
         </a>
     </div>
- 
 
 
 
-    
+
+
     <script>
-
-
-
-
         // Function to scroll to the top of the page
         function scrollToTop() {
             window.scrollTo({
@@ -785,7 +781,9 @@
         }
 
         // Show scroll button when scrolling down
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -794,16 +792,13 @@
                 document.getElementById("scrollBtn").style.display = "none";
             }
         }
-
-
-
     </script>
 
- 
+
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Toggle dropdown on button click
-            $('.toggleDropdown').change(function () {
+            $('.toggleDropdown').change(function() {
                 if ($(this).is(':checked')) {
                     $('.dropdown-menu').show();
                 } else {
@@ -811,7 +806,6 @@
                 }
             });
         });
-
     </script>
 
     <script src="phamplet_script.js"></script>
@@ -821,16 +815,18 @@
 
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+        ! function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript", e.async = !0,
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        }();
+    </script>
 </body>
 
 </html>

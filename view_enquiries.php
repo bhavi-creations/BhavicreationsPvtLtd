@@ -16,7 +16,7 @@ if ($q) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Bhavi Creations – Client Requirements</title>
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -129,6 +129,10 @@ if ($q) {
             }
         }
     </style>
+
+<?php include 'heading.php'; ?> 
+
+
 </head>
 
 <body>

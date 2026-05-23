@@ -370,7 +370,7 @@
 
         }
     </style>
-
+<?php include 'heading.php'; ?>
 </head>
 
 

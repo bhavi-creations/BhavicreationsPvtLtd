@@ -52,7 +52,7 @@
             }
         }
     </script>
-
+    <?php include 'heading.php'; ?>
 </head>
 
 <style>
@@ -472,23 +472,23 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <label for="first_name" class="ms-2">First Name</label><br>
-                            <input type="text" id="first_name" name="first_name" class="inputname mb-2" pattern="[A-Za-z]+" title="Please enter only alphabetic characters"  required> <br>
+                            <input type="text" id="first_name" name="first_name" class="inputname mb-2" pattern="[A-Za-z]+" title="Please enter only alphabetic characters" required> <br>
                         </div>
                         <div class="col-lg-6">
                             <label for="last_name" class="ms-2">Last Name</label><br>
                             <input type="text" id="last_name" name="last_name" class="inputemail mb-2" pattern="[A-Za-z]+" title="Please enter only alphabetic characters" required><br>
                         </div>
-                        
+
                         <div class="col-lg-6">
                             <label for="email" class="ms-2 mt-5">Email</label><br>
                             <input type="email" id="email" name="email" class="inputemail mb-2" required><br>
                         </div>
-                 
+
                         <div class="col-lg-6">
                             <label for="phone" class="ms-2 mt-5">Phone Number</label><br>
                             <input type="text" id="phone" name="phone" class="inputemail mb-2" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required><br>
                         </div>
-                        
+
                     </div>
                     <div class="container">
                         <div class="row d-flex flex-row mt-5">
@@ -584,22 +584,22 @@
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
- 
+
                 </div>
 
 
                 <div class="    col-md-4 text-center order-3  order-md-3">
 
                     <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-                    
+
                     <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
                         Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
- 
+
                 </div>
 
             </div>
         </div>
-        
+
 
 
 
@@ -608,7 +608,7 @@
                 <div class="row">
                     <div class=" col-12">
                         <div class="footer-widget__copyright">
-                            <span style="color:#ffffff;font-weight: 400;">   
+                            <span style="color:#ffffff;font-weight: 400;">
                                 <a
                                     href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
@@ -617,7 +617,7 @@
                                     href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
-                                    <a
+                                <a
                                     href="https://bhavicreations.com"
                                     style="text-decoration: none; color: #ffffff">
                                     Design with love @</a> <a
@@ -625,7 +625,7 @@
                                     style="text-decoration: none; color: #ffffff">
                                     <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
 
-                                 </span>
+                            </span>
                         </div>
                     </div>
 
@@ -765,10 +765,6 @@
 
 
     <script>
-
-
-
-
         // Function to scroll to the top of the page
         function scrollToTop() {
             window.scrollTo({
@@ -778,7 +774,9 @@
         }
 
         // Show scroll button when scrolling down
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -787,26 +785,23 @@
                 document.getElementById("scrollBtn").style.display = "none";
             }
         }
-
-
-
     </script>
 
     <script>
-        document.getElementById('branchSelector').addEventListener('change', function () {
+        document.getElementById('branchSelector').addEventListener('change', function() {
             var selectedDiv = this.value;
             var divs = document.querySelectorAll('.map-container');
 
-            divs.forEach(function (div) {
+            divs.forEach(function(div) {
                 div.style.display = (div.id === selectedDiv) ? 'block' : 'none';
             });
         });
     </script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Toggle dropdown on button click
-            $('.toggleDropdown').change(function () {
+            $('.toggleDropdown').change(function() {
                 if ($(this).is(':checked')) {
                     $('.dropdown-menu').show();
                 } else {
@@ -817,16 +812,18 @@
     </script>
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+        ! function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript", e.async = !0,
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        }();
+    </script>
 </body>
 
 </html>

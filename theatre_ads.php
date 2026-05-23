@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>theater Bhavi Creations</title>
+   
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
 
@@ -44,6 +44,7 @@
 
 
 
+<?php include 'heading.php'; ?>
 </head>
 
 <body>

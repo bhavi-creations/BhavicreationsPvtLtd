@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your website description">
+  <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
   <meta name="keywords" content="your,keywords,here">
   <meta name="author" content="Your Name">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <title>Bhavi Creations</title>
+  <title>Digital Marketing Agency in Kakinada - Bhavi Creations</title>
   <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
     type="image/x-icon">
 
@@ -32,13 +32,14 @@
 
 
 
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
 
-
+<link rel="canonical" href="https://bhavicreations.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -129,7 +130,7 @@
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
 
-      <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+      <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp" alt="bhavicreations"
         class="img-fluid   d-none d-md-block   animate__animated   animate__lightSpeedInLeft"
         style="width: 250px;height: 120px;" alt="">
 
@@ -149,7 +150,7 @@
 
 
 
-      <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp "
+      <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp " alt="bhavicreations"
         class="img-fluid  d-block d-md-none   animate__animated   animate__lightSpeedInLight"
         style="width: 180px;height: 100px;" alt="">
 
@@ -228,7 +229,7 @@
                   <div class="user">
                     <div class="img"><img
                         src="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
-                        class="img-fluid" alt=""></div>
+                        class="img-fluid" alt="Bhavi Creations"></div>
                     <div class="details">
                       <div class="name">Bhavi</div>
                       <div class="username">@phaneendra</div>
@@ -532,8 +533,8 @@
           <div class="profile">
             <div class="user">
               <div class="img"><img
-                  src="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
-                  class="img-fluid" alt=""></div>
+                  src="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp" 
+                  class="img-fluid" alt="Bhavi Creations"></div>
               <div class="details">
                 <div class="name">Bhavi</div>
                 <div class="username">@phaneendra</div>
