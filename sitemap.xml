@@ -1,351 +1,76 @@
-<url>
-<loc>https://bhavicreations.com/</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/index</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/about</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/services</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/contact_us</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/our_works</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/pages</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/online_branding_mainpage</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/main_offline_markiting</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_marketing</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/software_mainpage.htm</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/privacy</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/logo_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/website_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/poster_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/reels_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/photoshoot_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/videos_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/testimonials_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/animatedtestimonials_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/visitingcards_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/pamplets</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/brochures_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/hoardings_page</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/logo_design</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/website</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/designing</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/seo</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/social_media</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/visting_cards</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/brochures</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/venyl_stickers</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/offline_pamphlets</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/offline_flex</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/text_books</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/calenders</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/dairys</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_pamphlets</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/hoarding</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/theatre_ads</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/no_parking_ads</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_flex</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/index.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/about.html</loc>
-<lastmod>2026-05-21T10:50:28+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/services.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/contact_us.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/our_works.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/privacy.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/main_offline_markiting.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_marketing.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/online_branding_mainpage.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/Portfolio</loc>
-<lastmod>2026-05-23T08:31:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/visting_cards.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/brochures.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/venyl_stickers.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/offline_pamphlets.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/offline_flex.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/text_books.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/calenders.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/dairys.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_pamphlets.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/hoarding.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/theatre_ads.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/no_parking_ads.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/traditional_flex.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/logo_design.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/website.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/designing.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/seo.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
-<url>
-<loc>https://bhavicreations.com/social_media.html</loc>
-<lastmod>2026-05-21T10:50:35+00:00</lastmod>
-<priority>0.51</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://bhavicreations.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/about-us</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/services</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/website-design</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/seo-services</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/social-media-marketing</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/branding</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/google-ads</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/graphic-design</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/video-editing</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/contact-us</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://bhavicreations.com/blog</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
 </urlset>

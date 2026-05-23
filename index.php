@@ -66,7 +66,32 @@ Google Ads agency in Kakinada">
 
     gtag('config', 'G-DWS4V98M9N');
   </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DigitalMarketingAgency",
+  "name": "Bhavi Creations",
+  "url": "https://bhavicreations.com/",
+  "logo": "https://bhavicreations.com/logo.png",
+  "image": "https://bhavicreations.com/logo.png",
+  "telephone": "+91 9642343434",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot no 28, RTO Office Rd, behind Lazza Icecream Shop, Ranga Rao Nagar",
+    "addressLocality": "Kakinada",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "533003",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.instagram.com/bhavicreations_pvtltd/",
+    "https://www.facebook.com/BhavicreationsPvtLtd"
+  ],
+  "areaServed": "India",
+  "priceRange": "$$",
+  "description": "Bhavi Creations is a digital marketing agency in Kakinada offering website design, SEO, social media marketing, branding, graphic design, Google Ads, and business growth solutions."
+}
+</script>
 </head>
 
 <style>
@@ -213,10 +238,12 @@ Google Ads agency in Kakinada">
     <div class="row">
 
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-5 row   ">
+        <h1 style="display:none;">bhavi creations pvt ltd</h1>
+        
 
-        <h1 class="kanit-regular we_support">We Support <i class="bi bi-arrow-up-right-circle-fill custom-icon"></i>
-        </h1>
-        <h1 class="kanit-regular growth_size">Gr
+        <h2 class="kanit-regular we_support">We Support <i class="bi bi-arrow-up-right-circle-fill custom-icon"></i>
+        </h2>
+        <h2 class="kanit-regular growth_size">Gr
 
           <label class="switch">
             <input type="checkbox" class="toggleDropdown">
@@ -224,8 +251,8 @@ Google Ads agency in Kakinada">
           </label>
 
           wth
-        </h1>
-        <h1 class="kanit-regular  your_business">Of Your Business</h1>
+        </h2>
+        <h2 class="kanit-regular  your_business">Of Your Business</h2>
 
 
         <div class="col-8 col-md-6">
