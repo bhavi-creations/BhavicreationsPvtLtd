@@ -4,14 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your website description">
-  <meta name="keywords" content="your,keywords,here">
+  <title>Digital Marketing Agency in Kakinada - Bhavi Creations</title>
+  <link rel="canonical" href="https://bhavicreations.com/" />
+  <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
+  <meta name="keywords" content="Best digital marketing agency in Kakinada,
+Digital marketing agency in Kakinada,
+Digital marketing company in Kakinada,
+Online marketing services in Kakinada,
+Internet marketing agency in Kakinada,
+Branding agency in Kakinada,
+Website design company in Kakinada,
+Social media marketing agency in Kakinada,
+SEO services in Kakinada,
+Google Ads agency in Kakinada">
   <meta name="author" content="Your Name">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  
+
   <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
     type="image/x-icon">
 
@@ -42,7 +53,48 @@
 
   <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
 
-<?php include 'heading.php'; ?>
+  <?php include 'heading.php'; ?>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalMarketingAgency",
+      "name": "Bhavi Creations",
+      "url": "https://bhavicreations.com/",
+      "logo": "https://bhavicreations.com/logo.png",
+      "image": "https://bhavicreations.com/logo.png",
+      "telephone": "+91 9642343434",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot no 28, RTO Office Rd, behind Lazza Icecream Shop, Ranga Rao Nagar",
+        "addressLocality": "Kakinada",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "533003",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.instagram.com/bhavicreations_pvtltd/",
+        "https://www.facebook.com/BhavicreationsPvtLtd"
+      ],
+      "areaServed": "India",
+      "priceRange": "$$",
+      "description": "Bhavi Creations is a digital marketing agency in Kakinada offering website design, SEO, social media marketing, branding, graphic design, Google Ads, and business growth solutions."
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWS4V98M9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DWS4V98M9N');
+  </script>
 
 </head>
 
@@ -133,7 +185,7 @@
           <li><a class="dropdown-item menu_item_black  " href="our_works.php">Our Works</a></li>
           <!-- <li><a class="dropdown-item menu_item_black  " href="multimedia_service.php">Multimedia Service</a></li> -->
           <li class="d-md-none "><a class="dropdown-item menu_item  " href="pages.php">Page</a></li>
-                    <!-- <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li> -->
+          <!-- <li><a class="dropdown-item menu_item_black lol" href="https://invoice.bhavicreations.com">Login</a></li> -->
         </ul>
 
 
@@ -427,108 +479,108 @@
   <footer class="text-light foot_bg_img   mt-5 foot ">
 
     <div class="container " style="padding-top: 100px;">
-        <div class="row">
+      <div class="row">
 
-            <div class="   col-md-4 text-center order-2 order-md-1">
+        <div class="   col-md-4 text-center order-2 order-md-1">
 
-                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
-                <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
-                    <span style="color:#ffffff; font-weight: bold;">
-                        <i class="fa-solid fa-phone"></i>
-                    </span>: +91 9642343434
-                </h5>
-
-
-                <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
-                    <div class="d-flex mail_text_box" style="margin-top: 10px;">
-                        <span class="tooltip-container  ">
-
-                            <span class="text">@</span>
-                        </span> &nbsp;
-
-                        <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
-
-                    </div>
-                </a>
+          <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Contact Us</p>
+          <h5 style="color: #ffffff; font-weight: 1000; margin-top: 30px; ">
+            <span style="color:#ffffff; font-weight: bold;">
+              <i class="fa-solid fa-phone"></i>
+            </span>: +91 9642343434
+          </h5>
 
 
-                <div class="mt-3  " style="margin-bottom: 55px;">
-                    <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff; "
-                            class="fa-brands fa-facebook px-1  footicon"></i></a>
-                    <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands fa-instagram  px-1 footicon"></i></a>
-                    <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands  px-1  fa-square-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
-                            style="font-size: 24px; color: #ffffff;"
-                            class="fa-brands fa-youtube  px-1  footicon"></i></a>
-                    <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
-                            style="font-size: 24px;  color: #ffffff;  "
-                            class="fa-brands fa-linkedin   px-1 footicon"></i></a>
-                    <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
-                            style="font-size: 24px ; color: #ffffff;"
-                            class="fa-brands fa-pinterest px-1  footicon"></i></a>
+          <a href="mailto:admin@bhavicreations.com" style="text-decoration: none; ">
+            <div class="d-flex mail_text_box" style="margin-top: 10px;">
+              <span class="tooltip-container  ">
 
+                <span class="text">@</span>
+              </span> &nbsp;
 
-                </div>
-            </div>
-
-
-            <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
-                <a href="index.php">
-                    <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
-                        style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
-                </a>
+              <p style="color: #ffffff; font-weight: bold;  "> admin@bhavicreations.com </p>
 
             </div>
+          </a>
 
 
-            <div class="    col-md-4 text-center order-3  order-md-3">
+          <div class="mt-3  " style="margin-bottom: 55px;">
+            <a href="https://www.facebook.com/BhavicreationsPvtLtd/ " target="_blank"> <i
+                style="font-size: 24px; color: #ffffff; "
+                class="fa-brands fa-facebook px-1  footicon"></i></a>
+            <a href="https://www.instagram.com/bhavicreations_pvtltd/ " target="_blank"> <i
+                style="font-size: 24px; color: #ffffff;"
+                class="fa-brands fa-instagram  px-1 footicon"></i></a>
+            <a href="https://twitter.com/bhavi_creations" target="_blank"> <i
+                style="font-size: 24px; color: #ffffff;"
+                class="fa-brands  px-1  fa-square-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@bhavicreationspvtltd" target="_blank"> <i
+                style="font-size: 24px; color: #ffffff;"
+                class="fa-brands fa-youtube  px-1  footicon"></i></a>
+            <a href="https://www.linkedin.com/in/bhavi-creations-pvt-ltd-926651235/" target="_blank"> <i
+                style="font-size: 24px;  color: #ffffff;  "
+                class="fa-brands fa-linkedin   px-1 footicon"></i></a>
+            <a href="https://in.pinterest.com/bhavicreations/" target="_blank"> <i
+                style="font-size: 24px ; color: #ffffff;"
+                class="fa-brands fa-pinterest px-1  footicon"></i></a>
 
-                <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-                
-                <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
-                    Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
 
-            </div>
+          </div>
+        </div>
+
+
+        <div class="  col-md-4  order-1 order-md-2" style="text-align: center; ">
+          <a href="index.php">
+            <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
+              style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
+          </a>
 
         </div>
+
+
+        <div class="    col-md-4 text-center order-3  order-md-3">
+
+          <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
+
+          <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
+            Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
+
+        </div>
+
+      </div>
     </div>
-    
+
 
 
 
     <div class="footer-area-bottom theme-bg text-center pb-4">
-        <div class="container" style="margin-top: 30px;  ">
-            <div class="row">
-                <div class=" col-12">
-                    <div class="footer-widget__copyright">
-                        <span style="color:#ffffff;font-weight: 400;">   
-                            <a
-                                href="terms.php"
-                                style="text-decoration: none; color: #ffffff">Terms & conditions |
-                            </a>
-                            <a
-                                href="privacy.php"
-                                style="text-decoration: none; color: #ffffff">
-                                Privacy & policy ||</a>
-                                <a
-                                href="https://bhavicreations.com"
-                                style="text-decoration: none; color: #ffffff">
-                                Design with love @</a> <a
-                                href="https://bhavicreations.com"
-                                style="text-decoration: none; color: #ffffff">
-                                <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
+      <div class="container" style="margin-top: 30px;  ">
+        <div class="row">
+          <div class=" col-12">
+            <div class="footer-widget__copyright">
+              <span style="color:#ffffff;font-weight: 400;">
+                <a
+                  href="terms.php"
+                  style="text-decoration: none; color: #ffffff">Terms & conditions |
+                </a>
+                <a
+                  href="privacy.php"
+                  style="text-decoration: none; color: #ffffff">
+                  Privacy & policy ||</a>
+                <a
+                  href="https://bhavicreations.com"
+                  style="text-decoration: none; color: #ffffff">
+                  Design with love @</a> <a
+                  href="https://bhavicreations.com"
+                  style="text-decoration: none; color: #ffffff">
+                  <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
 
-                             </span>
-                    </div>
-                </div>
-
+              </span>
             </div>
+          </div>
+
         </div>
+      </div>
     </div>
 
 
@@ -566,7 +618,7 @@
         </div>
     </div> -->
 
-</footer>
+  </footer>
   <!-- ENDING  FOOTER -->
 
 
@@ -693,7 +745,6 @@
 
 
   <script>
-
     // Function to scroll to the top of the page
     function scrollToTop() {
       window.scrollTo({
@@ -703,7 +754,9 @@
     }
 
     // Show scroll button when scrolling down
-    window.onscroll = function () { scrollFunction() };
+    window.onscroll = function() {
+      scrollFunction()
+    };
 
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -712,9 +765,6 @@
         document.getElementById("scrollBtn").style.display = "none";
       }
     }
-
-
-
   </script>
 
 
@@ -725,9 +775,9 @@
 
 
   <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
       // Toggle dropdown on button click
-      $('.toggleDropdown').change(function () {
+      $('.toggleDropdown').change(function() {
         if ($(this).is(':checked')) {
           $('.dropdown-menu').show();
         } else {
@@ -737,16 +787,18 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
-        window.omnisend = window.omnisend || [];
-        omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
-        omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+  <script type="text/javascript">
+    window.omnisend = window.omnisend || [];
+    omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
+    omnisend.push(["track", "$pageViewed"]);
+    ! function() {
+      var e = document.createElement("script");
+      e.type = "text/javascript", e.async = !0,
+        e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t)
+    }();
+  </script>
 </body>
 
 </html>

@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your website description">
-    <meta name="keywords" content="your,keywords,here">
+    <title>Digital Marketing Agency in Kakinada - Bhavi Creations</title>
+    <link rel="canonical" href="https://bhavicreations.com/" />
+    <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
+    <meta name="keywords" content="Best digital marketing agency in Kakinada,
+Digital marketing agency in Kakinada,
+Digital marketing company in Kakinada,
+Online marketing services in Kakinada,
+Internet marketing agency in Kakinada,
+Branding agency in Kakinada,
+Website design company in Kakinada,
+Social media marketing agency in Kakinada,
+SEO services in Kakinada,
+Google Ads agency in Kakinada">
     <meta name="author" content="Your Name">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    
+
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
 
@@ -42,7 +53,45 @@
 
     <link href="path_to_bootstrap/bootstrap.min.css" rel="stylesheet">
 
-<?php include 'heading.php'; ?>
+    <?php include 'heading.php'; ?>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "DigitalMarketingAgency",
+            "name": "Bhavi Creations",
+            "url": "https://bhavicreations.com/",
+            "logo": "https://bhavicreations.com/logo.png",
+            "image": "https://bhavicreations.com/logo.png",
+            "telephone": "+91 9642343434",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot no 28, RTO Office Rd, behind Lazza Icecream Shop, Ranga Rao Nagar",
+                "addressLocality": "Kakinada",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "533003",
+                "addressCountry": "IN"
+            },
+            "sameAs": [
+                "https://www.instagram.com/bhavicreations_pvtltd/",
+                "https://www.facebook.com/BhavicreationsPvtLtd"
+            ],
+            "areaServed": "India",
+            "priceRange": "$$",
+            "description": "Bhavi Creations is a digital marketing agency in Kakinada offering website design, SEO, social media marketing, branding, graphic design, Google Ads, and business growth solutions."
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWS4V98M9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DWS4V98M9N');
+    </script>
 
 </head>
 
@@ -170,7 +219,7 @@
     </div>
 
 
-    
+
 
     <section>
         <div class="container my-5">
@@ -185,60 +234,60 @@
                 <h3>Definitions</h3>
                 <p>For the purposes of this Privacy Policy:</p>
                 <ul>
-                <li>
-                <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
-                </li>
-                <li>
-                <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
-                </li>
-                <li>
-                <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to bhavicreations.</p>
-                </li>
-                <li>
-                <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
-                </li>
-                <li>
-                <p><strong>Country</strong> refers to: Andhra Pradesh,  India</p>
-                </li>
-                <li>
-                <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
-                </li>
-                <li>
-                <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
-                </li>
-                <li>
-                <p><strong>Service</strong> refers to the Website.</p>
-                </li>
-                <li>
-                <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
-                </li>
-                <li>
-                <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
-                </li>
-                <li>
-                <p><strong>Website</strong> refers to bhavicreations, accessible from <a href="https://bhavicreations.com/index.php" rel="external nofollow noopener" target="_blank">https://bhavicreations.com/index.php</a></p>
-                </li>
-                <li>
-                <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
-                </li>
+                    <li>
+                        <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
+                    </li>
+                    <li>
+                        <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
+                    </li>
+                    <li>
+                        <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to bhavicreations.</p>
+                    </li>
+                    <li>
+                        <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
+                    </li>
+                    <li>
+                        <p><strong>Country</strong> refers to: Andhra Pradesh, India</p>
+                    </li>
+                    <li>
+                        <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
+                    </li>
+                    <li>
+                        <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
+                    </li>
+                    <li>
+                        <p><strong>Service</strong> refers to the Website.</p>
+                    </li>
+                    <li>
+                        <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
+                    </li>
+                    <li>
+                        <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
+                    </li>
+                    <li>
+                        <p><strong>Website</strong> refers to bhavicreations, accessible from <a href="https://bhavicreations.com/index.php" rel="external nofollow noopener" target="_blank">https://bhavicreations.com/index.php</a></p>
+                    </li>
+                    <li>
+                        <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+                    </li>
                 </ul>
                 <h2>Collecting and Using Your Personal Data</h2>
                 <h3>Types of Data Collected</h3>
                 <h4>Personal Data</h4>
                 <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
                 <ul>
-                <li>
-                <p>Email address</p>
-                </li>
-                <li>
-                <p>First name and last name</p>
-                </li>
-                <li>
-                <p>Phone number</p>
-                </li>
-                <li>
-                <p>Usage Data</p>
-                </li>
+                    <li>
+                        <p>Email address</p>
+                    </li>
+                    <li>
+                        <p>First name and last name</p>
+                    </li>
+                    <li>
+                        <p>Phone number</p>
+                    </li>
+                    <li>
+                        <p>Usage Data</p>
+                    </li>
                 </ul>
                 <h4>Usage Data</h4>
                 <p>Usage Data is collected automatically when using the Service.</p>
@@ -248,68 +297,68 @@
                 <h4>Tracking Technologies and Cookies</h4>
                 <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
                 <ul>
-                <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
-                <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
+                    <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
+                    <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
                 </ul>
                 <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on <a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed website</a> article.</p>
                 <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
                 <ul>
-                <li>
-                <p><strong>Necessary / Essential Cookies</strong></p>
-                <p>Type: Session Cookies</p>
-                <p>Administered by: Us</p>
-                <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
-                </li>
-                <li>
-                <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
-                <p>Type: Persistent Cookies</p>
-                <p>Administered by: Us</p>
-                <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
-                </li>
-                <li>
-                <p><strong>Functionality Cookies</strong></p>
-                <p>Type: Persistent Cookies</p>
-                <p>Administered by: Us</p>
-                <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
-                </li>
+                    <li>
+                        <p><strong>Necessary / Essential Cookies</strong></p>
+                        <p>Type: Session Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
+                    </li>
+                    <li>
+                        <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
+                        <p>Type: Persistent Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
+                    </li>
+                    <li>
+                        <p><strong>Functionality Cookies</strong></p>
+                        <p>Type: Persistent Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
+                    </li>
                 </ul>
                 <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
                 <h3>Use of Your Personal Data</h3>
                 <p>The Company may use Personal Data for the following purposes:</p>
                 <ul>
-                <li>
-                <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
-                </li>
-                <li>
-                <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
-                </li>
-                <li>
-                <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
-                </li>
-                <li>
-                <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
-                </li>
-                <li>
-                <p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p>
-                </li>
-                <li>
-                <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
-                </li>
-                <li>
-                <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
-                </li>
-                <li>
-                <p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
-                </li>
+                    <li>
+                        <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
+                    </li>
+                    <li>
+                        <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
+                    </li>
+                    <li>
+                        <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
+                    </li>
+                    <li>
+                        <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
+                    </li>
+                    <li>
+                        <p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p>
+                    </li>
+                    <li>
+                        <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
+                    </li>
+                    <li>
+                        <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
+                    </li>
+                    <li>
+                        <p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
+                    </li>
                 </ul>
                 <p>We may share Your personal information in the following situations:</p>
                 <ul>
-                <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service,  to contact You.</li>
-                <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
-                <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
-                <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
-                <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
-                <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
+                    <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+                    <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+                    <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+                    <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+                    <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+                    <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
                 </ul>
                 <h3>Retention of Your Personal Data</h3>
                 <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
@@ -331,11 +380,11 @@
                 <h4>Other legal requirements</h4>
                 <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
                 <ul>
-                <li>Comply with a legal obligation</li>
-                <li>Protect and defend the rights or property of the Company</li>
-                <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-                <li>Protect the personal safety of Users of the Service or the public</li>
-                <li>Protect against legal liability</li>
+                    <li>Comply with a legal obligation</li>
+                    <li>Protect and defend the rights or property of the Company</li>
+                    <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                    <li>Protect the personal safety of Users of the Service or the public</li>
+                    <li>Protect against legal liability</li>
                 </ul>
                 <h3>Security of Your Personal Data</h3>
                 <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
@@ -352,21 +401,21 @@
                 <h2>Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, You can contact us:</p>
                 <ul>
-                <li>
-                <p>By email: admin@bhavicreations.com</p>
-                </li>
-                <li>
-                <p>By visiting this page on our website: <a href="https://bhavicreations.com/contact_us.php" rel="external nofollow noopener" target="_blank">https://bhavicreations.com/contact_us.php</a></p>
-                </li>
-                <li>
-                <p>By phone number: 9642343434</p>
-                </li>
+                    <li>
+                        <p>By email: admin@bhavicreations.com</p>
+                    </li>
+                    <li>
+                        <p>By visiting this page on our website: <a href="https://bhavicreations.com/contact_us.php" rel="external nofollow noopener" target="_blank">https://bhavicreations.com/contact_us.php</a></p>
+                    </li>
+                    <li>
+                        <p>By phone number: 9642343434</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
- 
+
 
 
     <!-- FOOTER -->
@@ -428,22 +477,22 @@
                         <img src="assests/images/Bhavi_Creations/best_digital_marketing_white_logo_bhavi_creations.webp"
                             style="width: 250px;height: 130px;" alt="" class="img-fluid  " />
                     </a>
- 
+
                 </div>
 
 
                 <div class="    col-md-4 text-center order-3  order-md-3">
 
                     <p style="color: #ffffff;font-weight:bold;font-size:24px;  ">Address</p>
-                    
+
                     <p style="color: #ffffff; font-weight: 100;">Behind J.N.T.U Engineering College Play Ground,
                         Ranga Rao Nagar, Kakinada, Andhra Pradesh 533003</p>
- 
+
                 </div>
 
             </div>
         </div>
-        
+
 
 
 
@@ -452,7 +501,7 @@
                 <div class="row">
                     <div class=" col-12">
                         <div class="footer-widget__copyright">
-                            <span style="color:#ffffff;font-weight: 400;">   
+                            <span style="color:#ffffff;font-weight: 400;">
                                 <a
                                     href="terms.php"
                                     style="text-decoration: none; color: #ffffff">Terms & conditions |
@@ -461,7 +510,7 @@
                                     href="privacy.php"
                                     style="text-decoration: none; color: #ffffff">
                                     Privacy & policy ||</a>
-                                    <a
+                                <a
                                     href="https://bhavicreations.com"
                                     style="text-decoration: none; color: #ffffff">
                                     Design with love @</a> <a
@@ -469,7 +518,7 @@
                                     style="text-decoration: none; color: #ffffff">
                                     <img src="assests\images\bhavi_logo\Bhavi_Branding_Stamp.png" class="img-fluid brand_image" alt=""></a>
 
-                                 </span>
+                            </span>
                         </div>
                     </div>
 
@@ -638,7 +687,6 @@
 
 
     <script>
-
         // Function to scroll to the top of the page
         function scrollToTop() {
             window.scrollTo({
@@ -648,7 +696,9 @@
         }
 
         // Show scroll button when scrolling down
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -657,9 +707,6 @@
                 document.getElementById("scrollBtn").style.display = "none";
             }
         }
-
-
-
     </script>
 
 
@@ -668,9 +715,9 @@
 
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Toggle dropdown on button click
-            $('.toggleDropdown').change(function () {
+            $('.toggleDropdown').change(function() {
                 if ($(this).is(':checked')) {
                     $('.dropdown-menu').show();
                 } else {
@@ -680,16 +727,18 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript">
         window.omnisend = window.omnisend || [];
         omnisend.push(["brandID", "6846e3dd25a66a4ceda01bf6"]);
         omnisend.push(["track", "$pageViewed"]);
-        !function(){var e=document.createElement("script");
-        e.type="text/javascript",e.async=!0,
-        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-        var t=document.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(e,t)}();
-</script>
+        ! function() {
+            var e = document.createElement("script");
+            e.type = "text/javascript", e.async = !0,
+                e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            var t = document.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(e, t)
+        }();
+    </script>
 </body>
 
 </html>

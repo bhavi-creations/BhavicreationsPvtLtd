@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your animatedvideos description">
-    <meta name="keywords" content="your,keywords,here">
+    <title>Digital Marketing Agency in Kakinada - Bhavi Creations</title>
+    <link rel="canonical" href="https://bhavicreations.com/" />
+    <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
+    <meta name="keywords" content="Best digital marketing agency in Kakinada,
+Digital marketing agency in Kakinada,
+Digital marketing company in Kakinada,
+Online marketing services in Kakinada,
+Internet marketing agency in Kakinada,
+Branding agency in Kakinada,
+Website design company in Kakinada,
+Social media marketing agency in Kakinada,
+SEO services in Kakinada,
+Google Ads agency in Kakinada">
     <meta name="author" content="Your Name">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    
+
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
 
@@ -531,7 +542,46 @@
 
         }
     </style>
-<?php include 'heading.php'; ?>
+    <?php include 'heading.php'; ?>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "DigitalMarketingAgency",
+            "name": "Bhavi Creations",
+            "url": "https://bhavicreations.com/",
+            "logo": "https://bhavicreations.com/logo.png",
+            "image": "https://bhavicreations.com/logo.png",
+            "telephone": "+91 9642343434",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot no 28, RTO Office Rd, behind Lazza Icecream Shop, Ranga Rao Nagar",
+                "addressLocality": "Kakinada",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "533003",
+                "addressCountry": "IN"
+            },
+            "sameAs": [
+                "https://www.instagram.com/bhavicreations_pvtltd/",
+                "https://www.facebook.com/BhavicreationsPvtLtd"
+            ],
+            "areaServed": "India",
+            "priceRange": "$$",
+            "description": "Bhavi Creations is a digital marketing agency in Kakinada offering website design, SEO, social media marketing, branding, graphic design, Google Ads, and business growth solutions."
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWS4V98M9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DWS4V98M9N');
+    </script>
 </head>
 
 
@@ -753,58 +803,58 @@
             </div>
         </div>  -->
         <div id="animatedvideo" class="media-tab-content active"><!-- active = default show -->
-    <div class="row">
-        <?php
-        include 'db.connection/db_connection.php';
+            <div class="row">
+                <?php
+                include 'db.connection/db_connection.php';
 
-        // Fix: normalize spaces + case
-        $sql = "SELECT * FROM our_works 
+                // Fix: normalize spaces + case
+                $sql = "SELECT * FROM our_works 
                 WHERE REPLACE(TRIM(LOWER(media_type)), ' ', '') = 'animatedvideo' 
                 ORDER BY id DESC";
-        $result = $conn->query($sql);
+                $result = $conn->query($sql);
 
-        if ($result && $result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $file = htmlspecialchars($row['file_path']);
-                $title = htmlspecialchars($row['title']);
-                $link = htmlspecialchars($row['media_link']);
-                $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+                if ($result && $result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $file = htmlspecialchars($row['file_path']);
+                        $title = htmlspecialchars($row['title']);
+                        $link = htmlspecialchars($row['media_link']);
+                        $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
-                // Path fix: check if already contains uploads/staff/
-                $path = (strpos($file, 'uploads/staff/') !== false) ? $file : "admin/public/uploads/staff/" . $file;
+                        // Path fix: check if already contains uploads/staff/
+                        $path = (strpos($file, 'uploads/staff/') !== false) ? $file : "admin/public/uploads/staff/" . $file;
 
-                echo "<div class='col-md-4 mb-4'>
+                        echo "<div class='col-md-4 mb-4'>
                         <div class='card shadow-sm h-100'>
                             <div class='card-body p-2'>";
 
-                // If media_link exists → wrap
-                if (!empty($link)) echo "<a href='$link' target='_blank'>";
+                        // If media_link exists → wrap
+                        if (!empty($link)) echo "<a href='$link' target='_blank'>";
 
-                // Video check
-                if (in_array($ext, ['mp4', 'webm', 'ogg', 'mov'])) {
-                    $mime = ($ext === 'mp4') ? 'video/mp4' : (($ext === 'webm') ? 'video/webm' : (($ext === 'ogg') ? 'video/ogg' : 'video/mp4'));
-                    echo "<video controls class='img-fluid' style='border-radius:8px; max-height:300px;'>
+                        // Video check
+                        if (in_array($ext, ['mp4', 'webm', 'ogg', 'mov'])) {
+                            $mime = ($ext === 'mp4') ? 'video/mp4' : (($ext === 'webm') ? 'video/webm' : (($ext === 'ogg') ? 'video/ogg' : 'video/mp4'));
+                            echo "<video controls class='img-fluid' style='border-radius:8px; max-height:300px;'>
                             <source src='$path' type='$mime'>
                           </video>";
-                } else {
-                    echo "<p class='text-muted text-center'>⚠ Only video formats supported for animated videos</p>";
-                }
+                        } else {
+                            echo "<p class='text-muted text-center'>⚠ Only video formats supported for animated videos</p>";
+                        }
 
-                if (!empty($link)) echo "</a>";
+                        if (!empty($link)) echo "</a>";
 
-                echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
+                        echo "<p class='mt-2 mb-0 text-center'><strong>$title</strong></p>
                             </div>
                         </div>
                     </div>";
-            }
-        } else {
-            echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
-        }
+                    }
+                } else {
+                    echo "<div class='col-12'><p class='text-muted text-center'>No animated videos uploaded yet.</p></div>";
+                }
 
-        $conn->close();
-        ?>
-    </div>
-</div>
+                $conn->close();
+                ?>
+            </div>
+        </div>
 
         <div id="logo" class="media-tab-content">
             <div class="row">

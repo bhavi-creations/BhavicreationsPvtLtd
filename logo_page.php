@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your logo description">
-    <meta name="keywords" content="your,keywords,here">
+    <title>Digital Marketing Agency in Kakinada - Bhavi Creations</title>
+    <link rel="canonical" href="https://bhavicreations.com/" />
+    <meta name="description" content="Bhavi Creations is a leading digital marketing agency in Kakinada offering website design, SEO services, social media marketing, branding, graphic design, Google Ads, video editing, and business growth solutions for local and online brands.">
+    <meta name="keywords" content="Best digital marketing agency in Kakinada,
+Digital marketing agency in Kakinada,
+Digital marketing company in Kakinada,
+Online marketing services in Kakinada,
+Internet marketing agency in Kakinada,
+Branding agency in Kakinada,
+Website design company in Kakinada,
+Social media marketing agency in Kakinada,
+SEO services in Kakinada,
+Google Ads agency in Kakinada">
     <meta name="author" content="Your Name">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-   
+
     <link rel="icon" href="assests/images/Bhavi_Creations/best_digital_marketing_fav_blue logo_bhavi_creations.webp"
         type="image/x-icon">
 
@@ -531,7 +542,53 @@
 
         }
     </style>
-<?php include 'heading.php'; ?>
+    <?php include 'heading.php'; ?>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "DigitalMarketingAgency",
+            "name": "Bhavi Creations",
+            "url": "https://bhavicreations.com/",
+            "logo": "https://bhavicreations.com/logo.png",
+            "image": "https://bhavicreations.com/logo.png",
+            "telephone": "+91 9642343434",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plot no 28, RTO Office Rd, behind Lazza Icecream Shop, Ranga Rao Nagar",
+                "addressLocality": "Kakinada",
+                "addressRegion": "Andhra Pradesh",
+                "postalCode": "533003",
+                "addressCountry": "IN"
+            },
+            "sameAs": [
+                "https://www.instagram.com/bhavicreations_pvtltd/",
+                "https://www.facebook.com/BhavicreationsPvtLtd"
+            ],
+            "areaServed": "India",
+            "priceRange": "$$",
+            "description": "Bhavi Creations is a digital marketing agency in Kakinada offering website design, SEO, social media marketing, branding, graphic design, Google Ads, and business growth solutions."
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWS4V98M9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DWS4V98M9N');
+    </script>
+
+
+
+
+
+
+
 </head>
 
 
