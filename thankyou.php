@@ -370,181 +370,187 @@
 
         }
     </style>
-<?php include 'heading.php'; ?>
+    <!-- Event snippet for BHAVI conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-10932795730/SzuzCJTAyrMcENLylN0o',
+            'value': 1.0,
+            'currency': 'INR'
+        });
+    </script>
 </head>
 
 
 <?php include 'navbar.php'; ?>
- 
- 
- <style>
-  :root {
-    --blue: #1a3a6c;
-    --teal: #0d9488;
-    --light: #f0f9ff;
-    --white: #ffffff;
-  }
 
-  .main-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 16px;
-  }
 
-  .card-box {
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 12px 40px rgba(26, 58, 108, 0.13);
-    padding: 52px 44px 44px;
-    max-width: 520px;
-    width: 100%;
-    text-align: center;
-    animation: fadeUp 0.7s ease both;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(28px);
+<style>
+    :root {
+        --blue: #1a3a6c;
+        --teal: #0d9488;
+        --light: #f0f9ff;
+        --white: #ffffff;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    .main-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 16px;
     }
-  }
 
-  .brand-icon {
-    font-size: 64px;
-    line-height: 1;
-    margin-bottom: 18px;
-    display: block;
-    animation: pop 0.5s 0.4s cubic-bezier(.36, 1.6, .6, 1) both;
-  }
-
-  @keyframes pop {
-    from {
-      transform: scale(0.5);
-      opacity: 0;
+    .card-box {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 12px 40px rgba(26, 58, 108, 0.13);
+        padding: 52px 44px 44px;
+        max-width: 520px;
+        width: 100%;
+        text-align: center;
+        animation: fadeUp 0.7s ease both;
     }
-    to {
-      transform: scale(1);
-      opacity: 1;
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(28px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-  }
 
-  .agency-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--blue);
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
+    .brand-icon {
+        font-size: 64px;
+        line-height: 1;
+        margin-bottom: 18px;
+        display: block;
+        animation: pop 0.5s 0.4s cubic-bezier(.36, 1.6, .6, 1) both;
+    }
 
-  .tagline {
-    font-size: 0.82rem;
-    color: var(--teal);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 28px;
-  }
+    @keyframes pop {
+        from {
+            transform: scale(0.5);
+            opacity: 0;
+        }
 
-  .divider {
-    width: 56px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--teal), var(--blue));
-    border-radius: 2px;
-    margin: 0 auto 28px;
-  }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
 
-  .thank-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--blue);
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
+    .agency-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: var(--blue);
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
 
-  .thank-message {
-    font-size: 1rem;
-    color: #4b5563;
-    line-height: 1.75;
-    margin-bottom: 32px;
-  }
+    .tagline {
+        font-size: 0.82rem;
+        color: var(--teal);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 28px;
+    }
 
-  .btn-home {
-    background: linear-gradient(135deg, var(--teal), var(--blue));
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    padding: 12px 36px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+    .divider {
+        width: 56px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--teal), var(--blue));
+        border-radius: 2px;
+        margin: 0 auto 28px;
+    }
 
-  .btn-home:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(13, 148, 136, 0.35);
-    color: var(--white);
-  }
+    .thank-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: var(--blue);
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
 
-  footer {
-    background: var(--blue);
-    color: #cbd5e1;
-    text-align: center;
-    padding: 16px 12px;
-    font-size: 0.82rem;
-  }
+    .thank-message {
+        font-size: 1rem;
+        color: #4b5563;
+        line-height: 1.75;
+        margin-bottom: 32px;
+    }
 
-  footer span {
-    color: var(--teal);
-    font-weight: 600;
-  }
+    .btn-home {
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        color: var(--white);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 36px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(13, 148, 136, 0.35);
+        color: var(--white);
+    }
+
+    footer {
+        background: var(--blue);
+        color: #cbd5e1;
+        text-align: center;
+        padding: 16px 12px;
+        font-size: 0.82rem;
+    }
+
+    footer span {
+        color: var(--teal);
+        font-weight: 600;
+    }
 </style>
 
 <!-- MAIN -->
 <div class="main-content">
-  <div class="card-box">
-    <span class="brand-icon">🚀</span>
+    <div class="card-box">
+        <span class="brand-icon">🚀</span>
 
-    <div class="agency-name">Bhavi Creations </div>
-    <div class="tagline">Creative Branding &nbsp;|&nbsp; Build Your Brand Identity</div>
+        <div class="agency-name">Bhavi Creations </div>
+        <div class="tagline">Creative Branding &nbsp;|&nbsp; Build Your Brand Identity</div>
 
-    <div class="divider"></div>
+        <div class="divider"></div>
 
-    <h1 class="thank-heading">Thank You!</h1>
+        <h1 class="thank-heading">Thank You!</h1>
 
-    <p class="thank-message">
-      Thank you for contacting <strong>Bhavi Creations </strong>.<br />
-      Your enquiry has been successfully submitted.<br />
-      Our creative team will get in touch with you shortly. 😊
-    </p>
+        <p class="thank-message">
+            Thank you for contacting <strong>Bhavi Creations </strong>.<br />
+            Your enquiry has been successfully submitted.<br />
+            Our creative team will get in touch with you shortly. 😊
+        </p>
 
-    <a href="index.php" class="btn-home">🏠 Back to Home</a>
-  </div>
+        <a href="index.php" class="btn-home">🏠 Back to Home</a>
+    </div>
 </div>
 
 
 
 
 
-    <script>
-        $(document).ready(function() {
-            // Toggle dropdown on button click
-            $('.toggleDropdown').change(function() {
-                if ($(this).is(':checked')) {
-                    $('.dropdown-menu').show();
-                } else {
-                    $('.dropdown-menu').hide();
-                }
-            });
+<script>
+    $(document).ready(function() {
+        // Toggle dropdown on button click
+        $('.toggleDropdown').change(function() {
+            if ($(this).is(':checked')) {
+                $('.dropdown-menu').show();
+            } else {
+                $('.dropdown-menu').hide();
+            }
         });
-    </script>
-
-    
-
+    });
+</script>

@@ -181,6 +181,38 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media (max-width: 600px) {
+            .circular_section {
+                bottom: 20px;
+                right: -40px;
+            }
+
+            .circular_move__button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .circular_move__text-container {
+                font-size: 9px;
+                top: -20px;
+            }
+
+            .circular_move__button__circle {
+                width: 32px;
+                height: 32px;
+            }
+
+            .circular_move__button__icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .circular_move__outer-text {
+                font-size: 8px;
+                padding: 3px 8px;
+            }
+        }
     </style>
 </head>
 

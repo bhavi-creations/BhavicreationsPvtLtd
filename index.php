@@ -25,7 +25,7 @@ Google Ads agency in Kakinada">
     type="image/x-icon">
 
   <link rel="stylesheet" href="assests/style.css">
-  <link rel="stylesheet" href="assests/animation.css" />
+  <link rel="stylesheet" href="assests/animation.css"/>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha384-lYFkg6eZ2q7hnkxZ9pPt2K/CszkQzPLhtlDwe2lnJQmI+iY9GM1f3tmzxoTfwUKl" crossorigin="anonymous">
