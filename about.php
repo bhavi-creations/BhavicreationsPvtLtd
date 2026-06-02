@@ -411,6 +411,17 @@ Google Ads agency in Kakinada">
     }
 </script>
 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10932795730"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10932795730');
+</script>
+
 </head>
 
 
@@ -2255,7 +2266,7 @@ Google Ads agency in Kakinada">
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="flip-card mt-4">
+                            <div class="flip-card mt-4">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <img src="assests/images/Bhavi_Creations/sathish_designer.png"
@@ -2266,7 +2277,7 @@ Google Ads agency in Kakinada">
                                         <p>Designer</p>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
 
 

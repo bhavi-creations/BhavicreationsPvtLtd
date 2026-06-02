@@ -378,6 +378,27 @@
             'currency': 'INR'
         });
     </script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10932795730"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10932795730');
+</script>
+<!-- Event snippet for Submit lead form conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10932795730/pZVDCIagqLccENLylN0o',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+</script>
+
+
 </head>
 
 
